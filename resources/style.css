@@ -5,32 +5,36 @@
 */
 
 body{
-  font-family: 'Neue Helvetica W01', sans-serif;
+  font-family: 'Helvetica', sans-serif;
   font-size: 18px;
   color: #424242;
   margin: 0;
 }    
 
-h1{
-  font-weight: bolder;
-  font-size: 48px;
-  margin: 0;    
-}
 
+
+/* Use for headings in text */
 h2{
   margin: 0;
   font-size: 32px;
   color: #1a3a45;
 }
 
-h3{
-  margin: 0;
-}
-
 #main {
   margin: 0;
   align-items: center;
   display: grid;
+}
+
+/*h1 and h3 are used for header banner here*/
+h1{
+  font-weight: bolder;
+  font-size: 48px;
+  margin: 0;    
+}
+
+h3{
+  margin: 0;
 }
 
 .header{
@@ -78,27 +82,92 @@ h3{
   flex-direction: row;
 }
 
+.footer{
+  padding: 30px 0px 30px 0px;
+  margin: 50px 0px 0px 0px;
+  display: grid;
+  background-color: #424242;
+  color: #ffffff;
+  
+}
+
+.footer-row{
+  padding: 0px 80px 0px 80px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.license{
+  font-size: 14px;
+}
+
+.footer-col{
+  display: flex;
+}
+
+.footer-row-list{
+  margin: 0px 50px 0px 50px;
+  text-align: left;
+  align-items: center;
+  color: #ffffff;
+  min-width: 120px;
+}
+
+.footer-list:hover{
+  color: #557068;
+}
+
+.footer-list{
+  color: #ffffff;
+  margin-top: 10px;
+  
+}
+
+.watermark{
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.watermark-row{
+  padding: 10px 80px 10px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.web-button{
+  padding: 0px 0px 0px 20px;
+}
+
+.github-button{
+  padding: 0px 20px 0px 0px;
+}
+
+/* Inactive button */
 .button{
   padding: 10px 20px 10px 20px;
   background-color: transparent;
   border-width: 0;
-  border-radius: 30px;
   font-size: 16px;
+  border-radius: 30px;
   color: #424242;
 }
 
+/* Active button style when clicked */
 .active{
   padding: 10px 20px 10px 20px;
-  background-color: #fbd383;
+  background-color: #557068;
   border-width: 0;
   border-radius: 30px;
   border-color: transparent;
   font-size: 16px;
-  color: #424242;
+  color: #ffffff;
 }
 
-/*Top navigation*/
-/* Add a black background color to the top navigation */
+/* Top navigation */
 .topnav {
     padding: 0px 80px 0px 80px;
     justify-content: space-between;
@@ -108,7 +177,6 @@ h3{
     background-color: transparent;
   }
   
-  /* Style the links inside the navigation bar */
   .topnav a {
     float: left;
     display: flex;
