@@ -1,0 +1,317 @@
+/*Color palette derived from logo
+--Dark          : #1a3a45
+--Accent        : #fbd383
+--Accent dark   : #557068
+*/
+
+body{
+  font-family: 'Helvetica', sans-serif;
+  font-size: 18px;
+  color: #424242;
+  margin: 0;
+}    
+
+
+
+/* Use for headings in text */
+h2{
+  margin: 0;
+  font-size: 36px;
+  color: #1a3a45;
+}
+
+#main {
+  margin: 0;
+  align-items: center;
+  display: grid;
+}
+
+/*h1 and h3 are used for header banner here*/
+h1{
+  font-weight: bolder;
+  font-size: 56px;
+  margin: 0;    
+}
+
+h3{
+  margin: 0;
+}
+
+.header{
+  background-image: url(../assets/images/home/background.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.search_bar{
+  margin: 10px 80px 50px 80px;
+  display: grid;
+}
+
+.search_form{  
+  padding: 15px 20px 15px 20px;
+  font-size: 18px;
+  border-style: solid;
+  border-radius: 20px;
+  border-color: transparent;
+  background-color: #ffffff;
+  color: #424242;}
+
+.search_button{
+  padding: 10px 10px 10px 10px;
+  margin-top: 10px;
+  border-style: solid;
+  border-radius: 20px;
+  max-width: 100px;
+  text-align: center;
+  border-color: transparent;
+  padding: 10px 10px 10px 10px;
+  background-color: #1a3a45;
+  color: #ffffff;
+}
+
+#header-text{
+  padding: 50px 80px 20px 80px;
+  color: #ffffff;
+  text-shadow: 0px 1px 5px #000000;
+}
+
+.introduction{
+  padding: 50px 80px 0px 80px;
+}
+
+.mission{  
+  background-color: #1a3a45;
+  background-image: url(../assets/images/home/mission.jpg);
+  background-position: bottom;
+  background-size: cover;
+  color: #ffffff;
+}
+
+#mission-text{
+  padding: 50px 80px 50px 80px;
+  width: 700px;
+  display: grid;
+  text-shadow: 0px 0px 5px #000000;
+  color: #ffffff;
+}
+
+.contribute{
+  background-color: #1a3a45;
+  background-image: url(../assets/images/home/contribute.jpg);
+  background-size: cover;
+  background-position: 50px;
+  color: #ffffff;
+}
+
+#contribute-text{
+  padding: 100px 80px 100px 80px;
+  display: grid;
+  text-align: center;
+  text-shadow: 0px 0px 5px #000000;
+  color: #ffffff;
+}
+
+.repo-button{
+  padding: 20px 0px 0px 0px;
+}
+
+.repo-link{
+  padding: 15px 30px 15px 30px;
+  background-color: #1a3a45;
+  color: #ffffff;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+.curriculum{
+  padding: 30px 30px 30px 30px;
+  margin: 30px 80px 50px 80px;
+  border-style: solid;
+  border-radius: 20px;
+  border-color: transparent;
+  box-shadow: 0 0px 10px 0px #b4b4b4;
+}
+
+.curriculum:hover{
+  box-shadow: 0 0px 15px 0px #b4b4b4;
+}
+
+.semester-wrapper{
+  margin: 10px 10px 20px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.footer{
+  padding: 50px 0px 30px 0px;
+  display: grid;
+  background-color: #424242;
+  color: #ffffff;
+  
+}
+
+.footer-row{
+  padding: 0px 80px 0px 80px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.license{
+  font-size: 14px;
+}
+
+.footer-col{
+  display: flex;
+}
+
+.footer-row-list{
+  margin: 0px 50px 0px 50px;
+  text-align: left;
+  align-items: center;
+  color: #ffffff;
+  min-width: 120px;
+}
+
+.footer-list:hover{
+  color: #557068;
+}
+
+.footer-list{
+  color: #ffffff;
+  margin-top: 10px;
+  
+}
+
+.watermark{
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.watermark-row{
+  padding: 10px 80px 10px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.web-button{
+  padding: 0px 0px 0px 20px;
+}
+
+.github-button{
+  padding: 0px 20px 0px 0px;
+}
+
+/* Inactive button */
+.button{
+  padding: 10px 20px 10px 20px;
+  background-color: transparent;
+  border-width: 0;
+  font-size: 16px;
+  border-radius: 30px;
+  color: #424242;
+}
+
+/* Active button style when clicked */
+.active{
+  padding: 10px 20px 10px 20px;
+  background-color: #557068;
+  border-width: 0;
+  border-radius: 30px;
+  border-color: transparent;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+/* Top navigation */
+.topnav {
+    padding: 0px 80px 0px 80px;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    display: flex;
+    background-color: transparent;
+  }
+  
+  .topnav a {
+    float: left;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-weight: bold;
+    color: #424242;
+    padding: 14px 10px 14px 10px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Wrapper for the logo */
+  .logo-wrapper{
+    align-items: start;
+    display: grid;
+  }
+
+  /* Wrapper for three menus*/
+  .menu{
+    display: flex;
+    align-items: center;
+  }
+  
+  .courses:hover{
+    color: #557068;
+  }
+
+  /* Semester menu dropdown */
+  .semester-menu:hover{
+    color: #557068;
+  }
+  
+  /* Language switch dropdown */
+  .language-switch{
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 20px;
+    border-color: #424242;
+    padding: 10px 10px 10px 10px;
+  }
+
+  .language-switch:hover{
+    color: #557068;
+    border-color: #557068;
+  }
+
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    .menu{
+        display: none;
+    }
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: relative;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
