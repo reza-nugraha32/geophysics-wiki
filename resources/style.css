@@ -82,7 +82,7 @@ h3{
 
 .mission{  
   background-color: #1a3a45;
-  background-image: url("../assets/images/home/mission.jpg");
+  background-image: url(../assets/images/home/mission.jpg);
   background-position: bottom;
   background-size: cover;
   color: #ffffff;
@@ -98,7 +98,7 @@ h3{
 
 .contribute{
   background-color: #1a3a45;
-  background-image: url("../assets/images/home/contribute.jpg");
+  background-image: url(../assets/images/home/contribute.jpg);
   background-size: cover;
   background-position: 50px;
   color: #ffffff;
