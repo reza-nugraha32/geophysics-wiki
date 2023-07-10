@@ -1,3 +1,3 @@
 # opengeophy
 
-<img alt="Logo" src="./assets/images/logo/logo.png" width=245>
+<img alt="Logo" src="./assets/images/logo/logo-compact-horizontal.png" width=245>
