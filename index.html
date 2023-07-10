@@ -5,13 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>OpenGeophy | Online Geophysics Learning Resources</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./assets/images/webpage-logo/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./resources/style.css">
+    <link rel="icon" href="./assets/images/logo.png" type="image/x-icon">
+    <script language="JavaScript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="./resources/index.js"></script>
   </head>
+
   <body>
-    <main>
-        <h1>Welcome to My Website</h1>  
-    </main>
-	<script src="index.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      
+      <div class="topnav" id="myTopnav">
+        <span class="logo-wrapper">
+          <span class="logo">
+            <a href="#home">
+              <img src="./assets/images/logo/logo-compact-horizontal.png" width=150px>
+            </a>
+          </span>
+        </span>
+        <span class="menu">
+          <a href="#"><span class="courses">Courses </span></a>
+          <a href="#"><span class="semester-menu">Semesters <i class="fa fa-chevron-down"></i></span></a>
+
+          <a href="#"><span class="language-switch">English <i class="fa fa-chevron-down"></i></span></a>
+        </span>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      
+      <!--Web content starts here-->
+      <div id="main" class="lang en">
+        <div class="header">
+          <div id="header-text">
+            <h3>OpenGeophy</h3>
+            <h1>Online geophysics learning resources.</h1>
+          </div>
+        </div>
+
+        <div class="introduction">
+          <div id="intro-text">
+            <h2>What is OpenGeophy?</h2>
+            <p>OpenGeophy is an online geophysics learning resources aiming to aid any students interested in studying geophysics at university. It is based on undergraduate geophysical engineering's curriculum at Institut Teknologi Bandung, Indonesia. You can find materials, problem sets, and past papers here.</p>
+          </div>
+        </div>
+
+        <div class="curriculum">
+          <h2>Curriculum</h2>
+          <div class="semester-wrapper">
+            <button id="first-year" class="button" onClick="buttonActive()">1st Year</button>
+            <button id="second-year" class="button" onClick="buttonActive()">2nd Year</button>
+            <button id="third-year" class="button" onClick="buttonActive()">3rd Year</button>
+            <button id="fourth-year" class="button" onClick="buttonActive()">4th Year</button>
+          </div>
+        </div>
+      </div>
+
+	
   </body>
 </html>
