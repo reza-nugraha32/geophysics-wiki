@@ -1,17 +1,9 @@
-/*Color palette derived from logo
---Dark          : #1a3a45
---Accent        : #fbd383
---Accent dark   : #557068
-*/
-
 body{
   font-family: 'Helvetica', sans-serif;
   font-size: 18px;
   color: #424242;
   margin: 0;
 }    
-
-
 
 /* Use for headings in text */
 h2{
@@ -20,13 +12,14 @@ h2{
   color: #1a3a45;
 }
 
+/* The whole main content */
 #main {
   margin: 0;
   align-items: center;
   display: grid;
 }
 
-/*h1 and h3 are used for header banner here*/
+/* h1 and h3 are used for header banner here */
 h1{
   font-weight: bolder;
   font-size: 56px;
@@ -37,113 +30,241 @@ h3{
   margin: 0;
 }
 
+/* Set background image for header */
 .header{
   background-image: url(../assets/images/home/background.jpg);
   background-size: cover;
   background-position: center;
+
+  .header-text{
+    padding: 50px 80px 20px 80px;
+    color: #ffffff;
+    text-shadow: 0px 1px 5px #000000;
+  }
 }
 
+/* Search bar in the header */
 .search_bar{
   margin: 10px 80px 50px 80px;
   display: grid;
+
+  .search_form{  
+    padding: 15px 20px 15px 20px;
+    font-size: 18px;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: transparent;
+    background-color: #ffffff;
+    color: #424242;}
+  
+  .search_button{
+    padding: 15px 10px 15px 10px;
+    margin-top: 10px;
+    border-style: solid;
+    border-radius: 20px;
+    max-width: 100px;
+    text-align: center;
+    border-color: transparent;
+    background-color: #1a3a45;
+    color: #ffffff;
+  }
 }
 
-.search_form{  
-  padding: 15px 20px 15px 20px;
-  font-size: 18px;
-  border-style: solid;
-  border-radius: 20px;
-  border-color: transparent;
-  background-color: #ffffff;
-  color: #424242;}
-
-.search_button{
-  padding: 10px 10px 10px 10px;
-  margin-top: 10px;
-  border-style: solid;
-  border-radius: 20px;
-  max-width: 100px;
-  text-align: center;
-  border-color: transparent;
-  padding: 10px 10px 10px 10px;
-  background-color: #1a3a45;
-  color: #ffffff;
-}
-
-#header-text{
-  padding: 50px 80px 20px 80px;
-  color: #ffffff;
-  text-shadow: 0px 1px 5px #000000;
-}
-
+/* Introduction section */
 .introduction{
   padding: 50px 80px 0px 80px;
 }
 
-.mission{  
-  background-color: #1a3a45;
-  background-image: url(../assets/images/home/mission.jpg);
-  background-position: bottom;
-  background-size: cover;
-  color: #ffffff;
-}
-
-#mission-text{
-  padding: 50px 80px 50px 80px;
-  width: 700px;
-  display: grid;
-  text-shadow: 0px 0px 5px #000000;
-  color: #ffffff;
-}
-
-.contribute{
-  background-color: #1a3a45;
-  background-image: url(../assets/images/home/contribute.jpg);
-  background-size: cover;
-  background-position: 50px;
-  color: #ffffff;
-}
-
-#contribute-text{
-  padding: 100px 80px 100px 80px;
-  display: grid;
-  text-align: center;
-  text-shadow: 0px 0px 5px #000000;
-  color: #ffffff;
-}
-
-.repo-button{
-  padding: 20px 0px 0px 0px;
-}
-
-.repo-link{
-  padding: 15px 30px 15px 30px;
-  background-color: #1a3a45;
-  color: #ffffff;
-  border-radius: 30px;
-  text-decoration: none;
-}
-
+/* Courses by year section */
 .curriculum{
   padding: 30px 30px 30px 30px;
   margin: 30px 80px 50px 80px;
   border-style: solid;
-  border-radius: 20px;
   border-color: transparent;
+  border-radius: 20px;
   box-shadow: 0 0px 10px 0px #b4b4b4;
+
 }
 
 .curriculum:hover{
   box-shadow: 0 0px 15px 0px #b4b4b4;
 }
 
-.semester-wrapper{
-  margin: 10px 10px 20px 0px;
+/* Wrapper for years */
+.year-wrapper{
+  margin: 10px 0px 0px 0px;
   display: flex;
   align-items: center;
   flex-direction: row;
 }
 
+.course-wrapper{
+  display: grid;
+  justify-content: space-between;
+
+}
+
+.semester-and-button{
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.carousel-button{
+  display: none;
+}
+
+.prev-button, .next-button{
+  background-color: #557068;
+  text-align: center;
+  width: 100px;
+  height: 30px;
+  padding: 10px 10px 10px 10px;
+  margin: 0px 10px 0px 0px;
+  color: #ffffff;
+  border-radius: 20px;
+  border-width: 0px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.prev-button:hover, .next-button:hover{
+  background-color: #abd3c7;
+}
+
+.curriculum{
+  display: block;
+}
+
+#second-year-course, #third-year-course, #fourth-year-course{
+  display: none;
+  transition: 0.6s ease;
+}
+
+#second-year-course-even, #third-year-course-even, #fourth-year-course-even{
+  display: none;
+  transition: 0.6s ease;
+}
+
+#first-year-course, #first-year-course-even{
+  display: block;
+  transition: 0.6s ease;
+  animation: fade;
+}
+
+.semester{
+  text-align: left;
+  align-items: start;
+  margin: 10px 0 10px 0;
+  overflow-x: scroll;
+}
+
+.course-list{
+  display: inline-flex;
+  text-align: left;
+  align-items: start;
+  margin: 10px 0 10px 0;
+}
+
+.course-box{
+  margin: 10px 40px 10px 40px;
+  width: 300px;
+  height: 320px;
+  align-content: start;
+  display: grid;
+  border-style: solid;
+  border-width: 0px;
+  border-color: transparent;
+  border-radius: 20px;
+  box-shadow: 0 0px 10px 0px #b4b4b4;
+  overflow: hidden;
+}
+
+.course-box:hover{
+  box-shadow: 0 0px 15px 5px #b4b4b4;
+  opacity: 0.7;
+  transition: 0.3s ease;
+}
+
+.course-cover{
+  width: 300px;
+  height: 200px;
+  display: flex;
+  background-color: #1a3a45;
+}
+
+.course-name{
+  width: 250px;
+  display: grid;
+  text-align: left;
+  font-weight: bold;
+  padding: 0px 20px 10px 20px;
+}
+
+.course-code{
+  display: flex;
+  text-align: left;
+  font-size: 16px;
+  color: #557068;
+  padding: 10px 20px 0px 20px;
+  max-width: 200px;
+  max-height: 100px;
+  
+}
+
+/* Our mission section */
+.mission{  
+  background-color: #1a3a45;
+  background-image: url(../assets/images/home/mission.jpg);
+  background-position: bottom;
+  background-size: cover;
+  color: #ffffff;
+
+  .mission-text{
+    padding: 50px 80px 50px 80px;
+    width: 700px;
+    display: grid;
+    text-shadow: 0px 0px 5px #000000;
+    color: #ffffff;
+  }
+  
+}
+
+/* Contribute with us section */
+.contribute{
+  background-color: #1a3a45;
+  background-image: url(../assets/images/home/contribute.jpg);
+  background-size: cover;
+  background-position: 50px;
+  color: #ffffff;
+
+
+  .contribute-text{
+    padding: 100px 80px 100px 80px;
+    display: grid;
+    text-align: center;
+    text-shadow: 0px 0px 5px #000000;
+    color: #ffffff;
+  }
+
+
+  /* Join us button */
+  .repo-button{
+    padding: 20px 0px 0px 0px;
+
+    /* Text inside the button */
+    .repo-link{
+      padding: 15px 30px 15px 30px;
+      background-color: #1a3a45;
+      color: #ffffff;
+      border-radius: 30px;
+      text-decoration: none;
+    }
+  }
+}
+
+/* Footer section */
 .footer{
   padding: 50px 0px 30px 0px;
   display: grid;
@@ -157,15 +278,14 @@ h3{
   align-items: center;
   display: flex;
   justify-content: space-between;
-  
-}
 
-.license{
-  font-size: 14px;
-}
+  .footer-license{
+    font-size: 14px;
+  } 
 
-.footer-col{
-  display: flex;
+  .footer-column{
+    display: flex;
+  }
 }
 
 .footer-row-list{
@@ -173,58 +293,56 @@ h3{
   text-align: left;
   align-items: center;
   color: #ffffff;
-  min-width: 120px;
+  text-decoration: none;
+  min-width: 120px;  
+}
+
+.footer-list{
+  color: #ffffff;
+  margin-top: 10px;
+  text-decoration: none;
 }
 
 .footer-list:hover{
   color: #557068;
 }
 
-.footer-list{
-  color: #ffffff;
-  margin-top: 10px;
-  
-}
-
+/* Watermark section */
 .watermark{
   background-color: #000000;
   color: #ffffff;
   font-size: 14px;
+
+  .watermark-row{
+    padding: 10px 80px 10px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .web-button{
+    padding: 0px 0px 0px 20px;
+  }
+  
+  .github-button{
+    padding: 0px 20px 0px 0px;
+  }
 }
 
-.watermark-row{
-  padding: 10px 80px 10px 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.web-button{
-  padding: 0px 0px 0px 20px;
-}
-
-.github-button{
-  padding: 0px 20px 0px 0px;
-}
-
-/* Inactive button */
-.button{
-  padding: 10px 20px 10px 20px;
+/* Unclicked button style */
+.year-button{
+  padding: 15px 20px 15px 20px;
   background-color: transparent;
   border-width: 0;
-  font-size: 16px;
+  border-color: transparent;
   border-radius: 30px;
+  font-size: 16px;
   color: #424242;
 }
 
-/* Active button style when clicked */
+/* Clicked button style */
 .active{
-  padding: 10px 20px 10px 20px;
   background-color: #557068;
-  border-width: 0;
-  border-radius: 30px;
-  border-color: transparent;
-  font-size: 16px;
   color: #ffffff;
 }
 

@@ -7,8 +7,9 @@
     <title>OpenGeophy | Online Geophysics Learning Resources</title>
     <link rel="stylesheet" href="./resources/style.css">
     <link rel="icon" href="./assets/images/logo/default-logo.png" type="image/x-icon">
-    <script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script language="JavaScript" type="text/javascript" src="./resources/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="./resources/index.js"></script>
+    <script src="./resources/scroll.js"></script>
   </head>
 
   <body>
@@ -33,15 +34,17 @@
       </div>
       
       <!--Web content starts here-->
+      <!--Planning to use class lang en to make this bilingual-->
       <div id="main" class="lang en">
         <div class="header">
-          <div id="header-text">
+          <div class="header-text">
             <h3>OpenGeophy</h3>
             <h1>Online geophysics learning resources.</h1>
           </div>
+
         <div class="search_bar">
           <input class="search_form" type="text" placeholder="Search topics...">
-          <span class="search_button">Search</span>
+          <span id="button" class="search_button">Search</span>
         </div>
         </div>
 
@@ -53,46 +56,306 @@
           </div>
         </div>
 
-
         <div class="curriculum">
-          <h2>Courses by Year</h2>
-          <div class="semester-wrapper">
-            <button id="first-year" class="button" onClick="buttonActive()">1st Year</button>
-            <button id="second-year" class="button" onClick="buttonActive()">2nd Year</button>
-            <button id="third-year" class="button" onClick="buttonActive()">3rd Year</button>
-            <button id="fourth-year" class="button" onClick="buttonActive()">4th Year</button>
+          <h2>Courses by year</h2>
+          <div class="year-wrapper">
+            <button id="first-year" class="year-button active">1st Year</button>
+            <button id="second-year" class="year-button">2nd Year</button>
+            <button id="third-year" class="year-button">3rd Year</button>
+            <button id="fourth-year" class="year-button">4th Year</button>
+          </div>
+
+          <div class="course-wrapper">
+            <span class="semester-and-button">
+              <h3 class="first-year">1st semester</h3>
+              <div class="carousel-button">
+                <span id="button" class="prev-button">
+                  <a><i class="fa fa-chevron-left"></i> Prev</a>
+                </span>
+                <span id="button" class="next-button">
+                  <a>Next <i class="fa fa-chevron-right"></i></a>
+                </span>
+              </div>
+            </span>
+
+            <div id="first-year-course" class="semester">
+              <div class="course-list">
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">MA1101</div>
+                  <div class="course-name"><p>Mathematics IA</p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">FI1101</div>
+                  <div class="course-name"><p>Physics IA</p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">KI1101</div>
+                  <div class="course-name"><p>Chemistry IA</p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">KU1102</div>
+                  <div class="course-name"><p>Introduction to Computation</p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">KU1024</div>
+                  <div class="course-name"><p>English</p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">KU1164</div>
+                  <div class="course-name"><p>Introduction to Mineral and Energy Resources</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div id="second-year-course" class="semester">
+              <div class="course-list">
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">TG2101</div>
+                  <div class="course-name"><p>Geomathematics I</p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">TG2102</div>
+                  <div class="course-name"><p>Wave in Geophysics</p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">TG2103</div>
+                  <div class="course-name"><p>Basic Geophysics</p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">TG2104</div>
+                  <div class="course-name"><p>Elementary Geophysical Instrumentations</p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">TG2105</div>
+                  <div class="course-name"><p>Computing in Geophysics</p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">GL2111</div>
+                  <div class="course-name"><p>Physical Geology</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div id="third-year-course" class="semester">
+              <div class="course-list">
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">GL2012</div>
+                  <div class="course-name"><p>Structural Geology</p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">GL3053</div>
+                  <div class="course-name"><p>Sedimentology and Stratigraphy</p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">TG3310</div>
+                  <div class="course-name"><p>Geophysical Signal Processing</p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">TG3102</div>
+                  <div class="course-name"><p>Geostatistics II</p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">TG3109</div>
+                  <div class="course-name"><p>Refraction Seismic</p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">TGL3132</div>
+                  <div class="course-name"><p>Earth Crust Mechanics</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div id="fourth-year-course" class="semester">
+              <div class="course-list">
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">TG4001</div>
+                  <div class="course-name"><p>Communication in Geophysics</p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">TG4162</div>
+                  <div class="course-name"><p>Seismic Interpretation</p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">TG4141</div>
+                  <div class="course-name"><p>Geophysical Inversion</p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">TG4029</div>
+                  <div class="course-name"><p>Capita of Selecta in Geophysics</p></div>
+                </div>
+              </div>
+            </div>
+
+            <span class="semester-and-button">
+              <h3 id="second-year">2nd semester</h3>
+              <div class="carousel-button">
+                <span id="button" class="prev-button">
+                  <a onclick="scrollLeft()"><i class="fa fa-chevron-left"></i> Prev</a>
+                </span>
+                <span id="button" class="next-button">
+                  <a onclick="scrollRight()">Next <i class="fa fa-chevron-right"></i></a>
+                </span>
+              </div>
+            </span>
+            
+            <div id="first-year-course-even" class="semester">
+              <div class="course-list">
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">MA1202</div>
+                  <div class="course-name"><p>Mathematics IIA</p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">FI1201</div>
+                  <div class="course-name"><p>Physics IIA</p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">KI1201</div>
+                  <div class="course-name"><p>Chemistry IIA</p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">KU1101</div>
+                  <div class="course-name"><p>Indonesian Language: Scientific Writing</p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">KU1202</div>
+                  <div class="course-name"><p>	Introduction to Engineering and Design</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div id="second-year-course-even" class="semester">
+              <div class="course-list">
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">GD2001</div>
+                  <div class="course-name"><p>Introduction to Surveying</p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">GL2043</div>
+                  <div class="course-name"><p>Introduction to Mineralogy and Petrology</p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">TG2203</div>
+                  <div class="course-name"><p>Geomathematics II</p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">TG2204</div>
+                  <div class="course-name"><p>Potential Theory</p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">TG2201</div>
+                  <div class="course-name"><p>Geostatistics I</p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">TG2231</div>
+                  <div class="course-name"><p>Seismology</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div id="third-year-course-even" class="semester">
+              <div class="course-list">
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">TG3201</div>
+                  <div class="course-name"><p>Geophysical Thermodynamics & Fluid Dynamics</p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">TG3261</div>
+                  <div class="course-name"><p>Seismic Data Acquisition</p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">TG3241</div>
+                  <div class="course-name"><p>Geo-electromagnetism</p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">TG3263</div>
+                  <div class="course-name"><p>Gravity & Geomagnetics/p></div>
+                </div>
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">TG3222</div>
+                  <div class="course-name"><p>Geodynamics</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div id="fourth-year-course-even" class="semester">
+              <div class="course-list">
+                <div class="course-box">
+                  <div class="course-cover"><img src="./assets/assets/images/home/background.jpg"></div>
+                  <div class="course-code">TG4243</div>
+                  <div class="course-name"><p>Volcanology and Geothermal Exploration</p></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="mission">
-          <div id="mission-text">
+          <div class="mission-text">
             <p>Our Mission</p>
             <p style="font-size: 30px;"><b>OpenGeophy came from the idea that an online learning resources carefully crafted and developed could massively benefit anyone studying to become a geophysicist anywhere in the world. Through this initiative, we hope to inspire a new generation of excellent geophysicist and aid them in their journey.</b></p>
           </div>
         </div>
 
         <div class="contribute">
-          <div id="contribute-text">
+          <div class="contribute-text">
             <div style="font-size: 40px;"><b>Contribute with us!</b></div>
             <p>Interested to help contributing to the materials? Come and join us at our repository!</p>
-            <div class="repo-button"><a class="repo-link" href="https://github.com/reza-nugraha32/opengeophy">Join us</a></div>
+            <div id="button" class="repo-button"><a class="repo-link" href="https://github.com/reza-nugraha32/opengeophy">Join us</a></div>
           </div>
         </div>
       </div>
 
       <div class="footer">
         <div class="footer-row">
-          <span class="footer-col-logo-and-license">
-            <img alt="OpenGeophy Logo" src="./assets/images/logo/logo-compact-horizontal.png" width="300">
+          <span class="footer-logo-and-license">
+            <img alt="OpenGeophy Logo" src="./assets/images/logo/logo-compact-horizontal.png" width="200">
             <div>
               <p>Aiming to aid students around the world in <b>learning geophysics.</b></p>
             </div>
-            <div class="license"> 
-              <p>All materials in this website are licensed with Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0), except where noted.</p>
+            <div class="footer-license"> 
+              <p>All materials in this website are licensed with CC BY-NC-ND 4.0 license, except where noted. See <a style="color: #557068; text-decoration: none;" href="https://github.com/reza-nugraha32/opengeophy/">readme</a> for detailed informations.</p>
             </div>            
           </span>
           
-          <span class="footer-col">
+          <span class="footer-column">
             <div class="footer-row-list">
               <h3>Help</h3>
               <a href="#"><div class="footer-list">Contacts</div></a>
