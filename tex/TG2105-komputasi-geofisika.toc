@@ -1,0 +1,9 @@
+\contentsline {chapter}{\numberline {1}Pendahuluan}{5}{}%
+\contentsline {section}{\numberline {1.1}Komputasi di bidang geofisika}{5}{}%
+\contentsline {chapter}{\numberline {2}Sistem Persamaan Linear}{7}{}%
+\contentsline {chapter}{\numberline {3}Regresi dan Interpolasi Linear}{9}{}%
+\contentsline {chapter}{\numberline {4}Integrasi Numerik}{11}{}%
+\contentsline {chapter}{\numberline {5}Persamaan Diferensial Biasa}{13}{}%
+\contentsline {chapter}{\numberline {6}Persamaan Diferensial Parsial}{15}{}%
+\contentsline {chapter}{\numberline {7}\textit {Finite Element Method}}{17}{}%
+\contentsline {chapter}{\numberline {8}Optimisasi}{19}{}%
