@@ -1,4 +1,4 @@
-.light-theme{
+.light-mode{
   font-family: "Helvetica", sans-serif;
   font-size: 18px;
   color: #424242 !important;
@@ -14,8 +14,13 @@
     color: #ffffff;
   }
   
-  .intro-header{
+  .section-header{
     color: #1a3a45;
+    padding-bottom: 10px;
+  }
+
+  .section-text a{
+    color: #557068;
   }
 
   .course-by-year{
@@ -57,11 +62,11 @@
   }
 
   .footer{
-    background-color: #2d3629;
+    background-color: #1f251c;
   }
 }    
 
-.dark-theme{
+.dark-mode{
   font-family: "Helvetica", sans-serif;
   font-size: 18px;
   color: #ffffff !important;
@@ -72,7 +77,12 @@
     color: #ffffff;
   }
 
-  .intro-header{
+  .section-header{
+    color: #557068;
+    padding-bottom: 10px;
+  }
+
+  .section-text a{
     color: #557068;
   }
 
@@ -81,24 +91,24 @@
   }
 
   .curriculum{
-    box-shadow: 0 0px 10px 0px #1a3a45;
+    box-shadow: 0px 0px 10px 0px #1a3a45;
     border-width: 1px;
     border-color: #424242;
   }
 
   .curriculum:hover{
-    box-shadow: 0 0px 20px 0px #1a3a45;
+    box-shadow: 0px 0px 20px 0px #1a3a45;
   }
 
   .course-box{
-    box-shadow: 0 0px 10px 0px #1a3a45;
+    box-shadow: 0px 0px 10px 0px #1a3a45;
     border-width: 1px;
     border-color: #424242;
     text-decoration: none;
   }
 
   .course-box:hover{
-    box-shadow: 0 0px 10px 5px #1a3a45;
+    box-shadow: 0px 0px 10px 5px #1a3a45;
   }
 
   .course-name{
@@ -118,6 +128,44 @@
     background-color: #1f251c;
   }
 }  
+
+/* Wrapper for any section */
+.section{
+  padding: 30px 100px 0px 100px;
+}
+
+/* Section header is use for header for any text section */
+/* Wrap h2 or h3 inside this class */
+.section-header{
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+/* Use for title heading*/
+h1{
+  margin-top: 0;
+}
+
+/* Use for headings in text */
+h2{
+  margin: 0px 0px 0px 0px;
+  font-size: 36px;
+}
+
+/* Use for subheading */
+h3{
+  margin: 0px 0px 0px 0px;
+} 
+
+/* Section text is use for plain text for any text section */
+.section-text{
+  margin-bottom: 15px
+}
+
+/* Add space between main section and footer section */
+.spacer{
+  padding-bottom: 150px;
+}
 
 a{
   text-decoration: none !important;
@@ -141,13 +189,6 @@ a:hover{
   cursor: pointer;
 }
 
-/* Use for headings in text */
-h2{
-  margin: 0;
-  font-size: 36px;
-}
-
-
 /* The whole main content */
 #main {
   margin: 0;
@@ -161,9 +202,10 @@ h2{
   background-image: url(../assets/images/home/background.jpg);
   background-size: cover;
   background-position: center;
+  margin-bottom: 20px;
 
   .header-text{
-    padding: 10px 80px 10px 80px;
+    padding: 0px 100px 0px 100px;
     color: #ffffff;
     text-shadow: 0px 1px 5px #3b3b3b;
   }
@@ -171,7 +213,7 @@ h2{
 
 /* Search bar in the header */
 .search_bar{
-  margin: 10px 80px 50px 80px;
+  margin: 10px 100px 50px 100px;
   display: grid;
 
   .search_form{  
@@ -201,19 +243,10 @@ h2{
   }
 }
 
-/* Introduction section */
-.introduction-section{
-  padding: 50px 80px 0px 80px;
-}
-
-.intro-header{
-  padding-bottom: 10px;
-}
-
 /* Courses by year section */
 .curriculum{
   padding: 30px 30px 30px 30px;
-  margin: 30px 80px 50px 80px;
+  margin: 30px 100px 50px 100px;
   border-style: solid;
   border-color: transparent;
   border-radius: 20px;
@@ -284,10 +317,6 @@ h2{
 #first-year-course, #first-year-course-even{
   height: 100%;
   width: 100%;
-}
-
-.semester-and-button{
-  margin: 10px 0px 10px 0px;
 }
 
 .semester{
@@ -376,29 +405,27 @@ h2{
   text-shadow: 0px 0px 5px #3b3b3b;
   font-size: 30px;
   font-weight: bold;
-  color: #ffffff;
   overflow: hidden;
   animation: typing 5s steps(50, end) infinite;
 }
 
 .mission-text-wrapper{
   display: inline-block;
-  margin: 10px 80px 30px 80px;
+  margin: 10px 100px 30px 100px;
   width: 700px;
   height: 240px;
   overflow: hidden;
 }
 
 .mission-text-header{
-  padding: 40px 80px 10px 80px;
+  padding: 40px 100px 10px 100px;
   display: grid;
   text-shadow: 0px 0px 5px #3b3b3b;
-  color: #ffffff;
 }
 
 /* Contribute with us section */
 .contribute-wrapper{
-  padding: 30px 80px 50px 80px;
+  padding: 30px 100px 50px 100px;
   display: grid;
   text-align: center;
 }
@@ -408,12 +435,12 @@ h2{
 }
 
 .contribute-text{
-  padding: 10px 0px 0px 0px;
+  padding: 10px 0px 10px 0px;
 }
 
 /* Join us button */
 .repo-button{
-  padding: 30px 0px 0px 0px;
+  padding: 20px 0px 0px 0px;
 
   /* Text inside the button */
   .repo-link{
@@ -427,15 +454,14 @@ h2{
 
 /* Footer section */
 .footer{
-  padding: 10px 0px 30px 0px;
-  display: grid;
+  padding: 30px 30px 30px 30px;
   background-color: #3a4435;
   color: #ffffff;
   align-items: start;
+  justify-content: space-between;
 }
 
 .footer-row{
-  padding: 0px 80px 0px 80px;
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -450,7 +476,7 @@ h2{
 }
 
 .footer-row-list{
-  margin: 0px 50px 0px 50px;
+  padding: 0px 50px 0px 50px;
   text-align: left;
   align-items: center;
   color: #ffffff;
@@ -473,20 +499,26 @@ h2{
   background-color: #000000;
   color: #ffffff;
   font-size: 14px;
+  justify-content: space-between;
 
   .watermark-row{
-    padding: 10px 80px 10px 80px;
+    padding: 10px 30px 10px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
+  .watermark-paragraph{
+    display: flex;
+    align-items: center;
+  }
+
   .web-button{
-    padding: 0px 10px 0px 20px;
+    padding: 0px 10px 0px 40px;
   }
   
   .github-button{
-    padding: 0px 20px 0px 10px;
+    padding: 0px 40px 0px 10px;
   }
 }
 
@@ -511,8 +543,8 @@ h2{
 /* Top navigation */
 .topnav {
     top: 10px;
-    left: 80px;
-    right: 80px;
+    left: 100px;
+    right: 100px;
     justify-content: space-between;
     align-items: center;
     display: flex;
@@ -527,7 +559,7 @@ h2{
     text-align: center;
     text-decoration: none;
     font-weight: bold;
-    padding: 14px 10px 14px 10px;
+    margin: 14px 10px 14px 10px;
     text-decoration: none;
     font-size: 17px;
   }

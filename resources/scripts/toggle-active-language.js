@@ -1,5 +1,4 @@
-$(document).ready(function(){
-    $(".language-switch").click(function(){
+$(".language-switch").click(function(){
     if ($(this).children(".language").text() == "EN") {
         $(this).children(".language").text("ID");
     }
@@ -8,6 +7,5 @@ $(document).ready(function(){
     }
     console.log($(this).children(".language").text());
     console.log($("html").attr("lang"))
-    });   
-});
+});   
 

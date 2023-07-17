@@ -1,3 +1,4 @@
+// JQuery script for toggling course by year button
 $(function toggleActive(){
     $(".year-button").click(function(){
       $(".year-button").removeClass("active")
