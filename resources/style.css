@@ -1,16 +1,134 @@
-body{
-  font-family: 'Helvetica', sans-serif;
+.light-theme{
+  font-family: "Helvetica", sans-serif;
   font-size: 18px;
   color: #424242;
+  background-color: #ffffff;
   margin: 0;
+  
+  .year-button{
+    color: #424242;
+  }
+
+  .active{
+    background-color: #1a3a45;
+    color: #ffffff;
+  }
+  
+  .intro-header{
+    color: #1a3a45;
+  }
+
+  .course-by-year{
+    color: #1a3a45;
+  }
+
+  .curriculum{
+    box-shadow: 0 0px 10px 0px #b4b4b4;
+    border-width: 0px;
+    border-color: #424242;
+  }
+
+  .curriculum:hover{
+    box-shadow: 0 0px 20px 0px #9ab39a;
+  }
+
+  .course-box{
+    box-shadow: 0 0px 10px 0px #b4b4b4;
+    border-width: 0px;
+    border-color: #424242;
+  }
+
+  .course-box:hover{
+    box-shadow: 0 0px 10px 5px #9ab3ab;
+  }
+
+  .mission{
+    background: linear-gradient(30deg, #1a3a45 0%,  #99b87d 100%);
+  }
+
+  .mode-switch{
+    color: #ffffff;
+    background-color: transparent;
+  }
+
+  .footer{
+    background-color: #3a4435;
+  }
 }    
+
+.dark-theme{
+  font-family: "Helvetica", sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #111111;
+  margin: 0;
+
+  .year-button{
+    color: #ffffff;
+  }
+
+  .intro-header{
+    color: #557068;
+  }
+
+  .course-by-year{
+    color: #557068;
+  }
+
+  .curriculum{
+    box-shadow: 0 0px 10px 0px #1a3a45;
+    border-width: 1px;
+    border-color: #424242;
+  }
+
+  .curriculum:hover{
+    box-shadow: 0 0px 20px 0px #1a3a45;
+  }
+
+  .course-box{
+    box-shadow: 0 0px 10px 0px #1a3a45;
+    border-width: 1px;
+    border-color: #424242;
+  }
+
+  .course-box:hover{
+    box-shadow: 0 0px 10px 5px #1a3a45;
+  }
+
+  .mission{
+    background: linear-gradient(30deg, #1a3a45 40%,  #55996b 100%);
+  }
+
+  .mode-switch{
+    color: #ffffff;
+    background-color: transparent;
+  }
+
+  .footer{
+    background-color: #1f251c;
+  }
+}  
+
+.mode-switch{
+  width: 20px;
+  scale: 1.2;
+  display: block;
+  align-content: center;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.mode-switch:hover{
+  color: #557068;
+  cursor: pointer;
+}
 
 /* Use for headings in text */
 h2{
   margin: 0;
   font-size: 36px;
-  color: #1a3a45;
 }
+
 
 /* The whole main content */
 #main {
@@ -19,25 +137,15 @@ h2{
   display: grid;
 }
 
-/* h1 and h3 are used for header banner here */
-h1{
-  font-weight: bolder;
-  font-size: 56px;
-  margin: 0;    
-}
-
-h3{
-  margin: 0;
-}
-
 /* Set background image for header */
 .header{
+  padding-top: 80px;
   background-image: url(../assets/images/home/background.jpg);
   background-size: cover;
   background-position: center;
 
   .header-text{
-    padding: 50px 80px 20px 80px;
+    padding: 10px 80px 10px 80px;
     color: #ffffff;
     text-shadow: 0px 1px 5px #3b3b3b;
   }
@@ -64,15 +172,24 @@ h3{
     border-radius: 20px;
     max-width: 100px;
     text-align: center;
+    text-decoration: none;
     border-color: transparent;
     background-color: #1a3a45;
     color: #ffffff;
   }
+
+  .search_button:hover{
+    background-color: #557068;
+  }
 }
 
 /* Introduction section */
-.introduction{
+.introduction-section{
   padding: 50px 80px 0px 80px;
+}
+
+.intro-header{
+  padding-bottom: 10px;
 }
 
 /* Courses by year section */
@@ -82,20 +199,24 @@ h3{
   border-style: solid;
   border-color: transparent;
   border-radius: 20px;
-  box-shadow: 0 0px 10px 0px #b4b4b4;
-
-}
-
-.curriculum:hover{
-  box-shadow: 0 0px 15px 0px #b4b4b4;
 }
 
 /* Wrapper for years */
 .year-wrapper{
-  margin: 10px 0px 0px 0px;
-  display: flex;
+  margin: 0px 0px 0px 0px;
+  display: inline-flex;
   align-items: center;
   flex-direction: row;
+}
+
+.course-by-year{
+  display: inline-flex;
+}
+
+.curriculum-header{
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .course-wrapper{
@@ -107,8 +228,7 @@ h3{
 .semester-and-button{
   display: inline-flex;
   justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
+  align-content: center;
 }
 
 .carousel-button{
@@ -133,30 +253,28 @@ h3{
   background-color: #abd3c7;
 }
 
-.curriculum{
-  display: block;
-}
-
 #second-year-course, #third-year-course, #fourth-year-course{
-  display: none;
-  transition: 0.6s ease;
+  width: 0;
+  height: 0;
 }
 
 #second-year-course-even, #third-year-course-even, #fourth-year-course-even{
-  display: none;
-  transition: 0.6s ease;
+  width: 0;
+  height: 0;
 }
 
 #first-year-course, #first-year-course-even{
-  display: block;
-  transition: 0.6s ease;
-  animation: fade;
+  height: 100%;
+  width: 100%;
+}
+
+.semester-and-button{
+  margin: 10px 0px 10px 0px;
 }
 
 .semester{
   text-align: left;
   align-items: start;
-  margin: 10px 0 10px 0;
   overflow-x: scroll;
 }
 
@@ -168,37 +286,35 @@ h3{
 }
 
 .course-box{
-  margin: 10px 20px 10px 20px;
-  width: 300px;
-  height: 320px;
+  margin: 10px 25px 10px 0px;
+  width: 200px;
+  height: 200px;
   align-content: start;
   display: grid;
   border-style: solid;
   border-width: 0px;
   border-color: transparent;
   border-radius: 20px;
-  box-shadow: 0 0px 10px 0px #b4b4b4;
   overflow: hidden;
 }
 
 .course-box:hover{
-  box-shadow: 0 0px 15px 5px #b4b4b4;
+  scale: 1.05;
   opacity: 0.7;
   transition: 0.3s ease;
 }
 
 .course-cover{
-  width: 300px;
-  height: 200px;
-  display: flex;
-  background-color: #1a3a45;
+  width: 200px;
+  height: 100px;
+  display: grid;
 }
 
 .course-name{
-  width: 250px;
   display: grid;
   text-align: left;
   font-weight: bold;
+  font-size: 16px;
   padding: 0px 20px 10px 20px;
 }
 
@@ -207,7 +323,7 @@ h3{
   text-align: left;
   font-size: 16px;
   color: #557068;
-  padding: 10px 20px 0px 20px;
+  padding: 10px 20px 5px 20px;
   max-width: 200px;
   max-height: 100px;
   
@@ -215,62 +331,85 @@ h3{
 
 /* Our mission section */
 .mission{  
-  background-color: #1a3a45;
-  background-image: url(../assets/images/home/mission.jpg);
   background-position: bottom;
   background-size: cover;
   color: #ffffff;
+  justify-content: center;
+}
 
-  .mission-text{
-    padding: 50px 80px 50px 80px;
-    width: 700px;
-    display: grid;
-    text-shadow: 0px 0px 5px #3b3b3b;
-    color: #ffffff;
+@keyframes typing {
+  0% {
+    width: 0;
   }
-  
+  20%{
+    width: 100%;
+  }
+  100%{
+    width: 100%;
+  }
+}
+
+.mission-text{
+  width: 0;
+  text-shadow: 0px 0px 5px #3b3b3b;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+  overflow: hidden;
+  animation: typing 5s steps(50, end) infinite;
+}
+
+.mission-text-wrapper{
+  display: inline-block;
+  margin: 10px 80px 30px 80px;
+  width: 700px;
+  height: 240px;
+  overflow: hidden;
+}
+
+.mission-text-header{
+  padding: 30px 80px 10px 80px;
+  display: grid;
+  text-shadow: 0px 0px 5px #3b3b3b;
+  color: #ffffff;
 }
 
 /* Contribute with us section */
-.contribute{
-  background-color: #1a3a45;
-  background-image: url(../assets/images/home/contribute.jpg);
-  background-size: cover;
-  background-position: 50px;
-  color: #ffffff;
+.contribute-wrapper{
+  padding: 30px 80px 50px 80px;
+  display: grid;
+  text-align: center;
+}
 
+.contribute-header{
+  font-size: 40px;
+}
 
-  .contribute-text{
-    padding: 100px 80px 100px 80px;
-    display: grid;
-    text-align: center;
-    text-shadow: 0px 0px 5px #3b3b3b;
+.contribute-text{
+  padding: 10px 0px 0px 0px;
+}
+
+/* Join us button */
+.repo-button{
+  padding: 30px 0px 0px 0px;
+
+  /* Text inside the button */
+  .repo-link{
+    padding: 15px 30px 15px 30px;
+    background-color: #1a3a45;
     color: #ffffff;
-  }
-
-
-  /* Join us button */
-  .repo-button{
-    padding: 20px 0px 0px 0px;
-
-    /* Text inside the button */
-    .repo-link{
-      padding: 15px 30px 15px 30px;
-      background-color: #1a3a45;
-      color: #ffffff;
-      border-radius: 30px;
-      text-decoration: none;
-    }
+    border-radius: 30px;
+    text-decoration: none;
   }
 }
 
 /* Footer section */
 .footer{
-  padding: 50px 0px 30px 0px;
+  padding: 10px 0px 30px 0px;
   display: grid;
-  background-color: #424242;
+  background-color: #3a4435;
   color: #ffffff;
-  
+  align-items: start;
 }
 
 .footer-row{
@@ -337,23 +476,26 @@ h3{
   border-color: transparent;
   border-radius: 30px;
   font-size: 16px;
-  color: #424242;
+  cursor: pointer;
 }
 
 /* Clicked button style */
 .active{
-  background-color: #557068;
+  background-color: #1a3a45;
   color: #ffffff;
+  cursor: pointer;
 }
 
 /* Top navigation */
 .topnav {
-    padding: 0px 80px 0px 80px;
+    top: 10px;
+    left: 80px;
+    right: 80px;
     justify-content: space-between;
     align-items: center;
-    overflow: hidden;
     display: flex;
     background-color: transparent;
+    position: absolute;
   }
   
   .topnav a {
@@ -361,8 +503,8 @@ h3{
     display: flex;
     flex-direction: row;
     text-align: center;
+    text-decoration: none;
     font-weight: bold;
-    color: #424242;
     padding: 14px 10px 14px 10px;
     text-decoration: none;
     font-size: 17px;
@@ -379,28 +521,40 @@ h3{
     display: flex;
     align-items: center;
   }
-  
-  .courses:hover{
+  .menu:hover{
     color: #557068;
+    cursor: pointer;
   }
 
-  /* Semester menu dropdown */
-  .semester-menu:hover{
-    color: #557068;
+  .courses{
+    color: #ffffff;
   }
-  
+
+  .courses:hover{
+    color: #557068;
+    cursor: pointer;
+  }
+
   /* Language switch dropdown */
   .language-switch{
+    color: #ffffff;
+    display: inline-flex;
     border-style: solid;
     border-width: 2px;
     border-radius: 20px;
-    border-color: #424242;
+    border-color: #ffffff;
+    margin: 0px 20px 0px 10px;
     padding: 10px 10px 10px 10px;
   }
 
   .language-switch:hover{
     color: #557068;
     border-color: #557068;
+    cursor: pointer;
+  }
+
+  .language{
+    padding-right: 10px;
   }
 
   /* Hide the link that should open and close the topnav on small screens */

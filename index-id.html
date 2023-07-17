@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" contidt="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" contidt="ie=edge">
+    <title>OpenGeophy | Platform Pembelajaran Geofisika Online</title>
+    <link rel="stylesheet" href="./resources/style.css">
+    <link rel="icon" href="./assets/images/logo/default-logo.png" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="./resources/scripts/scroll.js"></script>
+    <script src="./resources/scripts/toggle-active-theme.js"></script>
+    <script src="./resources/scripts/toggle-active-button.js"></script>
+    <script src="./resources/scripts/assign-course-cover.js"></script>
+</head>
+
+<body class="light-theme" id="body-id">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="navbar-wrapper">
+      <div class="topnav" id="myTopnav">
+        <span class="logo-wrapper">
+          <span class="logo">
+            <a href="./index-id.html">
+              <img src="./assets/images/logo/logo-compact-horizontal.png" width=150px>
+            </a>
+          </span>
+        </span>
+        <span class="menu">
+          <a href="#courses">
+            <div class="courses" lang="id">Mata Kuliah</div>
+          </a>
+  
+          <a href="./index-en.html">
+            <div class="language-switch">
+                <div class="language">ID</div>
+                <i class="fa fa-globe"></i>
+            </div>
+          </a>
+          
+          <div class="mode-switch">
+            <i class="fa fa-sun-o"></i>
+          </div>
+        </span>
+        
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+    
+    <!--Web contidt starts here-->
+    <!--Planning to use class lang id to make this bilingual-->
+    <div id="main" class="lang id">
+      <div class="header">
+        <div class="header-text" lang="id">
+          <h3>OpenGeophy</h3>
+          <h1>Platform pembelajaran geofisika daring.</h1>
+        </div>
+  
+      <div class="search_bar">
+        <input class="search_form" type="text" placeholder="Cari topik...">
+        <a id="button" class="search_button" href="#" lang="id">Cari</a>
+      </div>
+      </div>
+  
+      <div class="introduction-section">
+        <div class="intro-header" lang="id">
+          <h2>Apa itu OpenGeophy?</h2>
+        </div>
+        <div class="intro-text" lang="id">
+          OpenGeophy adalah platform pembelajaran Geofisika yang bertujuan untuk membantu mahasiswa di seluruh dunia yang tertarik mempelajari geofisika di universitas. Platform ini dibuat berdasarkan kurikulum sarjana Teknik Geofisika di Institut Teknologi Bandung, Indonesia.</p>
+          Di sini, Anda dapat midemukan materi, latihan soal, dan soal ujian.</p>
+        </div>
+      </div>
+  
+      <div id="courses" class="curriculum">
+        <div class="curriculum-header">
+          <h2 class="course-by-year">Mata kuliah berdasarkan tahun</h2>
+          <div class="year-wrapper">
+            <button id="first-year" class="year-button active" lang="id">Tahun ke-1</button>
+            <button id="second-year" class="year-button" lang="id">Tahun ke-2</button>
+            <button id="third-year" class="year-button" lang="id">Tahun ke-3</button>
+            <button id="fourth-year" class="year-button" lang="id">Tahun ke-4</button>
+          </div>
+        </div>
+        
+        <div class="course-wrapper">
+          <span class="semester-and-button">
+            <h3 class="first-year" lang="id">Semester Ganjil</h3>
+            <div class="carousel-button">
+              <span id="button" class="prev-button">
+                <a><i class="fa fa-chevron-left"></i> Prev</a>
+              </span>
+              <span id="button" class="next-button">
+                <a>Next <i class="fa fa-chevron-right"></i></a>
+              </span>
+            </div>
+          </span>
+
+          <div id="first-year-course" class="semester">
+            <div class="course-list">
+              <a href="./MA1101-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">MA1101</div>
+                  <div class="course-name" lang="id">Matematika IA</p></div>
+                </div>
+              </a>
+              
+              <a href="./FI1101-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">FI1101</div>
+                  <div class="course-name" lang="id">Fisika IA</p></div>
+                </div>
+              </a>
+
+              <a href="./KI1101-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">KI1101</div>
+                  <div class="course-name" lang="id">Kimia IA</p></div>
+                </div>
+              </a>
+
+              <a href="./KU1102-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">KU1102</div>
+                  <div class="course-name" lang="id">Pengenalan Komputasi</p></div>
+                </div>
+              </a>
+
+              <a href="./KU1024-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">KU1024</div>
+                  <div class="course-name" lang="id">Bahasa Inggris</p></div>
+                </div>
+              </a>
+
+              <a href="./KU1164-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">KU1164</div>
+                  <div class="course-name" lang="id">Pengenalan Sumberdaya Mineral dan Energi</p></div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div id="second-year-course" class="semester">
+            <div class="course-list">
+              <a href="./TG2101-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">TG2101</div>
+                  <div class="course-name" lang="id">Geomatematika I</p></div>
+                </div>
+              </a>
+
+              <a href="./TG2102-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">TG2102</div>
+                  <div class="course-name" lang="id">Gelombang dalam Geofisika</p></div>
+                </div>
+              </a>
+              
+              <a href="./TG2103-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">TG2103</div>
+                  <div class="course-name" lang="id">Geofisika Dasar</p></div>
+                </div>
+              </a>
+
+              <a href="./TG2104-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">TG2104</div>
+                  <div class="course-name" lang="id">Instrumentasi Geofisika Dasar</p></div>
+                </div>
+              </a>
+
+              <a href="./TG2105-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">TG2105</div>
+                  <div class="course-name" lang="id">Komputasi Geofisika</p></div>
+                </div>
+              </a>
+
+              <a href="./GL2111-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">GL2111</div>
+                  <div class="course-name" lang="id">Geologi Fisik</p></div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div id="third-year-course" class="semester">
+            <div class="course-list">
+              <a href="./GL2012-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">GL2012</div>
+                  <div class="course-name" lang="id">Geologi Struktur</p></div>
+                </div>
+              </a>
+
+              <a href="./GL3053-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">GL3053</div>
+                  <div class="course-name" lang="id">Sedimentologi dan Stratigrafi<p></div>
+                </div>
+              </a>
+
+              <a href="./TG3310-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">TG3310</div>
+                  <div class="course-name" lang="id">Analisis Sinyal Geofisika</p></div>
+                </div>
+              </a>
+
+              <a href="./TG3102-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">TG3102</div>
+                  <div class="course-name" lang="id">Geostatistika II</p></div>
+                </div>
+              </a>
+
+              <a href="./TG3109-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">TG3109</div>
+                  <div class="course-name" lang="id">Seismik Refraksi</p></div>
+                </div>
+              </a>
+
+              <a href="./TG3132-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">TG3132</div>
+                  <div class="course-name" lang="id">Mekanika Kerak Bumi</p></div>
+                </div>
+              </a>
+            </div>
+          </div>
+  
+          <div id="fourth-year-course" class="semester">
+            <div class="course-list">
+              <a href="./TG4001-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">TG4001</div>
+                  <div class="course-name" lang="id">Komunikasi Geofisika</p></div>
+                </div>
+              </a>
+
+              <a href="./TG4162-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">TG4162</div>
+                  <div class="course-name" lang="id">Interpretasi Seismik</p></div>
+                </div>
+              </a>
+
+              <a href="./TG4141-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">TG4141</div>
+                  <div class="course-name" lang="id">Inversi Geofisika</p></div>
+                </div>
+              </a>
+
+              <a href="./TG4029-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">TG4029</div>
+                  <div class="course-name" lang="id">Kapita Selekta Geofisika</p></div>
+                </div>
+              </a>
+            </div>
+          </div>
+        
+          <span class="semester-and-button">
+            <h3 id="second-year" lang="id">Semester Genap</h3>
+            <div class="carousel-button">
+              <span id="button" class="prev-button">
+                <a onclick="scrollLeft()"><i class="fa fa-chevron-left"></i> Prev</a>
+              </span>
+              <span id="button" class="next-button">
+                <a onclick="scrollRight()">Next <i class="fa fa-chevron-right"></i></a>
+              </span>
+            </div>
+          </span>
+          
+          <div id="first-year-course-even" class="semester">
+            <div class="course-list">
+              <a href="./MA1202-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">MA1202</div>
+                  <div class="course-name" lang="id">Matematika IIA</p></div>
+                </div>
+              </a>
+
+              <a href="./FI201-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">FI1201</div>
+                  <div class="course-name" lang="id">Fisika IIA</p></div>
+                </div>
+              </a>
+
+              <a href="./KI1201-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">KI1201</div>
+                  <div class="course-name" lang="id">Kimia IIA</p></div>
+                </div>
+              </a>
+
+              <a href="./KU1101-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code" lang="id">KU1101</div>
+                  <div class="course-name" lang="id">Tata Tulis Karya Ilmiah</p></div>
+                </div>
+              </a>
+
+              <a href="./KU1202-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">KU1202</div>
+                  <div class="course-name" lang="id">Pengenalan Rekayasa dan Desain</p></div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div id="second-year-course-even" class="semester">
+            <div class="course-list">
+              <a href="./GD2001-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">GD2001</div>
+                  <div class="course-name" lang="id">Pengenalan Surveying</p></div>
+                </div>
+              </a>
+
+              <a href="./GL2043-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">GL2043</div>
+                  <div class="course-name" lang="id">Pengenalan Mineralogi dan Petrologi</p></div>
+                </div>
+              </a>
+
+              <a href="./TG2203-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">TG2203</div>
+                  <div class="course-name" lang="id">Geomatematika II</p></div>
+                </div>
+              </a>
+
+              <a href="./TG2204-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">TG2204</div>
+                  <div class="course-name" lang="id">Teori Potensial</p></div>
+                </div>
+              </a>
+
+              <a href="./TG2201-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">TG2201</div>
+                  <div class="course-name" lang="id">Geostatistika I</p></div>
+                </div>
+              </a>
+
+              <a href="./TG2231-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">TG2231</div>
+                  <div class="course-name" lang="id">Seismologi</p></div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div id="third-year-course-even" class="semester">
+            <div class="course-list">
+              <a href="./TG3201-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">TG3201</div>
+                  <div class="course-name" lang="id">Termodinamika Kerak Bumi dan Fluida</div>
+                </div>
+              </a>
+              
+              <a href="./TG3261-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">TG3261</div>
+                  <div class="course-name" lang="id">Akuisisi Data Seismik</div>
+                </div>
+              </a>
+
+              <a href="./TG3241-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">TG3241</div>
+                  <div class="course-name" lang="id">Geolistrik & EM</div>
+                </div>
+              </a>
+              
+              <a href="./TG3263-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">TG3263</div>
+                  <div class="course-name" lang="id">Gravitasi & Geomagnetik</div>
+                </div>
+              </a>
+
+              <a href="./TG3222-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">TG3222</div>
+                  <div class="course-name" lang="id">Geodinamika</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div id="fourth-year-course-even" class="semester">
+            <div class="course-list">
+              <a href="./TG4243-id.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">TG4243</div>
+                  <div class="course-name" lang="id">Volkanologi dan Eksplorasi Geotermal</p></div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    <div class="mission">
+          <div class="mission-text-header" lang="id">Misi Kami</div>
+          <div class="mission-text-wrapper">
+            <div class="mission-text" lang="id">OpenGeophy berasal dari gagasan bahwa platform pembelajaran daring yang dibuat didgan baik dapat bermanfaat bagi siapa pun yang belajar untuk midjadi geofisikawan di mana pun di dunia. Melalui inisiatif ini, kami berharap dapat midginspirasi giderasi baru geofisikawan yang hebat dan membantu mereka dalam perjalanan mereka.</div>       
+          </div>
+    </div>
+  
+    <div class="contribute-section">
+        <div class="contribute-wrapper">
+          <div class="contribute-header" lang="id"><b>Mari Berkontribusi!</b></div>
+          <div class="contribute-text" lang="id">Tertarik untuk ikut midgembangkan OpenGeophy? Ayo bergabung didgan kami di GitHub!</div>
+          <div id="button" class="repo-button" lang="id"><a class="repo-link" href="https://github.com/reza-nugraha32/OpenGeophy">Bergabung</a></div>
+        </div>
+    </div>
+  
+    <div class="footer">
+      <div class="footer-row">
+        <span class="footer-logo-and-licidse">
+          <img alt="OpenGeophy Logo" src="./assets/images/logo/logo-compact-horizontal.png" width="200">
+          <div lang="id">
+            Membantu mahasiswa di seluruh dunia <b>mempelajari geofisika.</b></p>
+          </div>
+  
+          <div class="footer-licidse" lang="id"> 
+            Seluruh material dalam web ini berlisidsi CC BY-NC-ND 4.0, kecuali tertulis lain. Lihat <a style="color: #557068; text-decoration: none;" href="https://github.com/reza-nugraha32/OpenGeophy/">readme</a> untuk informasi lebih detil.</p>
+          </div>            
+        </span>
+        
+        <span class="footer-column">
+          <div class="footer-row-list">
+            <h3 lang="id">Bantuan</h3>
+            <a href="#"><div class="footer-list" lang="id">Kontak</div></a>
+            <a href="#"><div class="footer-list" lang="id">FAQs</div></a>
+            <a href="#"><div class="footer-list" lang="id">Berkontribusi</div></a>
+          </div>
+  
+          <div class="footer-row-list">
+            <h3 lang="id">Kebijakan</h3>
+            <a href="#"><div class="footer-list" lang="id">Kebijakan Pidggunaan</div></a>
+            <a href="#"><div class="footer-list" lang="id">Lisidsi</div></a>
+            <a href="#"><div class="footer-list" lang="id">Ketidtuan Privasi</div></a>
+          </div>
+        </span>
+      </div>
+    </div>
+  
+    <div class="watermark">
+      <div class="watermark-row">
+        <div class="watermark-paragraph" lang="id">
+          &copy; 2023, Program Studi Teknik Geofisika, Fakultas Teknik Pertambangan dan Perminyakan, Institut Teknologi Bandung.</p> 
+        </div>
+  
+        <div class="web-button">
+          <a href="http://gf.itb.ac.id"><i class="fa fa-globe" style="font-size:36px;color:white"></i></a>
+        </div>
+  
+        <div class="github-button">
+          <a href="https://github.com/reza-nugraha32/OpenGeophy"><i class="fa fa-github" style="font-size:36px;color:white"></i></a>
+        </div>
+  
+        <div class="fttm-logo">
+          <a href="http://fttm.itb.ac.id"><img alt="FTTM ITB" src="./assets/images/home/FTTM-ITB.png" width="250"></a>
+        </div>
+      </div>
+    </div>
+  </body>
+  </html>
