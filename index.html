@@ -10,6 +10,16 @@
   </head>
 
   <body class="light-mode" id="body-en">
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+      };
+    </script>
+    <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="./resources/scripts/scroll.js"></script>
     <script src="./resources/scripts/toggle-active-theme.js"></script>
@@ -74,6 +84,8 @@
         <div class="section-text" lang="en">
           OpenGeophy is an online learning resources aiming to aid students around the world who's interested in studying geophysics at university. It is based on a four year undergraduate geophysical engineering's curriculum at Institut Teknologi Bandung, Indonesia.</p>
           You can find reading materials, problem sets, and past papers here.
+
+          $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
         </div>
       </div>
 
