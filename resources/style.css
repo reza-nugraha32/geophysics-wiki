@@ -2,7 +2,7 @@
   font-size: 1.3em;
   }
 .logo-horizontal{
-  max-width: 25vh;
+  max-width: 20vh;
 }
 
 .light-mode{
@@ -515,7 +515,7 @@ a:hover{
   }
 
   .footer-list{
-    margin-top: 2vw;
+    margin-top: 5vw;
     text-decoration: none;
   }
 
@@ -541,6 +541,7 @@ a:hover{
   
   .watermark-paragraph{
     display: flex;
+    text-align: center;
     padding: 2vh 0 2vh 0;
   }
 
