@@ -237,8 +237,8 @@ a:hover{
 .mode-switch{
   width: 3vw;
   scale: 1.2;
-  display: block;
-  align-content: center;
+  display: grid;
+  justify-items: center;
   color: #424242;
   background-color: transparent;
 }
@@ -607,7 +607,9 @@ a:hover{
 
   .courses{
     color: #424242;
-    padding-right: 3vw;
+    display: grid;
+    justify-items: center;
+    align-items: center;
   }
 
   .courses:hover{
@@ -616,7 +618,7 @@ a:hover{
   }
 
   .mode-switch{
-    margin: 0 5vh 0 5vh;
+    margin: 0 3vh 0 3vh;
   }
 
 @media screen and (min-width: 800px) {
@@ -854,7 +856,6 @@ a:hover{
   
   /* Switch between light and dark mode */
   .mode-switch{
-    width: 3vh;
     scale: 1.2;
     display: block;
     align-content: center;
