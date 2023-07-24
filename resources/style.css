@@ -426,16 +426,16 @@ a:hover{
     text-align: left;
     font-weight: bold;
     font-size: 0.8em;
-    padding: 5vw 3vw 2vw 3vw;
+    padding: 3vw 3vw 2vw 3vw;
   }
   
   .course-code{
     display: flex;
     text-decoration: none;
     text-align: left;
-    font-size: 0.8em;
+    font-size: 0.7em;
     color: #526D82;
-    padding: 2vw 3vw 2vw 3vw;
+    padding: 2vw 1vw 2vw 3vw;
     max-height: 0;
   }  
 }
