@@ -1,3 +1,7 @@
+.MathJax {
+  font-size: 1.3em;
+  }
+  
 .light-mode{
   font-family: "Helvetica", sans-serif;
   font-size: 1.2em;
@@ -7,7 +11,7 @@
 
   .topnav {
     background-color: #ffffff;
-    box-shadow: 0 0 2vh 0 #b4b4b4;
+    box-shadow: 0 0 2vw 0 #b4b4b4;
   }
 
   .header-text{
@@ -41,24 +45,24 @@
   
   .section-header{
     color: #27374D;
-    padding-bottom: 2vh;
+    padding-bottom: 2vw;
   }
 
   .curriculum{
-    box-shadow: 0 0 2vh 0 #9DB2BF;
+    box-shadow: 0 0 2vw 0 #9DB2BF;
     border-width: 0;
     border-color: #424242;
   }
 
   .course-box{
-    box-shadow: 0 0 2vh 0 #9DB2BF;
+    box-shadow: 0 0 2vw 0 #9DB2BF;
     text-decoration: none;
     border-style: none;
-    border-radius: 3vh;
+    border-radius: 3vw;
   }
 
   .course-box:hover{
-    box-shadow: 0 0 2vh 0.5vh #9DB2BF;
+    box-shadow: 0 0 2vw 0.5vw #9DB2BF;
   }
 
   .course-name{
@@ -123,7 +127,7 @@
   
   .section-header{
     color: #9DB2BF;
-    padding-bottom: 2vh;
+    padding-bottom: 2vw;
   }
 
   .section-text a{
@@ -150,7 +154,7 @@
     border-style: solid;
     border-width: 0.07em;
     border-color: #424242;
-    border-radius: 3vh;
+    border-radius: 3vw;
   }
 
   .course-box:hover{
@@ -178,18 +182,18 @@
 
 /* Wrapper for any section */
 .section{
-  padding: 3vh 20vh 3vh 20vh;
+  padding: 3vw 20vw 3vw 20vw;
 
   /* Section header for any text section */
   .section-header{
     margin-bottom: 0;
     margin-top: 0;
-    padding-bottom: 2.5vh;
+    padding-bottom: 2.5vw;
   }
 
   /* Section text is use for plain text for any text section */
   .section-text{
-    margin-bottom: 4vh;
+    margin-bottom: 4vw;
   }
 }
 
@@ -213,7 +217,7 @@ h3{
 
 /* Add space between main section and footer section */
 .spacer{
-  padding-bottom: 25vh;
+  padding-bottom: 25vw;
 }
 
 a{
@@ -228,7 +232,7 @@ a:hover{
 
 /* Switch between light and dark mode */
 .mode-switch{
-  width: 3vh;
+  width: 3vw;
   scale: 1.2;
   display: block;
   align-content: center;
@@ -255,11 +259,11 @@ a:hover{
 /* Header text of the page*/
 .header{
   .header-text{
-    padding: 5vh 20vh 1vh 20vh;
+    padding: 5vw 20vw 1vw 20vw;
   }
 
   .page-title{
-    padding-top: 2vh;
+    padding-top: 2vw;
     border-top: solid;
     border-color: #424242;
     border-width: 0.07em;
@@ -270,24 +274,24 @@ a:hover{
 
 /* Search bar in the header */
 .search_bar{
-  margin: 2vh 20vh 8.3vh 20vh;
+  margin: 2vw 20vw 8.3vw 20vw;
   display: grid;
 
   .search_form{  
-    padding: 2.5vh 3vh 2.5vh 3vh;
+    padding: 2.5vw 3vw 2.5vw 3vw;
     font-size: 0.9em;
     border-style: solid;
-    border-radius: 3vh;
+    border-radius: 3vw;
     border-color: transparent;
     background-color: #ffffff;
     color: #424242;}
   
   .search_button{
-    padding: 2.5vh 2vh 2.5vh 2vh;
-    margin-top: 2vh;
+    padding: 2.5vw 2vw 2.5vw 2vw;
+    margin-top: 2vw;
     border-style: solid;
-    border-radius: 3vh;
-    max-width: 20vh;
+    border-radius: 3vw;
+    max-width: 20vw;
     text-align: center;
     text-decoration: none;
     border-color: transparent;
@@ -307,10 +311,10 @@ a:hover{
   color: #ffffff;
   display: inline-flex;
   margin: 0 0 0 0;
-  padding: 2vh 0 2vh 0;
+  padding: 2vw 0 2vw 0;
 
   .language{
-    padding-left: 2vh;
+    padding-left: 2vw;
     font-size: 0.8em;
   }
   
@@ -326,11 +330,11 @@ a:hover{
 
 /* Courses by year section */
 .curriculum{
-  padding: 5vh 5vh 5vh 5vh;
-  margin: 5vh 20vh 8.3vh 20vh;
+  padding: 5vw 5vw 5vw 5vw;
+  margin: 5vw 20vw 8.3vw 20vw;
   border-style: solid;
   border-color: transparent;
-  border-radius: 3vh;
+  border-radius: 3vw;
 
   .course-by-year{
     display: inline-flex;
@@ -360,7 +364,7 @@ a:hover{
     display: inline-flex;
     justify-content: space-between;
     align-content: center;
-    padding: 2vh 2vh 2vh 2vh;
+    padding: 2vw 2vw 2vw 2vw;
   }
   
   .carousel-button{
@@ -370,12 +374,12 @@ a:hover{
   .prev-button, .next-button{
     background-color: #526D82;
     text-align: center;
-    width: 20vh;
-    height: 5vh;
-    padding: 2vh 2vh 2vh 2vh;
-    margin: 0 2vh 0 0;
+    width: 20vw;
+    height: 5vw;
+    padding: 2vw 2vw 2vw 2vw;
+    margin: 0 2vw 0 0;
     color: #ffffff;
-    border-radius: 3vh;
+    border-radius: 3vw;
     border-width: 0;
     cursor: pointer;
     transition: 0.3s ease;
@@ -386,7 +390,7 @@ a:hover{
   }
   
   .second-semester-text{
-  margin-top: 3vh;
+  margin-top: 3vw;
   }
 
   #second-year-course, #third-year-course, #fourth-year-course{
@@ -415,13 +419,13 @@ a:hover{
     text-align: center;
     align-items: start;
     text-decoration: none;
-    margin: 2vh 2vh 2vh 2vh;
+    margin: 2vw 2vw 2vw 2vw;
   }
   
   .course-box{
-    margin: 2vh 3vh 2vh 3vh;
-    width: 45vh;
-    height: 40vh;
+    margin: 2vw 3vw 2vw 3vw;
+    width: 45vw;
+    height: 40vw;
     align-content: start;
     display: grid;
     overflow: hidden;
@@ -435,8 +439,8 @@ a:hover{
   }
   
   .course-cover{
-    width: 45vh;
-    height: 20vh;
+    width: 45vw;
+    height: 20vw;
     display: grid;
   }
   
@@ -446,7 +450,7 @@ a:hover{
     text-align: left;
     font-weight: bold;
     font-size: 0.9em;
-    padding: 0 3vh 2vh 3vh;
+    padding: 0 3vw 2vw 3vw;
   }
   
   .course-code{
@@ -455,9 +459,9 @@ a:hover{
     text-align: left;
     font-size: 0.9em;
     color: #526D82;
-    padding: 2vh 3vh 2vh 3vh;
-    max-width: 333vh;
-    max-height: 20vh;
+    padding: 2vw 3vw 2vw 3vw;
+    max-width: 333vw;
+    max-height: 20vw;
     
   }  
 }
@@ -485,8 +489,8 @@ a:hover{
 
   .mission-text{
     width: 0;
-    text-shadow: 0 0 8.3vh #3b3b3b;
-    font-size: 5vh;
+    text-shadow: 0 0 8.3vw #3b3b3b;
+    font-size: 5vw;
     font-weight: bold;
     overflow: hidden;
     animation: typing 5s steps(50, end) infinite;
@@ -496,7 +500,7 @@ a:hover{
 
 /* Contribute with us section */
 .contribute-wrapper{
-  padding: 0 20vh 8.3vh 20vh;
+  padding: 0 20vw 8.3vw 20vw;
   display: grid;
   text-align: center;
 
@@ -505,21 +509,21 @@ a:hover{
   }
   
   .contribute-text{
-    padding: 2vh 0 2vh 0;
+    padding: 2vw 0 2vw 0;
   }
 }
 
 
 
 .repo-button{
-  padding: 6.6vh 0 0 0;
+  padding: 6.6vw 0 0 0;
 
   /* Text inside the button */
   .repo-link{
-    padding: 2.5vh 5vh 2.5vh 5vh;
+    padding: 2.5vw 5vw 2.5vw 5vw;
     background-color: #27374D;
     color: #ffffff;
-    border-radius: 5vh;
+    border-radius: 5vw;
     text-decoration: none;
   }
 }
@@ -534,18 +538,18 @@ a:hover{
 .footer{
   border-top: solid;
   border-width: 0.07em;
-  margin: 5vh 20vh 5vh 20vh;
+  margin: 5vw 20vw 5vw 20vw;
   max-width: 100%;
   background-color: #3a4435;
   align-items: start;
   justify-content: space-between;
 
   .logo-horizontal{
-    padding: 2vh 0 2vh 0;
+    padding: 2vw 0 2vw 0;
   }
 
   .footer-row{
-    padding-top: 5vh;
+    padding-top: 5vw;
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -556,15 +560,15 @@ a:hover{
   }
 
   .footer-row-list{
-    padding: 0 8.3vh 0 8.3vh;
+    padding: 0 8.3vw 0 8.3vw;
     text-align: left;
     align-items: center;
     text-decoration: none;
-    min-width: 13vh;  
+    min-width: 13vw;  
   }
 
   .footer-list{
-    margin-top: 2vh;
+    margin-top: 2vw;
     text-decoration: none;
   }
 
@@ -584,7 +588,7 @@ a:hover{
   justify-content: space-between;
 
   .watermark-row{
-    padding: 2vh 20vh 2vh 20vh;
+    padding: 2vw 20vw 2vw 20vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -596,11 +600,11 @@ a:hover{
   }
 
   .web-button{
-    padding: 0 2vh 0 6.6vh;
+    padding: 0 2vw 0 6.6vw;
   }
   
   .github-button{
-    padding: 0 6.6vh 0 2vh;
+    padding: 0 6.6vw 0 2vw;
   }
 }
 
@@ -608,11 +612,11 @@ a:hover{
 
 /* Unclicked button style */
 .year-button{
-  padding: 2.5vh 3vh 2.5vh 3vh;
+  padding: 2.5vw 3vw 2.5vw 3vw;
   background-color: transparent;
   border-width: 0;
   border-color: transparent;
-  border-radius: 5vh;
+  border-radius: 5vw;
   font-size: 0.8em;
   cursor: pointer;
 }
@@ -631,7 +635,7 @@ a:hover{
     justify-content: space-between;
     align-items: center;
     display: flex;
-    padding: 2vh 20vh 2vh 20vh;
+    padding: 2vw 20vw 2vw 20vw;
   }
 
   .topnav a {
@@ -640,7 +644,7 @@ a:hover{
     flex-direction: row;
     text-align: center;
     text-decoration: none;
-    margin: 2.3vh 2vh 2.3vh 2vh;
+    margin: 2.3vw 2vw 2.3vw 2vw;
     text-decoration: none;
     font-size: 1em;
   }
@@ -663,7 +667,7 @@ a:hover{
 
   .courses{
     color: #424242;
-    padding-right: 3vh;
+    padding-right: 3vw;
   }
 
   .courses:hover{
