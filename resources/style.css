@@ -619,7 +619,7 @@ a:hover{
   
     .topnav {
       background-color: #ffffff;
-      box-shadow: 0 0 10px 5px #9DB2BF;
+      box-shadow: 0 0 10px 0px #9DB2BF;
     }
   
     .header-text{
@@ -657,20 +657,20 @@ a:hover{
     }
   
     .curriculum{
-      box-shadow: 0 0 10px 5px #9DB2BF;
+      box-shadow: 0 0 10px 0px #9DB2BF;
       border-width: 0;
       border-color: #424242;
     }
   
     .course-box{
-      box-shadow: 0 0 10px 5px #9DB2BF;
+      box-shadow: 0 0 10px 0px #9DB2BF;
       text-decoration: none;
       border-style: none;
       border-radius: 3vh;
     }
   
     .course-box:hover{
-      box-shadow: 0 0 10px 5px #9DB2BF;
+      box-shadow: 0 0 10px 0px #9DB2BF;
     }
   
     .course-name{
