@@ -1,7 +1,10 @@
 .MathJax {
   font-size: 1.3em;
   }
-  
+.logo-horizontal{
+  max-width: 25vh;
+}
+
 .light-mode{
   font-family: "Helvetica", sans-serif;
   font-size: 1.2em;
@@ -182,7 +185,7 @@
 
 /* Wrapper for any section */
 .section{
-  padding: 3vw 20vw 3vw 20vw;
+  padding: 3vw 5vw 3vw 5vw;
 
   /* Section header for any text section */
   .section-header{
@@ -259,7 +262,7 @@ a:hover{
 /* Header text of the page*/
 .header{
   .header-text{
-    padding: 5vw 20vw 1vw 20vw;
+    padding: 5vw 5vw 1vw 5vw;
   }
 
   .page-title{
@@ -274,7 +277,7 @@ a:hover{
 
 /* Search bar in the header */
 .search_bar{
-  margin: 2vw 20vw 8.3vw 20vw;
+  margin: 2vw 5vw 8.3vw 5vw;
   display: grid;
 
   .search_form{  
@@ -291,7 +294,7 @@ a:hover{
     margin-top: 2vw;
     border-style: solid;
     border-radius: 3vw;
-    max-width: 20vw;
+    max-width: 0;
     text-align: center;
     text-decoration: none;
     border-color: transparent;
@@ -331,7 +334,7 @@ a:hover{
 /* Courses by year section */
 .curriculum{
   padding: 5vw 5vw 5vw 5vw;
-  margin: 5vw 20vw 8.3vw 20vw;
+  margin: 5vw 5vw 8.3vw 5vw;
   border-style: solid;
   border-color: transparent;
   border-radius: 3vw;
@@ -342,13 +345,12 @@ a:hover{
   
   .curriculum-header{
     align-items: center;
-    display: flex;
     justify-content: space-between;
   }
   
   /* Wrapper for years */
   .year-wrapper{
-    margin: 0 0 0 0;
+    margin: 2vw 0 0 0;
     display: inline-flex;
     align-items: center;
     flex-direction: row;
@@ -365,28 +367,6 @@ a:hover{
     justify-content: space-between;
     align-content: center;
     padding: 2vw 2vw 2vw 2vw;
-  }
-  
-  .carousel-button{
-    display: none;
-  }
-  
-  .prev-button, .next-button{
-    background-color: #526D82;
-    text-align: center;
-    width: 20vw;
-    height: 5vw;
-    padding: 2vw 2vw 2vw 2vw;
-    margin: 0 2vw 0 0;
-    color: #ffffff;
-    border-radius: 3vw;
-    border-width: 0;
-    cursor: pointer;
-    transition: 0.3s ease;
-  }
-  
-  .prev-button:hover, .next-button:hover{
-    background-color: #526D82;
   }
   
   .second-semester-text{
@@ -423,9 +403,9 @@ a:hover{
   }
   
   .course-box{
-    margin: 2vw 3vw 2vw 3vw;
-    width: 45vw;
-    height: 40vw;
+    margin: 2vw 3vw 2vw 0;
+    width: 50vw;
+    height: 50vw;
     align-content: start;
     display: grid;
     overflow: hidden;
@@ -439,8 +419,8 @@ a:hover{
   }
   
   .course-cover{
-    width: 45vw;
-    height: 20vw;
+    width: 50vw;
+    height: 25vw;
     display: grid;
   }
   
@@ -449,8 +429,8 @@ a:hover{
     display: grid;
     text-align: left;
     font-weight: bold;
-    font-size: 0.9em;
-    padding: 0 3vw 2vw 3vw;
+    font-size: 0.8em;
+    padding: 5vw 3vw 2vw 3vw;
   }
   
   .course-code{
@@ -460,47 +440,15 @@ a:hover{
     font-size: 0.9em;
     color: #526D82;
     padding: 2vw 3vw 2vw 3vw;
-    max-width: 333vw;
-    max-height: 20vw;
-    
+    max-height: 0;
   }  
 }
 
 
 
-/* Our mission section */
-.mission{  
-  background-position: bottom;
-  background-size: cover;
-  color: #ffffff;
-  justify-content: center;
-
-  @keyframes typing {
-    0% {
-      width: 0;
-    }
-    20%{
-      width: 100%;
-    }
-    100%{
-      width: 100%;
-    }
-  }
-
-  .mission-text{
-    width: 0;
-    text-shadow: 0 0 8.3vw #3b3b3b;
-    font-size: 5vw;
-    font-weight: bold;
-    overflow: hidden;
-    animation: typing 5s steps(50, end) infinite;
-  }
-}
-
-
 /* Contribute with us section */
 .contribute-wrapper{
-  padding: 0 20vw 8.3vw 20vw;
+  padding: 0 5vw 8.3vw 5vw;
   display: grid;
   text-align: center;
 
@@ -538,7 +486,7 @@ a:hover{
 .footer{
   border-top: solid;
   border-width: 0.07em;
-  margin: 5vw 20vw 5vw 20vw;
+  margin: 5vw 5vw 10vw 5vw;
   max-width: 100%;
   background-color: #3a4435;
   align-items: start;
@@ -551,7 +499,6 @@ a:hover{
   .footer-row{
     padding-top: 5vw;
     align-items: center;
-    display: flex;
     justify-content: space-between;
 
     .footer-column{
@@ -560,7 +507,7 @@ a:hover{
   }
 
   .footer-row-list{
-    padding: 0 8.3vw 0 8.3vw;
+    padding: 0 8.3vw 0 0;
     text-align: left;
     align-items: center;
     text-decoration: none;
@@ -581,30 +528,28 @@ a:hover{
 
 /* Watermark section */
 .watermark{
+  padding: 5vw 5vw 5vw 5vw;
   max-width: 100%;
   background-color: #000000;
   color: #ffffff;
   font-size: 0.8em;
-  justify-content: space-between;
-
+ 
   .watermark-row{
-    padding: 2vw 20vw 2vw 20vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    justify-items: center;
   }
-
+  
   .watermark-paragraph{
     display: flex;
-    align-items: center;
+    padding: 2vh 0 2vh 0;
   }
 
   .web-button{
-    padding: 0 2vw 0 6.6vw;
+    padding: 2vh 0 2vh 0;
   }
   
   .github-button{
-    padding: 0 6.6vw 0 2vw;
+    padding: 2vh 0 2vh 0;
   }
 }
 
@@ -635,7 +580,7 @@ a:hover{
     justify-content: space-between;
     align-items: center;
     display: flex;
-    padding: 2vw 20vw 2vw 20vw;
+    padding: 2vw 5vw 2vw 5vw;
   }
 
   .topnav a {
@@ -647,12 +592,6 @@ a:hover{
     margin: 2.3vw 2vw 2.3vw 2vw;
     text-decoration: none;
     font-size: 1em;
-  }
-  
-  /* Wrapper for the logo */
-  .logo-wrapper{
-    align-items: start;
-    display: grid;
   }
 
   /* Wrapper for three menus*/
@@ -675,33 +614,668 @@ a:hover{
     cursor: pointer;
   }
 
-  /* Hide the link that should open and close the topnav on small screens */
-  .topnav .icon {
-    display: none;
+  .mode-switch{
+    margin: 0 2vh 0 2vh;
   }
 
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
-    .menu{
-        display: none;
+@media screen and (min-width: 800px) {
+  .MathJax {
+    font-size: 1.3em;
     }
-    .topnav a.icon {
-      float: right;
-      display: block;
+    
+  .light-mode{
+    font-family: "Helvetica", sans-serif;
+    font-size: 1.2em;
+    color: #424242 ;
+    background-color: #fdfdfd;
+    margin: 0;
+  
+    .topnav {
+      background-color: #ffffff;
+      box-shadow: 0 0 10px 5px #9DB2BF;
+    }
+  
+    .header-text{
+      color: #27374D;
+    }
+  
+    .mode-switch{
+      background-color: transparent;
+    }
+  
+    .language-switch{
+      color: #424242;
+    }
+  
+    .section-text a{
+      color: #526D82;
+    }
+  
+    .course-by-year{
+      color: #27374D;
+    }
+  
+    .year-button{
+      color: #424242;
+    }
+  
+    .active{
+      background-color: #27374D;
+      color: #ffffff;
+    }
+    
+    .section-header{
+      color: #27374D;
+      padding-bottom: 2vh;
+    }
+  
+    .curriculum{
+      box-shadow: 0 0 10px 5px #9DB2BF;
+      border-width: 0;
+      border-color: #424242;
+    }
+  
+    .course-box{
+      box-shadow: 0 0 10px 5px #9DB2BF;
+      text-decoration: none;
+      border-style: none;
+      border-radius: 3vh;
+    }
+  
+    .course-box:hover{
+      box-shadow: 0 0 10px 5px #9DB2BF;
+    }
+  
+    .course-name{
+      color: #424242;
+    }
+  
+    .mission{
+      background: linear-gradient(30deg, #27374D 0%,  #99b87d 100%);
+    }
+  
+    .footer{
+      background-color: transparent;
+      border-color: #424242;
+  
+      .footer-row-list a{
+        color: #424242;
+      }
+    }
+  }    
+  
+  
+  
+  .dark-mode{
+    font-family: "Helvetica", sans-serif;
+    font-size: 1.2em;
+    color: #ffffff !important;
+    background-color: #111111;
+    margin: 0;
+  
+    .topnav {
+      background-color: transparent;
+      box-shadow: none;
+      border-bottom: solid;
+      border-width: 0.07em;
+      border-color: #424242;
+    }
+  
+    .header-text{
+      color:#9DB2BF;
+    }
+    
+    .courses{
+      color: #ffffff;
+    }
+  
+    .mode-switch{
+      color: #ffffff;
+    }
+  
+    .topnav{
+      background-color: transparent;
+    }
+  
+    .mode-switch{
+      color: #ffffff;
+      background-color: transparent;
+    }
+  
+    .language-switch{
+      color: #ffffff;
+    }
+    
+    .section-header{
+      color: #9DB2BF;
+      padding-bottom: 2vh;
+    }
+  
+    .section-text a{
+      color: #9DB2BF;
+    }
+  
+    .year-button{
+      color: #ffffff;
+    }
+  
+    .course-by-year{
+      color: #9DB2BF;
+    }
+  
+    .curriculum{
+      box-shadow: none;
+      border-width: 0.07em;
+      border-color: #424242;
+    }
+  
+    .course-box{
+      box-shadow: none;
+      text-decoration: none;
+      border-style: solid;
+      border-width: 0.07em;
+      border-color: #424242;
+      border-radius: 3vh;
+    }
+  
+    .course-box:hover{
+      box-shadow: none;
+    }
+  
+    .course-name{
+      color: #ffffff;
+    }
+  
+    .mission{
+      background: linear-gradient(30deg, #27374D 40%,  #55996b 100%);
+    }
+  
+    .footer{
+      background-color: transparent;
+      border-color: #424242;
+      
+      .footer-row-list a{
+        color: #ffffff;
+      }
+    }
+  }  
+  
+  
+  /* Wrapper for any section */
+  .section{
+    padding: 3vh 20vh 3vh 20vh;
+  
+    /* Section header for any text section */
+    .section-header{
+      margin-bottom: 0;
+      margin-top: 0;
+      padding-bottom: 2.5vh;
+    }
+  
+    /* Section text is use for plain text for any text section */
+    .section-text{
+      margin-bottom: 4vh;
     }
   }
   
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
-    .topnav.responsive {position: relative;}
-    .topnav.responsive a.icon {
-      position: relative;
-      right: 0;
-      top: 0;
+  
+  
+  /* Use for title heading */
+  h1{
+    margin: 0;
+  }
+  
+  /* Use for headings in text */
+  h2{
+    margin: 0 0 0 0;
+    font-size: 1.7em;
+  }
+  
+  /* Use for subheading */
+  h3{
+    margin: 0 0 0 0;
+  } 
+  
+  /* Add space between main section and footer section */
+  .spacer{
+    padding-bottom: 25vh;
+  }
+  
+  a{
+    text-decoration: none !important;
+  }
+  
+  a:hover{
+    text-decoration: none !important;
+  }
+  
+  
+  
+  /* Switch between light and dark mode */
+  .mode-switch{
+    width: 3vh;
+    scale: 1.2;
+    display: block;
+    align-content: center;
+    color: #424242;
+    background-color: transparent;
+  }
+  
+  .mode-switch:hover{
+    color: #526D82;
+    cursor: pointer;
+  }
+  
+  
+  
+  /* The whole main content */
+  #main {
+    margin: 0;
+    align-items: center;
+    display: grid;
+  }
+  
+  
+  
+  /* Header text of the page*/
+  .header{
+    .header-text{
+      padding: 5vh 20vh 1vh 20vh;
     }
-    .topnav.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
+  
+    .page-title{
+      padding-top: 2vh;
+      border-top: solid;
+      border-color: #424242;
+      border-width: 0.07em;
     }
   }
+  
+  
+  
+  /* Search bar in the header */
+  .search_bar{
+    margin: 2vh 20vh 8.3vh 20vh;
+    display: grid;
+  
+    .search_form{  
+      padding: 2.5vh 3vh 2.5vh 3vh;
+      font-size: 0.9em;
+      border-style: solid;
+      border-radius: 3vh;
+      border-color: transparent;
+      background-color: #ffffff;
+      color: #424242;}
+    
+    .search_button{
+      padding: 2.5vh 2vh 2.5vh 2vh;
+      margin-top: 2vh;
+      border-style: solid;
+      border-radius: 3vh;
+      max-width: 20vh;
+      text-align: center;
+      text-decoration: none;
+      border-color: transparent;
+      background-color: #27374D;
+      color: #ffffff;
+    }
+  
+    .search_button:hover{
+      background-color: #526D82;
+    }
+  }
+  
+  
+  
+  /* Language switch */
+  .language-switch{
+    color: #ffffff;
+    display: inline-flex;
+    margin: 0 0 0 0;
+    padding: 2vh 0 2vh 0;
+  
+    .language{
+      padding-left: 2vh;
+      font-size: 0.8em;
+    }
+    
+  }
+  
+  .language-switch:hover{
+    color: #526D82;
+    cursor: pointer;
+  }
+  
+  
+  
+  
+  /* Courses by year section */
+  .curriculum{
+    padding: 5vh 5vh 5vh 5vh;
+    margin: 5vh 20vh 8.3vh 20vh;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 3vh;
+  
+    .course-by-year{
+      display: inline-flex;
+    }
+    
+    .curriculum-header{
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    /* Wrapper for years */
+    .year-wrapper{
+      margin: 0 0 0 0;
+      display: inline-flex;
+      align-items: center;
+      flex-direction: row;
+    }
+    
+    .course-wrapper{
+      display: grid;
+      justify-content: space-between;
+    
+    }
+    
+    .semester-and-button{
+      display: inline-flex;
+      justify-content: space-between;
+      align-content: center;
+      padding: 2vh 2vh 2vh 2vh;
+    }
+    
+    .second-semester-text{
+    margin-top: 3vh;
+    }
+  
+    #second-year-course, #third-year-course, #fourth-year-course{
+      width: 0;
+      height: 0;
+    }
+    
+    #second-year-course-even, #third-year-course-even, #fourth-year-course-even{
+      width: 0;
+      height: 0;
+    }
+    
+    #first-year-course, #first-year-course-even{
+      height: 100%;
+      width: 100%;
+    }
+    
+    .semester{
+      text-align: left;
+      align-items: start;
+      overflow-x: scroll;
+    }
+    
+    .course-list{
+      display: inline-flex;
+      text-align: center;
+      align-items: start;
+      text-decoration: none;
+      margin: 2vh 2vh 2vh 2vh;
+    }
+    
+    .course-box{
+      margin: 2vh 3vh 2vh 3vh;
+      width: 45vh;
+      height: 40vh;
+      align-content: start;
+      display: grid;
+      overflow: hidden;
+      text-decoration: none;
+    }
+    
+    .course-box:hover{
+      scale: 1.05;
+      opacity: 0.7;
+      transition: 0.3s ease;
+    }
+    
+    .course-cover{
+      width: 45vh;
+      height: 20vh;
+      display: grid;
+    }
+    
+    .course-name{
+      text-decoration: none;
+      display: grid;
+      text-align: left;
+      font-weight: bold;
+      font-size: 0.9em;
+      padding: 0 3vh 2vh 3vh;
+    }
+    
+    .course-code{
+      display: flex;
+      text-decoration: none;
+      text-align: left;
+      font-size: 0.9em;
+      color: #526D82;
+      padding: 2vh 3vh 2vh 3vh;
+      max-width: 333vh;
+      max-height: 20vh;
+      
+    }  
+  }
+  
+  
+  
+  /* Our mission section */
+  .mission{  
+    background-position: bottom;
+    background-size: cover;
+    color: #ffffff;
+    justify-content: center;
+  
+    @keyframes typing {
+      0% {
+        width: 0;
+      }
+      20%{
+        width: 100%;
+      }
+      100%{
+        width: 100%;
+      }
+    }
+  
+    .mission-text{
+      width: 0;
+      text-shadow: 0 0 8.3vh #3b3b3b;
+      font-size: 5vh;
+      font-weight: bold;
+      overflow: hidden;
+      animation: typing 5s steps(50, end) infinite;
+    }
+  }
+  
+  
+  /* Contribute with us section */
+  .contribute-wrapper{
+    padding: 0 20vh 8.3vh 20vh;
+    display: grid;
+    text-align: center;
+  
+    .contribute-header{
+      font-size: 1em;
+    }
+    
+    .contribute-text{
+      padding: 2vh 0 2vh 0;
+    }
+  }
+  
+  
+  
+  .repo-button{
+    padding: 6.6vh 0 0 0;
+  
+    /* Text inside the button */
+    .repo-link{
+      padding: 2.5vh 5vh 2.5vh 5vh;
+      background-color: #27374D;
+      color: #ffffff;
+      border-radius: 5vh;
+      text-decoration: none;
+    }
+  }
+  
+  .repo-link:hover{
+    background-color: #526D82;
+    }
+  
+  
+  
+  /* Footer section */
+  .footer{
+    border-top: solid;
+    border-width: 0.07em;
+    margin: 5vh 20vh 5vh 20vh;
+    max-width: 100%;
+    background-color: #3a4435;
+    align-items: start;
+    justify-content: space-between;
+  
+    .logo-horizontal{
+      padding: 2vh 0 2vh 0;
+    }
+  
+    .footer-row{
+      padding-top: 5vh;
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+  
+      .footer-column{
+        display: flex;
+      }
+    }
+  
+    .footer-row-list{
+      padding: 0 8.3vh 0 8.3vh;
+      text-align: left;
+      align-items: center;
+      text-decoration: none;
+      min-width: 13vh;  
+    }
+  
+    .footer-list{
+      margin-top: 2vh;
+      text-decoration: none;
+    }
+  
+    .footer-list:hover{
+      color: #526D82;
+    }
+  }
+  
+  
+  
+  /* Watermark section */
+  .watermark{
+    max-width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 0.8em;
+    justify-content: space-between;
+  
+    .watermark-row{
+      padding: 2vh 20vh 2vh 20vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .watermark-paragraph{
+      display: flex;
+      align-items: center;
+    }
+  
+    .web-button{
+      padding: 0 2vh 0 6.6vh;
+    }
+    
+    .github-button{
+      padding: 0 6.6vh 0 2vh;
+    }
+  }
+  
+  
+  
+  /* Unclicked button style */
+  .year-button{
+    padding: 2.5vh 3vh 2.5vh 3vh;
+    background-color: transparent;
+    border-width: 0;
+    border-color: transparent;
+    border-radius: 5vh;
+    font-size: 0.8em;
+    cursor: pointer;
+  }
+  
+  /* Clicked button style */
+  .active{
+    background-color: #27374D;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  
+  
+  
+  /* Top navigation */
+  .topnav {
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+      padding: 2vh 20vh 2vh 20vh;
+    }
+  
+    .topnav a {
+      float: left;
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      text-decoration: none;
+      margin: 2.3vh 2vh 2.3vh 2vh;
+      text-decoration: none;
+      font-size: 1em;
+    }
+    
+    /* Wrapper for the logo */
+    .logo-wrapper{
+      align-items: start;
+      display: grid;
+    }
+  
+    /* Wrapper for three menus*/
+    .menu{
+      display: flex;
+      align-items: center;
+    }
+    .menu:hover{
+      color: #526D82;
+      cursor: pointer;
+    }
+  
+    .courses{
+      color: #424242;
+      padding-right: 3vh;
+    }
+  
+    .courses:hover{
+      color: #526D82;
+      cursor: pointer;
+    }
+  
+    /* Hide the link that should open and close the topnav on small screens */
+    .topnav .icon {
+      display: none;
+    }
+}
