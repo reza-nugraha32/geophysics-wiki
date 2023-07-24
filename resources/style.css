@@ -602,7 +602,7 @@ a:hover{
   }
 
   .mode-switch{
-    margin: 0 3vh 0 3vh;
+    margin: 0 3vh 0 0;
   }
 
 @media screen and (min-width: 800px) {
