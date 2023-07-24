@@ -106,10 +106,6 @@
   .header-text{
     color:#9DB2BF;
   }
-  
-  .courses{
-    color: #ffffff;
-  }
 
   .mode-switch{
     color: #ffffff;
@@ -605,18 +601,6 @@ a:hover{
     cursor: pointer;
   }
 
-  .courses{
-    color: #424242;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-  }
-
-  .courses:hover{
-    color: #526D82;
-    cursor: pointer;
-  }
-
   .mode-switch{
     margin: 0 3vh 0 3vh;
   }
@@ -728,10 +712,6 @@ a:hover{
       color:#9DB2BF;
     }
     
-    .courses{
-      color: #ffffff;
-    }
-  
     .mode-switch{
       color: #ffffff;
     }
@@ -1264,20 +1244,5 @@ a:hover{
     .menu:hover{
       color: #526D82;
       cursor: pointer;
-    }
-  
-    .courses{
-      color: #424242;
-      padding-right: 3vh;
-    }
-  
-    .courses:hover{
-      color: #526D82;
-      cursor: pointer;
-    }
-  
-    /* Hide the link that should open and close the topnav on small screens */
-    .topnav .icon {
-      display: none;
     }
 }
