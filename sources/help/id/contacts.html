@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Start of copyable header template -->
 <html lang="id">
   <head>
     <meta charset="UTF-8">
@@ -10,32 +11,39 @@
   </head>
 
   <body class="light-mode" id="body-id">
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          tags: 'ams'
+        }
+      };
+    </script>
+    <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../../resources/scripts/scroll.js"></script>
     <script src="../../../resources/scripts/toggle-active-theme.js"></script>
+    <script src="../../../resources/scripts/toggle-active-button.js"></script>
+    <script src="../../../resources/scripts/assign-course-cover.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div class="navbar-wrapper">
       <div class="topnav" id="myTopnav">
         <span class="logo-wrapper">
           <span class="logo">
             <a href="../../../index-id.html">
-              <img src="../../../assets/images/logo/logo-compact-horizontal.png" width=150px>
+              <img src="../../../assets/images/logo/logo-compact-horizontal.png" width=200vh>
             </a>
           </span>
         </span>
         <span class="menu">
-          <a href="../../../index-id.html#courses">
+          <a href="../../../index-id.html">
             <div class="courses" lang="id">Mata Kuliah</div>
-          </a>
-
-          <a href="../en/contacts.html">
-            <div class="language-switch">
-              <div class="language">ID</div>
-              <i class="fa fa-globe"></i>
-          </div>
           </a>
           
           <div class="mode-switch">
-            <i class="fa fa-sun-o"></i>
+            <i class="fa fa-moon-o"></i>
           </div>
         </span>
         
@@ -46,14 +54,22 @@
     </div>
     
     <!--Web content starts here-->
-    <!--Planning to use class lang en to make this bilingual-->
-    <div id="main" class="lang en">
+    <!--Header-->
+    <!--Use this for the title of the page-->
+    <div id="main" class="lang id"> 
       <div class="header">
         <div class="header-text" lang="id">
-          <h3>OpenGeophy</h3>
-          <h1>Kontak</h1>
+          <!-- Language switch-->
+          <a href="../../../sources/help/en/contacts.html">
+            <div class="language-switch">
+                <i class="fa fa-language"></i>
+                <div class="language">Bahasa Indonesia</div>              
+            </div>
+          </a>
+          <h1 class="page-title">Kontak</h1>
         </div>
       </div>
+      <!-- End of copyable header template -->
       
       <div class="section">
         <div class="section-text" lang="id">
@@ -63,33 +79,36 @@
     </div>
 
     <div class="spacer"></div>
-
+    
+    <!-- Start of copyable footer template -->
     <div class="footer">
       <div class="footer-row">
         <span class="footer-logo-and-license">
-          <img alt="OpenGeophy Logo" src="../../../assets/images/logo/logo-compact-horizontal.png" width="200">
+          <a href="../../../index-id.html">
+            <img class="logo-horizontal" src="../../../assets/images/logo/logo-compact-horizontal.png" width=200vh>
+          </a>
           <div lang="id">
             Membantu mahasiswa di seluruh dunia <b>mempelajari geofisika.</b></p>
           </div>
 
           <div class="footer-license" lang="id"> 
-            Seluruh isi dalam web ini berlisensi CC BY-NC-ND 4.0, kecuali tertulis lain. Lihat <a style="color: #557068; text-decoration: none;" href="https://github.com/reza-nugraha32/OpenGeophy/">readme</a> untuk informasi lebih detil.</p>
+            Seluruh isi dalam web ini berlisensi MIT license, kecuali tertulis lain. Lihat <a style="color: #526D82; text-decoration: none;" href="https://github.com/reza-nugraha32/opengeophy/">readme</a> untuk detail lebih lanjut.</p>
           </div>        
         </span>
         
         <span class="footer-column">
           <div class="footer-row-list">
             <h3 lang="id">Bantuan</h3>
-            <a href="contacts.html"><div class="footer-list" lang="id">Kontak</div></a>
-            <a href="faqs.html"><div class="footer-list" lang="id">FAQs</div></a>
-            <a href="contribute.html"><div class="footer-list" lang="id">Berkontribusi</div></a>
+            <a href="../../../sources/help/id/contacts.html"><div class="footer-list" lang="id">Kontak</div></a>
+            <a href="../../../sources/help/id/faqs.html"><div class="footer-list" lang="id">FAQs</div></a>
+            <a href="../../../sources/help/id/contribute.html"><div class="footer-list" lang="id">Berkontribusi</div></a>
           </div>
 
           <div class="footer-row-list">
             <h3 lang="id">Kebijakan</h3>
-            <a href="../../policy/en/tos.html"><div class="footer-list" lang="id">Kebijakan Penggunaan</div></a>
-            <a href="../../policy/en/license.html"><div class="footer-list" lang="id">Lisensi</div></a>
-            <a href="../../policy/en/privacy.html"><div class="footer-list" lang="id">Ketentuan Privasi</div></a>
+            <a href="../../../sources/policy/id/tos.html"><div class="footer-list" lang="id">Ketentuan Pemakaian</div></a>
+            <a href="../../../sources/policy/id/license.html"><div class="footer-list" lang="id">Lisensi</div></a>
+            <a href="../../../sources/policy/id/privacy.html"><div class="footer-list" lang="id">Ketentuan Privasi</div></a>
           </div>
         </span>
       </div>
@@ -98,7 +117,7 @@
     <div class="watermark">
       <div class="watermark-row">
         <div class="watermark-paragraph" lang="id">
-            &copy; 2023 Program Studi Teknik Geofisika, Fakultas Teknik Pertambangan dan Perminyakan, Institut Teknologi Bandung.</p> 
+          &copy; 2023 Program Studi Teknik Geofisika, Fakultas Teknik Pertambangan dan Perminyakan, Institut Teknologi Bandung.</p> 
         </div>
         
         <div class="web-button">
@@ -114,5 +133,6 @@
         </div>
       </div>
     </div>
+    <!-- End of copyable footer template -->
 </body>
 </html>

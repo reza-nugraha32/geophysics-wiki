@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+<!-- Start of copyable header template -->
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>OpenGeophy | Online Geophysics Learning Resources</title>
+    <title>Geophysics Wiki</title>
     <link rel="stylesheet" href="./resources/style.css">
     <link rel="icon" href="./assets/images/logo/default-logo.png" type="image/x-icon">  
   </head>
@@ -13,7 +14,8 @@
     <script>
       MathJax = {
         tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']]
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          tags: 'ams'
         }
       };
     </script>
@@ -31,7 +33,7 @@
         <span class="logo-wrapper">
           <span class="logo">
             <a href="./index.html">
-              <img src="./assets/images/logo/logo-compact-horizontal.png" width=150px>
+              <img src="./assets/images/logo/logo-compact-horizontal.png" width=200vh>
             </a>
           </span>
         </span>
@@ -39,16 +41,9 @@
           <a href="#courses">
             <div class="courses" lang="en">Courses</div>
           </a>
-
-          <a href="./index-id.html">
-            <div class="language-switch">
-              <div class="language">EN</div>
-              <i class="fa fa-globe"></i>
-          </div>
-          </a>
           
           <div class="mode-switch">
-            <i class="fa fa-sun-o"></i>
+            <i class="fa fa-moon-o"></i>
           </div>
         </span>
         
@@ -59,14 +54,23 @@
     </div>
     
     <!--Web content starts here-->
-    <!--Planning to use class lang en to make this bilingual-->
-    <div id="main" class="lang en">
+    <!--Header-->
+    <!--Use this for the title of the page-->
+    <div id="main" class="lang en"> 
       <div class="header">
         <div class="header-text" lang="en">
-          <h3>OpenGeophy</h3>
+          <!-- Language switch-->
+          <a href="./index-id.html">
+            <div class="language-switch">
+                <i class="fa fa-language"></i>
+                <div class="language">English</div>              
+            </div>
+          </a>
+          <h3 class="page-title">Geophysics Wiki</h3>
           <h1>Online geophysics learning resources.</h1>
         </div>
       
+      <!--Search bar under construction-->
       <!--
         <div class="search_bar">
           <input class="search_form" type="text" placeholder="Search topics...">
@@ -74,18 +78,22 @@
         </div>
       -->
       </div>
-      
+      <!-- End of copyable header template -->
 
       <div class="section">
         <div class="section-header" lang="en">
-          <h2>What is OpenGeophy?</h2>
+          <h2>What is Geophysics Wiki?</h2>
         </div>
 
         <div class="section-text" lang="en">
-          OpenGeophy is an online learning resources aiming to aid students around the world who's interested in studying geophysics at university. It is based on a four year undergraduate geophysical engineering's curriculum at Institut Teknologi Bandung, Indonesia.</p>
+          Geophysics Wiki is an online resource for students studying geophysics. It's based on a four-year undergraduate geophysical engineering program from Institut Teknologi Bandung, Indonesia.</p>
           You can find reading materials, problem sets, and past papers here.
 
-          $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+          For starter, here's an equation for the complex Fourier transform,
+
+          $$\begin{equation}
+          H(f) = {\int_{-\infty}^{\infty}} e^{-i2\pi fa} e^{i2\pi ft} df. \nonumber
+          \end{equation}$$
         </div>
       </div>
 
@@ -102,15 +110,7 @@
         
         <div class="course-wrapper">
           <span class="semester-and-button">
-            <h3 class="first-year" lang="en">1st Semester</h3>
-            <div class="carousel-button">
-              <span id="button" class="prev-button">
-                <a><i class="fa fa-chevron-left"></i> Prev</a>
-              </span>
-              <span id="button" class="next-button">
-                <a>Next <i class="fa fa-chevron-right"></i></a>
-              </span>
-            </div>
+            <div class="first-semester-text" lang="en">1st Semester</div>
           </span>
 
           <div id="first-year-course" class="semester">
@@ -302,19 +302,20 @@
                   <div class="course-name" lang="en">Capita of Selecta in Geophysics</p></div>
                 </div>
               </a>
+
+              <a href="./GL2213-en.html">
+                <div class="course-box">
+                  <div class="course-cover"></div>
+                  <div class="course-code">TG4029</div>
+                  <div class="course-name" lang="en">Tektonofisik</p></div>
+                </div>
+              </a>
+
             </div>
           </div>
         
           <span class="semester-and-button">
-            <h3 id="second-year" lang="en">2nd Semester</h3>
-            <div class="carousel-button">
-              <span id="button" class="prev-button">
-                <a onclick="scrollLeft()"><i class="fa fa-chevron-left"></i> Prev</a>
-              </span>
-              <span id="button" class="next-button">
-                <a onclick="scrollRight()">Next <i class="fa fa-chevron-right"></i></a>
-              </span>
-            </div>
+            <div class="second-semester-text" lang="en">2nd Semester</div>
           </span>
           
           <div id="first-year-course-even" class="semester">
@@ -471,32 +472,28 @@
         </div>
       </div>
 
-      <div class="mission">
-          <div class="mission-text-header" lang="en">Our Mission</div>
-          <div class="mission-text-wrapper">
-            <div class="mission-text" lang="en">OpenGeophy came from the idea that an online learning resources carefully crafted and developed could massively benefit anyone studying to become a geophysicist anywhere in the world. Through this initiative, we hope to inspire a new generation of excellent geophysicist and aid them in their journey.</div>       
-          </div>
-      </div>
-
       <div class="contribute-section">
         <div class="contribute-wrapper">
           <div class="section-header" lang="en"><h2>Contribute with us!</h2></div>
-          <div class="section-text" lang="en">Interested to help developing OpenGeophy? Come and join us at our repository!</div>
-          <div id="button" class="repo-button" lang="en"><a class="repo-link" href="https://github.com/reza-nugraha32/opengeophy">Join us</a></div>
+          <div class="section-text" lang="en">Interested to help developing Geophysics Wiki? Come and join us at our repository!</div>
+          <div id="button" class="repo-button" lang="en"><a class="repo-link" href="https://github.com/reza-nugraha32/geophysics-wiki">Join us</a></div>
         </div>
       </div>
     </div>
 
+    <!-- Start of copyable footer template -->
     <div class="footer">
       <div class="footer-row">
         <span class="footer-logo-and-license">
-          <img alt="OpenGeophy Logo" src="./assets/images/logo/logo-compact-horizontal.png" width="200">
+          <a href="./index.html">
+            <img class="logo-horizontal" src="./assets/images/logo/logo-compact-horizontal.png" width=200vh>
+          </a>
           <div lang="en">
-            Aiming to aid students around the world in <b>learning geophysics.</b></p>
+            Aiding students around the world <b>learning geophysics.</b></p>
           </div>
 
           <div class="footer-license" lang="en"> 
-            All materials in this website are licensed with CC BY-NC-ND 4.0 license, except where noted. See <a style="color: #557068; text-decoration: none;" href="https://github.com/reza-nugraha32/opengeophy/">readme</a> for detailed informations.</p>
+            All materials in this website are licensed with the MIT license, except where noted. See <a style="color: #526D82; text-decoration: none;" href="https://github.com/reza-nugraha32/geophysics-wiki">readme</a> for detailed informations.</p>
           </div>        
         </span>
         
@@ -525,11 +522,11 @@
         </div>
         
         <div class="web-button">
-          <a href="http://gf.itb.ac.id"><i class="fa fa-globe" style="font-size:36px;color:white"></i></a>
+          <a href="http://gf.itb.ac.id"><i class="fa fa-globe" style="font-size:2em;color:white"></i></a>
         </div>
 
         <div class="github-button">
-          <a href="https://github.com/reza-nugraha32/opengeophy"><i class="fa fa-github" style="font-size:36px;color:white"></i></a>
+          <a href="https://github.com/reza-nugraha32/geophysics-wiki"><i class="fa fa-github" style="font-size:2em;color:white"></i></a>
         </div>
 
         <div class="fttm-logo">
@@ -537,5 +534,6 @@
         </div>
       </div>
     </div>
+    <!-- End of copyable footer template -->
 </body>
 </html>

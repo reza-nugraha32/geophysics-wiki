@@ -1,51 +1,64 @@
 .light-mode{
   font-family: "Helvetica", sans-serif;
-  font-size: 18px;
-  color: #424242 !important;
-  background-color: #ffffff;
+  font-size: 1.2em;
+  color: #424242 ;
+  background-color: #fdfdfd;
   margin: 0;
-  
+
+  .topnav {
+    background-color: #ffffff;
+    box-shadow: 0 0 2vh 0 #b4b4b4;
+  }
+
+  .header-text{
+    color: #27374D;
+  }
+
+  .mode-switch{
+    background-color: transparent;
+  }
+
+  .language-switch{
+    color: #424242;
+  }
+
+  .section-text a{
+    color: #526D82;
+  }
+
+  .course-by-year{
+    color: #27374D;
+  }
+
   .year-button{
     color: #424242;
   }
 
   .active{
-    background-color: #1a3a45;
+    background-color: #27374D;
     color: #ffffff;
   }
   
   .section-header{
-    color: #1a3a45;
-    padding-bottom: 10px;
-  }
-
-  .section-text a{
-    color: #557068;
-  }
-
-  .course-by-year{
-    color: #1a3a45;
+    color: #27374D;
+    padding-bottom: 2vh;
   }
 
   .curriculum{
-    box-shadow: 0 0px 10px 0px #b4b4b4;
-    border-width: 0px;
+    box-shadow: 0 0 2vh 0 #9DB2BF;
+    border-width: 0;
     border-color: #424242;
-  }
-
-  .curriculum:hover{
-    box-shadow: 0 0px 20px 0px #9ab39a;
   }
 
   .course-box{
-    box-shadow: 0 0px 10px 0px #b4b4b4;
-    border-width: 0px;
-    border-color: #424242;
+    box-shadow: 0 0 2vh 0 #9DB2BF;
     text-decoration: none;
+    border-style: none;
+    border-radius: 3vh;
   }
 
   .course-box:hover{
-    box-shadow: 0 0px 10px 5px #9ab3ab;
+    box-shadow: 0 0 2vh 0.5vh #9DB2BF;
   }
 
   .course-name{
@@ -53,7 +66,50 @@
   }
 
   .mission{
-    background: linear-gradient(30deg, #1a3a45 0%,  #99b87d 100%);
+    background: linear-gradient(30deg, #27374D 0%,  #99b87d 100%);
+  }
+
+  .footer{
+    background-color: transparent;
+    border-color: #424242;
+
+    .footer-row-list a{
+      color: #424242;
+    }
+  }
+}    
+
+
+
+.dark-mode{
+  font-family: "Helvetica", sans-serif;
+  font-size: 1.2em;
+  color: #ffffff !important;
+  background-color: #111111;
+  margin: 0;
+
+  .topnav {
+    background-color: transparent;
+    box-shadow: none;
+    border-bottom: solid;
+    border-width: 0.07em;
+    border-color: #424242;
+  }
+
+  .header-text{
+    color:#9DB2BF;
+  }
+  
+  .courses{
+    color: #ffffff;
+  }
+
+  .mode-switch{
+    color: #ffffff;
+  }
+
+  .topnav{
+    background-color: transparent;
   }
 
   .mode-switch{
@@ -61,54 +117,44 @@
     background-color: transparent;
   }
 
-  .footer{
-    background-color: #1f251c;
+  .language-switch{
+    color: #ffffff;
   }
-}    
-
-.dark-mode{
-  font-family: "Helvetica", sans-serif;
-  font-size: 18px;
-  color: #ffffff !important;
-  background-color: #111111;
-  margin: 0;
   
+  .section-header{
+    color: #9DB2BF;
+    padding-bottom: 2vh;
+  }
+
+  .section-text a{
+    color: #9DB2BF;
+  }
+
   .year-button{
     color: #ffffff;
   }
 
-  .section-header{
-    color: #557068;
-    padding-bottom: 10px;
-  }
-
-  .section-text a{
-    color: #557068;
-  }
-
   .course-by-year{
-    color: #557068;
+    color: #9DB2BF;
   }
 
   .curriculum{
-    box-shadow: 0px 0px 10px 0px #1a3a45;
-    border-width: 1px;
+    box-shadow: none;
+    border-width: 0.07em;
     border-color: #424242;
-  }
-
-  .curriculum:hover{
-    box-shadow: 0px 0px 20px 0px #1a3a45;
   }
 
   .course-box{
-    box-shadow: 0px 0px 10px 0px #1a3a45;
-    border-width: 1px;
-    border-color: #424242;
+    box-shadow: none;
     text-decoration: none;
+    border-style: solid;
+    border-width: 0.07em;
+    border-color: #424242;
+    border-radius: 3vh;
   }
 
   .course-box:hover{
-    box-shadow: 0px 0px 10px 5px #1a3a45;
+    box-shadow: none;
   }
 
   .course-name{
@@ -116,55 +162,58 @@
   }
 
   .mission{
-    background: linear-gradient(30deg, #1a3a45 40%,  #55996b 100%);
-  }
-
-  .mode-switch{
-    color: #ffffff;
-    background-color: transparent;
+    background: linear-gradient(30deg, #27374D 40%,  #55996b 100%);
   }
 
   .footer{
-    background-color: #1f251c;
+    background-color: transparent;
+    border-color: #424242;
+    
+    .footer-row-list a{
+      color: #ffffff;
+    }
   }
 }  
 
+
 /* Wrapper for any section */
 .section{
-  padding: 30px 100px 0px 100px;
+  padding: 3vh 20vh 3vh 20vh;
+
+  /* Section header for any text section */
+  .section-header{
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 2.5vh;
+  }
+
+  /* Section text is use for plain text for any text section */
+  .section-text{
+    margin-bottom: 4vh;
+  }
 }
 
-/* Section header is use for header for any text section */
-/* Wrap h2 or h3 inside this class */
-.section-header{
-  margin-bottom: 0px;
-  margin-top: 0px;
-}
 
-/* Use for title heading*/
+
+/* Use for title heading */
 h1{
-  margin-top: 0;
+  margin: 0;
 }
 
 /* Use for headings in text */
 h2{
-  margin: 0px 0px 0px 0px;
-  font-size: 36px;
+  margin: 0 0 0 0;
+  font-size: 1.7em;
 }
 
 /* Use for subheading */
 h3{
-  margin: 0px 0px 0px 0px;
+  margin: 0 0 0 0;
 } 
-
-/* Section text is use for plain text for any text section */
-.section-text{
-  margin-bottom: 15px
-}
 
 /* Add space between main section and footer section */
 .spacer{
-  padding-bottom: 150px;
+  padding-bottom: 25vh;
 }
 
 a{
@@ -175,19 +224,24 @@ a:hover{
   text-decoration: none !important;
 }
 
+
+
+/* Switch between light and dark mode */
 .mode-switch{
-  width: 20px;
+  width: 3vh;
   scale: 1.2;
   display: block;
   align-content: center;
-  color: #ffffff;
+  color: #424242;
   background-color: transparent;
 }
 
 .mode-switch:hover{
-  color: #557068;
+  color: #526D82;
   cursor: pointer;
 }
+
+
 
 /* The whole main content */
 #main {
@@ -196,189 +250,219 @@ a:hover{
   display: grid;
 }
 
-/* Set background image for header */
-.header{
-  padding-top: 80px;
-  background-image: url(../assets/images/home/background.jpg);
-  background-size: cover;
-  background-position: center;
-  margin-bottom: 20px;
 
+
+/* Header text of the page*/
+.header{
   .header-text{
-    padding: 0px 100px 0px 100px;
-    color: #ffffff;
-    text-shadow: 0px 1px 5px #3b3b3b;
+    padding: 5vh 20vh 1vh 20vh;
+  }
+
+  .page-title{
+    padding-top: 2vh;
+    border-top: solid;
+    border-color: #424242;
+    border-width: 0.07em;
   }
 }
 
+
+
 /* Search bar in the header */
 .search_bar{
-  margin: 10px 100px 50px 100px;
+  margin: 2vh 20vh 8.3vh 20vh;
   display: grid;
 
   .search_form{  
-    padding: 15px 20px 15px 20px;
-    font-size: 18px;
+    padding: 2.5vh 3vh 2.5vh 3vh;
+    font-size: 0.9em;
     border-style: solid;
-    border-radius: 20px;
+    border-radius: 3vh;
     border-color: transparent;
     background-color: #ffffff;
     color: #424242;}
   
   .search_button{
-    padding: 15px 10px 15px 10px;
-    margin-top: 10px;
+    padding: 2.5vh 2vh 2.5vh 2vh;
+    margin-top: 2vh;
     border-style: solid;
-    border-radius: 20px;
-    max-width: 100px;
+    border-radius: 3vh;
+    max-width: 20vh;
     text-align: center;
     text-decoration: none;
     border-color: transparent;
-    background-color: #1a3a45;
+    background-color: #27374D;
     color: #ffffff;
   }
 
   .search_button:hover{
-    background-color: #557068;
+    background-color: #526D82;
   }
 }
 
-/* Courses by year section */
-.curriculum{
-  padding: 30px 30px 30px 30px;
-  margin: 30px 100px 50px 100px;
-  border-style: solid;
-  border-color: transparent;
-  border-radius: 20px;
-}
 
-/* Wrapper for years */
-.year-wrapper{
-  margin: 0px 0px 0px 0px;
-  display: inline-flex;
-  align-items: center;
-  flex-direction: row;
-}
 
-.course-by-year{
-  display: inline-flex;
-}
-
-.curriculum-header{
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-}
-
-.course-wrapper{
-  display: grid;
-  justify-content: space-between;
-
-}
-
-.semester-and-button{
-  display: inline-flex;
-  justify-content: space-between;
-  align-content: center;
-}
-
-.carousel-button{
-  display: none;
-}
-
-.prev-button, .next-button{
-  background-color: #557068;
-  text-align: center;
-  width: 100px;
-  height: 30px;
-  padding: 10px 10px 10px 10px;
-  margin: 0px 10px 0px 0px;
+/* Language switch */
+.language-switch{
   color: #ffffff;
-  border-radius: 20px;
-  border-width: 0px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.prev-button:hover, .next-button:hover{
-  background-color: #abd3c7;
-}
-
-#second-year-course, #third-year-course, #fourth-year-course{
-  width: 0;
-  height: 0;
-}
-
-#second-year-course-even, #third-year-course-even, #fourth-year-course-even{
-  width: 0;
-  height: 0;
-}
-
-#first-year-course, #first-year-course-even{
-  height: 100%;
-  width: 100%;
-}
-
-.semester{
-  text-align: left;
-  align-items: start;
-  overflow-x: scroll;
-}
-
-.course-list{
   display: inline-flex;
-  text-align: center;
-  align-items: start;
-  text-decoration: none;
-  margin: 10px 10px 10px 10px;
-}
+  margin: 0 0 0 0;
+  padding: 2vh 0 2vh 0;
 
-.course-box{
-  margin: 10px 25px 10px 2px;
-  width: 200px;
-  height: 200px;
-  align-content: start;
-  display: grid;
-  border-style: solid;
-  border-width: 0px;
-  border-color: transparent;
-  border-radius: 20px;
-  overflow: hidden;
-  text-decoration: none;
-}
-
-.course-box:hover{
-  scale: 1.05;
-  opacity: 0.7;
-  transition: 0.3s ease;
-}
-
-.course-cover{
-  width: 200px;
-  height: 100px;
-  display: grid;
-}
-
-.course-name{
-  text-decoration: none;
-  display: grid;
-  text-align: left;
-  font-weight: bold;
-  font-size: 16px;
-  padding: 0px 20px 10px 20px;
-}
-
-.course-code{
-  display: flex;
-  text-decoration: none;
-  text-align: left;
-  font-size: 16px;
-  color: #557068;
-  padding: 10px 20px 5px 20px;
-  max-width: 200px;
-  max-height: 100px;
+  .language{
+    padding-left: 2vh;
+    font-size: 0.8em;
+  }
   
 }
+
+.language-switch:hover{
+  color: #526D82;
+  cursor: pointer;
+}
+
+
+
+
+/* Courses by year section */
+.curriculum{
+  padding: 5vh 5vh 5vh 5vh;
+  margin: 5vh 20vh 8.3vh 20vh;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 3vh;
+
+  .course-by-year{
+    display: inline-flex;
+  }
+  
+  .curriculum-header{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Wrapper for years */
+  .year-wrapper{
+    margin: 0 0 0 0;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  .course-wrapper{
+    display: grid;
+    justify-content: space-between;
+  
+  }
+  
+  .semester-and-button{
+    display: inline-flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 2vh 2vh 2vh 2vh;
+  }
+  
+  .carousel-button{
+    display: none;
+  }
+  
+  .prev-button, .next-button{
+    background-color: #526D82;
+    text-align: center;
+    width: 20vh;
+    height: 5vh;
+    padding: 2vh 2vh 2vh 2vh;
+    margin: 0 2vh 0 0;
+    color: #ffffff;
+    border-radius: 3vh;
+    border-width: 0;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .prev-button:hover, .next-button:hover{
+    background-color: #526D82;
+  }
+  
+  .second-semester-text{
+  margin-top: 3vh;
+  }
+
+  #second-year-course, #third-year-course, #fourth-year-course{
+    width: 0;
+    height: 0;
+  }
+  
+  #second-year-course-even, #third-year-course-even, #fourth-year-course-even{
+    width: 0;
+    height: 0;
+  }
+  
+  #first-year-course, #first-year-course-even{
+    height: 100%;
+    width: 100%;
+  }
+  
+  .semester{
+    text-align: left;
+    align-items: start;
+    overflow-x: scroll;
+  }
+  
+  .course-list{
+    display: inline-flex;
+    text-align: center;
+    align-items: start;
+    text-decoration: none;
+    margin: 2vh 2vh 2vh 2vh;
+  }
+  
+  .course-box{
+    margin: 2vh 3vh 2vh 3vh;
+    width: 45vh;
+    height: 40vh;
+    align-content: start;
+    display: grid;
+    overflow: hidden;
+    text-decoration: none;
+  }
+  
+  .course-box:hover{
+    scale: 1.05;
+    opacity: 0.7;
+    transition: 0.3s ease;
+  }
+  
+  .course-cover{
+    width: 45vh;
+    height: 20vh;
+    display: grid;
+  }
+  
+  .course-name{
+    text-decoration: none;
+    display: grid;
+    text-align: left;
+    font-weight: bold;
+    font-size: 0.9em;
+    padding: 0 3vh 2vh 3vh;
+  }
+  
+  .course-code{
+    display: flex;
+    text-decoration: none;
+    text-align: left;
+    font-size: 0.9em;
+    color: #526D82;
+    padding: 2vh 3vh 2vh 3vh;
+    max-width: 333vh;
+    max-height: 20vh;
+    
+  }  
+}
+
+
 
 /* Our mission section */
 .mission{  
@@ -386,123 +470,121 @@ a:hover{
   background-size: cover;
   color: #ffffff;
   justify-content: center;
-}
 
-@keyframes typing {
-  0% {
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+    20%{
+      width: 100%;
+    }
+    100%{
+      width: 100%;
+    }
+  }
+
+  .mission-text{
     width: 0;
-  }
-  20%{
-    width: 100%;
-  }
-  100%{
-    width: 100%;
+    text-shadow: 0 0 8.3vh #3b3b3b;
+    font-size: 5vh;
+    font-weight: bold;
+    overflow: hidden;
+    animation: typing 5s steps(50, end) infinite;
   }
 }
 
-.mission-text{
-  width: 0;
-  text-shadow: 0px 0px 5px #3b3b3b;
-  font-size: 30px;
-  font-weight: bold;
-  overflow: hidden;
-  animation: typing 5s steps(50, end) infinite;
-}
-
-.mission-text-wrapper{
-  display: inline-block;
-  margin: 10px 100px 30px 100px;
-  width: 700px;
-  height: 240px;
-  overflow: hidden;
-}
-
-.mission-text-header{
-  padding: 40px 100px 10px 100px;
-  display: grid;
-  text-shadow: 0px 0px 5px #3b3b3b;
-}
 
 /* Contribute with us section */
 .contribute-wrapper{
-  padding: 30px 100px 50px 100px;
+  padding: 0 20vh 8.3vh 20vh;
   display: grid;
   text-align: center;
+
+  .contribute-header{
+    font-size: 1em;
+  }
+  
+  .contribute-text{
+    padding: 2vh 0 2vh 0;
+  }
 }
 
-.contribute-header{
-  font-size: 40px;
-}
 
-.contribute-text{
-  padding: 10px 0px 10px 0px;
-}
 
-/* Join us button */
 .repo-button{
-  padding: 20px 0px 0px 0px;
+  padding: 6.6vh 0 0 0;
 
   /* Text inside the button */
   .repo-link{
-    padding: 15px 30px 15px 30px;
-    background-color: #1a3a45;
+    padding: 2.5vh 5vh 2.5vh 5vh;
+    background-color: #27374D;
     color: #ffffff;
-    border-radius: 30px;
+    border-radius: 5vh;
     text-decoration: none;
   }
 }
 
+.repo-link:hover{
+  background-color: #526D82;
+  }
+
+
+
 /* Footer section */
 .footer{
-  padding: 30px 30px 30px 30px;
+  border-top: solid;
+  border-width: 0.07em;
+  margin: 5vh 20vh 5vh 20vh;
+  max-width: 100%;
   background-color: #3a4435;
-  color: #ffffff;
   align-items: start;
   justify-content: space-between;
-}
 
-.footer-row{
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
+  .logo-horizontal{
+    padding: 2vh 0 2vh 0;
+  }
 
-  .footer-license{
-    font-size: 14px;
-  } 
-
-  .footer-column{
+  .footer-row{
+    padding-top: 5vh;
+    align-items: center;
     display: flex;
+    justify-content: space-between;
+
+    .footer-column{
+      display: flex;
+    }
+  }
+
+  .footer-row-list{
+    padding: 0 8.3vh 0 8.3vh;
+    text-align: left;
+    align-items: center;
+    text-decoration: none;
+    min-width: 13vh;  
+  }
+
+  .footer-list{
+    margin-top: 2vh;
+    text-decoration: none;
+  }
+
+  .footer-list:hover{
+    color: #526D82;
   }
 }
 
-.footer-row-list{
-  padding: 0px 50px 0px 50px;
-  text-align: left;
-  align-items: center;
-  color: #ffffff;
-  text-decoration: none;
-  min-width: 120px;  
-}
 
-.footer-list{
-  color: #ffffff;
-  margin-top: 10px;
-  text-decoration: none;
-}
-
-.footer-list:hover{
-  color: #557068;
-}
 
 /* Watermark section */
 .watermark{
+  max-width: 100%;
   background-color: #000000;
   color: #ffffff;
-  font-size: 14px;
+  font-size: 0.8em;
   justify-content: space-between;
 
   .watermark-row{
-    padding: 10px 30px 10px 30px;
+    padding: 2vh 20vh 2vh 20vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -514,54 +596,53 @@ a:hover{
   }
 
   .web-button{
-    padding: 0px 10px 0px 40px;
+    padding: 0 2vh 0 6.6vh;
   }
   
   .github-button{
-    padding: 0px 40px 0px 10px;
+    padding: 0 6.6vh 0 2vh;
   }
 }
 
+
+
 /* Unclicked button style */
 .year-button{
-  padding: 15px 20px 15px 20px;
+  padding: 2.5vh 3vh 2.5vh 3vh;
   background-color: transparent;
   border-width: 0;
   border-color: transparent;
-  border-radius: 30px;
-  font-size: 16px;
+  border-radius: 5vh;
+  font-size: 0.8em;
   cursor: pointer;
 }
 
 /* Clicked button style */
 .active{
-  background-color: #1a3a45;
+  background-color: #27374D;
   color: #ffffff;
   cursor: pointer;
 }
 
+
+
 /* Top navigation */
 .topnav {
-    top: 10px;
-    left: 100px;
-    right: 100px;
     justify-content: space-between;
     align-items: center;
     display: flex;
-    background-color: transparent;
-    position: absolute;
+    padding: 2vh 20vh 2vh 20vh;
   }
-  
+
   .topnav a {
     float: left;
     display: flex;
     flex-direction: row;
     text-align: center;
     text-decoration: none;
-    font-weight: bold;
-    margin: 14px 10px 14px 10px;
+    margin: 2.3vh 2vh 2.3vh 2vh;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 1em;
   }
   
   /* Wrapper for the logo */
@@ -576,39 +657,18 @@ a:hover{
     align-items: center;
   }
   .menu:hover{
-    color: #557068;
+    color: #526D82;
     cursor: pointer;
   }
 
   .courses{
-    color: #ffffff;
+    color: #424242;
+    padding-right: 3vh;
   }
 
   .courses:hover{
-    color: #557068;
+    color: #526D82;
     cursor: pointer;
-  }
-
-  /* Language switch dropdown */
-  .language-switch{
-    color: #ffffff;
-    display: inline-flex;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 20px;
-    border-color: #ffffff;
-    margin: 0px 20px 0px 10px;
-    padding: 10px 10px 10px 10px;
-  }
-
-  .language-switch:hover{
-    color: #557068;
-    border-color: #557068;
-    cursor: pointer;
-  }
-
-  .language{
-    padding-right: 10px;
   }
 
   /* Hide the link that should open and close the topnav on small screens */
