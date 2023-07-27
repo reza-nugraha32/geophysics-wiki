@@ -1,8 +1,22 @@
 // JQuery script for toggling between dark mode and light mode
 $(document).ready(function(){
+  var lastTheme = localStorage.getItem("theme");
+  
+  $("body").addClass(lastTheme)
+
   $(".mode-switch").click(function(){
     $("i", this).toggleClass("fa-moon-o fa-sun-o");
-    $(".light-mode").toggleClass("dark-mode");
-    console.log($(this).attr("class"));
+
+    $("body").toggleClass("dark-mode light-mode");
+    
+    if ($("body").attr("class") == "dark-mode"){
+      localStorage.setItem("theme", "dark-mode");
+      lastTheme = localStorage.getItem("theme");
+
+    } else if ($("body").attr("class") == "light-mode"){
+      localStorage.setItem("theme", "light-mode");
+      lastTheme = localStorage.getItem("theme");
+    
+    }
   });   
 });

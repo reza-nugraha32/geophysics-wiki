@@ -1,18 +1,34 @@
+<!--Template for any course overview page-->
 <!DOCTYPE html>
-<!-- Start of copyable header template -->
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contacts</title>
+    <!--The course name-->
+    <title>Course Name</title>
     <link rel="stylesheet" href="../../../resources/style.css">
     <link rel="icon" href="../../../assets/images/logo/default-logo.png" type="image/x-icon">  
   </head>
 
   <body id="body-en">
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          tags: 'ams'
+        }
+      };
+    </script>
+    <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../../resources/scripts/scroll.js"></script>
+    <script src="../../../resources/scripts/toggle-course-subcontent.js"></script>
     <script src="../../../resources/scripts/toggle-active-theme.js"></script>
+    <script src="../../../resources/scripts/toggle-active-button.js"></script>
+    <script src="../../../resources/scripts/assign-course-cover.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div class="navbar-wrapper">
       <div class="topnav" id="myTopnav">
@@ -36,25 +52,81 @@
     <div id="main" class="lang en"> 
       <div class="header">
         <div class="header-text">
-          <!-- Language switch-->
-          <a href="../../../sources/help/id/contacts.html">
+          <!--Language switch-->
+          <a href="../../../sources/courses/id/odd-semester/MA1101/index.html">
             <div class="language-switch">
                 <i class="fa fa-language"></i>
                 <div class="language">English</div>              
             </div>
           </a>
-          <h1 class="page-title">Contacts</h1>
+          <!--Course code-->
+          <div class="page-title">Course Code</div>
+          <!--Course name-->
+          <h1 class="page-title">Course Name</h1>
         </div>
       </div>
       <!-- End of copyable header template -->
       
 
       <div class="section">
-        <div class="section-text">
-          If you have any inquiry, kindly contact us at 
-          <a href="mailto:reza040204@gmail.com">reza040204@gmail.com</a>
-          or visit our <a href="https://github.com/reza-nugraha32/opengeophy">GitHub repository</a>.
+        <!--Describe briefly about the course, mainly its purposes and brief contents-->
+        <div class="section-header">
+          <h3>Course Description</h3>
         </div>
+        <div class="section-text">
+          This course is .... It covers ....
+        </div>
+        
+        <!--Describe the course prerequisites-->
+        <div class="section-header">
+          <h3>Prerequisites</h3>
+        </div>
+
+        <div class="section-text">
+          Course prerequisites
+        </div>
+
+        <!--Insert the main references and additional references (if any)-->
+        <div class="section-header">
+          <h3>References</h3>
+        </div>
+
+        <div class="section-header">Main Reference(s)</div>
+
+        <div class="section-text">
+          Author(s). (Year). Title, Edition. Publisher.
+        </div>
+
+        <div class="section-header">Additional Reference(s)</div>
+
+        <div class="section-text">
+          Author(s). (Year). Title, Edition. Publisher.
+        </div>
+
+        <!--Insert the contents of the course-->
+        <div class="section-header">
+          <h3>Course Contents</h3>
+        </div>
+          <ul class="course-syllabus">
+            <li class="course-content">Chapter X: Chapter Title<i class="fa fa-chevron-down"></i></li>
+            <div class="course-subcontent">
+              <ul>
+                <li><a href="#">Subchapter 1</a></li>
+                <li><a href="#">Subchapter 2</a></li>
+                <li><a href="#">Subchapter 3</a></li>
+                <li><a href="#">...</a></li>
+              </ul>
+            </div>
+            <li class="course-content">Chapter Y: Chapter Title<i class="fa fa-chevron-down"></i></li>
+            <div class="course-subcontent">
+              <ul>
+                <li><a href="#">Subchapter 1</a></li>
+                <li><a href="#">Subchapter 2</a></li>
+                <li><a href="#">Subchapter 3</a></li>
+                <li><a href="#">...</a></li>
+              </ul>
+            </div>
+          </ul>
       </div>
     </div>
 

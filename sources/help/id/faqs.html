@@ -10,30 +10,17 @@
     <link rel="icon" href="../../../assets/images/logo/default-logo.png" type="image/x-icon">  
   </head>
 
-  <body class="light-mode" id="body-id">
-    <script>
-      MathJax = {
-        tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']],
-          tags: 'ams'
-        }
-      };
-    </script>
-    <script id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-    </script>
+  <body id="body-id">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="../../../resources/scripts/scroll.js"></script>
+    <script src="../../../resources/scripts/toggle-faqs-dropdown.js"></script>
     <script src="../../../resources/scripts/toggle-active-theme.js"></script>
-    <script src="../../../resources/scripts/toggle-active-button.js"></script>
-    <script src="../../../resources/scripts/assign-course-cover.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div class="navbar-wrapper">
       <div class="topnav" id="myTopnav">
         <span class="logo-wrapper">
           <span class="logo">
             <a href="../../../index-id.html">
-              <img src="../../../assets/images/logo/logo-compact-horizontal.png" width=200vh>
+              <img class="logo-horizontal" src="../../../assets/images/logo/logo-compact-horizontal.png">
             </a>
           </span>
         </span>
@@ -50,7 +37,7 @@
     <!--Use this for the title of the page-->
     <div id="main" class="lang id"> 
       <div class="header">
-        <div class="header-text" lang="id">
+        <div class="header-text">
           <!-- Language switch-->
           <a href="../../../sources/help/en/faqs.html">
             <div class="language-switch">
@@ -64,44 +51,61 @@
       <!-- End of copyable header template -->
       
         <div class="section">
-            <div class="section-text" lang="id">
+            <div class="section-text">
                 Di bawah ini adalah beberapa pertanyaan yang mungkin muncul mengenai Geophysics Wiki.
             </div>
 
-            <div class="section-header" lang="id">
-                <h3>+ Bagaimana cara menggunakan Geophysics Wiki?</h3>
+            <div class="faqs-dropdown">
+                <h3 class="header-text"><i class="fa fa-plus"></i> Bagaimana cara menggunakan Geophysics Wiki?</h3>
             </div>
 
-            <div class="section-text" lang="id">
-                Geophysics Wiki berisi materi-materi perkuliahan S1 Teknik Geofisika di Institut Teknologi Bandung. Untuk menggunakan Geophysics Wiki, cukup cari mata kuliah/subjek yang ingin Anda pelajari dan gunakan bahan bacaan, latihan soal, atau soal ujian yang tersedia.
+            <div class="dropdown-content">
+              <div class="section-text">
+                Geophysics Wiki berisi materi-materi perkuliahan S1 Teknik Geofisika di Institut Teknologi 
+                Bandung. Untuk menggunakan Geophysics Wiki, cukup cari mata kuliah/subjek yang ingin Anda 
+                pelajari dan gunakan bahan bacaan, latihan soal, atau soal ujian yang tersedia.
+              </div>
             </div>
 
-            <div class="section-header" lang="en">
-                <h3>+ Kenapa Geophysics Wiki dibuat?</h3>
+            <div class="faqs-dropdown">
+                <h3 class="section-header"><i class="fa fa-plus"></i> Kenapa Geophysics Wiki dibuat?</h3>
             </div>
 
-            <div class="section-text" lang="en">
-                Geophysics Wiki berasal dari gagasan bahwa sumber pembelajaran online yang baik dapat bermanfaat bagi siapa pun yang mempelajari geofisika di mana pun. Melalui Geophysics Wiki, kami berharap dapat menginspirasi generasi baru ahli geofisika yang hebat dan membantu mereka dalam perjalanan mereka.
-            </div>
-            
-            <div class="section-text" lang="en">
-                Perhatikan bahwa Geophysics Wiki tidak bisa menjadi pengganti buku teks. Silakan gunakan buku teks sebagai referensi utama dan Geophysics Wiki sebagai referensi tambahan.
+            <div class="dropdown-content">
+              <div class="section-text">
+                Geophysics Wiki berasal dari gagasan bahwa sumber pembelajaran online yang baik dapat bermanfaat 
+                bagi siapa pun yang mempelajari geofisika di mana pun. Melalui Geophysics Wiki, kami berharap 
+                dapat menginspirasi generasi baru ahli geofisika yang hebat dan membantu mereka dalam perjalanan mereka.
+              </div>
+
+              <div class="section-text">
+                Perhatikan bahwa Geophysics Wiki tidak bisa menjadi pengganti buku teks. 
+                Silakan gunakan buku teks sebagai referensi utama dan Geophysics Wiki sebagai referensi tambahan.
+              </div>
             </div>
 
-            <div class="section-header" lang="id">
-                <h3>+ Kapan kontennya akan di-<i>update</i>?</h3>
+            <div class="faqs-dropdown">
+                <h3 class="section-header"><i class="fa fa-plus"></i> Kapan kontennya akan di-update?</h3>
             </div>
 
-            <div class="section-text" lang="id">
-                Saat ini, Geophysics Wiki hanya berisikan materi-materi mata kuliah S1 Teknik Geofisika Institut Teknologi Bandung. Akan tetapi, jika Anda tertarik untuk menambahkan konten di luar kurikulum tersebut, silakan kontak kami untuk bergabung mengembangkan Geophysics Wiki.
+            <div class="dropdown-content">
+              <div class="section-text">
+                Saat ini, Geophysics Wiki hanya berisikan materi-materi mata kuliah S1 Teknik Geofisika 
+                Institut Teknologi Bandung. Akan tetapi, jika Anda tertarik untuk menambahkan konten di 
+                luar kurikulum tersebut, silakan kontak kami untuk bergabung mengembangkan Geophysics Wiki.
+              </div>
             </div>
 
-            <div class="section-header" lang="id">
-                <h3>+ Menemukan kesalahan pada isi materi?</h3>
+            <div class="faqs-dropdown">
+                <h3 class="section-header"><i class="fa fa-plus"></i> Menemukan kesalahan pada isi materi?</h3>
             </div>
 
-            <div class="section-text" lang="id">
-                Geophysics Wiki sangat terbuka pada kritik dan saran untuk meningkatkan kualitas isi materinya. Oleh karena itu, segera kontak kami jika Anda menemukan kesalahan apa pun pada konten Geophysics Wiki.
+            <div class="dropdown-content">
+              <div class="section-text">
+                Geophysics Wiki sangat terbuka pada kritik dan saran untuk meningkatkan kualitas kontennya. 
+                Oleh karena itu, segera hubungi kami jika Anda menemukan kesalahan pada konten Geophysics Wiki 
+                atau pun ingin memberikan saran.
+              </div>
             </div>
         </div>
     </div>
@@ -115,28 +119,28 @@
           <a href="../../../index-id.html">
             <img class="logo-horizontal" src="../../../assets/images/logo/logo-compact-horizontal.png" width=200vh>
           </a>
-          <div lang="id">
+          <div>
             Membantu mahasiswa di seluruh dunia <b>mempelajari geofisika.</b></p>
           </div>
 
-          <div class="footer-license" lang="id"> 
-            Seluruh isi dalam web ini berlisensi MIT license, kecuali tertulis lain. Lihat <a style="color: #526D82; text-decoration: none;" href="https://github.com/reza-nugraha32/geophysics-wiki/">readme</a> untuk detail lebih lanjut.</p>
+          <div class="footer-license"> 
+            Seluruh isi dalam web ini berlisensi MIT License, kecuali tertulis lain. Lihat <a style="color: #526D82; text-decoration: none;" href="https://github.com/reza-nugraha32/geophysics-wiki/">readme</a> untuk detail lebih lanjut.</p>
           </div>        
         </span>
         
         <span class="footer-column">
           <div class="footer-row-list">
-            <h3 lang="id">Bantuan</h3>
-            <a href="../../../sources/help/id/contacts.html"><div class="footer-list" lang="id">Kontak</div></a>
-            <a href="../../../sources/help/id/faqs.html"><div class="footer-list" lang="id">FAQs</div></a>
-            <a href="../../../sources/help/id/contribute.html"><div class="footer-list" lang="id">Berkontribusi</div></a>
+            <h3>Bantuan</h3>
+            <a href="../../../sources/help/id/contacts.html"><div class="footer-list">Kontak</div></a>
+            <a href="../../../sources/help/id/faqs.html"><div class="footer-list">FAQs</div></a>
+            <a href="../../../sources/help/id/contribute.html"><div class="footer-list">Berkontribusi</div></a>
           </div>
 
           <div class="footer-row-list">
-            <h3 lang="id">Kebijakan</h3>
-            <a href="../../../sources/policy/id/tos.html"><div class="footer-list" lang="id">Ketentuan Pemakaian</div></a>
-            <a href="../../../sources/policy/id/license.html"><div class="footer-list" lang="id">Lisensi</div></a>
-            <a href="../../../sources/policy/id/privacy.html"><div class="footer-list" lang="id">Ketentuan Privasi</div></a>
+            <h3>Kebijakan</h3>
+            <a href="../../../sources/policy/id/tos.html"><div class="footer-list">Ketentuan Pemakaian</div></a>
+            <a href="../../../sources/policy/id/license.html"><div class="footer-list">Lisensi</div></a>
+            <a href="../../../sources/policy/id/privacy.html"><div class="footer-list">Ketentuan Privasi</div></a>
           </div>
         </span>
       </div>
@@ -144,7 +148,7 @@
 
     <div class="watermark">
       <div class="watermark-row">
-        <div class="watermark-paragraph" lang="id">
+        <div class="watermark-paragraph">
           &copy; 2023 Program Studi Teknik Geofisika, Fakultas Teknik Pertambangan dan Perminyakan, Institut Teknologi Bandung.</p> 
         </div>
         
