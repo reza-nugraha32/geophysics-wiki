@@ -1,9 +1,14 @@
 // JQuery script for toggling between dark mode and light mode
 $(document).ready(function(){
   var lastTheme = localStorage.getItem("theme");
-  
-  $("body").addClass(lastTheme)
+  console.log(lastTheme);
 
+  if (lastTheme != null){
+    $("body").addClass(lastTheme);
+  } else{
+    $("body").addClass("light-mode");
+  }
+  
   $(".mode-switch").click(function(){
     $("i", this).toggleClass("fa-moon-o fa-sun-o");
 
