@@ -3,7 +3,7 @@
   }
 
 .logo-horizontal{
-  max-width: 25vh;
+  max-width: 200px;
 }
 
 body{
@@ -13,11 +13,11 @@ body{
 }
 
 .light-mode{
-  color: #424242;
-  background-color: #fdfdfd;
+  color: #474747;
+  background-color: #f3f3f3;
 
   .course-subcontent a{
-    color: #424242;
+    color: #474747;
   }
   
   .topnav {
@@ -34,7 +34,7 @@ body{
   }
 
   .language-switch{
-    color: #424242;
+    color: #474747;
   }
 
   .section-text a{
@@ -46,12 +46,13 @@ body{
   }
 
   .year-button{
-    color: #424242;
+    color: #474747;
   }
 
   .active{
-    background-color: #27374D;
-    color: #ffffff;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 3px #27374D;
+    color: #27374D;
   }
   
   .section-header{
@@ -60,11 +61,13 @@ body{
   }
 
   .curriculum{
+    background-color: #ffffff;
     box-shadow: 0 0 2vw 0 #b4b4b4;
     border-width: 0;
   }
 
   .course-box{
+    background-color: #ffffff;
     box-shadow: 0 0 2vw 0 #b4b4b4;
     text-decoration: none;
     border-style: none;
@@ -76,14 +79,25 @@ body{
   }
 
   .course-name{
-    color: #424242;
+    color: #474747;
+  }
+
+  .repo-link{
+    background-color: transparent;
+    box-shadow: inset 0 0 0 4px #27374D;
+    color: #27374D;
+  }
+
+  .repo-link:hover{
+    box-shadow: inset 0 0 0 4px #9DB2BF;
+    color: #9DB2BF;
   }
 
   .footer{
     background-color: transparent;
 
     .footer-row-list a{
-      color: #424242;
+      color: #474747;
     }
   }
 }    
@@ -91,53 +105,55 @@ body{
 
 
 .dark-mode{
-  color: #ffffff;
-  background-color: #111111;
+  color: #dadada;
+  background-color: #151b1f;
 
   .course-subcontent a{
-    color: #ffffff;
+    color: #dadada;
   }
   
   .topnav {
-    background-color: transparent;
+    background-color: #11171a;
     box-shadow: none;
     border-bottom: solid;
-    border-width: 0.07em;
-    border-color: #424242;
+    border-width: 1.5px;
+    border-color: #474747;
   }
 
   .header-text{
-    color:#d7eeff;
+    color:#ffffff;
   }
 
   .mode-switch{
-    color: #ffffff;
-  }
-
-  .topnav{
-    background-color: transparent;
+    color: #dadada;
   }
 
   .mode-switch{
-    color: #ffffff;
+    color: #dadada;
     background-color: transparent;
   }
 
   .language-switch{
-    color: #ffffff;
+    color: #dadada;
   }
   
   .section-header{
-    color: #d7eeff;
+    color: #ffffff;
     padding-bottom: 2vw;
   }
 
   .section-text a{
-    color: #d7eeff;
+    color: #526D82;
   }
 
   .year-button{
-    color: #ffffff;
+    color: #dadada;
+  }
+
+  .active{
+    background-color: transparent;
+    box-shadow: inset 0 0 0 3px #9DB2BF;
+    color: #9DB2BF;
   }
 
   .course-by-year{
@@ -146,16 +162,18 @@ body{
 
   .curriculum{
     box-shadow: none;
-    border-width: 0.07em;
-    border-color: #424242;
+    background-color: #11171a;
+    border-width: 2px;
+    border-color: #474747;
   }
 
   .course-box{
     box-shadow: none;
+    background-color: #151b1f;
     text-decoration: none;
     border-style: solid;
-    border-width: 0.07em;
-    border-color: #424242;
+    border-width: 2px;
+    border-color: #474747;
     border-radius: 3vw;
   }
 
@@ -164,14 +182,25 @@ body{
   }
 
   .course-name{
-    color: #ffffff;
+    color: #dadada;
+  }
+
+  .repo-link{
+    background-color: transparent;
+    box-shadow: inset 0 0 0 3px #9DB2BF;
+    color: #9DB2BF;
+  }
+
+  .repo-link:hover{
+    box-shadow: inset 0 0 0 3px #dadada;
+    color: #dadada;
   }
 
   .footer{
     background-color: transparent;
     
     .footer-row-list a{
-      color: #ffffff;
+      color: #dadada;
     }
   }
 }  
@@ -240,7 +269,7 @@ li{
 }
 
 .course-subcontent a{
-  color: #424242;
+  color: #474747;
 }
 
 .course-subcontent{
@@ -290,7 +319,7 @@ li{
 .mode-switch{
   display: grid;
   justify-items: center;
-  color: #424242;
+  color: #474747;
   font-size: 1.5em;
   background-color: transparent;
 }
@@ -336,7 +365,7 @@ li{
     border-radius: 3vw;
     border-color: transparent;
     background-color: #ffffff;
-    color: #424242;}
+    color: #474747;}
   
   .search_button{
     padding: 2.5vw 2vw 2.5vw 2vw;
@@ -360,14 +389,13 @@ li{
 
 /* Language switch */
 .language-switch{
-  color: #ffffff;
   display: inline-flex;
   margin: 0 0 0 0;
   padding: 2vw 0 2vw 0;
   width: 100%;
   border-bottom: solid;
-  border-color: #424242;
-  border-width: 0.02em;
+  border-color: #757575;
+  border-width: 1.5px;
 
   .language{
     padding-left: 2vw;
@@ -454,8 +482,8 @@ li{
   
   .course-box{
     margin: 2vw 3vw 2vw 0;
-    width: 180px;
-    height: 180px;
+    width: 170px;
+    height: 170px;
     align-content: start;
     display: grid;
     overflow: hidden;
@@ -469,8 +497,8 @@ li{
   }
   
   .course-cover{
-    width: 180px;
-    height: 90px;
+    width: 170px;
+    height: 85px;
     display: grid;
   }
   
@@ -478,9 +506,8 @@ li{
     text-decoration: none;
     display: grid;
     text-align: left;
-    font-weight: bold;
     font-size: 0.8em;
-    padding: 10px 5px 5px 15px;
+    padding: 8px 5px 5px 10px;
   }
   
   .course-code{
@@ -489,7 +516,7 @@ li{
     text-align: left;
     font-size: 0.7em;
     color: #526D82;
-    padding: 10px 5px 5px 15px;
+    padding: 8px 5px 10px 10px;
     max-height: 0;
   }  
 }
@@ -519,16 +546,10 @@ li{
   /* Text inside the button */
   .repo-link{
     padding: 2.5vw 5vw 2.5vw 5vw;
-    background-color: #27374D;
-    color: #ffffff;
     border-radius: 5vw;
     text-decoration: none;
   }
 }
-
-.repo-link:hover{
-  background-color: #526D82;
-  }
 
 
 
@@ -545,12 +566,16 @@ li{
 
   .footer-row{
     border-top: solid;
-    border-width: 0.07em;
-    border-color: #424242;
+    border-width: 1.5px;
+    border-color: #757575;
     margin: 8vw 5vw 8vw 5vw;
 
     .footer-column{
       display: flex;
+      margin-top: 5vw;
+    }
+
+    .footer-license{
       margin-top: 5vw;
     }
   }
@@ -579,7 +604,7 @@ li{
 .watermark{
   max-width: 100%;
   padding: 5vw 5vw 5vw 5vw;
-  background-color: #000000;
+  background-color: #090c0e;
   color: #ffffff;
   font-size: 0.8em;
  
@@ -607,19 +632,11 @@ li{
 
 /* Unclicked button style */
 .year-button{
-  padding: 2.5vw 3vw 2.5vw 3vw;
+  padding: 2.5vw 2vw 2.5vw 2vw;
   background-color: transparent;
   border-width: 0;
-  border-color: transparent;
-  border-radius: 5vw;
-  font-size: 0.8em;
-  cursor: pointer;
-}
-
-/* Clicked button style */
-.active{
-  background-color: #27374D;
-  color: #ffffff;
+  border-radius: 6vw;
+  font-size: 0.9em;
   cursor: pointer;
 }
 
@@ -630,7 +647,7 @@ li{
     justify-content: space-between;
     align-items: center;
     display: flex;
-    padding: 2vw 5vw 2vw 5vw;
+    padding: 1vw 5vw 1vw 5vw;
   }
 
   .topnav a {
@@ -655,7 +672,7 @@ li{
 
 @media screen and (min-width: 800px) {
   .logo-horizontal{
-    max-width: 15vw;
+    max-width: 35vh;
   }  
 
   .light-mode{
@@ -686,7 +703,6 @@ li{
   
   .dark-mode{
     .topnav {
-      background-color: transparent;
       box-shadow: none;
     }
 
@@ -696,15 +712,15 @@ li{
 
     .curriculum{
       box-shadow: none;
-      border-width: 0.07em;
-      border-color: #424242;
+      border-width: 1.5px;
+      border-color: #474747;
     }
 
     .course-box{
       box-shadow: none;
       border-style: solid;
-      border-width: 0.07em;
-      border-color: #424242;
+      border-width: 1.5px;
+      border-color: #474747;
       border-radius: 3vh;
     }
 
@@ -714,7 +730,7 @@ li{
 
     .footer{
       background-color: transparent;
-      border-color: #424242;
+      border-color: #474747;
     }
   }  
   
@@ -766,7 +782,7 @@ li{
       border-radius: 3vh;
       border-color: transparent;
       background-color: #ffffff;
-      color: #424242;}
+      color: #474747;}
     
     .search_button{
       padding: 2.5vh 2vh 2.5vh 2vh;
@@ -796,8 +812,8 @@ li{
     padding: 2vh 0 2vh 0;
     width: 100%;
     border-bottom: solid;
-    border-color: #424242;
-    border-width: 0.07em;
+    border-color: #474747;
+    border-width: 1.5px;
   
     .language{
       padding-left: 2vh;
@@ -853,7 +869,7 @@ li{
     
     .course-code{
       font-size: 0.9em;
-      padding: 2vh 3vh 2vh 3vh;
+      padding: 2vh 3vh 1vh 3vh;
       max-width: 333vh;
       max-height: 20vh;
       
@@ -899,12 +915,19 @@ li{
       display: flex;
       align-items: start;
       justify-content: space-between;
+
+      .footer-license{
+        margin-top: 5vh;
+      }
+      
     }
   
     .footer-row-list{
       padding: 0;
     }
-  
+    
+    
+
     .footer-column{
       display: flex;
       margin-top: 0 !important;
@@ -946,15 +969,15 @@ li{
   
   /* Unclicked button style */
   .year-button{
-    padding: 2.5vh 3vh 2.5vh 3vh;
-    border-radius: 5vh;
+    padding: 2vh 2.5vh 2vh 2.5vh;
+    border-radius: 6vh;
   }
   
 
   
   /* Top navigation */
   .topnav {
-      padding: 2vh 20vh 2vh 20vh;
+      padding: 0.5vh 20vh 0.5vh 20vh;
     }
   
     .topnav a {
