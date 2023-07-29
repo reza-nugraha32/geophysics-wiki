@@ -39,7 +39,7 @@
         </span>
         <span class="menu">        
           <div class="mode-switch">
-            <i class="fa fa-moon-o"></i>
+            <i id="switch-button"></i>
           </div>
         </span>
       </div>
@@ -51,12 +51,12 @@
       <div class="header">
         <div class="header-text">
           <!-- Language switch-->
-          <a href="./index.html">
-            <div class="language-switch">
-                <i class="fa fa-language"></i>
-                <div class="language">Bahasa Indonesia</div>              
-            </div>
-          </a>
+          <div class="language-switch">
+            <a href="./index.html">
+              <i class="fa fa-language"></i>
+              <div class="language">Bahasa Indonesia</div>              
+            </a>
+          </div>  
           <h3 class="page-title">Geophysics Wiki</h3>
           <h1>Platform belajar geofisika.</h1>
         </div>
@@ -73,10 +73,6 @@
 
       <!-- Header section for the page title -->
       <div class="section">
-        <div class="section-header">
-          <h2>Apa itu Geophysics Wiki?</h2>
-        </div>
-
         <div class="section-text">
           Geophysics Wiki adalah sumber belajar geofisika yang bertujuan untuk membantu mahasiswa mempelajari geofisika. Platform ini dibuat berdasarkan kurikulum sarjana Teknik Geofisika di Institut Teknologi Bandung, Indonesia.
           Di sini, Anda dapat menemukan bahan bacaan, latihan soal, dan soal ujian.
@@ -90,12 +86,13 @@
 
       <div id="courses" class="curriculum">
         <div class="curriculum-header">
-          <h2 class="course-by-year">Mata Kuliah</h2>
+          <h2 class="course-by-year">Mata kuliah berdasarkan tahun</h2>
           <div class="year-wrapper">
-            <button id="first-year" class="year-button active">Tahun ke-1</button>
-            <button id="second-year" class="year-button">Tahun ke-2</button>
-            <button id="third-year" class="year-button">Tahun ke-3</button>
-            <button id="fourth-year" class="year-button">Tahun ke-4</button>
+            <div class="year-index">Tahun</div> 
+            <button id="first-year" class="year-button active">ke-1</button>
+            <button id="second-year" class="year-button">ke-2</button>
+            <button id="third-year" class="year-button">ke-3</button>
+            <button id="fourth-year" class="year-button">ke-4</button>
           </div>
         </div>
         
@@ -466,7 +463,7 @@
         <div class="contribute-wrapper">
           <div class="section-header"><h2>Ayo berkontribusi!</h2></div>
           <div class="section-text">Tertarik untuk ikut mengembangkan Geophysics Wiki? Ayo bergabung dengan kami!</div>
-          <div id="button" class="repo-button"><a class="repo-link" href="https://github.com/reza-nugraha32/opengeophy">Berkontribusi</a></div>
+          <div id="button" class="repo-button"><a class="repo-link" href="https://github.com/reza-nugraha32/geophysics-wiki">Berkontribusi</a></div>
         </div>
       </div>
     </div>
@@ -483,7 +480,7 @@
           </div>
 
           <div class="footer-license"> 
-            Seluruh isi dalam web ini berlisensi the MIT License, kecuali tertulis lain. Lihat <a style="color: #526D82; text-decoration: none;" href="https://github.com/reza-nugraha32/opengeophy/">readme</a> untuk detail lebih lanjut.
+            Seluruh isi dalam web ini berlisensi the MIT License, kecuali tertulis lain. Lihat <a style="color: #4d77b3; text-decoration: none;" href="https://github.com/reza-nugraha32/opengeophy/">readme</a> untuk detail lebih lanjut.
           </div>        
         </span>
         

@@ -9,8 +9,14 @@ $(document).ready(function(){
     $("body").addClass("light-mode");
   }
   
+  if (lastTheme == "light-mode"){
+    $("#switch-button").addClass("fa fa-sun-o");
+  } else {
+    $("#switch-button").addClass("fa fa-moon-o");
+  }
+  
   $(".mode-switch").click(function(){
-    $("i", this).toggleClass("fa-moon-o fa-sun-o");
+    $("i", this).toggleClass("fa-sun-o fa-moon-o");
 
     $("body").toggleClass("dark-mode light-mode");
     
