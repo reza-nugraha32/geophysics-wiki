@@ -2,11 +2,15 @@
   border-radius: 10px;
 }
 
+.MathJax{
+  font-size: 0.9em !important;
+}
+
 .tex-container{
-  width: 320px;
+  width: 300px;
   margin-bottom: 8px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 0;
+  margin-right: 0; 
   overflow-x: auto;
   overflow-y: hidden;
 }
@@ -55,10 +59,18 @@ body{
   display: none;
 }
 
+.right-column{
+  width: auto;
+}
+
 
 .light-mode{
   color: #474747;
   background-color: #f7f9ff;
+
+  .solution{
+    background-color: #dfdfdf;
+  }
 
   .course-subcontent a{
     color: #474747;
@@ -113,7 +125,6 @@ body{
   
   .section-header{
     color: #394c66;
-    padding-bottom: 2vw;
   }
 
   .curriculum{
@@ -170,6 +181,10 @@ body{
     border-color: #8a8a8a;
   }
 
+  .solution{
+    background-color: #1d2529;
+  }
+
   .course-subcontent a{
     color: #dadada;
   }
@@ -205,7 +220,6 @@ body{
 
   .section-header{
     color: #ffffff;
-    padding-bottom: 2vw;
   }
 
   .section-text a{
@@ -351,7 +365,7 @@ li{
   padding-left: 0;
 }
 
-.fa.fa-chevron-down, fa.fa-chevron-up{
+.fa.fa-chevron-down, .fa.fa-chevron-up{
   color: #808080;
   font-size: 1em;
   font-weight: 100;
@@ -385,22 +399,41 @@ li{
 
 
 /* Dropdown toggle */
+.example{
+  margin-bottom: 30px;
+}
+
+.toggle-solution{
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 15px 15px 15px;
+
+}
+
+.solution-content{
+  display: none;
+  overflow: hidden;
+  padding: 0 15px 10px 15px;
+}
+
+.solution{
+  margin-bottom: 30px;
+  margin-top: 10px;  
+  border-radius: 5px;
+}
+
 .toggle-dropdown{
   display: flex;
   justify-content: space-between;
-  padding-bottom: 1em;
+}
+
+.dropdown-content{
+  overflow: hidden;
 }
 
 .faqs-dropdown{
   padding-bottom: 1em;
 }
-
-.dropdown-content{
-  display: none;
-  overflow: hidden;
-}
-
-
 
 
 
@@ -781,7 +814,7 @@ li{
 .content-footer-wrapper{
   display: flex;
   justify-content: space-between;
-  padding: 10px 0 0 0;
+  padding: 20px 0 0 0;
 }
 
 .content-footer-wrapper a:hover{
@@ -791,6 +824,8 @@ li{
 @media screen and (min-width: 800px) {
   .tex-container{
     width: auto;
+    margin-left: auto;
+    margin-right: auto; 
   }
 
   .figure-wrapper{
@@ -811,8 +846,10 @@ li{
   }  
   
   .content-column{
-    display: inline-flex;
+    display: flex;
+    width: auto;
     padding: 3vh 20vh 3vh 20vh;
+    gap: 5vh;
   }
 
   .contents-header{
@@ -833,16 +870,12 @@ li{
   }
 
   .right-column{
-    padding: 0 0 0 5vh;
+    width: 150vh;
   }
 
   .light-mode{
     .topnav {
       box-shadow: 0 0 10px 0px #b4b4b4;
-    }
-
-    .section-header{
-      padding-bottom: 2vh;
     }
   
     .curriculum{
@@ -865,10 +898,6 @@ li{
   .dark-mode{
     .topnav {
       box-shadow: none;
-    }
-
-    .section-header{
-      padding-bottom: 2vh;
     }
 
     .curriculum{

@@ -31,6 +31,7 @@
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../../../../../resources/scripts/toggle-dropdown.js"></script>
     <script src="../../../../../../resources/scripts/toggle-course-subcontent.js"></script>
     <script src="../../../../../../resources/scripts/toggle-table-of-contents.js"></script>
     <script src="../../../../../../resources/scripts/toggle-active-theme.js"></script>
@@ -168,55 +169,69 @@
       </div>
       
       <div class="right-column">
-        <h2 class="section-header">Mathematical Model</h2>
+        <div class="toggle-dropdown">
+          <h2 class="section-header">Mathematical Model</h2>
+          <i class="fa fa-chevron-up"></i>
+        </div>
 
-        <div class="section-text">
+        <div class="dropdown-content">
+          <div class="section-text">
             Every phenomena that is happening around us can be described in the mathematical language as a mathematical model. 
             A mathematical model is an equation which expresses a process or physical system in mathematical terms.
             It takes a skill to accurately model or to choose a fitting model that could describe a physical phenomenon. 
             A particular mathematical model determines how the problem solving process will be carried out in itself.
             It will also, depending on the complexity of the model, give us a different insights.
+          </div>
+
+          <div class="section-text">
+              The equations 1, 2, and 3 below illustrated the different levels of model complexities describing acceleration given by Newton's Law. 
+              It takes more and more complex approach than the previous one to solve each model as the level of complexity increases.  
+              However, each increase of complexity also gives more nuances than the previous one.
+          </div>
+    
+          <div class="section-text">    
+              For instance, while Equation 1 gives the force-mass relation to
+              acceleration, Equation 2 takes it further by introducing acceleration $a$ as a derivative of velocity over time $dv/dt$. Equation 3
+              also expands it further by introducing air resistance force $cv$ that counteracts against the weight force $mg$.
+              $$ \begin{equation} a = \frac{F}{m} \end{equation}$$
+              $$ \begin{equation} \frac{dv}{dt} = \frac{F}{m} \end{equation}$$
+              $$ \begin{equation} \begin{split} \frac{dv}{dt} & = \frac{F}{m} \\
+                  & = \frac{mg-cv}{m} \\
+                  & = g-\frac{c}{m}v \\
+              \end{split} \end{equation}$$
+              The resulting Equation 3 gives a differential equation which describes the motions of a mass better compared to Equation 1.
+              Consequently, it is also requires more complex approach to solve a differential equation such as the former than the simple fraction given by the latter.
+          </div>
         </div>
 
-        <div class="section-text">
-            The equations 1, 2, and 3 below illustrated the different levels of model complexities describing acceleration given by Newton's Law. 
-            It takes more and more complex approach than the previous one to solve each model as the level of complexity increases.  
-            However, each increase of complexity also gives more nuances than the previous one.
+        <div class="toggle-dropdown">
+          <h2 class="section-header">Algorithm</h2>
+          <i class="fa fa-chevron-up"></i>
         </div>
-   
-        <div class="section-text">    
-            For instance, while Equation 1 gives the force-mass relation to
-            acceleration, Equation 2 takes it further by introducing acceleration $a$ as a derivative of velocity over time $dv/dt$. Equation 3
-            also expands it further by introducing air resistance force $cv$ that counteracts against the weight force $mg$.
-            $$ \begin{equation} a = \frac{F}{m} \end{equation}$$
-            $$ \begin{equation} \frac{dv}{dt} = \frac{F}{m} \end{equation}$$
-            $$ \begin{equation} \begin{split} \frac{dv}{dt} & = \frac{F}{m} \\
-                & = \frac{mg-cv}{m} \\
-                & = g-\frac{c}{m}v \\
-            \end{split} \end{equation}$$
-            The resulting Equation 3 gives a differential equation which describes the motions of a mass better compared to Equation 1.
-            Consequently, it is also requires more complex approach to solve a differential equation such as the former than the simple fraction given by the latter.
-        </div>
-
-        <h2 class="section-header">Algorithm</h2>
-
-        <div class="section-text">
+        
+        <div class="dropdown-content">
+          <div class="section-text">
             Algorithm is defined as the procedural steps and logics done for computing. Usually, an algorithm will consist of steps such as declaration of variable,
             logics, and looping. The program which contains the algorithm will start to execute it step by step and stop when all of them were done.
+          </div>
         </div>
 
-        <h2 class="section-header">Error Analysis</h2>
-
-        <div class="section-text">
+        <div class="toggle-dropdown">
+          <h2 class="section-header">Error Analysis</h2>
+          <i class="fa fa-chevron-up"></i>
+        </div>
+        
+        <div class="dropdown-content">
+          <div class="section-text">
             Due to the approximate nature of numerical methods, an error which defined as the degree of how much the solution obtained deviates from the true solution is introduced.
             Generally, there are two kinds of error, namely <b>the round-off error</b> and <b>the truncation error</b>. The round-off error is produced by the limitation of computers in counting
             decimals. The use of significant digits are crucial to mitigate this error. On the other hand, the truncation error is produced by the limitation of the numerical method itself, 
             namely the approximate error it produced.
-        </div>
+          </div>
+          
+          <h3 class="section-header">Precision vs Accuracy</h3>
 
-        <h3 class="section-header">Precision vs Accuracy</h3>
-
-        <div class="section-text">
+          <div class="section-text">
             In dealing with errors, there are two closely related terms we have to pay attention to, namely precision and accuracy.
             <ul>
                 <li>Accuracy measures how closely a computed value agrees with the true value.</li>
@@ -224,31 +239,32 @@
             </ul>
             Computed values could be accurate but imprecise, resulting in a largely spread results. As such, they could also be precise but inaccurate, 
             which do little good. Values that are both accurate and precise are the ideal values.
-        </div>
+          </div>
 
-        <h3 class="section-header">The Rules of Significant Digits</h3>
-        <ul>
+          <h3 class="section-header">The Rules of Significant Digits</h3>
+          <ul>
             <li>
-                Every non-zero digit between 1, 2, 3, 4, 5, 6, 7, 8, and 9 is a significant digits.
-                E.g. the number 12,455 has 5 significant digits. 
+              Every non-zero digit between 1, 2, 3, 4, 5, 6, 7, 8, and 9 is a significant digits.
+              E.g. the number 12,455 has 5 significant digits. 
             </li>
             <li>
-                Every zero digit behind a non-zero digit is not a significant digit.
-                E.g. the number 21,000 has only 2 significant digits.
+              Every zero digit behind a non-zero digit is not a significant digit.
+              E.g. the number 21,000 has only 2 significant digits.
             </li>
             <li>
-                Every zero digit between two non-zero digits is a significant digit.
-                E.g. the number 509,000 has 3 significant digits.
+              Every zero digit between two non-zero digits is a significant digit.
+              E.g. the number 509,000 has 3 significant digits.
             </li>
             <li>
-                Every zero digit in front of a non-zero digit is not a significant digit.
-                E.g. the number 0.0065 has only 2 significant digits.
+              Every zero digit in front of a non-zero digit is not a significant digit.
+              E.g. the number 0.0065 has only 2 significant digits.
             </li>
             <li>
-                Every zero digit behind a decimal and a non-zero digit is a significant digit.
-                E.g. the number 35.100 has 5 significant digits.
+              Every zero digit behind a decimal and a non-zero digit is a significant digit.
+              E.g. the number 35.100 has 5 significant digits.
             </li>
-        </ul>
+          </ul>
+        </div>
 
         <div class="content-footer-wrapper">
           <div class="previous-content"><a href="./1-1.html"><i class="fa fa-chevron-left"></i>Previous</a></div>

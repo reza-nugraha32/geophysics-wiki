@@ -23,7 +23,10 @@
       MathJax = {
         tex: {
           inlineMath: [['$', '$'], ['\\(', '\\)']],
-          tags: 'ams'
+          tags: 'ams',
+          autoload: {
+            cases: [[], ['numcases', 'subnumcases']]
+          }
         }
       };
     </script>
@@ -31,9 +34,15 @@
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../../../../../resources/scripts/toggle-dropdown.js"></script>
+    <script src="../../../../../../resources/scripts/toggle-solution.js"></script>
     <script src="../../../../../../resources/scripts/toggle-course-subcontent.js"></script>
     <script src="../../../../../../resources/scripts/toggle-table-of-contents.js"></script>
     <script src="../../../../../../resources/scripts/toggle-active-theme.js"></script>
+    <script src="../../../../../../resources/scripts/trim-code-whitespace.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/tokyo-night-dark.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div class="navbar-wrapper">
       <div class="topnav" id="myTopnav">
@@ -168,245 +177,478 @@
       </div>
       
       <div class="right-column">
-        <h2 class="section-header">The Matrices System</h2>
-
-        <div class="section-text">
-          A system of linear equations, which contains a set of linear equations, such as
-          <div class="tex-container">
-            $$ \begin{cases}
-            2x-3y = 1 \\
-            x+3 = -2,
-            \end{cases}$$
-          </div>
-          can be written in its general form as
-          <div class="tex-container">
-            $$ \begin{cases}
-            & a_{11}x_1+a_{12}x_2+\ldots+a_{1n}x_n = b_1 \\
-            & a_{21}x_1+a_{22}x_2+\ldots+a_{2n}x_n = b_2 \\
-            & \vdots \\
-            & a_{n1}x_1+a_{n2}x_2+\ldots+a_{nn}x_n = b_n, 
-          \end{cases}$$
-          </div>
-          where $a_{nn}$ are the constant coefficients, $x_n$ are the unknown variables, 
-          $c_n$ are the contants terms, and $n$ are the number of equations.
+        <div class="toggle-dropdown">
+          <h2 class="section-header">The Naive Gauss Elimination Method</h2>
+          <i class="fa fa-chevron-up"></i>
         </div>
 
-        <div class="section-text">
-          This system can also be written as a matrices system in the form of
-          $$[A][X]=[C].$$ 
-          By multiplying the inverse of $A$ with the above equation, the solution of this system of equations is
-          <div class="tex-container">
-            $$\begin{split}
-            [A]^{-1}[A][X]&=[C]\\
-            [X]&=[A]^{-1}[C],
-            \end{split}$$
+        <div class="dropdown-content">
+          <div class="section-text">
+            Naive Gauss elimination method is one of the numerical to solve a system of linear equations.
+            This method is similiar to Cramer's, with Gauss elimination generalized it to solve $n$ number of equations. 
+            It's called "naive" because it does not avoid division by zero. Should we encounter one, 
+            pivoting of the matrices are required. 
           </div>
-          where $A$ and $C$ are defined as
-          <div class="tex-container">
-            $$ A = 
-            \begin{bmatrix}
-            a_{11} & a_{12} & \ldots & a_{1m} \\
-            a_{21} & a_{22} & \ldots & a_{2m} \\
-            \vdots & \vdots &        & \vdots \\
-            a_{n1} & a_{n2} & \ldots & a_{nm} \\
-            \end{bmatrix}$$
-          </div>
-          and 
-          <div class="tex-container">
-            $$ C = 
-            \begin{bmatrix}
-             c_{1} \\
-             c_{2} \\
-             \vdots \\
-             c_{n} \\
-            \end{bmatrix}.$$
-          </div>
-        </div>
-
-
-        <h2 class="section-header">Some Matrices Notation</h2>
-
-        <div class="section-text">
-          We introduce two important kind of matrices, namely the upper triangular and the lower triangular matrix as follow
-          <div class="tex-container">
-            $$ A_{upper} = 
-            \begin{bmatrix}
-             a_{11} & a_{12} & a_{13} & a_{14} \\
-                    & a_{22} & a_{23} & a_{24} \\
-                    &        & a_{33} & a_{34} \\
-                    &        &        & a_{44} \\
-            \end{bmatrix},$$
-          </div> 
-          and
-          <div class="tex-container">
-            $$ A_{lower} = 
-            \begin{bmatrix}
-             a_{11} &        &        &        \\
-             a_{21} & a_{22} &        &        \\
-             a_{31} & a_{32} & a_{33} &        \\
-             a_{41} & a_{42} & a_{43} & a_{44} \\
-            \end{bmatrix}.$$
-          </div>
-
-          Furthermore, for a $2\times2$ matrices, we define the inverse identity of matrices as follow
-          
-          <div class="tex-container">
-            $$[A][A]^{-1}=[A]^{-1}[A]=[I]$$
-          </div>
-          
-          where $I$ is an identity matrix and $A$ is a $2\times2$ matrix which defined as
-          <div class="tex-container">
-            $$ I =
-            \begin{bmatrix}
-            1 & \\
-            & 1 \\
-            \end{bmatrix},$$
-          </div>
-          <div class="tex-container">
-            $$ A = 
-            \begin{bmatrix}
-              a_{11} & a_{12} \\
-              a_{21} & a_{22} \\
-            \end{bmatrix},$$
-          </div>
-          and the inverse of $A$ is defined as
-          <div class="tex-container">
-            $$\begin{split}
-            [A]^{-1} &= \frac{1}{\det{A}} adj{A} \\
-                     &= \frac{1}{a_{11}a_{22}-a_{12}a_{21}} 
-            \begin{bmatrix}
-              a_{22} & -a_{12} \\
-              -a_{21} & a_{11} \\
-            \end{bmatrix}.
-            \end{split}$$
-          </div>
-          Notice that when $\det{A}=0$, $A$ doesn't have any inverse. 
-          This type of matrix is called a <b>singular matrix</b>.
-        </div>
-
-        <div class="section-text">
-          Therefore, we define $\det{A}$ of a $2\times2$ matrix as
-          <div class="tex-container">
-            $$\begin{split}
-            \det{A} &=
-            \begin{vmatrix}
-              a_{11} & a_{12} \\
-              a_{21} & a_{22} \\
-            \end{vmatrix} \\
-            &= a_{11}a_{22}-a_{12}a_{21}.
-            \end{split}$$
-          </div>
-          For a $3\times3$ matrix where $A$
-          <div class="tex-container">
-            $$ A =
-            \begin{bmatrix}
-              a_{11} & a_{12} & a_{13} \\
-              a_{21} & a_{22} & a_{23} \\
-              a_{31} & a_{32} & a_{33}
-            \end{bmatrix},$$
-          </div>
-          its determinant is
-          <div class="tex-container">
-            $$ \begin{split}
-            \det{A} &=
-            \begin{vmatrix}
-              a_{11} & a_{12} & a_{13} \\
-              a_{21} & a_{22} & a_{23} \\
-              a_{31} & a_{32} & a_{33}
-            \end{vmatrix} \\
-            = &a_{11} \begin{vmatrix} a_{22} & a_{23} \\ a_{32} & a_{33} \end{vmatrix} \\
-              &-a_{12} \begin{vmatrix} a_{21} & a_{23} \\ a_{31} & a_{33} \end{vmatrix} \\
-              &+a_{13} \begin{vmatrix} a_{21} & a_{22} \\ a_{31} & a_{32} \end{vmatrix}
-            \end{split}$$
-          </div>
-          where the $2\times2$ determinants are called <b>minors</b>.
-        </div>
-
-        <h2 class="section-header">Solving A System of Linear Equations</h2>
-
-        <div class="section-text">
-          There are several methods to solve a system of linear equation, both analytically and numerically. Some analytical methods to solve
-          a system of linear equations are including substitution, Cramer's law, and using the graph of the equation. On the other hand, 
-          some numerical methods to solve a system of linear equations are including Gauss elimination method and LU decomposition method. 
-        </div>
-
-        <div class="section-text">
-          We would take a look at using matrices and Cramer's law to solve this system.
-        </div>
-
-        <h3 class="section-header">Cramer's Rule</h3>
-
-        <div class="section-text">
-          Consider a system of linear equations as follows
-          <div class="tex-container">
-            $$\begin{cases}
-            3x_1+2x_2=18 \\
-            -x_1+2x_2=2,
-            \end{cases}$$
-          </div>
-          which expressed as a matrices system as
-          <div class="tex-container">
-            $$[A][X]=[C]$$
-            $$
-            \begin{bmatrix}
-            3 & 2 \\
-            -1 & 2
-            \end{bmatrix}
-            \begin{bmatrix}
-            x_1 \\
-            x_2
-            \end{bmatrix}
-            =
-            \begin{bmatrix}
-            18 \\
-            2
-            \end{bmatrix}
-            .$$
-          </div>
-          We then consider two matrices $P$ and $Q$ as
-          <div class="tex-container">
-            $$ P = 
-            \begin{bmatrix}
-            18 & 2 \\
-            2 & 2
-            \end{bmatrix}$$
-          </div>
-          and 
-          <div class="tex-container">
-            $$ Q = 
-            \begin{bmatrix}
-            3 & 18 \\
-            -1 & 2
-            \end{bmatrix}$$.
+          <div class="section-text">
+            Naive Gauss elimination consists of two steps, namely <b>the forward elimination</b> and <b>the back substitution</b>.
+            Consider the following system of linear equations,
+            <div class="tex-container">
+              $$ \begin{subnumcases} {}
+              a_{11}x_1+a_{12}x_2+a_{13}x_3 = b_1 \tag{1.1a} \label{eq:1.1a} \\ 
+              a_{21}x_1+a_{22}x_2+a_{23}x_3 = b_2 \tag{1.1b} \label{eq:1.1b} \\ 
+              a_{31}x_1+a_{32}x_2+a_{33}x_3 = b_3, \tag{1.1c} \label{eq:1.1c}   
+            \end{subnumcases} $$
             </div>
-          Both of which are $A$ with all of its elements corresponding to either $x_1$ or $x_2$ 
-          replaced by the elements in $C$.
-        </div>
-        <div class="section-text">
-          Then, according Cramer's rule, the solution for this system of linear equations are
-          <div class="tex-container">
-            $$ \begin{split} 
-            x_1 = \frac{\det{P}}{\det{A}} 
-                &= \frac{\begin{vmatrix} 18 & 2 \\ 2 & 2 \end{vmatrix}}
-                {\begin{vmatrix} 3 & 2 \\ -1 & 2 \end{vmatrix}} \\ 
-                &= \frac{32}{8} \\
-                &= 4,
-            \end{split}$$
+            which expressed as a matrices system of $[A][X]=[B]$ as
+              $$ \begin{bmatrix} 
+              a_{11} & a_{12} & a_{13} \\ 
+              a_{21} & a_{22} & a_{23} \\
+              a_{n1} & a_{n2} & a_{33}
+              \end{bmatrix} \begin{bmatrix} 
+              x_{1} \\ x_{2} \\ x_{3}
+              \end{bmatrix} = \begin{bmatrix} 
+              b_{1} \\ b_{2} \\ b_{3}
+              \end{bmatrix}.$$ 
+            We now introduce $M$ as augmented form of $A$ with elements of $B$ as
+              $$ M = \begin{bmatrix} 
+              a_{11} & a_{12} & a_{13} &\bigm| & b_{1} \\ 
+              a_{21} & a_{22} & a_{23} &\bigm| & b_{2} \\
+              a_{31} & a_{32} & a_{33} &\bigm| & b_{3}    
+              \end{bmatrix}. $$
           </div>
-          <div class="tex-container">
-            $$ \begin{split} 
-            x_2 = \frac{\det{Q}}{\det{A}} 
-                &= \frac{\begin{vmatrix} 3 & 18 \\ -1 & 2 \end{vmatrix}}
-                {\begin{vmatrix} 3 & 2 \\ -1 & 2 \end{vmatrix}} \\ 
-                &= \frac{24}{8} \\
-                &= 3.
-            \end{split}$$
+  
+          <h3 class="section-header">Forward Elimination</h3>
+  
+          <div class="section-text">
+            To perform the forward elimination step, 
+            first substract every element in $a_{2n}$ (row 2) in $M$ by
+            <div class="tex-container">
+              $$\begin{equation}
+              a_{2n}-\frac{a_{21}}{a_{11}}a_{1n}, \tag{1.2} \label{eq:1.2}
+              \end{equation}$$
+            </div>
+            resulting in the matrix $M$
+              $$ M = \begin{bmatrix} 
+              a_{11} & a_{12}  & a_{13}  &\bigm| & b_{1} \\ 
+                     & a_{22}' & a_{23}' &\bigm| & b_{2}' \\
+              a_{n1} & a_{32}  & a_{33}  &\bigm| & b_{3}    
+              \end{bmatrix}. $$
+            Then, substract every element in $a_{3n}$ (row 3) in $M$ by 
+            <div class="tex-container">
+              $$\begin{equation}
+              a_{3n}-\frac{a_{31}}{a_{11}}a_{1n}, \tag{1.3} \label{eq:1.3}
+              \end{equation}$$
+            </div>
+            which results in
+              $$ M = \begin{bmatrix} 
+              a_{11} & a_{12}  & a_{13}  &\bigm| & b_{1} \\ 
+                     & a_{22}' & a_{23}' &\bigm| & b_{2}' \\
+                     & a_{32}' & a_{33}' &\bigm| & b_{3}'    
+              \end{bmatrix}. $$
+            Finally, we substract every element in $a_{3n}$ (row 3) in $M$ by
+            <div class="tex-container">
+              $$\begin{equation}
+              a_{3n}'-\frac{a_{32}'}{a_{22}'}a_{2n}', \tag{1.4} \label{eq:1.4}
+              \end{equation}$$
+            </div>
+            and we got the augmented upper triangle matrix $M'$ as 
+              $$ M' = \begin{bmatrix} 
+              a_{11} & a_{12}  & a_{13}  &\bigm| & b_{1} \\ 
+                     & a_{22}' & a_{23}' &\bigm| & b_{2}' \\
+                     &         & a_{33}'' &\bigm| & b_{3}''    
+              \end{bmatrix}. $$
+          </div>
+  
+          <h3 class="section-header">Backward Substitution</h3>
+  
+          <div class="section-text">
+            To perform the backward substitution step, we multiply $M'$ by $X$ and solve for $x_3$ first.
+            Notice that for the last row of the matrix, we would get the equation
+            <div class="tex-container">
+              $$\begin{align}a_{33}''x_3 &= b_{3}'' \notag \\ 
+              x_3 &= \frac{b_{3}''}{a_{33}''}. \tag{1.5} \label{eq:1.5} \end{align}$$
+            </div>
+            Then, for $x_2$ we get
+  
+            <div class="tex-container">
+              $$a_{22}'x_2+a_{23}'x_3 = b_{2}'$$ 
+              $$x_2 = \frac{b_{2}'- a_{23}x_2}{a_{22}'}. \tag{1.6} \label{eq:1.6}$$
+            </div>
+  
+            Finally, for $x_1$ we get
+            
+            <div class="tex-container">
+              $$a_{11}x_1+a_{12}x_2+a_{13}x_3 = b_{1}$$
+              $$x_1 = \frac{b_{1} - a_{12}x_2 - a_{13}x_3}{a_{11}}. \tag{1.7} \label{eq:1.7}$$
+            </div>
+          </div>
+          <div class="example">
+            <h3 class="section-header">Example 1.1</h3>
+            Solve the following system of linear equations!
+              <div class="tex-container">
+                $$\begin{cases}{}
+                3x_1 - 0.1x_2 - 0.2x_3 = 7.85 \\
+                0.1x_1 + 7x_2 - 0.3x_3 = -19.3 \\
+                0.3x_1 - 0.2x_2 + 10x_3 = 71.4
+                \end{cases}$$
+              </div>
+            <div class="solution">
+              <div class="toggle-solution"><b>Solution</b><i class="fa fa-chevron-down"></i></div>
+              <div class="solution-content">
+                We begin by constructing an augmented matrix $M$ from the system, 
+                <div class="tex-container">
+                  $$ M = \begin{bmatrix} 
+                  3   & -0.1  & -0.2 &\bigm| & 7.85 \\ 
+                  0.1 & 7     & -0.3 &\bigm| & -19.3 \\
+                  0.3 & -0.2  & 10   &\bigm| & 71.4    
+                  \end{bmatrix}. $$
+                </div>
+                First, we perform the forward elimination step by substracting $M$ using Eq. 1.2
+                <div class="tex-container">
+                  $$\begin{equation}
+                  a_{2n}-\frac{0.1}{3}a_{1n}, \notag
+                  \end{equation}$$
+                </div>
+                and Eq. 1.3
+                <div class="tex-container">
+                  $$\begin{equation}
+                  a_{3n}-\frac{0.3}{3}a_{1n}, \notag
+                  \end{equation}$$
+                </div>
+                resulting in $M$
+                <div class="tex-container">
+                  $$ M = \begin{bmatrix} 
+                  3   & -0.1    & -0.2   &\bigm| & 7.85 \\ 
+                  0   & 7.033   & -0.293 &\bigm| & -19.562 \\
+                  0   & -0.190  & 10.020 &\bigm| & 70.615    
+                  \end{bmatrix}. $$
+                </div>
+                Then, using Eq. 1.4,
+                <div class="tex-container">
+                  $$\begin{equation}
+                  a_{3n}-\frac{-0.190}{7.033}a_{2n}, \notag
+                  \end{equation}$$
+                </div>
+                we obtain the matrix $M'$
+                <div class="tex-container">
+                  $$ M = \begin{bmatrix} 
+                  3   & -0.1  & -0.2   &\bigm| & 7.85 \\ 
+                  0   & 7.033 & -0.293 &\bigm| & -19.562 \\
+                  0   & 0     & 10.012 &\bigm| & 70.084   
+                  \end{bmatrix}. $$
+                </div>
+                We now perform the backward substitution step using Eq. 1.5, 1.6, and 1.7.
+                For $x_3$, we get
+                <div class="tex-container">
+                  $$\begin{align}
+                  x_3 &= \frac{70.084}{10.012} \notag \\
+                      &= 7.01. \notag
+                  \end{align}$$
+                </div>
+                For $x_2$, we get
+                <div class="tex-container">
+                  $$\begin{align}
+                  x_2 &= \frac{-19.562-(-0.293(7.01))}{7.033} \notag \\
+                      &= -2.51. \notag
+                  \end{align}$$
+                </div>
+                Finally, for $x_1$, we get
+                <div class="tex-container">
+                  $$\begin{align}
+                  x_2 &= \frac{7.85-(-0.1(-2.51)-0.2(7.01))}{3} \notag \\
+                      &= 3. \notag
+                  \end{align}$$
+                </div>
+                Thus, the solutions to the system were 
+                <div class="tex-container">
+                  $$x_1, x_2, x_3 = \{3, -2.51, 7.01\}. \tag*{$\Box$}$$
+                </div>
+              </div>
+            </div>
+          </div>  
+        </div>
+        
+        <div class="toggle-dropdown">
+          <h2 class="section-header">Generalization of The Naive Gauss Elimination Method</h2>
+          <i class="fa fa-chevron-up"></i>
+        </div>
+
+        <div class="dropdown-content">
+          <div class="section-text">
+            We will show now the generalized naive Gauss elimination for $n$ number of equations.
+            Consider the following system,
+            <div class="tex-container">
+              $$ \begin{subnumcases} {}
+              &a_{11}x_1+\ldots+a_{13}x_3 = b_1 \tag{2.1a} \label{eq:2.1a} \\ 
+              &a_{21}x_1+\ldots+a_{23}x_3 = b_2 \tag{2.1b} \label{eq:2.1b} \\
+              & \vdots \notag \\
+              &a_{31}x_1+\ldots+a_{33}x_3 = b_3. \tag{2.1c} \label{eq:2.1c}   
+              \end{subnumcases} $$
+            </div>
+            By the same manner as previously, we will construct an augmented matrix $M$ as follows,
+            <div class="tex-container">
+              $$ M = \begin{bmatrix} 
+              a_{11} & a_{12} & \ldots & a_{1n} &\bigm| & b_{1} \\ 
+              a_{21} & a_{22} & \ldots & a_{2n} &\bigm| & b_{2} \\
+                     &        & \vdots &        &\bigm| &\vdots \\
+              a_{n1} & a_{n2} & \ldots & a_{nn} &\bigm| & b_{n}    
+              \end{bmatrix}. $$
+            </div>
+            Next, we perform the forward elimination step by multiplying Eq. (2.1a) by $a_{21}/a_{11}$ to give
+            <div class="tex-container">
+              $$ a_{21}x_1+\frac{a_{21}}{a_{11}}a_{12}x_2+\ldots+\frac{a_{21}}{a_{11}}a_{1n}x_n=\frac{a_{21}}{a_{11}}b_n. 
+              \tag{2.2} \label{eq:2.2} $$
+            </div>
+            Then, substract Eq. (2.1b) by this equation to give
+            <div class="tex-container">
+              $$ \left(a_{22}-\frac{a_{21}}{a_{11}}a_{12}\right)x_2+\ldots+\left(a_{2n}-\frac{a_{21}}{a_{11}}a_{1n}\right)x_n 
+              = b_2-\frac{a_{21}}{a_{11}}b_1$$
+            </div>
+            or rewritten as
+            <div class="tex-container">
+              $$a_{22}'x_2+\ldots+a_{2n}'x_n=b_2'.$$
+            </div>
+            We repeat the same procedure for the remaining equations until we change the former system of equations into an 
+            upper triangular form such as
+            <div class="tex-container">
+              $$\begin{align}
+                a_{11}x_1+a_{12}x_2+a_{12}x_3+\ldots+a_{1n}x_n&=b_1 \tag{2.3} \label{eq:2.3} \\
+                      a_{22}'x_2+a_{23}'x_3+\ldots+a_{2n}'x_n&=b_2 \tag{2.4} \label{eq:2.4} \\
+                                a_{33}''x_3+\ldots+a_{3n}''x_n&=b_3 \tag{2.5} \label{eq:2.5} \\
+                                                              &\vdots \notag\\
+                                            a_{nn}^{(n-1)}x_n&=b_n^{(n-1)}. \tag{2.6} \label{eq:2.6}
+              \end{align}$$
+            </div>
+            We then now begin the back substitution step by solving Eq. (2.6) for $x_n$,
+            <div class="tex-container">
+              $$ x_n = \frac{b_n^{(n-1)}}{a_{nn}^{(n-1)}}. \tag{2.7} \label{eq:2.7}$$
+            </div>
+            The result from Eq. (2.7) could be substituted to the previous equation to solve for $x_{n-1}$.
+            Thus, the rest of the unknowns $x$-s can be solved by the Eq. (2.8) below,
+            <div class="tex-container">
+              $$ x_i = \frac{b_i^{n-1}-\displaystyle\sum_{j=i+1}^{n}a_{ij}^{i-1}x_j}{a_{ii}^{i-1}} \tag{2.8}$$
+            </div>
+          </div>
+        </div>
+
+        <div class="toggle-dropdown">
+          <h2 class="section-header">Programming Exercises</h2>
+          <i class="fa fa-chevron-up"></i>
+        </div>
+        
+        <div class="dropdown-content">
+          <div class="example">
+            <h3 class="section-header">Exercise 1.1</h3>
+            Solve the following system of linear equations using the naive Gauss elimination.
+            $$ \begin{cases} a+2b=10 \\ 1.1a+2b=4 \end{cases}$$
+            <div class="solution">
+              <div class="toggle-solution"><b>Solution</b><i class="fa fa-chevron-down"></i></div>
+            <div class="solution-content">
+              The above equations can be written in the augmented matrix form
+              $$ \begin{bmatrix} 1 & 2 & \bigm| & 10 \\ 1.1 & 2 & \bigm| & 4 \end{bmatrix}.$$
+              We will now begin to write program to solve this system.
+              <div class="tex-container">
+                <pre><code class="language-python hljs">
+import numpy as np
+
+# Array storing the variables
+array = np.array([[1, 2, 10], 
+                  [1.1, 2, 10.4]])
+
+n = len(array)
+
+# Array storing the solutions
+solution = np.zeros(n)
+
+# Forward Elimination Step
+for i in range(n):
+    for j in range(i+1, n):
+        ratio = array[j][i]/array[i][i]
+        
+        for k in range(n+1):
+            array[j][k] = array[j][k]-ratio*array[i][k]
+
+# Back Substitution Step
+solution[n-1] = array[n-1][n]/array[n-1][n-1]
+
+for i in range(n-2,-1,-1):
+    solution[i] = array[i][n]
+    
+    for j in range(i+1,n):
+        solution[i] = solution[i]-array[i][j]*solution[j]
+    
+    solution[i] = solution[i]/array[i][i]
+
+print("The augmented upper triangular matrix:\n", array)
+print("Numerical solutions:\n", solution)
+                  </code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="example">
+            <h3 class="section-header">Exercise 1.2</h3>
+            Solve the following system of linear equations using the naive Gauss elimination.
+            $$ \begin{cases} 8a+2b-c=-2 \\ 10a+2b+4c=4 \\ 12a+2b+2c=6\end{cases}$$
+            <div class="solution">
+              <div class="toggle-solution"><b>Solution</b><i class="fa fa-chevron-down"></i></div>
+              <div class="solution-content">
+                The above equations contain division by zero when left as is. Pivotting the equations resulted in the augmented matrix
+                $$ \begin{bmatrix} 2 & 8 & -1 & \bigm| & -2 \\ 2 & 10 & 4 & \bigm| & 4 
+                \\ 2 & 12 & 2 & \bigm| & 6 \end{bmatrix}.$$
+                We can now begin to write program to solve this system.
+                <div class="tex-container">
+                  <pre><code class="language-python hljs">
+import numpy as np
+
+# Array storing the variables
+array = np.array([[2, 8, -2, -2], 
+                  [2, 10, 4, 4],
+                  [2, 12, 2, 6]])
+n = len(array)
+
+#Array storing the solutions
+solution = np.zeros(n)
+
+# Forward Elimination Step
+for i in range(n):
+    for j in range(i+1, n):
+        ratio = array[j][i]/array[i][i]
+        
+        for k in range(n+1):
+            array[j][k] = array[j][k]-ratio*array[i][k]
+
+# Back Substitution Step
+solution[n-1] = array[n-1][n]/array[n-1][n-1]
+
+for i in range(n-2,-1,-1):
+    solution[i] = array[i][n]
+    
+    for j in range(i+1,n):
+        solution[i] = solution[i]-array[i][j]*solution[j]
+    
+    solution[i] = solution[i]/array[i][i]
+
+print("The augmented upper triangular matrix:\n", array)
+print("Numerical solutions:\n", solution)
+                  </code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="example">
+            <h3 class="section-header">Exercise 1.3</h3>
+            Solve the following system of linear equations using the naive Gauss elimination.
+            $$ \begin{cases} 2a+b-c+2d=5 \\ 4a+5b-3c+6d=9 \\ -2a+5b-2c+6d=4 \\ 4a+11b-4c+8d=2\end{cases}$$
+            <div class="solution">
+              <div class="toggle-solution"><b>Solution</b><i class="fa fa-chevron-down"></i></div>
+              <div class="solution-content">
+                The above equations can be written in the augmented matrix form
+                $$ \begin{bmatrix} 2 & 1 & -1 & 2 & \bigm| & 5 \\ 4 & 5 & -3 & 6 & \bigm| & 9 
+                \\ -2 & 5 & -2 & 6 & \bigm| & 4 \\ 4 & 11 & -4 & 8 & \bigm| & 2 \end{bmatrix}.$$
+                We will now begin to write program to solve this system.
+                <div class="tex-container">
+                  <pre><code class="language-python hljs">
+import numpy as np
+
+# Array storing the variables
+array = np.array([[2, 1, -1, 2, 5],
+                  [4, 5, -3, 6, 9],
+                  [-2, 5, -2, 6, 4],
+                  [4, 11, -4, 8, 2]])
+
+n = len(array)
+
+# Array storing the solutions
+solution = np.zeros(n)
+
+# Forward Elimination Step
+for i in range(n):
+    for j in range(i+1, n):
+        ratio = array[j][i]/array[i][i]
+        
+        for k in range(n+1):
+            array[j][k] = array[j][k]-ratio*array[i][k]
+
+# Back Substitution Step
+solution[n-1] = array[n-1][n]/array[n-1][n-1]
+
+for i in range(n-2,-1,-1):
+    solution[i] = array[i][n]
+    
+    for j in range(i+1,n):
+        solution[i] = solution[i]-array[i][j]*solution[j]
+    
+    solution[i] = solution[i]/array[i][i]
+
+print("The augmented upper triangular matrix:\n", array)
+print("Numerical solutions:\n", solution)
+                  </code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="example">
+            <h3 class="section-header">Exercise 1.3</h3>
+            Solve the following system of linear equations using the naive Gauss elimination.
+            $$ \begin{cases} 2a+b-c+2d=5 \\ 4a+5b-3c+6d=9 \\ -2a+5b-2c+6d=4 \\ 4a+11b-4c+8d=2\end{cases}$$
+            
+            <div class="solution">
+              <div class="toggle-solution"><b>Solution</b><i class="fa fa-chevron-down"></i></div>
+              <div class="solution-content">
+                The above equations can be written in the augmented matrix form
+                $$ \begin{bmatrix} 2 & 1 & -1 & 2 & \bigm| & 5 \\ 4 & 5 & -3 & 6 & \bigm| & 9 
+                \\ -2 & 5 & -2 & 6 & \bigm| & 4 \\ 4 & 11 & -4 & 8 & \bigm| & 2 \end{bmatrix}.$$
+                We will now begin to write program to solve this system.
+                <div class="tex-container">
+                  <pre><code class="language-python hljs">
+import numpy as np
+
+# Array storing the variables
+array = np.array([[2, 1, -1, 2, 5],
+                  [4, 5, -3, 6, 9],
+                  [-2, 5, -2, 6, 4],
+                  [4, 11, -4, 8, 2]])
+
+n = len(array)
+
+# Array storing the solutions
+solution = np.zeros(n)
+
+# Forward Elimination Step
+for i in range(n):
+    for j in range(i+1, n):
+        ratio = array[j][i]/array[i][i]
+        
+        for k in range(n+1):
+            array[j][k] = array[j][k]-ratio*array[i][k]
+
+# Back Substitution Step
+solution[n-1] = array[n-1][n]/array[n-1][n-1]
+
+for i in range(n-2,-1,-1):
+    solution[i] = array[i][n]
+    
+    for j in range(i+1,n):
+        solution[i] = solution[i]-array[i][j]*solution[j]
+    
+    solution[i] = solution[i]/array[i][i]
+
+print("The augmented upper triangular matrix:\n", array)
+print("Numerical solutions:\n", solution)
+                  </code></pre>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="content-footer-wrapper">
-          <div class="previous-content"><a href="./1-2.html"><i class="fa fa-chevron-left"></i>Previous</a></div>
-          <div class="next-content"><a href="./2-2.html">Next<i class="fa fa-chevron-right"></i></a></div>
+          <div class="previous-content"><a href="./2-1.html"><i class="fa fa-chevron-left"></i>Previous</a></div>
+          <div class="next-content"><a href="./2-3.html">Next<i class="fa fa-chevron-right"></i></a></div>
         </div>
       </div>
     </div>

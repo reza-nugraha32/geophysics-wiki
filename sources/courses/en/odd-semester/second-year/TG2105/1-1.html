@@ -31,6 +31,7 @@
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../../../../../resources/scripts/toggle-dropdown.js"></script>
     <script src="../../../../../../resources/scripts/toggle-course-subcontent.js"></script>
     <script src="../../../../../../resources/scripts/toggle-table-of-contents.js"></script>
     <script src="../../../../../../resources/scripts/toggle-active-theme.js"></script>
@@ -168,36 +169,47 @@
       </div>
       
       <div class="right-column">
-        <h2 class="section-header">Numerical Method</h2>
-
-        <div class="section-text">
-          Numerical method is a technique used to formulate a mathematical problem in order to make it solvable using arithmetic operations.
-          Numerical method is used to solve a problem when it's deemed too complicated to solve analytically.
-          A solution obtained by a numerical method is a numerical approximation, unlike the exact solution obtained by analytical method. 
-          Thus, it will contains a degree of error. However, through optimizations and generally increasing the number of iterations or decreasing step sizes, its error could be controlled to 
-          meet certain satisfiable threshold.
+        <div class="toggle-dropdown">
+          <h2 class="section-header">Numerical Method</h2>
+          <i class="fa fa-chevron-up"></i>
         </div>
 
-        <div class="section-text">
-          For instance, Figure 1.1 below shows the use of numerical method to calculate the approximate solution for the definite integral
-          $\int_{0}^{\pi} \sin(x) dx. $ 
-          Reducing the error of approximation, as intuition would suggests, can be done by increasing the number of partitions used at the expense of longer
-          computational time.
-        </div>
+        <div class="dropdown-content">
+          <div class="section-text">
+            Numerical method is a technique used to formulate a mathematical problem in order to make it solvable using arithmetic operations.
+            Numerical method is used to solve a problem when it's deemed too complicated to solve analytically.
+            A solution obtained by a numerical method is a numerical approximation, unlike the exact solution obtained by analytical method. 
+            Thus, it will contains a degree of error. However, through optimizations and generally increasing the number of iterations or decreasing step sizes, its error could be controlled to 
+            meet certain satisfiable threshold.
+          </div>
 
-        <div class="figure-wrapper">
-          <img class="figure" src="./figures/1.1.png">
-          <div class="figure-caption">
-            Figure 1.1 Graph of the numerical integration for $\int_{0}^{\pi} \sin(x) dx. $ 
+          <div class="section-text">
+            For instance, Figure 1.1 below shows the use of numerical method to calculate the approximate solution for the definite integral
+            $\int_{0}^{\pi} \sin(x) dx. $ 
+            Reducing the error of approximation, as intuition would suggests, can be done by increasing the number of partitions used at the expense of longer
+            computational time.
+          </div>
+
+          <div class="figure-wrapper">
+            <img class="figure" src="./figures/1.1.png">
+            <div class="figure-caption">
+              Figure 1.1 Graph of the numerical integration for $\int_{0}^{\pi} \sin(x) dx. $ 
+            </div>
           </div>
         </div>
-        <h2 class="section-header">Computing in Geophysics</h2>
 
-        <div class="section-text">
-          Computation is defined as a method of problem solving from a data inputs using certain algorithms.
-          It holds a vital role in geophysics as a multidisciplinary science comprising of mathematics, physics, geology, and computer sciences.
+        <div class="toggle-dropdown">
+          <h2 class="section-header">Computing in Geophysics</h2>
+          <i class="fa fa-chevron-up"></i>
         </div>
-
+        
+        <div class="dropdown-content">
+          <div class="section-text">
+            Computation is defined as a method of problem solving from a data inputs using certain algorithms.
+            It holds a vital role in geophysics as a multidisciplinary science comprising of mathematics, physics, geology, and computer sciences.
+          </div>
+        </div>
+        
         <div class="content-footer-wrapper">
           <div class="previous-content"><a href="./index.html"><i class="fa fa-chevron-left"></i>Previous</a></div>
           <div class="next-content"><a href="./1-2.html">Next<i class="fa fa-chevron-right"></i></a></div>
