@@ -67,6 +67,10 @@ body{
   display: none;
 }
 
+.left-column{
+  position: absolute;
+}
+
 .right-column{
   width: auto;
 }
@@ -838,7 +842,9 @@ li{
   .example{
     width: auto;
   }
-
+  .left-column{
+    position: static;
+  }
   .tex-container{
     width: auto;
     margin-left: auto;
