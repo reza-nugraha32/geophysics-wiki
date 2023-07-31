@@ -69,6 +69,8 @@ body{
 
 .left-column{
   position: absolute;
+  margin-bottom: 30px;
+  padding: 10px 5px 10px 5px;
 }
 
 .right-column{
@@ -79,7 +81,11 @@ body{
 .light-mode{
   color: #474747;
   background-color: #f7f9ff;
-
+  
+  .left-column{
+    background-color: #f7f9ff;
+  }
+    
   .solution{
     background-color: #dfdfdf;
   }
@@ -191,6 +197,10 @@ body{
   color: #dadada;
   background-color: #151b1f;
 
+  .left-column{
+    background-color: #151b1f;
+  }
+  
   .hljs{
     border: solid;
     border-width: 1px;
@@ -844,6 +854,7 @@ li{
   }
   .left-column{
     position: static;
+    padding: auto
   }
   .tex-container{
     width: auto;
