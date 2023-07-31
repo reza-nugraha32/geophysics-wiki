@@ -2,7 +2,7 @@
 $(function toggleTablleofContents(){
    
     $(".contents-header").click(function () {
-        $(".left-table-of-contents").toggle(200);
+        $(".left-table-of-contents").toggle(300);
         $("i", this).toggleClass("fa-times fa-bars");
     });  
 
