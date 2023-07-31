@@ -1,6 +1,15 @@
-.MathJax {
-  font-size: 1.3em;
-  }
+.hljs{
+  border-radius: 10px;
+}
+
+.tex-container{
+  width: 320px;
+  margin-bottom: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
 
 .logo-horizontal{
   max-width: 200px;
@@ -21,6 +30,32 @@ body{
   z-index: -1;
 }
 
+.content-column{
+  display: grid;
+  padding: 3vw 5vw 3vw 5vw;
+}
+
+.contents-header{
+  display: inline-flex;
+  width: 150px;
+  margin: 0 0 5vw 0;
+  padding: 2vw 0 0 4vw;
+  border: solid;
+  border-radius: 2vw;
+}
+
+.left-table-of-contents{
+  overflow-y: scroll;
+  padding: 0 0 0 0;
+  margin: 0 0 5vw 0;
+}
+
+
+.left-table-of-contents{
+  display: none;
+}
+
+
 .light-mode{
   color: #474747;
   background-color: #f7f9ff;
@@ -28,13 +63,16 @@ body{
   .course-subcontent a{
     color: #474747;
   }
-  
+  .content-footer-wrapper{
+    color: #27374D;
+  }
+
   .topnav {
     background-color: #ffffff;
     box-shadow: 0 0 2vw 0 #b4b4b4;
   }
 
-  .header-text{
+  .header-text, .fa{
     color: #394c66;
   }
 
@@ -126,6 +164,12 @@ body{
   color: #dadada;
   background-color: #151b1f;
 
+  .hljs{
+    border: solid;
+    border-width: 1px;
+    border-color: #8a8a8a;
+  }
+
   .course-subcontent a{
     color: #dadada;
   }
@@ -135,10 +179,10 @@ body{
     box-shadow: none;
     border-bottom: solid;
     border-width: 1px;
-    border-color: #5e5e5e;
+    border-color: #8a8a8a;
   }
 
-  .header-text{
+  .header-text, .fa{
     color:#ffffff;
   }
 
@@ -152,11 +196,11 @@ body{
   }
 
   .language-switch a{
-    color: #5e5e5e;
+    color: #8a8a8a;
   }
 
   .language-switch{
-    color: #5e5e5e;
+    color: #8a8a8a;
   }
 
   .section-header{
@@ -190,7 +234,7 @@ body{
     box-shadow: none;
     background-color: #131a1d;
     border-width: 2px;
-    border-color: #5e5e5e;
+    border-color: #8a8a8a;
   }
 
   .course-box{
@@ -199,7 +243,7 @@ body{
     text-decoration: none;
     border-style: solid;
     border-width: 2px;
-    border-color: #5e5e5e;
+    border-color: #8a8a8a;
     border-radius: 3vw;
   }
 
@@ -235,20 +279,19 @@ body{
 /* Wrapper for any section */
 .section{
   padding: 3vw 5vw 3vw 5vw;
-
-  /* Section header for any text section */
-  .section-header{
-    margin-bottom: 0;
-    margin-top: 0;
-    padding-bottom: 2.5vw;
-  }
-
-  /* Section text is use for plain text for any text section */
-  .section-text{
-    margin-bottom: 6vw;
-  }
 }
 
+/* Section header for any text section */
+.section-header{
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-bottom: 2.5vw;
+}
+
+/* Section text is use for plain text for any text section */
+.section-text{
+  margin-bottom: 6vw;
+}
 
 
 /* Use for title heading */
@@ -273,11 +316,12 @@ h3{
 }
 
 a{
-  text-decoration: none !important;
+  color: inherit;
+  text-decoration: none;
 }
 
 a:hover{
-  text-decoration: none !important;
+  text-decoration: underline;
 }
 
 
@@ -289,7 +333,6 @@ li{
   list-style-type: disc;
 }
 .course-content{
-  cursor: pointer;
   display: flex;
   justify-content: space-between;
 }
@@ -312,24 +355,43 @@ li{
   color: #808080;
   font-size: 1em;
   font-weight: 100;
+  padding: 0 0 0 10px;
+}
+
+.fa.fa-chevron-left{
+  padding: 0 10px 0 0;
+  font-size: 0.9em;
+  font-weight: 100;
+}
+
+.fa.fa-chevron-right{
+  padding: 0 0 0 10px;
+  font-size: 0.9em;
+  font-weight: 100;
 }
 
 .fa.fa-plus, .fa.fa-minus{
   font-size: 0.7em;
 }
 
+.fa.fa-times{
+  font-size: larger;
+  padding: 0 0 0 10px;
+}
+
+.fa.fa-bars{
+  padding: 3px 0 0 10px;
+}
 
 
 /* Dropdown toggle */
 .toggle-dropdown{
-  cursor: pointer;
   display: flex;
   justify-content: space-between;
   padding-bottom: 1em;
 }
 
 .faqs-dropdown{
-  cursor: pointer;
   padding-bottom: 1em;
 }
 
@@ -352,7 +414,6 @@ li{
 
 .mode-switch:hover{
   color: #526D82;
-  cursor: pointer;
 }
 
 
@@ -428,7 +489,6 @@ li{
 
 .language-switch a:hover{
   color: #526D82;
-  cursor: pointer;
 }
 
 .language-switch{
@@ -667,7 +727,6 @@ li{
   border-width: 0;
   border-radius: 5vw;
   font-size: 0.9em;
-  cursor: pointer;
 }
 
 .year-index{
@@ -700,13 +759,82 @@ li{
   }
   .menu:hover{
     color: #526D82;
-    cursor: pointer;
   }
 
+.figure-wrapper{
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  padding: 2vw 0 5vw 0 ;
+
+  .figure{
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .figure-caption{
+    padding: 5vw 0 0 0 ;
+  }
+}
+
+.content-footer-wrapper{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 0 0;
+}
+
+.content-footer-wrapper a:hover{
+  text-decoration: underline;
+}
+
 @media screen and (min-width: 800px) {
+  .tex-container{
+    width: auto;
+  }
+
+  .figure-wrapper{
+    padding: 2vh 0 5vh 0 ;
+
+    .figure{
+      width: 70vh;
+    }
+  
+    .figure-caption{
+      padding: 5vh 0 0 0 ;
+    }
+  }
+
+
   .logo-horizontal{
     max-width: 35vh;
   }  
+  
+  .content-column{
+    display: inline-flex;
+    padding: 3vh 20vh 3vh 20vh;
+  }
+
+  .contents-header{
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  .left-table-of-contents{
+    display: flex;
+    padding: 0 15px 0 0;
+    width: 40vh;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+
+  .right-column{
+    padding: 0 0 0 5vh;
+  }
 
   .light-mode{
     .topnav {
@@ -771,18 +899,18 @@ li{
   /* Wrapper for any section */
   .section{
     padding: 3vh 20vh 3vh 20vh;
-  
-    /* Section header for any text section */
+  }
+
+  /* Section header for any text section */
     .section-header{
       padding-bottom: 2.5vh;
-    }
-  
-    /* Section text is use for plain text for any text section */
-    .section-text{
-      margin-bottom: 4vh;
-    }
   }
   
+  /* Section text is use for plain text for any text section */
+  .section-text{
+      margin-bottom: 4vh;
+  }
+
   /* Add space between main section and footer section */
   .spacer{
     padding-bottom: 25vh;

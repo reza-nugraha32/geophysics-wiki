@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <!-- Start of copyable header template -->
 <html lang="en">
-  <head>
+  <head>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Physics IA</title>
+    <title>Computing in Geophysics</title>
     <link rel="stylesheet" href="../../../../../../resources/style.css">
     <link rel="icon" href="../../../../../../assets/images/logo/default-logo.png" type="image/x-icon">  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKBYZ469RT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-YKBYZ469RT');
+    </script>
   </head>
 
   <body id="body-en">
@@ -38,14 +46,14 @@
       <div class="header">
         <div class="header-text">
           <!-- Language switch-->
-          <a href="../../../../../../sources/courses/id/odd-semester/MA1101/index.html">
-            <div class="language-switch">
-                <i class="fa fa-language"></i>
-                <div class="language">English</div>              
-            </div>
-          </a>
-          <div class="page-title">FI1101</div>
-          <h1 class="page-title">Physics IA</h1>
+          <div class="language-switch">
+            <a href="../../../../../../sources/courses/id/odd-semester/TG2105/index.html">
+              <i class="fa fa-language"></i>
+              <div class="language">English</div> 
+            </a>             
+          </div>
+          <div class="page-title">TG2105</div>
+          <h1 class="page-title">Computing in Geophysics</h1>
         </div>
       </div>
       <!-- End of copyable header template -->
@@ -56,7 +64,9 @@
           <h3>Course Description</h3>
         </div>
         <div class="section-text">
-          This course is the first part of university elementary physics course for science and engineering. It covers mechanics, mechanical waves, fluids, and thermophysics.
+          This course is a coding-oriented numerical methods course designated for second year geophysics students.
+          It covers topics in numerical methods including system of linear equations, curve fitting, numerical integration, 
+          numerical differentiation, differential equation, and optimizations. This course is taught using Python.
         </div>
         
         <div class="section-header">
@@ -64,7 +74,7 @@
         </div>
 
         <div class="section-text">
-          None
+          Introduction to Computation
         </div>
 
         <div class="section-header">
@@ -74,157 +84,99 @@
         <div class="section-header">Main Reference(s)</div>
 
         <div class="section-text">
-          Halliday, D., Resnick, R., & Walker, J. (2014). Principle of Physics, 10th Edition. John Wiley & Sons.
+          Chapra, S.C, & Canale, R.P. (2014). Numerical Methods for Engineers, 7th Edition. McGraw Hill.
         </div>
 
         <div class="section-header">Additional Reference(s)</div>
 
         <div class="section-text">
-          Serway, R.A. (1996). Physics for Scientist and Engineers, 7th Edition. Sander College.
+          Munir, R. (2017). Metode Numerik, 3th Edition. Informatika.
         </div>
 
         <div class="section-header">
           <h3>Course Contents</h3>
         </div>
-          <ul class="course-syllabus">
-            <li class="course-content">Chapter 1: Point-Mass Kinematics<i class="fa fa-chevron-down"></i></li>
-              <div class="course-subcontent">
-                <ul>
-                  <li><a href="#">Vectors</a></li>
-                  <li><a href="#">Point-Mass Kinematics</a></li>
-                </ul>
-              </div>
-            <li class="course-content">Chapter 2: Kinematics<i class="fa fa-chevron-down"></i></li>
-              <div class="course-subcontent">
-                <ul>
-                  <li><a href="#">Velocity and Acceleration</a></li>
-                  <li><a href="#">Kinematics Equations</a></li>
-                  <li><a href="#">Motions in 1-D</a></li>
-                  <li><a href="#">Motions in 2-D and 3-D</a></li>
-                  <li><a href="#">Relative Velocity</a></li>
-                </ul>
-              </div>
-            <li class="course-content">Chapter 3: Point-Mass Dynamics<i class="fa fa-chevron-down"></i></li>
+        <ul class="course-syllabus">
+          <li class="course-content">Chapter 1: Preliminaries<i class="fa fa-chevron-down"></i></li>
             <div class="course-subcontent">
               <ul>
-                <li><a href="#">Inertia</a></li>
-                <li><a href="#">Newton's Laws I, II, & III</a></li>
-                <li><a href="#">Application of Newton's Laws</a></li>
-                <li><a href="#">Force Diagram</a></li>
+                <li><a href="./1-1.html">1.1 Numerical Methods and Computing in Geophysics</a></li>
+                <li><a href="./1-2.html">1.2 Mathematical Model, Algorithm, and Error Analysis</a></li>
               </ul>
             </div>
-            <li class="course-content">Chapter 4: Newton's Dynamics<i class="fa fa-chevron-down"></i></li>
+          <li class="course-content">Chapter 2: System of Linear Equations<i class="fa fa-chevron-down"></i></li>
             <div class="course-subcontent">
               <ul>
-                <li><a href="#">Friction, Tension, and Normal Force</a></li>
-                <li><a href="#">Newton's Gravitational Force</a></li>
-                <li><a href="#">Pulley Problems</a></li>
-                <li><a href="#">Circular Motions</a></li>
-                <li><a href="#">Centripetal Force</a></li>
+                <li><a href="./2-1.html">2.1 The Matrices System</a></li>
+                <li><a href="./2-2.html">2.2 Naive Gauss Elimination Method</a></li>
+                <li><a href="./2-3.html">2.3 Gauss-Jordan Elimination Method</a></li>
+                <li><a href="./2-4.html">2.4 Gauss-Seidel Elimination Method</a></li>
+                <li><a href="./2-5.html">2.5 LU Decomposition Method</a></li>
               </ul>
             </div>
-            <li class="course-content">Chapter 5: Work and Energy<i class="fa fa-chevron-down"></i></li>
-            <div class="course-subcontent">
-              <ul>
-                <li><a href="#">Work</a></li>
-                <li><a href="#">Kinetic Energy and Work-Kinetic Energy Theorem</a></li>
-                <li><a href="#">Potential Energy</a></li>
-                <li><a href="#">Conservative Force</a></li>
-                <li><a href="#">Conservation of Energy Law</a></li>
-                <li><a href="#">Non-conservative Force</a></li>
-              </ul>
-            </div>
-            <li class="course-content">Chapter 6: Linear Momentum<i class="fa fa-chevron-down"></i></li>
-            <div class="course-subcontent">
-              <ul>
-                <li><a href="#">Momentum and Impulse</a></li>
-                <li><a href="#">Particle System</a></li>
-                <li><a href="#">Conservation of Linear Momentum Law</a></li>
-                <li><a href="#">Collision</a></li>
-                <li><a href="#">Motion of Center of Mass</a></li>
-              </ul>
-            </div>
-            <li class="course-content">Chapter 7: Rigid Body<i class="fa fa-chevron-down"></i></li>
-            <div class="course-subcontent">
-              <ul>
-                <li><a href="#">Statics</a></li>
-                <li><a href="#">Rotational Dynamics</a></li>
-                <li><a href="#">Rigid Body System</a></li>
-                <li><a href="#">Rotational Dynamics of Rigid Body System</a></li>
-                <li><a href="#">Rolling Motion</a></li>
-              </ul>
-            </div>
-            <li class="course-content">Chapter 8: Elasticity and Oscillations<i class="fa fa-chevron-down"></i></li>
-            <div class="course-subcontent">
-              <ul>
-                <li><a href="#">Stress, Strain, and Young Modulus</a></li>
-                <li><a href="#">Shear Modulus and Bulk Modulus</a></li>
-                <li><a href="#">Harmonic Oscillations and Damped Oscillations</a></li>
-                <li><a href="#">Resonances</a></li>
-              </ul>
-            </div>
-            <li class="course-content">Chapter 9: Mechanical Waves<i class="fa fa-chevron-down"></i></li>
-            <div class="course-subcontent">
-              <ul>
-                <li><a href="#">String Waves</a></li>
-                <li><a href="#">Sound Waves</a></li>
-                <li><a href="#">Superposition of Waves</a></li>
-                <li><a href="#">Standing Waves</a></li>
-                <li><a href="#">Resonances and Doppler Effects</a></li>
-              </ul>
-            </div>
-            <li class="course-content">Chapter 10: Statics and Dynamics Fluids<i class="fa fa-chevron-down"></i></li>
-            <div class="course-subcontent">
-              <ul>
-                <li><a href="#">Hydrostatic Pressure</a></li>
-                <li><a href="#">Archimedes' Law</a></li>
-                <li><a href="#">Continuity Equation</a></li>
-                <li><a href="#">Bernoulli's Principle</a></li>
-              </ul>
-            </div>
-            <li class="course-content">Chapter 11: Kinetic Theory of Gases<i class="fa fa-chevron-down"></i></li>
-            <div class="course-subcontent">
-              <ul>
-                <li><a href="#">Ideal Gas</a></li>
-                <li><a href="#">Equipartition Principle of Energy</a></li>
-                <li><a href="#">Internal Energy</a></li>
-                <li><a href="#">Heat Capacity</a></li>
-              </ul>
-            </div>
-            <li class="course-content">Chapter 12: the Zeroeth and the First Law of Thermodynamics<i class="fa fa-chevron-down"></i></li>
-            <div class="course-subcontent">
-              <ul>
-                <li><a href="#">Thermal Equilibrium</a></li>
-                <li><a href="#">General Quasistatic Process</a></li>
-                <li><a href="#">Specific Processes</a></li>
-                <li><a href="#">PV Diagram</a></li>
-                <li><a href="#">Works</a></li>
-                <li><a href="#">the First Law of Thermodynamics</a></li>
-              </ul>
-            </div>
-            <li class="course-content">Chapter 13: Second Law of Thermodynamics<i class="fa fa-chevron-down"></i></li>
-            <div class="course-subcontent">
-              <ul>
-                <li><a href="#">Cyclic Process</a></li>
-                <li><a href="#">Efficiency</a></li>
-                <li><a href="#">Second Law of Thermodynamics</a></li>
-                <li><a href="#">Carnot's Engine</a></li>
-                <li><a href="#">Introduction to Entropy</a></li>
-              </ul>
-            </div>
-            <li class="course-content">Middle Term Exams<i class="fa fa-chevron-down"></i></li>
-            <div class="course-subcontent">
-              <ul>
-                <li><a href="#">Middle Term Exams</a></li>
-              </ul>
-            </div>
-            <li class="course-content">Final Term Exams<i class="fa fa-chevron-down"></i></li>
-            <div class="course-subcontent">
-              <ul>
-                <li><a href="#">Final Term Exams</a></li>
-              </ul>
-            </div>
-          </ul>
+          <li class="course-content">Chapter 3: Curve Fitting<i class="fa fa-chevron-down"></i></li>
+          <div class="course-subcontent">
+            <ul>
+              <li><a href="./3-1.html">3.1 Linear Least-Square Regression</a></li>
+              <li><a href="./3-2.html">3.2 Non-linear Least-Square Regression</a></li>
+              <li><a href="./3-3.html">3.3 Interpolation and Linear Approximation</a></li>
+              <li><a href="./3-4.html">3.4 Newton's Polynomial Interpolation</a></li>
+              <li><a href="./3-5.html">3.5 Lagrange's Polynomial Interpolation</a></li>
+              <li><a href="./3-6.html">3.6 Spline Interpolation</a></li>
+            </ul>
+          </div>
+          <li class="course-content">Chapter 4: Numerical Integration and Differentiation<i class="fa fa-chevron-down"></i></li>
+          <div class="course-subcontent">
+            <ul>
+              <li><a href="./4-1.html">4.1 The Trapezoid Rule</a></li>
+              <li><a href="./4-2.html">4.2 The Simpson's Rule</a></li>
+              <li><a href="./4-3.html">4.3 Romberg's Extrapolation</a></li>
+              <li><a href="./4-4.html">4.4 Gauss-Legendre Integration Method</a></li>
+              <li><a href="./4-5.html">4.5 Euler's Method for Differential Equation</a></li>
+              <li><a href="./4-6.html">4.6 Heun's Method for Differential Equation</a></li>
+              <li><a href="./4-7.html">4.7 Runge-Kutta Method for Differential Equation</a></li>
+            </ul>
+          </div>
+          <li class="course-content">Chapter 5: Partial Differential Equation<i class="fa fa-chevron-down"></i></li>
+          <div class="course-subcontent">
+            <ul>
+              <li><a href="./5-1.html">5.1 Elliptic Partial Differential Equation</a></li>
+              <li><a href="./5-2.html">5.2 Finite Difference Method for Elliptic PDE</a></li>
+              <li><a href="./5-3.html">5.3 Parabolic Partial Differential Equations</a></li>
+              <li><a href="./5-4.html">5.4 Von Neumann Stability Analysis</a></li>
+              <li><a href="./5-5.html">5.5 Conservation of Energy Law</a></li>
+              <li><a href="./5-6.html">5.6 Hyperbolic Partial Differential Equations</a></li>
+            </ul>
+          </div>
+          <li class="course-content">Chapter 6: Finite Element Method<i class="fa fa-chevron-down"></i></li>
+          <div class="course-subcontent">
+            <ul>
+              <li><a href="./6-1.html">6.1 Introduction to Finite Element Method</a></li>
+              <li><a href="./6-2.html">6.2 Using Finite Element Method to Solve PDEs</a></li>
+            </ul>
+          </div>
+          <li class="course-content">Chapter 7: Optimizations<i class="fa fa-chevron-down"></i></li>
+          <div class="course-subcontent">
+            <ul>
+              <li><a href="./7-1.html">7.1 Introduction to Optimizations</a></li>
+              <li><a href="./7-2.html">7.2 Random Search Method</a></li>
+              <li><a href="./7-3.html">7.3 Gradient Descent Method</a></li>
+              <li><a href="./7-4.html">7.4 Newton's Optimization Method</a></li>
+            </ul>
+          </div>
+          <li class="course-content">Middle Term Exams<i class="fa fa-chevron-down"></i></li>
+          <div class="course-subcontent">
+            <ul>
+              <li><a href="./midterm.html">Middle Term Exams</a></li>
+            </ul>
+          </div>
+          <li class="course-content">Final Term Exams<i class="fa fa-chevron-down"></i></li>
+          <div class="course-subcontent">
+            <ul>
+              <li><a href="./finalterm.html">Final Term Exams</a></li>
+            </ul>
+          </div>
+        </ul>
       </div>
     </div>
 

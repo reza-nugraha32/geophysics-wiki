@@ -1,13 +1,15 @@
 <link rel="stylesheet" href="style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="index.js"></script>
+<script src="../../../../../../resources/scripts/trim-code-whitespace.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/tokyo-night-dark.min.css">
 
-<ul class="course-syllabus">
-  <li class="course-content">Chapter 1: Point-Mass Kinematics<i class="fa fa-chevron-down"></i></li>
-  <div class="course-subcontent">
-    <ul>
-      <li><a href="#">Vectors</a></li>
-      <li><a href="#">Point-Mass Kinematics</a></li>
-    </ul>
-  </div>
-</ul>
+<pre><code class="language-python hljs">
+print("hello world")
+for i in range(100):
+  if i%2 == 0:
+    print(i)
+  else:
+    print("%d is odd")
+</code></pre>
