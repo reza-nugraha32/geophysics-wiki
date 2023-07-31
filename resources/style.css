@@ -86,6 +86,10 @@ body{
   .content-footer-wrapper{
     color: #27374D;
   }
+  
+  .contents-header{
+    border-color: #394c66;
+  }
 
   .topnav {
     background-color: #ffffff;
