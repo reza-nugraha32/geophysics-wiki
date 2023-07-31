@@ -15,6 +15,14 @@
   overflow-y: hidden;
 }
 
+.code-container{
+  width: auto;
+  margin-left: auto;
+  margin-right: auto; 
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
 .logo-horizontal{
   max-width: 200px;
 }
@@ -420,7 +428,7 @@ li{
 .solution{
   margin-bottom: 30px;
   margin-top: 10px;  
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .toggle-dropdown{
