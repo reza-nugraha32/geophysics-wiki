@@ -553,7 +553,7 @@ li{
   /* Wrapper for years */
   .year-wrapper{
     margin: 2vw 0 2vw 0;
-    border-radius: 5vw;
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -759,7 +759,7 @@ li{
   padding: 3vw 3vw 3vw 3vw;
   background-color: transparent;
   border-width: 0;
-  border-radius: 5vw;
+  border-radius: 20px;
   font-size: 0.9em;
 }
 
@@ -847,7 +847,7 @@ li{
 
 
   .logo-horizontal{
-    max-width: 35vh;
+    max-width: 350px;
   }  
   
   .content-column{
@@ -1022,7 +1022,7 @@ li{
   /* Courses by year section */
   .curriculum{
     padding: 5vh 5vh 5vh 5vh;
-    margin: 5vh 20vh 8.3vh 20vh;
+    margin: 0 20vh 8.3vh 20vh;
     border-radius: 5vh;
 
     .curriculum-header{
@@ -1048,13 +1048,13 @@ li{
     
     .course-box{
       margin: 2vh 3vh 2vh 3vh;
-      width: 45vh;
-      height: 40vh;
+      width: 280px;
+      height: 250px;
     }
     
     .course-cover{
-      width: 45vh;
-      height: 20vh;
+      width: 280px;
+      height: 125px;
     }
     
     .course-name{
@@ -1065,9 +1065,8 @@ li{
     .course-code{
       font-size: 0.9em;
       padding: 2vh 3vh 1vh 3vh;
-      max-width: 333vh;
-      max-height: 20vh;
-      
+      max-width: 280px;
+      max-height: 50px;
     }  
   }
 
@@ -1165,7 +1164,7 @@ li{
   /* Unclicked button style */
   .year-button{
     padding: 2vh 4vh 2vh 4vh;
-    border-radius: 6vh;
+    border-radius: 20px;
   }
   
   .year-index{
