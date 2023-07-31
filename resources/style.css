@@ -2,8 +2,9 @@
   border-radius: 10px;
 }
 
-.MathJax{
+.MathJax, .mjx-chtml{
   font-size: 1em !important;
+  z-index: -1;
 }
 
 .tex-container{
@@ -58,23 +59,20 @@ body{
 
 .left-table-of-contents{
   overflow-y: scroll;
-  padding: 0 0 0 0;
+  padding: 10px 5px 10px 5px;
   margin: 0 0 5vw 0;
-}
-
-
-.left-table-of-contents{
   display: none;
 }
 
 .left-column{
   position: absolute;
   margin-bottom: 30px;
-  padding: 10px 5px 10px 5px;
+  z-index: 1;
 }
 
 .right-column{
   width: auto;
+  margin-top: 50px;
 }
 
 
@@ -852,10 +850,12 @@ li{
   .example{
     width: auto;
   }
+  
   .left-column{
     position: static;
     padding: auto
   }
+  
   .tex-container{
     width: auto;
     margin-left: auto;
@@ -905,6 +905,7 @@ li{
 
   .right-column{
     width: 150vh;
+    margin-top: 0;
   }
 
   .light-mode{
