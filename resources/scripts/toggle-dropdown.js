@@ -10,7 +10,7 @@ $(function toggleDropdown(){
 $(function toggleTableofContents(){
    
   $(".contents-header").click(function () {
-      $(".left-table-of-contents").slideToggle(300);
+      $(".left-table-of-contents").slideToggle(0);
       $("i", this).toggleClass("fa-times fa-bars");
   });  
 
@@ -26,7 +26,7 @@ $(function toggleTableofContents(){
 // JQuery script to toggle course subcontents dropdown
 $(function toggleCourseSubcontent(){
   $(".course-content").click(function () {
-    $(this).next(".course-subcontent").slideToggle(500);
+    $(this).next(".course-subcontent").slideToggle(300);
     $("i", this).toggleClass("fa-chevron-down fa-chevron-up");
   });  
 })
@@ -34,7 +34,7 @@ $(function toggleCourseSubcontent(){
 // JQuery script to toggle solution dropdown
 $(function toggleSolution(){
   $(".toggle-solution").click(function () {
-    $(this).next(".solution-content").slideToggle(500);
+    $(this).next(".solution-content").slideToggle(300);
     $("i", this).toggleClass("fa-chevron-down fa-chevron-up");
   });  
 })
