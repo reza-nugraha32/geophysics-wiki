@@ -1,8 +1,8 @@
 // JQuery script to toggle course subcontents dropdown
-$(function toggleTablleofContents(){
+$(function toggleTableofContents(){
    
     $(".contents-header").click(function () {
-        $(".left-table-of-contents").toggle(500);
+        $(".left-table-of-contents").slideToggle(500);
         $("i", this).toggleClass("fa-times fa-bars");
     });  
 
