@@ -406,14 +406,14 @@ li{
 .toggle-solution{
   display: flex;
   justify-content: space-between;
-  padding: 15px 15px 15px 15px;
+  padding: 15px 10px 15px 10px;
 
 }
 
 .solution-content{
   display: none;
   overflow: hidden;
-  padding: 0 15px 10px 15px;
+  padding: 0 10px 10px 10px;
 }
 
 .solution{
