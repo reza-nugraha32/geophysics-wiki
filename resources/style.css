@@ -400,6 +400,7 @@ li{
 
 /* Dropdown toggle */
 .example{
+  width: 90vw;
   margin-bottom: 30px;
 }
 
@@ -822,6 +823,10 @@ li{
 }
 
 @media screen and (min-width: 830px) {
+  .example{
+    width: auto;
+  }
+
   .tex-container{
     width: auto;
     margin-left: auto;
