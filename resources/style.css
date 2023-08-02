@@ -693,7 +693,7 @@ li{
     margin-bottom: 0;
   }
   .right-column{
-    width: auto;
+    width: 130vh;
   }
   .light-mode{
     .topnav {

@@ -2,11 +2,9 @@
 $(document).ready(function(){
   // Last theme used when visiting the web stored in localStorage
   var lastTheme = localStorage.getItem("theme")
-  console.log(lastTheme)
 
   // Detect device theme
   const deviceThemeIsDark = window.matchMedia("(prefers-color-scheme: dark)").matches
-  console.log(deviceThemeIsDark)
   
   // If there is not any localStorage, falls back into device theme
   if (lastTheme != null){
