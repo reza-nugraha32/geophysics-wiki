@@ -1,33 +1,44 @@
 // JQuery script for toggling between dark mode and light mode
 $(document).ready(function(){
-  var lastTheme = localStorage.getItem("theme");
-  console.log(lastTheme);
+  // Last theme used when visiting the web stored in localStorage
+  var lastTheme = localStorage.getItem("theme")
+  console.log(lastTheme)
 
+  // Detect device theme
+  const deviceThemeIsDark = window.matchMedia("(prefers-color-scheme: dark)").matches
+  console.log(deviceThemeIsDark)
+  
+  // If there is not any localStorage, falls back into device theme
   if (lastTheme != null){
-    $("body").addClass(lastTheme);
+    $("body").addClass(lastTheme)
   } else{
-    $("body").addClass("light-mode");
+    if (deviceThemeIsDark) {
+      $("body").addClass("dark-mode")
+    } else {
+      $("body").addClass("light-mode")
+    }
   }
   
+  // Sync between icon and theme
   if (lastTheme == "light-mode"){
-    $("#switch-button").addClass("fa fa-sun-o");
+    $("#switch-button").addClass("fa fa-sun-o")
   } else {
-    $("#switch-button").addClass("fa fa-moon-o");
+    $("#switch-button").addClass("fa fa-moon-o")
   }
   
+  // Toggle theme on click
   $(".mode-switch").click(function(){
-    $("i", this).toggleClass("fa-sun-o fa-moon-o");
+    $("i", this).toggleClass("fa-sun-o fa-moon-o")
 
-    $("body").toggleClass("dark-mode light-mode");
+    $("body").toggleClass("dark-mode light-mode")
     
     if ($("body").attr("class") == "dark-mode"){
-      localStorage.setItem("theme", "dark-mode");
-      lastTheme = localStorage.getItem("theme");
+      localStorage.setItem("theme", "dark-mode")
+      lastTheme = localStorage.getItem("theme")
 
     } else if ($("body").attr("class") == "light-mode"){
-      localStorage.setItem("theme", "light-mode");
+      localStorage.setItem("theme", "light-mode")
       lastTheme = localStorage.getItem("theme");
-    
     }
   });   
 });
