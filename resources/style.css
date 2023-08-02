@@ -1,25 +1,19 @@
 .hljs{
   border-radius: 10px;
 }
-
-.MathJax, .mjx-chtml{
+.katex-display > .katex > .katex-html > .tag {
+  position: relative !important;
+  right: -0.5em !important;
   font-size: 1em !important;
-  z-index: 0;
 }
-
-.solution{
-  z-index: -1;
-}
-
 .tex-container{
-  width: 300px;
+  width: 320px;
   margin-bottom: 8px;
   margin-left: auto;
   margin-right: auto; 
   overflow-x: auto;
   overflow-y: hidden;
 }
-
 .code-container{
   width: auto;
   margin-left: auto;
@@ -27,18 +21,14 @@
   overflow-x: auto;
   overflow-y: hidden;
 }
-
 .logo-horizontal{
   max-width: 200px;
 }
-
 body{
   font-family: "Helvetica", sans-serif;
   font-size: 1.2em;
   margin: 0;
-
 }
-
 .background-gradient{
   position: absolute;
   scale: 0.5;
@@ -46,59 +36,44 @@ body{
   rotate: 45deg;
   z-index: -1;
 }
-
 .content-column{
   display: grid;
   padding: 3vw 5vw 3vw 5vw;
 }
-
 .contents-header{
-  display: inline-flex;
-  width: 150px;
-  margin: 0 0 5vw 0;
-  padding: 10px 0 0 20px;
+  display: flex;
+  width: 125px;
+  margin: 0 0 15px 0;
+  padding: 10px 10px 10px 10px;
   border: solid;
   border-radius: 2vw;
 }
-
 .left-table-of-contents{
   overflow-y: scroll;
-  padding: 10px 15px 10px 5px;
+  max-height: 350px;
+  padding: 0 5vw 0 0;
   margin: 0 0 5vw 0;
   display: none;
 }
-
 .left-column{
-  position: absolute;
-  width: auto;
-  z-index: 1;
+  margin-bottom: 5px;
 }
-
 .right-column{
   width: auto;
-  margin-top: 80px;
 }
-
-
 .light-mode{
   color: #474747;
   background-color: #f7f9ff;
-  
-  .left-column{
-    background-color: #f7f9ff;
-  }
-    
   .solution{
     background-color: #dfdfdf;
   }
-
   .course-subcontent a{
     color: #474747;
   }
   .content-footer-wrapper{
     color: #27374D;
   }
-  
+
   .contents-header{
     border-color: #394c66;
   }
@@ -107,32 +82,25 @@ body{
     background-color: #ffffff;
     box-shadow: 0 0 2vw 0 #b4b4b4;
   }
-
   .header-text, .fa{
     color: #394c66;
   }
-
   .mode-switch{
     background-color: transparent;
     color: #808080;
   }
-
   .language-switch a{
     color: #808080;
   }
-
   .language-switch {
     color: #808080;
   }
-
   .section-text a{
     color: #4d77b3;
   }
-
   .course-by-year{
     color: #394c66;
   }
-
   .year-button{
     color: #474747;
   }
@@ -140,7 +108,6 @@ body{
   .year-wrapper{
     background-color: #f7f9ff;
   }
-
   .active{
     background-color: #ffffff;
     box-shadow: inset 0 0 0 3px #4d77b3;
@@ -150,69 +117,51 @@ body{
   .section-header{
     color: #394c66;
   }
-
   .curriculum{
     background-color: #ffffff;
     box-shadow: 0 0 2vw 0 #b4b4b4;
     border-width: 0;
   }
-
   .course-box{
     background-color: #ffffff;
     box-shadow: 0 0 2vw 0 #b4b4b4;
     text-decoration: none;
     border-style: none;
-    border-radius: 3vw;
+    border-radius: 15px;
   }
-
   .course-box:hover{
     box-shadow: 0 0 1vw 0 #b4b4b4;
   }
-
   .course-name{
     color: #474747;
   }
-
   .repo-link{
     background-color: transparent;
     box-shadow: inset 0 0 0 3px #4d77b3;
     color: #4d77b3;
   }
-
   .repo-link:hover{
     box-shadow: inset 0 0 0 3px #9DB2BF;
     color: #9DB2BF;
   }
-
   .footer{
     background-color: transparent;
-
     .footer-row-list a{
       color: #474747;
     }
   }
 }    
-
-
-
 .dark-mode{
   color: #dadada;
   background-color: #151b1f;
-
-  .left-column{
-    background-color: #151b1f;
-  }
-  
   .hljs{
     border: solid;
     border-width: 1px;
     border-color: #8a8a8a;
   }
-
   .solution{
     background-color: #1d2529;
   }
-
   .course-subcontent a{
     color: #dadada;
   }
@@ -224,90 +173,72 @@ body{
     border-width: 1px;
     border-color: #8a8a8a;
   }
-
   .header-text, .fa{
     color:#ffffff;
   }
-
   .mode-switch{
     color: #dadada;
   }
-
   .mode-switch{
     color: #dadada;
     background-color: transparent;
   }
-
   .language-switch a{
     color: #8a8a8a;
   }
-
   .language-switch{
     color: #8a8a8a;
   }
-
   .section-header{
     color: #ffffff;
   }
-
   .section-text a{
     color: #4d77b3;
   }
-
   .year-button{
     color: #dadada;
   }
-
   .active{
     background-color: #131a1d;
     box-shadow: inset 0 0 0 3px #4d77b3;
     color: #4d77b3;
   }
-
   .course-by-year{
     color: #9DB2BF;
   }
-
   .year-wrapper{
     background-color: #171d22;
   }
-
   .curriculum{
     box-shadow: none;
     background-color: #131a1d;
-    border-width: 2px;
+    border-width: 1px;
     border-color: #8a8a8a;
   }
-
   .course-box{
     box-shadow: none;
     background-color: #171d22;
     text-decoration: none;
     border-style: solid;
-    border-width: 2px;
+    border-width: 1px;
     border-color: #8a8a8a;
-    border-radius: 3vw;
+    border-radius: 15px;
   }
-
   .course-box:hover{
     box-shadow: none;
   }
-
   .course-name{
     color: #dadada;
   }
-
   .repo-link{
     background-color: transparent;
     box-shadow: inset 0 0 0 3px #4d77b3;
     color: #4d77b3;
   }
-
   .repo-link:hover{
     box-shadow: inset 0 0 0 3px #dadada;
     color: #dadada;
   }
-
   .footer{
     background-color: transparent;
     
@@ -316,58 +247,68 @@ body{
     }
   }
 }  
-
-
+/* Top navigation */
+.topnav {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  padding: 0 5vw 0 5vw;
+}
+.topnav a {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px 0 10px 0;
+  text-decoration: none;
+  font-size: 1em;
+}
+.menu{
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 0;
+}
+.menu:hover{
+  color: #526D82;
+}
 /* Wrapper for any section */
 .section{
   padding: 3vw 5vw 3vw 5vw;
 }
-
 /* Section header for any text section */
 .section-header{
   margin-bottom: 0;
   margin-top: 0;
   padding-bottom: 2.5vw;
 }
-
 /* Section text is use for plain text for any text section */
 .section-text{
   margin-bottom: 6vw;
 }
-
-
 /* Use for title heading */
 h1{
   margin: 0;
 }
-
 /* Use for headings in text */
 h2{
   margin: 0 0 0 0;
-  font-size: 1.7em;
+  font-size: 1.5em;
 }
-
 /* Use for subheading */
 h3{
   margin: 0 0 0 0;
 } 
-
 /* Add space between main section and footer section */
 .spacer{
   padding-bottom: 25vw;
 }
-
 a{
   color: inherit;
   text-decoration: none;
 }
-
 a:hover{
   text-decoration: underline;
 }
-
-
-
 /* Course syllabus */
 li{
   padding: 0.5em 0 1em 0;
@@ -378,94 +319,73 @@ li{
   display: flex;
   justify-content: space-between;
 }
-
 .course-subcontent a{
   color: #474747;
 }
-
 .course-subcontent{
   display: none;
   overflow: hidden;
 }
-
 .course-syllabus{
   margin-top: 0;
   padding-left: 0;
 }
-
 .fa.fa-chevron-down, .fa.fa-chevron-up{
   color: #808080;
   font-size: 1em;
   font-weight: 100;
   padding: 0 0 0 10px;
 }
-
 .fa.fa-chevron-left{
   padding: 0 10px 0 0;
   font-size: 0.9em;
   font-weight: 100;
 }
-
 .fa.fa-chevron-right{
   padding: 0 0 0 10px;
   font-size: 0.9em;
   font-weight: 100;
 }
-
 .fa.fa-plus, .fa.fa-minus{
   font-size: 0.7em;
 }
-
 .fa.fa-times{
-  font-size: larger;
-  padding: 0 0 0 10px;
+  padding: 3px 0 0 10px;
+  scale: 1.05;
 }
-
 .fa.fa-bars{
   padding: 5px 0 0 10px;
 }
-
-
 /* Dropdown toggle */
 .example{
   width: 90vw;
   margin-bottom: 30px;
 }
-
 .toggle-solution{
   display: flex;
   justify-content: space-between;
   padding: 15px 10px 15px 10px;
-
 }
-
 .solution-content{
   display: none;
   overflow: hidden;
   padding: 0 10px 10px 10px;
 }
-
 .solution{
   margin-bottom: 30px;
   margin-top: 10px;  
   border-radius: 10px;
 }
-
 .toggle-dropdown{
   display: flex;
   justify-content: space-between;
 }
-
 .dropdown-content{
   overflow: hidden;
 }
-
 .faqs-dropdown{
   padding-bottom: 1em;
 }
-
-
-
 /* Switch between light and dark mode */
 .mode-switch{
   display: grid;
@@ -473,156 +393,106 @@ li{
   font-size: 1.5em;
   background-color: transparent;
 }
-
 .mode-switch:hover{
   color: #526D82;
 }
-
-
-
 /* The whole main content */
 #main {
   margin: 0;
   align-items: center;
   display: grid;
 }
-
-
-
 /* Header text of the page*/
 .header{
   .header-text{
-    padding: 5vw 5vw 5vw 5vw;
+    padding: 5vw 5vw 0 5vw;
   }
-
   .page-title{
     padding-top: 2vw;
   }
 }
-
-
-
-/* Search bar in the header */
-.search_bar{
-  margin: 2vw 5vw 8.3vw 5vw;
-  display: grid;
-
-  .search_form{  
-    padding: 2.5vw 3vw 2.5vw 3vw;
-    font-size: 0.9em;
-    border-style: solid;
-    border-radius: 3vw;
-    border-color: transparent;
-    background-color: #ffffff;
-    color: #474747;}
-  
-  .search_button{
-    padding: 2.5vw 2vw 2.5vw 2vw;
-    margin-top: 2vw;
-    border-style: solid;
-    border-radius: 3vw;
-    max-width: 0;
-    text-align: center;
-    text-decoration: none;
-    border-color: transparent;
-    background-color: #27374D;
-    color: #ffffff;
-  }
-
-  .search_button:hover{
-    background-color: #526D82;
-  }
-}
-
-
-
 /* Language switch */
 .language-switch a{
   display: inline-flex;
   margin: 0 0 0 0;
   padding: 2vw 0 2vw 0;
-
   .language{
     padding-left: 2vw;
     font-size: 0.8em;
   }
-  
 }
-
 .language-switch a:hover{
   color: #526D82;
 }
-
 .language-switch{
   width: 100%;
   border-bottom: solid;
   border-width: 1px;
 }
-
-
-
+/* Unclicked button style */
+.year-button{
+  padding: 2vw 3vw 2vw 3vw;
+  background-color: transparent;
+  border-width: 0;
+  border-radius: 1em;
+  font-size: 0.9em;
+  width: auto;
+}
+.year-index{
+  padding: 0.5vw 0.5vw 0 1vw;
+}
 /* Courses by year section */
 .curriculum{
   padding: 5vw 5vw 5vw 5vw;
   margin: 0 5vw 0 5vw;
   border-style: solid;
   border-color: transparent;
-  border-radius: 7vw;
-
+  border-radius: 20px;
   .course-by-year{
     display: inline-flex;
   }
-  
   .curriculum-header{
     align-items: center;
     justify-content: space-between;
   }
-  
   /* Wrapper for years */
   .year-wrapper{
-    margin: 2vw 0 2vw 0;
+    margin: 10px 0 10px 0;
     border-radius: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
   }
-
   .course-wrapper{
     display: grid;
     justify-content: space-between;
   }
-  
-  .semester-and-button{
+  .first-semester-text{
     display: inline-flex;
     justify-content: space-between;
     align-content: center;
     padding: 2vw 2vw 2vw 2vw;
   }
-  
   .second-semester-text{
-  margin-top: 3vw;
+    margin-top: 2vw;
+    padding: 2vw 2vw 2vw 2vw;
   }
-
   #second-year-course, #third-year-course, #fourth-year-course{
     width: 0;
     height: 0;
   }
-  
   #second-year-course-even, #third-year-course-even, #fourth-year-course-even{
     width: 0;
     height: 0;
-  }
-  
+  }  
   #first-year-course, #first-year-course-even{
     height: 100%;
     width: 100%;
   }
-  
   .semester{
     text-align: left;
     overflow-x: scroll;
   }
-  
   .course-list{
     display: inline-flex;
     text-align: center;
@@ -630,7 +500,6 @@ li{
     text-decoration: none;
     margin: 0 2vw 0 2vw;
   }
-  
   .course-box{
     margin: 2vw 3vw 2vw 0;
     width: 170px;
@@ -640,19 +509,16 @@ li{
     overflow: hidden;
     text-decoration: none;
   }
-  
   .course-box:hover{
     scale: 1.05;
     opacity: 0.7;
     transition: 0.3s ease;
   }
-  
   .course-cover{
     width: 170px;
     height: 75px;
     display: grid;
   }
-  
   .course-name{
     text-decoration: none;
     display: grid;
@@ -660,40 +526,31 @@ li{
     font-size: 0.8em;
     padding: 8px 5px 5px 10px;
   }
-  
   .course-code{
     display: flex;
     text-decoration: none;
     text-align: left;
     font-size: 0.7em;
     color: #526D82;
-    padding: 8px 5px 10px 10px;
+    padding: 8px 5px 12px 10px;
     max-height: 0;
   }  
 }
-
-
-
 /* Contribute with us section */
 .contribute-wrapper{
   padding: 8.3vw 5vw 5vw 5vw;
   display: grid;
   text-align: center;
-
   .contribute-header{
     font-size: 1em;
   }
-  
+
   .contribute-text{
     padding: 2vw 0 2vw 0;
   }
 }
-
-
-
 .repo-button{
   padding: 5vw 0 0 0;
-
   /* Text inside the button */
   .repo-link{
     padding: 2.5vw 4vw 2.5vw 4vw;
@@ -702,36 +559,28 @@ li{
     font-weight: bold;
   }
 }
-
-
-
 /* Footer section */
 .footer{
   max-width: 100%;
   background-color: #3a4435;
   align-items: start;
   justify-content: space-between;
-
   .logo-horizontal{
     padding: 5vw 0 2vw 0;
   }
-
   .footer-row{
     border-top: solid;
     border-width: 1.5px;
     border-color: #808080;
-    margin: 8vw 5vw 8vw 5vw;
-
+    margin: 5vw 5vw 5vw 5vw;
     .footer-column{
       display: flex;
       margin-top: 5vw;
     }
-
     .footer-license{
       margin-top: 5vw;
     }
   }
-
   .footer-row-list{
     padding: 0 8.3vw 0 0;
     text-align: left;
@@ -739,19 +588,14 @@ li{
     text-decoration: none;
     min-width: 13vw;  
   }
-
   .footer-list{
     margin-top: 3vw;
     text-decoration: none;
   }
-
   .footer-list:hover{
     color: #526D82;
   }
 }
-
-
-
 /* Watermark section */
 .watermark{
   max-width: 100%;
@@ -770,7 +614,6 @@ li{
     text-align: center;
     padding: 2vh 0 2vh 0;
   }
-
   .web-button{
     padding: 2vh 0 2vh 0;
   }
@@ -779,117 +622,57 @@ li{
     padding: 2vh 0 2vh 0;
   }
 }
-
-
-
-/* Unclicked button style */
-.year-button{
-  padding: 3vw 3vw 3vw 3vw;
-  background-color: transparent;
-  border-width: 0;
-  border-radius: 20px;
-  font-size: 0.9em;
-}
-
-.year-index{
-  padding: 0.5vw 0.5vw 0 1vw;
-}
-
-
-/* Top navigation */
-.topnav {
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    padding: 1vw 5vw 1vw 5vw;
-  }
-
-  .topnav a {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    text-decoration: none;
-    margin: 2.3vw 0 2.3vw 0;
-    text-decoration: none;
-    font-size: 1em;
-  }
-
-  .menu{
-    display: flex;
-    align-items: center;
-    margin: 0 0 0 0;
-  }
-  .menu:hover{
-    color: #526D82;
-  }
-
 .figure-wrapper{
   display: grid;
   justify-content: center;
   text-align: center;
   padding: 2vw 0 5vw 0 ;
-
   .figure{
     width: 80vw;
     margin-left: auto;
     margin-right: auto;
   }
-
   .figure-caption{
     padding: 5vw 0 0 0 ;
   }
 }
-
 .content-footer-wrapper{
   display: flex;
   justify-content: space-between;
   padding: 20px 0 0 0;
 }
-
 .content-footer-wrapper a:hover{
   text-decoration: underline;
 }
-
 @media screen and (min-width: 830px) {
+  .katex-display > .katex > .katex-html > .tag {
+    position: absolute !important;
+    right: 1rem !important;
+  }
   .example{
     width: auto;
   }
-  
-  .left-column{
-    position: static;
-    padding: auto
-  }
-  
   .tex-container{
     width: auto;
-    margin-left: auto;
-    margin-right: auto; 
   }
-
   .figure-wrapper{
     padding: 2vh 0 5vh 0 ;
-
     .figure{
       width: 70vh;
     }
-  
     .figure-caption{
       padding: 5vh 0 0 0 ;
     }
   }
-
-
   .logo-horizontal{
-    max-width: 350px;
+    max-width: 10em;
   }  
-  
   .content-column{
     display: flex;
     width: auto;
     padding: 3vh 20vh 3vh 20vh;
     gap: 5vh;
   }
-
   .contents-header{
     display: flex;
     justify-content: space-between;
@@ -898,20 +681,19 @@ li{
     padding: 0;
     border: none;
   }
-
   .left-table-of-contents{
     display: flex;
-    padding: 0 15px 0 0;
+    padding: 0 15px 0 0; 
     width: 40vh;
-    height: 100vh;
+    max-height: 100vh;
     overflow-y: scroll;
   }
-
-  .right-column{
-    width: 150vh;
-    margin-top: 0;
+  .left-column{
+    margin-bottom: 0;
   }
-
+  .right-column{
+    width: auto;
+  }
   .light-mode{
     .topnav {
       box-shadow: 0 0 10px 0px #b4b4b4;
@@ -924,7 +706,6 @@ li{
     .course-box{
       box-shadow: 0 0 10px 0px #b4b4b4;
       border-style: none;
-      border-radius: 3vh;
     }
   
     .course-box:hover{
@@ -932,19 +713,15 @@ li{
     }
   }    
   
-  
-  
   .dark-mode{
     .topnav {
       box-shadow: none;
     }
-
     .curriculum{
       box-shadow: none;
       border-width: 1.5px;
       border-color: #474747;
     }
-
     .course-box{
       box-shadow: none;
       border-style: solid;
@@ -952,7 +729,6 @@ li{
       border-color: #474747;
       border-radius: 3vh;
     }
-
     .course-box:hover{
       box-shadow: none;
     }
@@ -962,161 +738,95 @@ li{
       border-color: #474747;
     }
   }  
-  
-  
+
   /* Wrapper for any section */
   .section{
     padding: 3vh 20vh 3vh 20vh;
   }
-
   /* Section header for any text section */
     .section-header{
       padding-bottom: 2.5vh;
   }
-  
   /* Section text is use for plain text for any text section */
   .section-text{
       margin-bottom: 4vh;
   }
-
   /* Add space between main section and footer section */
   .spacer{
     padding-bottom: 25vh;
   }
-  
-  
-  
   /* Header text of the page*/
   .header{
     .header-text{
       padding: 5vh 20vh 1vh 20vh;
     }
-  
     .page-title{
       padding-top: 2vh;
     }
   }
-  
-  
-  
-  /* Search bar in the header */
-  .search_bar{
-    margin: 2vh 20vh 8.3vh 20vh;
-    display: grid;
-  
-    .search_form{  
-      padding: 2.5vh 3vh 2.5vh 3vh;
-      font-size: 0.9em;
-      border-style: solid;
-      border-radius: 3vh;
-      border-color: transparent;
-      background-color: #ffffff;
-      color: #474747;}
-    
-    .search_button{
-      padding: 2.5vh 2vh 2.5vh 2vh;
-      margin-top: 2vh;
-      border-style: solid;
-      border-radius: 3vh;
-      max-width: 20vh;
-      text-align: center;
-      text-decoration: none;
-      border-color: transparent;
-      background-color: #27374D;
-      color: #ffffff;
-    }
-  
-    .search_button:hover{
-      background-color: #526D82;
-    }
-  }
-  
-  
-  
   /* Language switch */
   .language-switch a{
     display: inline-flex;
     margin: 0 0 0 0;
     padding: 2vh 0 2vh 0;
-  
     .language{
       padding-left: 2vh;
       font-size: 0.8em;
     }
   }
-
   .language-switch{
     width: 100%;
     border-bottom: solid;
     border-width: 1.5px;
   }
-
-  
-  
   /* Courses by year section */
   .curriculum{
     padding: 5vh 5vh 5vh 5vh;
     margin: 0 20vh 8.3vh 20vh;
     border-radius: 5vh;
-
     .curriculum-header{
       display: flex;
     }
-    
     /* Wrapper for years */
     .year-wrapper{
       margin: 0 0 0 0;
     }
-    
     .semester-and-button{
       padding: 2vh 2vh 2vh 2vh;
     }
-    
     .second-semester-text{
-    margin-top: 3vh;
+      margin-top: 3vh;
     }
-    
     .course-list{
       margin: 2vh 2vh 2vh 2vh;
     }
-    
     .course-box{
       margin: 2vh 3vh 2vh 3vh;
       width: 280px;
       height: 250px;
     }
-    
     .course-cover{
       width: 280px;
       height: 125px;
     }
-    
     .course-name{
       font-size: 0.9em;
       padding: 0 3vh 2vh 3vh;
     }
-    
     .course-code{
       font-size: 0.9em;
       padding: 2vh 3vh 1vh 3vh;
       max-width: 280px;
       max-height: 50px;
     }  
-  }
-
-
-  
+  } 
   /* Contribute with us section */
   .contribute-wrapper{
     padding: 0 20vh 8.3vh 20vh;
-
     .contribute-text{
       padding: 2vh 0 2vh 0;
     }
   }
-  
-  
-  
   .repo-button{
     padding: 6.6vh 0 0 0;
   
@@ -1125,17 +835,12 @@ li{
       padding: 2.5vh 5vh 2.5vh 5vh;
     }
   }
-  
-  
-  
   /* Footer section */
   .footer{
     margin: 5vh 20vh 5vh 20vh;
-
     .logo-horizontal{
       padding: 0 0 2vh 0;
-    }
-  
+    }  
     .footer-row{
       margin: 0;
       gap: 20px;
@@ -1143,77 +848,56 @@ li{
       display: flex;
       align-items: start;
       justify-content: space-between;
-
       .footer-license{
         margin-top: 5vh;
       }
-      
     }
-  
     .footer-row-list{
       padding: 0;
     }
-    
-    
-
     .footer-column{
       display: flex;
       margin-top: 0 !important;
     }
-
     .footer-list{
       margin-top: 2vh;
     }
   }
-  
-  
-  
   /* Watermark section */
   .watermark{
     padding: 2vh 20vh 2vh 20vh;
-  
     .watermark-row{
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-  
     .watermark-paragraph{
       display: flex;
       align-items: center;
       text-align: left;
     }
-  
     .web-button{
       padding: 0 2vh 0 6.6vh;
     }
-    
     .github-button{
       padding: 0 6.6vh 0 2vh;
     }
   }
-  
-  
-  
   /* Unclicked button style */
   .year-button{
     padding: 2vh 4vh 2vh 4vh;
     border-radius: 20px;
   }
-  
   .year-index{
     padding: 0 2vh 0 3vh;
   }
-  
   /* Top navigation */
   .topnav {
       padding: 0.5vh 20vh 0.5vh 20vh;
     }
-  
     .topnav a {
       margin: 2.3vh 2vh 2.3vh 2vh;
     }
-    
     /* Wrapper for the logo */
     .logo-wrapper{
       align-items: start;

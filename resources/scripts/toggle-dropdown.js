@@ -10,7 +10,7 @@ $(function toggleDropdown(){
 $(function toggleTableofContents(){
    
   $(".contents-header").click(function () {
-      $(".left-table-of-contents").slideToggle(300);
+      $(".left-table-of-contents").slideToggle(0);
       $("i", this).toggleClass("fa-times fa-bars");
   });  
 

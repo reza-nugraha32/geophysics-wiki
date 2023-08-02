@@ -7,7 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>2.2 Naive Gauss Elimination Method</title>
     <link rel="stylesheet" href="../../../../../../resources/style.css">
-    <link rel="icon" href="../../../../../../assets/images/logo/default-logo.png" type="image/x-icon">  
+    <link rel="icon" href="../../../../../../assets/images/logo/default-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">  
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+      onload="renderMathInElement(document.body, {delimiters: 
+          [
+            {left: '$$', right: '$$', display: true},
+            {left: '\\[', right: '\\]', display: true},
+            {left: '$', right: '$', display: false},
+            {left: '\\(', right: '\\)', display: false}
+          ],
+        }
+      );">
+    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKBYZ469RT"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -19,26 +32,12 @@
   </head>
 
   <body id="body-en">
-    <script>
-      MathJax = {
-        tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']],
-          tags: 'ams',
-          autoload: {
-            cases: [[], ['numcases', 'subnumcases']]
-          }
-        }
-      };
-    </script>
-    <script id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="../../../../../../resources/scripts/toggle-dropdown.js"></script>
     <script src="../../../../../../resources/scripts/toggle-active-theme.js"></script>
     <script src="../../../../../../resources/scripts/trim-code-whitespace.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    <script>hljs.highlightAll();</script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/tokyo-night-dark.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div class="navbar-wrapper">
@@ -83,9 +82,7 @@
     <div class="content-column">
       <div class="left-column">
         <div class="contents-header">
-          <div class="section-header">
-            <h3>Contents</h3>
-          </div>
+          <h3>Contents</h3>
           <i class="fa fa-times"></i>
         </div>
         <div class="left-table-of-contents">
@@ -190,11 +187,11 @@
             Naive Gauss elimination consists of two steps, namely <b>the forward elimination</b> and <b>the back substitution</b>.
             Consider the following system of linear equations,
             <div class="tex-container">
-              $$ \begin{subnumcases} {}
-              a_{11}x_1+a_{12}x_2+a_{13}x_3 = b_1 \tag{1.1a} \label{eq:1.1a} \\ 
-              a_{21}x_1+a_{22}x_2+a_{23}x_3 = b_2 \tag{1.1b} \label{eq:1.1b} \\ 
-              a_{31}x_1+a_{32}x_2+a_{33}x_3 = b_3, \tag{1.1c} \label{eq:1.1c}   
-            \end{subnumcases} $$
+              $$ \begin{cases} {}
+              a_{11}x_1+a_{12}x_2+a_{13}x_3 = b_1 \\ 
+              a_{21}x_1+a_{22}x_2+a_{23}x_3 = b_2 \\ 
+              a_{31}x_1+a_{32}x_2+a_{33}x_3 = b_3,  
+            \end{cases} $$
             </div>
             which expressed as a matrices system of $[A][X]=[B]$ as
               $$ \begin{bmatrix} 
@@ -221,7 +218,7 @@
             first substract every element in $a_{2n}$ (row 2) in $M$ by
             <div class="tex-container">
               $$\begin{equation}
-              a_{2n}-\frac{a_{21}}{a_{11}}a_{1n}, \tag{1.2} \label{eq:1.2}
+              a_{2n}-\frac{a_{21}}{a_{11}}a_{1n}, \tag{1.1}
               \end{equation}$$
             </div>
             resulting in the matrix $M$
@@ -233,7 +230,7 @@
             Then, substract every element in $a_{3n}$ (row 3) in $M$ by 
             <div class="tex-container">
               $$\begin{equation}
-              a_{3n}-\frac{a_{31}}{a_{11}}a_{1n}, \tag{1.3} \label{eq:1.3}
+              a_{3n}-\frac{a_{31}}{a_{11}}a_{1n}, \tag{1.2}
               \end{equation}$$
             </div>
             which results in
@@ -245,7 +242,7 @@
             Finally, we substract every element in $a_{3n}$ (row 3) in $M$ by
             <div class="tex-container">
               $$\begin{equation}
-              a_{3n}'-\frac{a_{32}'}{a_{22}'}a_{2n}', \tag{1.4} \label{eq:1.4}
+              a_{3n}'-\frac{a_{32}'}{a_{22}'}a_{2n}', \tag{1.3}
               \end{equation}$$
             </div>
             and we got the augmented upper triangle matrix $M'$ as 
@@ -263,20 +260,20 @@
             Notice that for the last row of the matrix, we would get the equation
             <div class="tex-container">
               $$\begin{align}a_{33}''x_3 &= b_{3}'' \notag \\ 
-              x_3 &= \frac{b_{3}''}{a_{33}''}. \tag{1.5} \label{eq:1.5} \end{align}$$
+              x_3 &= \frac{b_{3}''}{a_{33}''}. \tag{1.4}\end{align}$$
             </div>
             Then, for $x_2$ we get
   
             <div class="tex-container">
               $$a_{22}'x_2+a_{23}'x_3 = b_{2}'$$ 
-              $$x_2 = \frac{b_{2}'- a_{23}x_2}{a_{22}'}. \tag{1.6} \label{eq:1.6}$$
+              $$x_2 = \frac{b_{2}'- a_{23}x_2}{a_{22}'}. \tag{1.5}$$
             </div>
   
             Finally, for $x_1$ we get
             
             <div class="tex-container">
               $$a_{11}x_1+a_{12}x_2+a_{13}x_3 = b_{1}$$
-              $$x_1 = \frac{b_{1} - a_{12}x_2 - a_{13}x_3}{a_{11}}. \tag{1.7} \label{eq:1.7}$$
+              $$x_1 = \frac{b_{1} - a_{12}x_2 - a_{13}x_3}{a_{11}}. \tag{1.6}$$
             </div>
           </div>
           <div class="example">
@@ -300,13 +297,13 @@
                   0.3 & -0.2  & 10   &\bigm| & 71.4    
                   \end{bmatrix}. $$
                 </div>
-                First, we perform the forward elimination step by substracting $M$ using Eq. 1.2
+                First, we perform the forward elimination step by substracting $M$ using Eq. 1.1
                 <div class="tex-container">
                   $$\begin{equation}
                   a_{2n}-\frac{0.1}{3}a_{1n}, \notag
                   \end{equation}$$
                 </div>
-                and Eq. 1.3
+                and Eq. 1.2
                 <div class="tex-container">
                   $$\begin{equation}
                   a_{3n}-\frac{0.3}{3}a_{1n}, \notag
@@ -320,7 +317,7 @@
                   0   & -0.190  & 10.020 &\bigm| & 70.615    
                   \end{bmatrix}. $$
                 </div>
-                Then, using Eq. 1.4,
+                Then, using Eq. 1.3,
                 <div class="tex-container">
                   $$\begin{equation}
                   a_{3n}-\frac{-0.190}{7.033}a_{2n}, \notag
@@ -334,7 +331,7 @@
                   0   & 0     & 10.012 &\bigm| & 70.084   
                   \end{bmatrix}. $$
                 </div>
-                We now perform the backward substitution step using Eq. 1.5, 1.6, and 1.7.
+                We now perform the backward substitution step using Eq. 1.4, 1.5, and 1.6.
                 For $x_3$, we get
                 <div class="tex-container">
                   $$\begin{align}
@@ -375,12 +372,12 @@
             We will show now the generalized naive Gauss elimination for $n$ number of equations.
             Consider the following system,
             <div class="tex-container">
-              $$ \begin{subnumcases} {}
-              &a_{11}x_1+\ldots+a_{13}x_3 = b_1 \tag{2.1a} \label{eq:2.1a} \\ 
-              &a_{21}x_1+\ldots+a_{23}x_3 = b_2 \tag{2.1b} \label{eq:2.1b} \\
+              $$ \begin{cases} {}
+              &a_{11}x_1+\ldots+a_{13}x_3 = b_1 \tag{2.1a, 2.1b, 2.1c}\\ 
+              &a_{21}x_1+\ldots+a_{23}x_3 = b_2 \\
               & \vdots \notag \\
-              &a_{31}x_1+\ldots+a_{33}x_3 = b_3. \tag{2.1c} \label{eq:2.1c}   
-              \end{subnumcases} $$
+              &a_{31}x_1+\ldots+a_{33}x_3 = b_3.   
+              \end{cases} $$
             </div>
             By the same manner as previously, we will construct an augmented matrix $M$ as follows,
             <div class="tex-container">
@@ -394,7 +391,7 @@
             Next, we perform the forward elimination step by multiplying Eq. (2.1a) by $a_{21}/a_{11}$ to give
             <div class="tex-container">
               $$ a_{21}x_1+\frac{a_{21}}{a_{11}}a_{12}x_2+\ldots+\frac{a_{21}}{a_{11}}a_{1n}x_n=\frac{a_{21}}{a_{11}}b_n. 
-              \tag{2.2} \label{eq:2.2} $$
+              \tag{2.2}$$
             </div>
             Then, substract Eq. (2.1b) by this equation to give
             <div class="tex-container">
@@ -409,16 +406,16 @@
             upper triangular form such as
             <div class="tex-container">
               $$\begin{align}
-                a_{11}x_1+a_{12}x_2+a_{12}x_3+\ldots+a_{1n}x_n&=b_1 \tag{2.3} \label{eq:2.3} \\
-                      a_{22}'x_2+a_{23}'x_3+\ldots+a_{2n}'x_n&=b_2 \tag{2.4} \label{eq:2.4} \\
-                                a_{33}''x_3+\ldots+a_{3n}''x_n&=b_3 \tag{2.5} \label{eq:2.5} \\
+                a_{11}x_1+a_{12}x_2+a_{12}x_3+\ldots+a_{1n}x_n&=b_1 \tag{2.3}\\
+                      a_{22}'x_2+a_{23}'x_3+\ldots+a_{2n}'x_n&=b_2 \tag{2.4}\\
+                                a_{33}''x_3+\ldots+a_{3n}''x_n&=b_3 \tag{2.5}\\
                                                               &\vdots \notag\\
-                                            a_{nn}^{(n-1)}x_n&=b_n^{(n-1)}. \tag{2.6} \label{eq:2.6}
+                                            a_{nn}^{(n-1)}x_n&=b_n^{(n-1)}. \tag{2.6}
               \end{align}$$
             </div>
             We then now begin the back substitution step by solving Eq. (2.6) for $x_n$,
             <div class="tex-container">
-              $$ x_n = \frac{b_n^{(n-1)}}{a_{nn}^{(n-1)}}. \tag{2.7} \label{eq:2.7}$$
+              $$ x_n = \frac{b_n^{(n-1)}}{a_{nn}^{(n-1)}}. \tag{2.7}$$
             </div>
             The result from Eq. (2.7) could be substituted to the previous equation to solve for $x_{n-1}$.
             Thus, the rest of the unknowns $x$-s can be solved by the Eq. (2.8) below,
