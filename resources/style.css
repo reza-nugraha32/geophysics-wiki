@@ -253,6 +253,7 @@ body{
   justify-content: space-between;
   align-items: center;
   display: flex;
+  width: auto;
   padding: 0 5vw 0 5vw;
 }
 .topnav a {
@@ -693,7 +694,7 @@ li{
     margin-bottom: 0;
   }
   .right-column{
-    width: 130vh;
+    width: auto;
   }
   .light-mode{
     .topnav {
