@@ -34,7 +34,7 @@ $(function toggleCourseSubcontent(){
 // JQuery script to toggle solution dropdown
 $(function toggleSolution(){
   $(".toggle-solution").click(function () {
-    $(this).next(".solution-content").slideToggle(300);
+    $(this).next(".solution-content").slideToggle(0);
     $("i", this).toggleClass("fa-chevron-down fa-chevron-up");
   });  
 })
