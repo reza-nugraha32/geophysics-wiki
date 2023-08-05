@@ -7,7 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ketentuan Privasi</title>
     <link rel="stylesheet" href="../../../resources/style.css">
-    <link rel="icon" href="../../../assets/images/logo/default-logo.png" type="image/x-icon">  
+    <link rel="icon" href="../../../assets/images/logo/default-logo.png" type="image/x-icon">      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../../resources/scripts/toggle-active-theme.js"></script>
+    <script src="../../../resources/scripts/loading.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -18,38 +22,31 @@
   </head>
 
   <body id="body-id">
-    <script>
-      MathJax = {
-        tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']],
-          tags: 'ams'
-        }
-      };
-    </script>
-    <script id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="../../../resources/scripts/scroll.js"></script>
-    <script src="../../../resources/scripts/toggle-active-theme.js"></script>
-    <script src="../../../resources/scripts/toggle-active-button.js"></script>
-    <script src="../../../resources/scripts/assign-course-cover.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <div class="navbar-wrapper">
-      <div class="topnav" id="myTopnav">
-        <span class="logo-wrapper">
-          <span class="logo">
-            <a href="../../../index-id.html">
-              <img class="logo-horizontal" src="../../../assets/images/logo/logo-compact-horizontal.png">
-            </a>
-          </span>
-        </span>
-        <span class="menu">
-          <div class="mode-switch">
-            <i id="switch-button"></i>
+    <div class="loading-box">
+      <div class="loading-wrapper">
+          <div class="loading-container">
+              <div class="loading-image">
+                  <img class="wave" src="../../../assets/images/logo/loading-waves.png">
+              </div>
           </div>
-        </span>
+          <div class="loading-text">
+              Loading
+          </div>
       </div>
+    </div>
+    <div class="topnav">
+      <span class="logo-wrapper">
+        <span class="logo">
+          <a href="../../../index-id.html">
+            <div class="logo-horizontal"></div>
+          </a>
+        </span>
+      </span>
+      <span class="menu">
+        <div class="mode-switch">
+          <i id="switch-button"></i>
+        </div>
+      </span>
     </div>
     
     <!--Web content starts here-->
