@@ -71,7 +71,7 @@
 }
 .logo-horizontal{
   width: 200px;
-  height: 35px;
+  height: 37px;
 }
 .logo-horizontal.dark{
   background-size: cover;
@@ -183,7 +183,7 @@ body{
   .header-text{
     color: #394c66;
   }
-  .mode-switch{
+  .mode-switch, .topnav-contents{
     background-color: transparent;
     color: #808080;
   }
