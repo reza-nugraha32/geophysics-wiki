@@ -7,12 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Geophysics Wiki</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
-    <script src="./resources/scripts/toggle-active-theme.js"></script>
-    <link rel="stylesheet" href="./resources/style.css">
+    <script src="resources/scripts/toggle-active-theme.js"></script>
+    <script src="resources/scripts/loading.js"></script>
+    <link rel="stylesheet" href="resources/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"> 
-    <link rel="stylesheet" href="./resources/style.css">
-    <link rel="icon" href="./assets/images/logo/default-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="resources/style.css">
+    <link rel="icon" href="assets/images/logo/default-logo.png" type="image/x-icon">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
       onload="renderMathInElement(document.body, {delimiters: 
@@ -36,23 +37,33 @@
   </head>
 
   <body id="body-en">
-    <div class="navbar-wrapper">
-      <div class="topnav" id="myTopnav">
-        <span class="logo-wrapper">
-          <span class="logo">
-            <a href="./index.html">
-              <img class="logo-horizontal" src="./assets/images/logo/logo-compact-horizontal.png">
-            </a>
-          </span>
-        </span>
-        <span class="menu">
-          <div class="mode-switch">
-            <i id="switch-button"></i>
+    <div class="loading-box">
+      <div class="loading-wrapper">
+          <div class="loading-container">
+              <div class="loading-image">
+                  <img class="wave" src="assets/images/logo/loading-waves.png">
+                  <img class="wave" src="assets/images/logo/loading-waves.png">
+                  <img class="wave" src="assets/images/logo/loading-waves.png">
+              </div>
           </div>
-        </span>
+          <div class="loading-text">
+              Loading
+          </div>
       </div>
     </div>
-    
+    <div class="topnav">
+      <span class="logo">
+        <a href="index.html">
+          <div class="logo-horizontal"></div>
+        </a>
+      </span>
+      <span class="menu">
+        <div class="mode-switch">
+          <i id="switch-button"></i>
+        </div>
+      </span>
+    </div>
+
     <!--Web content starts here-->
     <!--Use this for the title of the page-->
     <div id="main" class="lang en"> 
@@ -61,7 +72,7 @@
         <div class="header-text">
           <!-- Language switch-->
           <div class="language-switch">
-              <a href="./index-id.html">
+              <a href="index-id.html">
                 <i class="fa fa-language"></i>
                 <div class="language">English</div>
               </a>              
@@ -110,7 +121,7 @@
 
           <div id="first-year-course" class="semester">
             <div class="course-list">
-              <a href="./sources/courses/en/odd-semester/first-year/MA1101/index.html">
+              <a href="courses/en/MA1101/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">MA1101</div>
@@ -118,7 +129,7 @@
                 </div>
               </a>
 
-              <a href="./sources/courses/en/odd-semester/first-year/FI1101/index.html">
+              <a href="courses/en/FI1101/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">FI1101</div>
@@ -126,7 +137,7 @@
                 </div>
               </a>
 
-              <a href="./sources/courses/en/odd-semester/first-year/KI1101/index.html">
+              <a href="courses/en/KI1101/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">KI1101</div>
@@ -134,7 +145,7 @@
                 </div>
               </a>
 
-              <a href="./sources/courses/en/odd-semester/first-year/KU1102/index.html">
+              <a href="courses/en/KU1102/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">KU1102</div>
@@ -146,7 +157,7 @@
 
           <div id="second-year-course" class="semester">
             <div class="course-list">
-              <a href="./sources/courses/en/odd-semester/second-year/GL2111/index.html">
+              <a href="courses/en/GL2111/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">GL2111</div>
@@ -154,7 +165,7 @@
                 </div>
               </a>
               
-              <a href="./sources/courses/en/odd-semester/second-year/TG2101/index.html">
+              <a href="courses/en/TG2101/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">TG2101</div>
@@ -162,7 +173,7 @@
                 </div>
               </a>
 
-              <a href="./sources/courses/en/odd-semester/second-year/TG2102/index.html">
+              <a href="courses/en/TG2102/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">TG2102</div>
@@ -170,7 +181,7 @@
                 </div>
               </a>
               
-              <a href="./sources/courses/en/odd-semester/second-year/TG2103/index.html">
+              <a href="courses/en/TG2103/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">TG2103</div>
@@ -178,7 +189,7 @@
                 </div>
               </a>
 
-              <a href="./sources/courses/en/odd-semester/second-year/TG2104/index.html">
+              <a href="courses/en/TG2104/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">TG2104</div>
@@ -186,7 +197,7 @@
                 </div>
               </a>
 
-              <a href="./sources/courses/en/odd-semester/second-year/TG2105/index.html">
+              <a href="courses/en/TG2105/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">TG2105</div>
@@ -198,7 +209,7 @@
 
           <div id="third-year-course" class="semester">
             <div class="course-list">
-               <a href="./sources/courses/en/odd-semester/third-year/GL2012/index.html">
+               <a href="courses/en/GL2012/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">GL2012</div>
@@ -206,7 +217,7 @@
                 </div>
               </a>
 
-               <a href="./sources/courses/en/odd-semester/third-year/GL3053/index.html">
+               <a href="courses/en/GL3053/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">GL3053</div>
@@ -214,7 +225,7 @@
                 </div>
               </a>
 
-               <a href="./sources/courses/en/odd-semester/third-year/TG3310/index.html">
+               <a href="courses/en/TG3310/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">TG3310</div>
@@ -222,7 +233,7 @@
                 </div>
               </a>
 
-               <a href="./sources/courses/en/odd-semester/third-year/TG3102/index.html">
+               <a href="courses/en/TG3102/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">TG3102</div>
@@ -230,7 +241,7 @@
                 </div>
               </a>
 
-               <a href="./sources/courses/en/odd-semester/third-year/TG3109/index.html">
+               <a href="courses/en/TG3109/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">TG3109</div>
@@ -238,7 +249,7 @@
                 </div>
               </a>
 
-               <a href="./sources/courses/en/odd-semester/third-year/TG3132/index.html">
+               <a href="courses/en/TG3132/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">TG3132</div>
@@ -250,7 +261,7 @@
   
           <div id="fourth-year-course" class="semester">
             <div class="course-list">
-              <a href="./sources/courses/en/odd-semester/fourth-year/GL2213/index.html">
+              <a href="courses/en/GL2213/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">GL2213</div>
@@ -258,7 +269,7 @@
                 </div>
               </a>
               
-              <a href="./sources/courses/en/odd-semester/fourth-year/TG4001/index.html">
+              <a href="courses/en/TG4001/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">TG4001</div>
@@ -266,7 +277,7 @@
                 </div>
               </a>
 
-              <a href="./sources/courses/en/odd-semester/fourth-year/TG4162/index.html">
+              <a href="courses/en/TG4162/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">TG4162</div>
@@ -274,7 +285,7 @@
                 </div>
               </a>
 
-              <a href="./sources/courses/en/odd-semester/fourth-year/TG4141/index.html">
+              <a href="courses/en/TG4141/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">TG4141</div>
@@ -282,7 +293,7 @@
                 </div>
               </a>
 
-              <a href="./sources/courses/en/odd-semester/fourth-year/TG4029/index.html">
+              <a href="courses/en/TG4029/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">TG4029</div>
@@ -298,7 +309,7 @@
           
           <div id="first-year-course-even" class="semester">
             <div class="course-list">
-               <a href="./sources/courses/en/even-semester/first-year/MA1201/index.html">
+               <a href="courses/en/MA1201/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">MA1201</div>
@@ -306,7 +317,7 @@
                 </div>
               </a>
 
-               <a href="./sources/courses/en/even-semester/first-year/FI1201/index.html">
+               <a href="courses/en/FI1201/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">FI1201</div>
@@ -314,7 +325,7 @@
                 </div>
               </a>
 
-               <a href="./sources/courses/en/even-semester/first-year/KI1201/index.html">
+               <a href="courses/en/KI1201/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">KI1201</div>
@@ -322,7 +333,7 @@
                 </div>
               </a>
 
-               <a href="./sources/courses/en/even-semester/first-year/KU1101/index.html">
+               <a href="courses/en/KU1101/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">KU1101</div>
@@ -330,7 +341,7 @@
                 </div>
               </a>
 
-               <a href="./sources/courses/en/even-semester/first-year/KU1202/index.html">
+               <a href="courses/en/KU1202/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">KU1202</div>
@@ -342,7 +353,7 @@
 
           <div id="second-year-course-even" class="semester">
             <div class="course-list">
-               <a href="./sources/courses/en/even-semester/second-year/GD2001/index.html">
+               <a href="courses/en/GD2001/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">GD2001</div>
@@ -350,7 +361,7 @@
                 </div>
               </a>
 
-               <a href="./sources/courses/en/even-semester/second-year/GL2043/index.html">
+               <a href="courses/en/GL2043/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">GL2043</div>
@@ -358,7 +369,7 @@
                 </div>
               </a>
 
-               <a href="./sources/courses/en/even-semester/second-year/TG2203/index.html">
+               <a href="courses/en/TG2203/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">TG2203</div>
@@ -366,7 +377,7 @@
                 </div>
               </a>
 
-               <a href="./sources/courses/en/even-semester/second-year/TG2204/index.html">
+               <a href="courses/en/TG2204/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">TG2204</div>
@@ -374,7 +385,7 @@
                 </div>
               </a>
 
-               <a href="./sources/courses/en/even-semester/second-year/TG2201/index.html">
+               <a href="courses/en/TG2201/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">TG2201</div>
@@ -382,7 +393,7 @@
                 </div>
               </a>
 
-               <a href="./sources/courses/en/even-semester/second-year/TG2231/index.html">
+               <a href="courses/en/TG2231/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">TG2231</div>
@@ -394,7 +405,7 @@
 
           <div id="third-year-course-even" class="semester">
             <div class="course-list">
-               <a href="./sources/courses/en/even-semester/third-year/TG3201/index.html">
+               <a href="courses/en/TG3201/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">TG3201</div>
@@ -402,7 +413,7 @@
                 </div>
               </a>
               
-               <a href="./sources/courses/en/even-semester/third-year/TG3261/index.html">
+               <a href="courses/en/TG3261/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">TG3261</div>
@@ -410,7 +421,7 @@
                 </div>
               </a>
 
-               <a href="./sources/courses/en/even-semester/third-year/TG3241/index.html">
+               <a href="courses/en/TG3241/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">TG3241</div>
@@ -418,7 +429,7 @@
                 </div>
               </a>
               
-               <a href="./sources/courses/en/even-semester/third-year/TG3263/index.html">
+               <a href="courses/en/TG3263/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">TG3263</div>
@@ -426,7 +437,7 @@
                 </div>
               </a>
 
-               <a href="./sources/courses/en/even-semester/third-year/TG3222/index.html">
+               <a href="courses/en/TG3222/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">TG3222</div>
@@ -438,7 +449,7 @@
 
           <div id="fourth-year-course-even" class="semester">
             <div class="course-list">
-               <a href="./sources/courses/en/even-semester/fourth-year/TG4243/index.html">
+               <a href="courses/en/TG4243/index.html">
                 <div class="course-box">
                   <div class="course-cover"></div>
                   <div class="course-code">TG4243</div>
@@ -463,8 +474,8 @@
     <div class="footer">
       <div class="footer-row">
         <span class="footer-logo-and-license">
-          <a href="./index.html">
-            <img class="logo-horizontal" src="./assets/images/logo/logo-compact-horizontal.png">
+          <a href="index.html">
+            <div class="logo-horizontal"></div>
           </a>
           <div>
             For everyone who's learning geophysics.
@@ -478,16 +489,16 @@
         <span class="footer-column">
           <div class="footer-row-list">
             <h3>Help</h3>
-            <a href="./sources/help/en/contacts.html"><div class="footer-list">Contacts</div></a>
-            <a href="./sources/help/en/faqs.html"><div class="footer-list">FAQs</div></a>
-            <a href="./sources/help/en/contribute.html"><div class="footer-list">Contribute</div></a>
+            <a href="sources/help/en/contacts.html"><div class="footer-list">Contacts</div></a>
+            <a href="sources/help/en/faqs.html"><div class="footer-list">FAQs</div></a>
+            <a href="sources/help/en/contribute.html"><div class="footer-list">Contribute</div></a>
           </div>
 
           <div class="footer-row-list">
             <h3>Policies</h3>
-            <a href="./sources/policy/en/tos.html"><div class="footer-list">Terms of Use</div></a>
-            <a href="./sources/policy/en/license.html"><div class="footer-list">Licensing</div></a>
-            <a href="./sources/policy/en/privacy.html"><div class="footer-list">Privacy Notice</div></a>
+            <a href="sources/policy/en/tos.html"><div class="footer-list">Terms of Use</div></a>
+            <a href="sources/policy/en/license.html"><div class="footer-list">Licensing</div></a>
+            <a href="sources/policy/en/privacy.html"><div class="footer-list">Privacy Notice</div></a>
           </div>
         </span>
       </div>
@@ -508,12 +519,12 @@
         </div>
 
         <div class="fttm-logo">
-          <a href="http://fttm.itb.ac.id"><img alt="FTTM ITB" src="./assets/images/home/FTTM-ITB.png" width="250"></a>
+          <a href="http://fttm.itb.ac.id"><img alt="FTTM ITB" src="assets/images/home/FTTM-ITB.png" width="250"></a>
         </div>
       </div>
     </div>
     <!-- End of copyable footer template -->
-    <script src="./resources/scripts/toggle-active-button.js"></script>
-    <script src="./resources/scripts/assign-course-cover.js"></script>
+    <script src="resources/scripts/toggle-active-button.js"></script>
+    <script src="resources/scripts/assign-course-cover.js"></script>
 </body>
 </html>

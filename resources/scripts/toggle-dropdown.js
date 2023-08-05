@@ -14,7 +14,7 @@ $(function toggleTableofContents(){
       $("i", this).toggleClass("fa-times fa-bars");
   });  
 
-  if ($(".left-table-of-contents").css('display') != 'none'){
+  if ($(".left-table-of-contents").css("display") != "none"){
       $("i", ".contents-header").removeClass("fa-bars");
       $("i", ".contents-header").addClass("fa-times");
   } else{
@@ -22,6 +22,31 @@ $(function toggleTableofContents(){
       $("i", ".contents-header").addClass("fa-bars");
   }
 })
+
+$(function toggleTopnavTableofContents(){
+  $(".topnav-contents").click(function () {
+      $(".topnav-table-of-contents").slideToggle(0);
+      $("i", this).toggleClass("fa-times fa-bars");
+  });  
+
+  if ($(".topnav-table-of-contents").css("display") != "none"){
+      $("i", ".topnav-contents").removeClass("fa-bars");
+      $("i", ".topnav-contents").addClass("fa-times");
+  } else{
+      $("i", ".topnav-contents").removeClass("fa-times");
+      $("i", ".topnav-contents").addClass("fa-bars");
+  }
+})
+
+$(window).scroll(function () {
+  if ($(this).scrollTop() < 100) {
+    if ($(".topnav-table-of-contents").css("display") == "none"){
+      $(".topnav-contents").addClass("hidden");
+    }
+  } else {
+    $(".topnav-contents").removeClass("hidden");
+  }
+});
 
 // JQuery script to toggle course subcontents dropdown
 $(function toggleCourseSubcontent(){

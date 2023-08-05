@@ -7,14 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>2.2 Naive Gauss Elimination Method</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="../../../../../../resources/scripts/toggle-active-theme.js"></script>
+    <script src="../../../resources/scripts/toggle-active-theme.js"></script>
+    <script src="../../../resources/scripts/loading.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/tokyo-night-dark.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../../../../../../resources/style.css">
-    <link rel="icon" href="../../../../../../assets/images/logo/default-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../../resources/style.css">
+    <link rel="icon" href="../../../assets/images/logo/default-logo.png" type="image/x-icon">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js",
       onload="renderMathInElement(document.body, {delimiters: 
           [
             {left: '$$', right: '$$', display: true},
@@ -36,23 +37,121 @@
   </head>
 
   <body id="body-en">
-    <div class="navbar-wrapper">
-      <div class="topnav" id="myTopnav">
-        <span class="logo-wrapper">
-          <span class="logo">
-            <a href="../../../../../../index.html">
-              <img class="logo-horizontal" src="../../../../../../assets/images/logo/logo-compact-horizontal.png">
-            </a>
-          </span>
-        </span>
-        <span class="menu">    
-          <div class="mode-switch">
-            <i id="switch-button"></i>
+    <div class="loading-box">
+      <div class="loading-wrapper">
+          <div class="loading-container">
+              <div class="loading-image">
+                  <img class="wave" src="../../../assets/images/logo/loading-waves.png">
+                  <img class="wave" src="../../../assets/images/logo/loading-waves.png">
+                  <img class="wave" src="../../../assets/images/logo/loading-waves.png">
+              </div>
           </div>
-        </span>
+          <div class="loading-text">
+              Loading
+          </div>
       </div>
     </div>
-    
+    <div class="topnav">
+      <div class="topnav-contents hidden">
+        <i class="fa fa-times"></i>
+      </div>
+      <span class="logo">
+        <a href="../../../index.html">
+          <div class="logo-horizontal"></div>
+        </a>
+      </span>
+      <span class="menu">    
+        <div class="mode-switch">
+          <i id="switch-button"></i>
+        </div>
+      </span>
+    </div>
+    <div class="topnav-table-of-contents">
+      <div class="topnav-syllabus">
+        <ul>
+          <li class="course-content">Chapter 1: Preliminaries<i class="fa fa-chevron-down"></i></li>
+            <div class="course-subcontent">
+              <ul>
+                <li><a href="1-1.html">1.1 Numerical Methods and Computing in Geophysics</a></li>
+                <li><a href="1-2.html">1.2 Mathematical Model, Algorithm, and Error Analysis</a></li>
+              </ul>
+            </div>
+          <li class="course-content">Chapter 2: System of Linear Equations<i class="fa fa-chevron-down"></i></li>
+            <div class="course-subcontent">
+              <ul>
+                <li><a href="2-1.html">2.1 The Matrices System</a></li>
+                <li><a href="2-2.html">2.2 Naive Gauss Elimination Method</a></li>
+                <li><a href="2-3.html">2.3 Gauss-Jordan Elimination Method</a></li>
+                <li><a href="2-4.html">2.4 Gauss-Seidel Elimination Method</a></li>
+                <li><a href="2-5.html">2.5 LU Decomposition Method</a></li>
+              </ul>
+            </div>
+          <li class="course-content">Chapter 3: Curve Fitting<i class="fa fa-chevron-down"></i></li>
+          <div class="course-subcontent">
+            <ul>
+              <li><a href="3-1.html">3.1 Linear Least-Square Regression</a></li>
+              <li><a href="3-2.html">3.2 Non-linear Least-Square Regression</a></li>
+              <li><a href="3-3.html">3.3 Interpolation and Linear Approximation</a></li>
+              <li><a href="3-4.html">3.4 Newton's Polynomial Interpolation</a></li>
+              <li><a href="3-5.html">3.5 Lagrange's Polynomial Interpolation</a></li>
+              <li><a href="3-6.html">3.6 Spline Interpolation</a></li>
+            </ul>
+          </div>
+          <li class="course-content">Chapter 4: Numerical Integration and Differentiation<i class="fa fa-chevron-down"></i></li>
+          <div class="course-subcontent">
+            <ul>
+              <li><a href="4-1.html">4.1 The Trapezoid Rule</a></li>
+              <li><a href="4-2.html">4.2 The Simpson's Rule</a></li>
+              <li><a href="4-3.html">4.3 Romberg's Extrapolation</a></li>
+              <li><a href="4-4.html">4.4 Gauss-Legendre Integration Method</a></li>
+              <li><a href="4-5.html">4.5 Euler's Method for Differential Equation</a></li>
+              <li><a href="4-6.html">4.6 Heun's Method for Differential Equation</a></li>
+              <li><a href="4-7.html">4.7 Runge-Kutta Method for Differential Equation</a></li>
+            </ul>
+          </div>
+          <li class="course-content">Chapter 5: Partial Differential Equation<i class="fa fa-chevron-down"></i></li>
+          <div class="course-subcontent">
+            <ul>
+              <li><a href="5-1.html">5.1 Elliptic Partial Differential Equation</a></li>
+              <li><a href="5-2.html">5.2 Finite Difference Method for Elliptic PDE</a></li>
+              <li><a href="5-3.html">5.3 Parabolic Partial Differential Equations</a></li>
+              <li><a href="5-4.html">5.4 Von Neumann Stability Analysis</a></li>
+              <li><a href="5-5.html">5.5 Conservation of Energy Law</a></li>
+              <li><a href="5-6.html">5.6 Hyperbolic Partial Differential Equations</a></li>
+            </ul>
+          </div>
+          <li class="course-content">Chapter 6: Finite Element Method<i class="fa fa-chevron-down"></i></li>
+          <div class="course-subcontent">
+            <ul>
+              <li><a href="6-1.html">6.1 Introduction to Finite Element Method</a></li>
+              <li><a href="6-2.html">6.2 Using Finite Element Method to Solve PDEs</a></li>
+            </ul>
+          </div>
+          <li class="course-content">Chapter 7: Optimizations<i class="fa fa-chevron-down"></i></li>
+          <div class="course-subcontent">
+            <ul>
+              <li><a href="7-1.html">7.1 Introduction to Optimizations</a></li>
+              <li><a href="7-2.html">7.2 Random Search Method</a></li>
+              <li><a href="7-3.html">7.3 Gradient Descent Method</a></li>
+              <li><a href="7-4.html">7.4 Newton's Optimization Method</a></li>
+            </ul>
+          </div>
+          <li class="course-content">Middle Term Exams<i class="fa fa-chevron-down"></i></li>
+          <div class="course-subcontent">
+            <ul>
+              <li><a href="midterm.html">Middle Term Exams</a></li>
+            </ul>
+          </div>
+          <li class="course-content">Final Term Exams<i class="fa fa-chevron-down"></i></li>
+          <div class="course-subcontent">
+            <ul>
+              <li><a href="finalterm.html">Final Term Exams</a></li>
+            </ul>
+          </div>
+        </ul>
+      </div>
+    </div>
+
     <!--Web content starts here-->
     <!--Use this for the title of the page-->
     <div id="main" class="lang en"> 
@@ -60,7 +159,7 @@
         <div class="header-text">
           <!-- Language switch-->
           <div class="language-switch">
-            <a href="../../../../../../sources/courses/id/odd-semester/TG2105/2-1.html">
+            <a href="../../../courses/id/TG2105/2-1.html">
               <i class="fa fa-language"></i>
               <div class="language">English</div> 
             </a>             
@@ -86,80 +185,80 @@
             <li class="course-content">Chapter 1: Preliminaries<i class="fa fa-chevron-down"></i></li>
               <div class="course-subcontent">
                 <ul>
-                  <li><a href="./1-1.html">1.1 Numerical Methods and Computing in Geophysics</a></li>
-                  <li><a href="./1-2.html">1.2 Mathematical Model, Algorithm, and Error Analysis</a></li>
+                  <li><a href="1-1.html">1.1 Numerical Methods and Computing in Geophysics</a></li>
+                  <li><a href="1-2.html">1.2 Mathematical Model, Algorithm, and Error Analysis</a></li>
                 </ul>
               </div>
             <li class="course-content">Chapter 2: System of Linear Equations<i class="fa fa-chevron-down"></i></li>
               <div class="course-subcontent">
                 <ul>
-                  <li><a href="./2-1.html">2.1 The Matrices System</a></li>
-                  <li><a href="./2-2.html">2.2 Naive Gauss Elimination Method</a></li>
-                  <li><a href="./2-3.html">2.3 Gauss-Jordan Elimination Method</a></li>
-                  <li><a href="./2-4.html">2.4 Gauss-Seidel Elimination Method</a></li>
-                  <li><a href="./2-5.html">2.5 LU Decomposition Method</a></li>
+                  <li><a href="2-1.html">2.1 The Matrices System</a></li>
+                  <li><a href="2-2.html">2.2 Naive Gauss Elimination Method</a></li>
+                  <li><a href="2-3.html">2.3 Gauss-Jordan Elimination Method</a></li>
+                  <li><a href="2-4.html">2.4 Gauss-Seidel Elimination Method</a></li>
+                  <li><a href="2-5.html">2.5 LU Decomposition Method</a></li>
                 </ul>
               </div>
             <li class="course-content">Chapter 3: Curve Fitting<i class="fa fa-chevron-down"></i></li>
             <div class="course-subcontent">
               <ul>
-                <li><a href="./3-1.html">3.1 Linear Least-Square Regression</a></li>
-                <li><a href="./3-2.html">3.2 Non-linear Least-Square Regression</a></li>
-                <li><a href="./3-3.html">3.3 Interpolation and Linear Approximation</a></li>
-                <li><a href="./3-4.html">3.4 Newton's Polynomial Interpolation</a></li>
-                <li><a href="./3-5.html">3.5 Lagrange's Polynomial Interpolation</a></li>
-                <li><a href="./3-6.html">3.6 Spline Interpolation</a></li>
+                <li><a href="3-1.html">3.1 Linear Least-Square Regression</a></li>
+                <li><a href="3-2.html">3.2 Non-linear Least-Square Regression</a></li>
+                <li><a href="3-3.html">3.3 Interpolation and Linear Approximation</a></li>
+                <li><a href="3-4.html">3.4 Newton's Polynomial Interpolation</a></li>
+                <li><a href="3-5.html">3.5 Lagrange's Polynomial Interpolation</a></li>
+                <li><a href="3-6.html">3.6 Spline Interpolation</a></li>
               </ul>
             </div>
             <li class="course-content">Chapter 4: Numerical Integration and Differentiation<i class="fa fa-chevron-down"></i></li>
             <div class="course-subcontent">
               <ul>
-                <li><a href="./4-1.html">4.1 The Trapezoid Rule</a></li>
-                <li><a href="./4-2.html">4.2 The Simpson's Rule</a></li>
-                <li><a href="./4-3.html">4.3 Romberg's Extrapolation</a></li>
-                <li><a href="./4-4.html">4.4 Gauss-Legendre Integration Method</a></li>
-                <li><a href="./4-5.html">4.5 Euler's Method for Differential Equation</a></li>
-                <li><a href="./4-6.html">4.6 Heun's Method for Differential Equation</a></li>
-                <li><a href="./4-7.html">4.7 Runge-Kutta Method for Differential Equation</a></li>
+                <li><a href="4-1.html">4.1 The Trapezoid Rule</a></li>
+                <li><a href="4-2.html">4.2 The Simpson's Rule</a></li>
+                <li><a href="4-3.html">4.3 Romberg's Extrapolation</a></li>
+                <li><a href="4-4.html">4.4 Gauss-Legendre Integration Method</a></li>
+                <li><a href="4-5.html">4.5 Euler's Method for Differential Equation</a></li>
+                <li><a href="4-6.html">4.6 Heun's Method for Differential Equation</a></li>
+                <li><a href="4-7.html">4.7 Runge-Kutta Method for Differential Equation</a></li>
               </ul>
             </div>
             <li class="course-content">Chapter 5: Partial Differential Equation<i class="fa fa-chevron-down"></i></li>
             <div class="course-subcontent">
               <ul>
-                <li><a href="./5-1.html">5.1 Elliptic Partial Differential Equation</a></li>
-                <li><a href="./5-2.html">5.2 Finite Difference Method for Elliptic PDE</a></li>
-                <li><a href="./5-3.html">5.3 Parabolic Partial Differential Equations</a></li>
-                <li><a href="./5-4.html">5.4 Von Neumann Stability Analysis</a></li>
-                <li><a href="./5-5.html">5.5 Conservation of Energy Law</a></li>
-                <li><a href="./5-6.html">5.6 Hyperbolic Partial Differential Equations</a></li>
+                <li><a href="5-1.html">5.1 Elliptic Partial Differential Equation</a></li>
+                <li><a href="5-2.html">5.2 Finite Difference Method for Elliptic PDE</a></li>
+                <li><a href="5-3.html">5.3 Parabolic Partial Differential Equations</a></li>
+                <li><a href="5-4.html">5.4 Von Neumann Stability Analysis</a></li>
+                <li><a href="5-5.html">5.5 Conservation of Energy Law</a></li>
+                <li><a href="5-6.html">5.6 Hyperbolic Partial Differential Equations</a></li>
               </ul>
             </div>
             <li class="course-content">Chapter 6: Finite Element Method<i class="fa fa-chevron-down"></i></li>
             <div class="course-subcontent">
               <ul>
-                <li><a href="./6-1.html">6.1 Introduction to Finite Element Method</a></li>
-                <li><a href="./6-2.html">6.2 Using Finite Element Method to Solve PDEs</a></li>
+                <li><a href="6-1.html">6.1 Introduction to Finite Element Method</a></li>
+                <li><a href="6-2.html">6.2 Using Finite Element Method to Solve PDEs</a></li>
               </ul>
             </div>
             <li class="course-content">Chapter 7: Optimizations<i class="fa fa-chevron-down"></i></li>
             <div class="course-subcontent">
               <ul>
-                <li><a href="./7-1.html">7.1 Introduction to Optimizations</a></li>
-                <li><a href="./7-2.html">7.2 Random Search Method</a></li>
-                <li><a href="./7-3.html">7.3 Gradient Descent Method</a></li>
-                <li><a href="./7-4.html">7.4 Newton's Optimization Method</a></li>
+                <li><a href="7-1.html">7.1 Introduction to Optimizations</a></li>
+                <li><a href="7-2.html">7.2 Random Search Method</a></li>
+                <li><a href="7-3.html">7.3 Gradient Descent Method</a></li>
+                <li><a href="7-4.html">7.4 Newton's Optimization Method</a></li>
               </ul>
             </div>
             <li class="course-content">Middle Term Exams<i class="fa fa-chevron-down"></i></li>
             <div class="course-subcontent">
               <ul>
-                <li><a href="./midterm.html">Middle Term Exams</a></li>
+                <li><a href="midterm.html">Middle Term Exams</a></li>
               </ul>
             </div>
             <li class="course-content">Final Term Exams<i class="fa fa-chevron-down"></i></li>
             <div class="course-subcontent">
               <ul>
-                <li><a href="./finalterm.html">Final Term Exams</a></li>
+                <li><a href="finalterm.html">Final Term Exams</a></li>
               </ul>
             </div>
           </ul>
@@ -637,8 +736,8 @@ print("Numerical solutions:\n", solution)
         </div>
         
         <div class="content-footer-wrapper">
-          <div class="previous-content"><a href="./2-1.html"><i class="fa fa-chevron-left"></i>Previous</a></div>
-          <div class="next-content"><a href="./2-3.html">Next<i class="fa fa-chevron-right"></i></a></div>
+          <div class="previous-content"><a href="2-1.html"><i class="fa fa-chevron-left"></i>Previous</a></div>
+          <div class="next-content"><a href="2-3.html">Next<i class="fa fa-chevron-right"></i></a></div>
         </div>
       </div>
     </div>
@@ -647,8 +746,8 @@ print("Numerical solutions:\n", solution)
     <div class="footer">
       <div class="footer-row">
         <span class="footer-logo-and-license">
-          <a href="../../../../../../index.html">
-            <img class="logo-horizontal" src="../../../../../../assets/images/logo/logo-compact-horizontal.png" width=200vh>
+          <a href="../../../index.html">
+            <div class="logo-horizontal"></div>
           </a>
           <div>
             For everyone who's learning geophysics.
@@ -662,16 +761,16 @@ print("Numerical solutions:\n", solution)
         <span class="footer-column">
           <div class="footer-row-list">
             <h3>Help</h3>
-            <a href="../../../../../../sources/help/en/contacts.html"><div class="footer-list">Contacts</div></a>
-            <a href="../../../../../../sources/help/en/faqs.html"><div class="footer-list">FAQs</div></a>
-            <a href="../../../../../../sources/help/en/contribute.html"><div class="footer-list">Contribute</div></a>
+            <a href="../../../sources/help/en/contacts.html"><div class="footer-list">Contacts</div></a>
+            <a href="../../../sources/help/en/faqs.html"><div class="footer-list">FAQs</div></a>
+            <a href="../../../sources/help/en/contribute.html"><div class="footer-list">Contribute</div></a>
           </div>
 
           <div class="footer-row-list">
             <h3>Policies</h3>
-            <a href="../../../../../../sources/policy/en/tos.html"><div class="footer-list">Terms of Use</div></a>
-            <a href="../../../../../../sources/policy/en/license.html"><div class="footer-list">Licensing</div></a>
-            <a href="../../../../../../sources/policy/en/privacy.html"><div class="footer-list">Privacy Notice</div></a>
+            <a href="../../../sources/policy/en/tos.html"><div class="footer-list">Terms of Use</div></a>
+            <a href="../../../sources/policy/en/license.html"><div class="footer-list">Licensing</div></a>
+            <a href="../../../sources/policy/en/privacy.html"><div class="footer-list">Privacy Notice</div></a>
           </div>
         </span>
       </div>
@@ -692,13 +791,13 @@ print("Numerical solutions:\n", solution)
         </div>
 
         <div class="fttm-logo">
-          <a href="http://fttm.itb.ac.id"><img alt="FTTM ITB" src="../../../../../../assets/images/home/FTTM-ITB.png" width="250"></a>
+          <a href="http://fttm.itb.ac.id"><img alt="FTTM ITB" src="../../../assets/images/home/FTTM-ITB.png" width="250"></a>
         </div>
       </div>
     </div>
     <!-- End of copyable footer template -->
-    <script src="../../../../../../resources/scripts/toggle-dropdown.js"></script>
-    <script src="../../../../../../resources/scripts/trim-code-whitespace.js"></script>
+    <script src="../../../resources/scripts/toggle-dropdown.js"></script>
+    <script src="../../../resources/scripts/trim-code-whitespace.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
 </body>

@@ -1,6 +1,54 @@
 .hljs{
   border-radius: 10px;
 }
+.loading-box{
+  background-color: transparent;
+  backdrop-filter: blur(50px);
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+.loading-wrapper{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 20px;
+  align-items: center;
+  animation: loading 0.5s ease infinite alternate;
+}
+.loading-container{
+  width: 200px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.wave{
+  height: 50px;
+}
+.loading-image{
+  display: flex;
+  animation: wave 5s ease infinite;
+}
+.loading-text{
+  text-align: center;
+}
+@keyframes loading{
+  0%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0.2;
+  }
+}
+@keyframes wave{
+  0%{
+      transform: translatex(-1000%);  
+  }
+  100%{
+      transform: translatex(0%);  
+  }
+}
 .katex-display > .katex > .katex-html > .tag {
   position: relative !important;
   right: -0.5em !important;
@@ -22,7 +70,16 @@
   overflow-y: hidden;
 }
 .logo-horizontal{
-  max-width: 200px;
+  width: 200px;
+  height: 35px;
+}
+.logo-horizontal.dark{
+  background-size: cover;
+  background-image: url(../assets/images/logo/logo-compact-horizontal-dark.svg);
+}
+.logo-horizontal.light{
+  background-size: cover;
+  background-image: url(../assets/images/logo/logo-compact-horizontal-light.svg);
 }
 body{
   font-family: "Helvetica", sans-serif;
@@ -38,6 +95,7 @@ body{
 }
 .content-column{
   display: grid;
+  gap: 20px;
   padding: 3vw 5vw 3vw 5vw;
 }
 .contents-header{
@@ -48,23 +106,58 @@ body{
   border: solid;
   border-radius: 2vw;
 }
+.contents-header h3{
+  padding: 0 10px 0 0;
+}
+.topnav-contents{
+  font-size: 1.4em;
+  display: flex;
+  width: 30px;
+  height: 30px;
+}
+.topnav-contents.hidden{
+  display: none;
+}
+.topnav-contents i{
+  padding: 0 !important;
+}
+.topnav-table-of-contents{
+  display: none;
+  position: fixed;
+  width: 80vw;
+  height: 100%;
+  overflow-y: scroll;
+  z-index: 99;
+}
+.topnav-syllabus{
+  padding: 3vw 6vw 10vw 0;
+}
+.topnav-syllabus ul{
+  margin-top: 0;
+}
 .left-table-of-contents{
   overflow-y: scroll;
   max-height: 350px;
   padding: 0 5vw 0 0;
-  margin: 0 0 5vw 0;
+  margin: 0 0 0 0;
   display: none;
 }
 .left-column{
   margin-bottom: 5px;
 }
+.left-column.hidden{
+  display: none;
+}
 .right-column{
   width: auto;
 }
 .light-mode{
-  transition: background-color 300ms ease-in-out;
   color: #474747;
   background-color: #f7f9ff;
+
+  .wave{
+    filter: none;
+  }
   .solution{
     background-color: #dfdfdf;
   }
@@ -74,16 +167,18 @@ body{
   .content-footer-wrapper{
     color: #27374D;
   }
-
   .contents-header{
     border-color: #394c66;
     color: #394c66;
   }
-
   .topnav {
-    transition: background-color 300ms ease-in-out;
-    background-color: #ffffff;
+    background-color: #ffffff60;
+    backdrop-filter: blur(10px);
     box-shadow: 0 0 2vw 0 #b4b4b4;
+  }
+  .topnav-table-of-contents{
+    background-color: #f7f9ff;
+    box-shadow: 0.5vw 0.5vw 1vw 0 #b4b4b4;
   }
   .header-text{
     color: #394c66;
@@ -115,12 +210,10 @@ body{
     box-shadow: inset 0 0 0 3px #4d77b3;
     color: #4d77b3;
   }
-  
   .section-header{
     color: #394c66;
   }
   .curriculum{
-    transition: background-color 300ms ease-in-out;
     background-color: #ffffff;
     box-shadow: 0 0 2vw 0 #b4b4b4;
     border-width: 0;
@@ -155,7 +248,6 @@ body{
   }
 }    
 .dark-mode{
-  transition: background-color 300ms ease-in-out;
   color: #dadada;
   background-color: #151b1f;
   .hljs{
@@ -163,18 +255,26 @@ body{
     border-width: 1px;
     border-color: #8a8a8a;
   }
+  .wave{
+    filter: brightness(80);
+  }
   .solution{
     background-color: #1d2529;
   }
   .course-subcontent a{
     color: #dadada;
   }
-  
   .topnav {
-    transition: background-color 300ms ease-in-out;
-    background-color: #131a1d;
+    background-color: #131a1d60;
+    backdrop-filter: blur(10px);
     box-shadow: none;
     border-bottom: solid;
+    border-width: 1px;
+    border-color: #8a8a8a;
+  }
+  .topnav-syllabus{
+    background-color: #131a1d;
+    border-right: solid;
     border-width: 1px;
     border-color: #8a8a8a;
   }
@@ -254,6 +354,9 @@ body{
 }  
 /* Top navigation */
 .topnav {
+  position: sticky;
+  top: 0px;
+  z-index: 99;
   justify-content: space-between;
   align-items: center;
   display: flex;
@@ -357,11 +460,11 @@ li{
   font-size: 0.7em;
 }
 .fa.fa-times{
-  padding: 3px 0 0 10px;
+  padding: 3px 0 0 1px;
   scale: 1.05;
 }
 .fa.fa-bars{
-  padding: 5px 0 0 10px;
+  padding: 5px 0 0 0;
 }
 /* Dropdown toggle */
 .example{
@@ -573,7 +676,7 @@ li{
   align-items: start;
   justify-content: space-between;
   .logo-horizontal{
-    padding: 5vw 0 2vw 0;
+    margin: 3vw 0 2vw 0;
   }
   .footer-row{
     border-top: solid;
@@ -585,7 +688,7 @@ li{
       margin-top: 5vw;
     }
     .footer-license{
-      margin-top: 5vw;
+      margin-top: 3vw;
     }
   }
   .footer-row-list{
@@ -657,6 +760,13 @@ li{
     position: absolute !important;
     right: 1rem !important;
   }
+  .topnav-table-of-contents{
+    width: 40vw;
+  }
+  .logo-horizontal{
+    width: 200px;
+    height: 35px;
+  }
   .example{
     width: auto;
   }
@@ -672,29 +782,29 @@ li{
       padding: 5vh 0 0 0 ;
     }
   }
-  .logo-horizontal{
-    max-width: 10em;
-  }  
   .content-column{
-    display: flex;
+    display: grid;
     width: auto;
     padding: 3vh 20vh 3vh 20vh;
-    gap: 5vh;
+    gap: 20px;
   }
   .contents-header{
     display: flex;
-    justify-content: space-between;
-    width: auto;
-    margin: 0;
-    padding: 0;
-    border: none;
+    width: 125px;
+    margin: 0 0 15px 0;
+    padding: 10px 10px 10px 10px;
+    border: solid;
+    border-radius: 10px;
   }
   .left-table-of-contents{
-    display: flex;
+    display: none;
     padding: 0 15px 0 0; 
-    width: 40vh;
-    max-height: 100vh;
+    width: auto;
+    height: 100vh;
     overflow-y: scroll;
+  }
+  .topnav-syllabus{
+    padding-left: 100px;
   }
   .left-column{
     margin-bottom: 0;
@@ -847,7 +957,7 @@ li{
   .footer{
     margin: 5vh 20vh 5vh 20vh;
     .logo-horizontal{
-      padding: 0 0 2vh 0;
+      margin: 0 0 3vh 0;
     }  
     .footer-row{
       margin: 0;
@@ -857,7 +967,7 @@ li{
       align-items: start;
       justify-content: space-between;
       .footer-license{
-        margin-top: 5vh;
+        margin-top: 3vh;
       }
     }
     .footer-row-list{
@@ -901,14 +1011,9 @@ li{
   }
   /* Top navigation */
   .topnav {
-      padding: 0.5vh 20vh 0.5vh 20vh;
+    padding: 0 20vh 0 20vh;
     }
     .topnav a {
       margin: 2.3vh 2vh 2.3vh 2vh;
-    }
-    /* Wrapper for the logo */
-    .logo-wrapper{
-      align-items: start;
-      display: grid;
     }
 }
