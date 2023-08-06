@@ -88,7 +88,7 @@
 .katex-display > .katex > .katex-html > .tag {
   position: relative !important;
   right: -0.5em !important;
-  font-size: 0.9em !important;
+  font-size: 0.8em !important;
 }
 .tex-container{
   width: 310px;
@@ -560,7 +560,7 @@ li{
 }
 /* Dropdown toggle */
 .example{
-  width: 300px;
+  width: 320px;
   margin-bottom: 30px;
 }
 .toggle-solution{
