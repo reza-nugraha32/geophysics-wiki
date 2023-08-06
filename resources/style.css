@@ -231,11 +231,15 @@ body{
     background-color: #f7f9ff;
     box-shadow: 0.5vw 0.5vw 1vw 0 #b4b4b4;
   }
-  .topnav-table-of-contents::-webkit-scrollbar-track{
+  .topnav-table-of-contents::-webkit-scrollbar{
+    width: 5px;
     border-radius: 0;
   }
   .topnav-table-of-contents::-webkit-scrollbar-thumb{
     background: linear-gradient(#4d77b3 0%, #ffffff 100%);
+  }
+  .table-of-contents::-webkit-scrollbar{
+    width: 5px;
   }
   .table-of-contents::-webkit-scrollbar-thumb{
     background: linear-gradient(#4d77b3 0%, #ffffff 100%);
@@ -356,10 +360,14 @@ body{
     border-color: #8a8a8a50;
   }
   .topnav-table-of-contents::-webkit-scrollbar{
+    width: 5px;
     border-radius: 0;
   }
   .topnav-table-of-contents::-webkit-scrollbar-thumb{
     background: linear-gradient( #4d77b3 0%, #ffffff 100%);
+  }
+  .table-of-contents::-webkit-scrollbar{
+    width: 5px;
   }
   .table-of-contents::-webkit-scrollbar-thumb{
     background: linear-gradient( #4d77b3 0%, #ffffff 100%);
@@ -653,8 +661,8 @@ li{
   justify-content: center;
   padding: 10px 10px 10px 10px;
   margin: -20px 0 -20px 0;
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
   top: 140px;
   z-index: 98;
   font-size: 1em;
@@ -668,10 +676,10 @@ li{
   top: 160px;
 }
 .first-left-scroll, .second-left-scroll{
-  left: -10px;
+  left: -15px;
 }
 .first-right-scroll, .second-right-scroll{
-  right: -10px;
+  right: -15px;
 }
 .first-left-scroll:hover, .second-left-scroll:hover, .first-right-scroll:hover, .second-right-scroll:hover{
   opacity: 0.8;
@@ -733,7 +741,7 @@ li{
     display: grid;
     margin: 10px 5px 10px 5px;
     width: 150px;
-    height: 170px;
+    height: 175px;
     border-radius: 15px;
     align-content: start;
     overflow: hidden;
@@ -830,6 +838,8 @@ li{
     border-top: solid;
     border-width: 0.5px;
     border-color: #8a8a8a50;
+    font-size: 0.9em;
+
     .footer-link{
       display: flex;
       margin-top: 20px;
