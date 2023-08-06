@@ -1,4 +1,4 @@
-<img alt="Logo" src="./assets/images/logo/logo-compact-horizontal.png" width=220>
+<img alt="Logo" src="./assets/images/logo/logo-compact-horizontal-dark.svg" width=220>
 
 <h1>Geophysics Wiki</h1>
 
