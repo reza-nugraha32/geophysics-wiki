@@ -871,7 +871,7 @@ li{
   display: flex;
   width: auto;
   margin: 0 20px 0 20px;
-  font-size: 0.8em;
+  font-size: 0.7em;
   justify-content: space-between;
   align-items: center;  
   .copyright{
