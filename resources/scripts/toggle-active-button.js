@@ -5,10 +5,10 @@ $(function toggleActive(){
       $(this).addClass("active")
   
       var render_id = $(this).attr("id");
-      var a = document.getElementById("first-year-course");
-      var b = document.getElementById("second-year-course");
-      var c = document.getElementById("third-year-course");
-      var d = document.getElementById("fourth-year-course");
+      var a = document.getElementById("first-year-course-odd");
+      var b = document.getElementById("second-year-course-odd");
+      var c = document.getElementById("third-year-course-odd");
+      var d = document.getElementById("fourth-year-course-odd");
       var e = document.getElementById("first-year-course-even");
       var f = document.getElementById("second-year-course-even");
       var g = document.getElementById("third-year-course-even");
@@ -65,4 +65,28 @@ $(function toggleActive(){
         h.style.width = "100%";
       }
     }); 
-  });
+});
+
+$(".first-left-scroll").click(function () { 
+  var leftPos = $(".first-semester").scrollLeft();
+  $(".first-semester").animate({scrollLeft: leftPos - 400}, 300);
+  console.log(leftPos);
+});
+
+$(".first-right-scroll").click(function () { 
+  var leftPos = $(".first-semester").scrollLeft();
+  $(".first-semester").animate({scrollLeft: leftPos + 400}, 300);
+  console.log(leftPos);
+});
+
+$(".second-left-scroll").click(function () { 
+  var leftPos = $(".second-semester").scrollLeft();
+  $(".second-semester").animate({scrollLeft: leftPos - 400}, 300);
+  console.log(leftPos);
+});
+
+$(".second-right-scroll").click(function () { 
+  var leftPos = $(".second-semester").scrollLeft();
+  $(".second-semester").animate({scrollLeft: leftPos + 400}, 300);
+  console.log(leftPos);
+});

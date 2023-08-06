@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Start of copyable header template -->
 <html lang="id">
   <head>
     <meta charset="UTF-8">
@@ -12,7 +11,6 @@
     <link rel="stylesheet" href="resources/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"> 
-    <link rel="stylesheet" href="resources/style.css">
     <link rel="icon" href="assets/images/logo/default-logo.png" type="image/x-icon">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
@@ -36,8 +34,8 @@
     </script> 
   </head>
 
-  <body id="body-id">
-    <div class="loading-box">
+  <body>
+    <div class="loading">
       <div class="loading-wrapper">
           <div class="loading-container">
               <div class="loading-image">
@@ -50,23 +48,22 @@
       </div>
     </div>
     <div class="topnav">
-      <span class="logo">
+      <span class="topnav-logo">
         <a href="index-id.html">
           <div class="logo-horizontal"></div>
         </a>
       </span>
-      <span class="menu">
+      <span class="topnav-menu">
         <div class="mode-switch">
           <i id="switch-button"></i>
         </div>
       </span>
     </div>
+
     <!--Web content starts here-->
-    <!--Use this for the title of the page-->
-    <div id="main" class="lang id"> 
+    <div class="main"> 
       <div class="header">
         <div class="header-text">
-          <!-- Language switch-->
           <div class="language-switch">
             <a href="index.html">
               <i class="fa fa-language"></i>
@@ -74,8 +71,9 @@
             </a>
           </div>  
           <h3 class="page-title">Geophysics Wiki</h3>
-          <h1>Platform belajar geofisika.</h1>
+          <h1 class="page-title">Platform belajar geofisika.</h1>
         </div>
+      </div>
       
       <!--Search bar under construction-->
       <!--
@@ -84,10 +82,7 @@
           <a id="button" class="search_button" href="#">Search</a>
         </div>
       -->
-      </div>
-      <!-- End of copyable header template -->
 
-      <!-- Header section for the page title -->
       <div class="section">
         <div class="section-text">
           Geophysics Wiki adalah sumber belajar geofisika yang bertujuan untuk membantu mahasiswa mempelajari geofisika. Platform ini dibuat berdasarkan kurikulum sarjana Teknik Geofisika di Institut Teknologi Bandung, Indonesia.
@@ -100,8 +95,8 @@
         </div>
       </div>
 
-      <div id="courses" class="curriculum">
-        <div class="curriculum-header">
+      <div class="courses">
+        <div class="courses-header">
           <h2 class="course-by-year">Mata kuliah berdasarkan tahun</h2>
           <div class="year-wrapper">
             <div class="year-index">Tahun</div> 
@@ -113,9 +108,14 @@
         </div>
         
         <div class="course-wrapper">
+          <div class="first-left-scroll">
+            <i class="fa fa-chevron-left"></i>
+          </div>
+          <div class="first-right-scroll">
+            <i class="fa fa-chevron-right"></i>
+          </div>
           <div class="first-semester-text">Semester Ganjil</div>
-
-          <div id="first-year-course" class="semester">
+          <div id="first-year-course-odd" class="first-semester">
             <div class="course-list">
               <a href="MA1101-id.html">
                 <div class="course-box">
@@ -167,7 +167,7 @@
             </div>
           </div>
 
-          <div id="second-year-course" class="semester">
+          <div id="second-year-course-odd" class="first-semester">
             <div class="course-list">
               <a href="GL2111-id.html">
                 <div class="course-box">
@@ -219,7 +219,7 @@
             </div>
           </div>
 
-          <div id="third-year-course" class="semester">
+          <div id="third-year-course-odd" class="first-semester">
             <div class="course-list">
                <a href="GL2012-id.html">
                 <div class="course-box">
@@ -271,7 +271,7 @@
             </div>
           </div>
   
-          <div id="fourth-year-course" class="semester">
+          <div id="fourth-year-course-odd" class="first-semester">
             <div class="course-list">
               <a href="GL2213-id.html">
                 <div class="course-box">
@@ -314,10 +314,15 @@
               </a>
             </div>
           </div>
-        
+
+          <div class="second-left-scroll">
+            <i class="fa fa-chevron-left"></i>
+          </div>
+          <div class="second-right-scroll">
+            <i class="fa fa-chevron-right"></i>
+          </div>
           <div class="second-semester-text">Semester Genap</div>
-          
-          <div id="first-year-course-even" class="semester">
+          <div id="first-year-course-even" class="second-semester">
             <div class="course-list">
                <a href="MA1202-id.html">
                 <div class="course-box">
@@ -361,7 +366,7 @@
             </div>
           </div>
 
-          <div id="second-year-course-even" class="semester">
+          <div id="second-year-course-even" class="second-semester">
             <div class="course-list">
                <a href="GD2001-id.html">
                 <div class="course-box">
@@ -413,7 +418,7 @@
             </div>
           </div>
 
-          <div id="third-year-course-even" class="semester">
+          <div id="third-year-course-even" class="second-semester">
             <div class="course-list">
                <a href="TG3201-id.html">
                 <div class="course-box">
@@ -457,7 +462,7 @@
             </div>
           </div>
 
-          <div id="fourth-year-course-even" class="semester">
+          <div id="fourth-year-course-even" class="second-semester">
             <div class="course-list">
                <a href="TG4243-id.html">
                 <div class="course-box">
@@ -471,70 +476,62 @@
         </div>
       </div>
 
-      <div class="contribute-section">
-        <div class="contribute-wrapper">
-          <div class="section-header"><h2>Ayo berkontribusi!</h2></div>
-          Tertarik untuk ikut mengembangkan Geophysics Wiki? Ayo bergabung dengan kami!
-          <div id="button" class="repo-button"><a class="repo-link" href="https://github.com/reza-nugraha32/geophysics-wiki">Berkontribusi</a></div>
+      <div class="contribute">
+        <div class="section-header"><h2>Ayo berkontribusi!</h2></div>
+        Tertarik untuk ikut mengembangkan Geophysics Wiki? Ayo bergabung dengan kami!
+        <div id="button" class="repo-button"><a class="repo-link" href="https://github.com/reza-nugraha32/geophysics-wiki">Berkontribusi</a></div>
+      </div>
+
+      <div class="footer">
+        <div class="footer-row">
+          <span class="footer-logo-and-license">
+            <a href="index-id.html">
+              <div class="logo-horizontal"></div>
+            </a>
+            <div>
+              Untuk semua orang yang mempelajari geofisika.
+            </div>
+
+            <div class="footer-license"> 
+              Seluruh isi dalam web ini berlisensi the MIT License, kecuali tertulis lain. Lihat <a style="color: #4d77b3; text-decoration: none;" href="https://github.com/reza-nugraha32/opengeophy/">readme</a> untuk detail lebih lanjut.
+            </div>        
+          </span>
+          
+          <span class="footer-link">
+            <div class="footer-row-list">
+              <h3>Bantuan</h3>
+              <a href="sources/help/id/contacts.html"><div class="footer-list">Kontak</div></a>
+              <a href="sources/help/id/faqs.html"><div class="footer-list">FAQs</div></a>
+              <a href="sources/help/id/contribute.html"><div class="footer-list">Berkontribusi</div></a>
+            </div>
+
+            <div class="footer-row-list">
+              <h3>Kebijakan</h3>
+              <a href="sources/policy/id/tos.html"><div class="footer-list">Ketentuan Pemakaian</div></a>
+              <a href="sources/policy/id/license.html"><div class="footer-list">Lisensi</div></a>
+              <a href="sources/policy/id/privacy.html"><div class="footer-list">Ketentuan Privasi</div></a>
+            </div>
+          </span>
         </div>
       </div>
-    </div>
 
-    <!-- Start of copyable footer template -->
-    <div class="footer">
-      <div class="footer-row">
-        <span class="footer-logo-and-license">
-          <a href="index-id.html">
-            <div class="logo-horizontal"></div>
-          </a>
-          <div>
-            Untuk semua orang yang mempelajari geofisika.
-          </div>
-
-          <div class="footer-license"> 
-            Seluruh isi dalam web ini berlisensi the MIT License, kecuali tertulis lain. Lihat <a style="color: #4d77b3; text-decoration: none;" href="https://github.com/reza-nugraha32/opengeophy/">readme</a> untuk detail lebih lanjut.
-          </div>        
-        </span>
-        
-        <span class="footer-column">
-          <div class="footer-row-list">
-            <h3>Bantuan</h3>
-            <a href="sources/help/id/contacts.html"><div class="footer-list">Kontak</div></a>
-            <a href="sources/help/id/faqs.html"><div class="footer-list">FAQs</div></a>
-            <a href="sources/help/id/contribute.html"><div class="footer-list">Berkontribusi</div></a>
-          </div>
-
-          <div class="footer-row-list">
-            <h3>Kebijakan</h3>
-            <a href="sources/policy/id/tos.html"><div class="footer-list">Ketentuan Pemakaian</div></a>
-            <a href="sources/policy/id/license.html"><div class="footer-list">Lisensi</div></a>
-            <a href="sources/policy/id/privacy.html"><div class="footer-list">Ketentuan Privasi</div></a>
-          </div>
-        </span>
-      </div>
-    </div>
-
-    <div class="watermark">
-      <div class="watermark-row">
-        <div class="watermark-paragraph">
-          &copy; 2023 Program Studi Teknik Geofisika, Fakultas Teknik Pertambangan dan Perminyakan, Institut Teknologi Bandung. 
+      <div class="watermark">
+        <div class="copyright">
+          &copy; 2023 Geophysics Wiki 
         </div>
         
-        <div class="web-button">
-          <a href="http://gf.itb.ac.id"><i class="fa fa-globe" style="font-size:36px;color:white"></i></a>
-        </div>
-
-        <div class="github-button">
-          <a href="https://github.com/reza-nugraha32/opengeophy"><i class="fa fa-github" style="font-size:36px;color:white"></i></a>
-        </div>
-
-        <div class="fttm-logo">
-          <a href="http://fttm.itb.ac.id"><img alt="FTTM ITB" src="assets/images/home/FTTM-ITB.png" width="250"></a>
+        <div class="watermark-link">
+          <div class="web-button">
+            <a href="http://gf.itb.ac.id"><i class="fa fa-globe"></i></a>
+          </div>
+    
+          <div class="github-button">
+            <a href="https://github.com/reza-nugraha32/geophysics-wiki"><i class="fa fa-github"></i></a>
+          </div>
         </div>
       </div>
     </div>
-    <!-- End of copyable footer template -->
-    <script src="resources/scripts/toggle-active-button.js"></script>
-    <script src="resources/scripts/assign-course-cover.js"></script>
-</body>
+  <script src="resources/scripts/toggle-active-button.js"></script>
+  <script src="resources/scripts/assign-course-cover.js"></script>
+  </body>
 </html>

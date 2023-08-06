@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Start of copyable header template -->
 <html lang="en">
   <head>  
     <meta charset="UTF-8">
@@ -36,8 +35,8 @@
     </script>
   </head>
 
-  <body id="body-en">
-    <div class="loading-box">
+  <body>
+    <div class="loading">
       <div class="loading-wrapper">
           <div class="loading-container">
               <div class="loading-image">
@@ -53,12 +52,12 @@
       <div class="topnav-contents hidden">
         <i class="fa fa-times"></i>
       </div>
-      <span class="logo">
+      <span class="topnav-logo">
         <a href="../../../index.html">
           <div class="logo-horizontal"></div>
         </a>
       </span>
-      <span class="menu">    
+      <span class="topnav-menu">    
         <div class="mode-switch">
           <i id="switch-button"></i>
         </div>
@@ -151,11 +150,9 @@
     </div>
 
     <!--Web content starts here-->
-    <!--Use this for the title of the page-->
-    <div id="main" class="lang en"> 
+    <div class="main"> 
       <div class="header">
         <div class="header-text">
-          <!-- Language switch-->
           <div class="language-switch">
             <a href="../../../courses/id/TG2105/2-1.html">
               <i class="fa fa-language"></i>
@@ -170,15 +167,13 @@
           <h1 class="page-title">2.2 Naive Gauss Elimination Method</h1>
         </div>
       </div>
-      <!-- End of copyable header template -->
       
-    <div class="content-column">
-      <div class="left-column">
+      <div class="contents">
         <div class="contents-header">
           <h3>Contents</h3>
           <i class="fa fa-times"></i>
         </div>
-        <div class="left-table-of-contents">
+        <div class="table-of-contents">
           <ul class="course-syllabus">
             <li class="course-content">Chapter 1: Preliminaries<i class="fa fa-chevron-down"></i></li>
               <div class="course-subcontent">
@@ -261,9 +256,7 @@
             </div>
           </ul>
         </div>
-      </div>
       
-      <div class="right-column">
         <div class="toggle-dropdown">
           <h2 class="section-header">The Naive Gauss Elimination Method</h2>
           <i class="fa fa-chevron-up"></i>
@@ -303,9 +296,9 @@
               a_{31} & a_{32} & a_{33} &\bigm| & b_{3}    
               \end{bmatrix}. $$
           </div>
-  
+
           <h3 class="section-header">Forward Elimination</h3>
-  
+
           <div class="section-text">
             To perform the forward elimination step, 
             first substract every element in $a_{2n}$ (row 2) in $M$ by
@@ -317,7 +310,7 @@
             resulting in the matrix $M$
               $$ M = \begin{bmatrix} 
               a_{11} & a_{12}  & a_{13}  &\bigm| & b_{1} \\ 
-                     & a_{22}' & a_{23}' &\bigm| & b_{2}' \\
+                      & a_{22}' & a_{23}' &\bigm| & b_{2}' \\
               a_{n1} & a_{32}  & a_{33}  &\bigm| & b_{3}    
               \end{bmatrix}. $$
             Then, substract every element in $a_{3n}$ (row 3) in $M$ by 
@@ -329,8 +322,8 @@
             which results in
               $$ M = \begin{bmatrix} 
               a_{11} & a_{12}  & a_{13}  &\bigm| & b_{1} \\ 
-                     & a_{22}' & a_{23}' &\bigm| & b_{2}' \\
-                     & a_{32}' & a_{33}' &\bigm| & b_{3}'    
+                      & a_{22}' & a_{23}' &\bigm| & b_{2}' \\
+                      & a_{32}' & a_{33}' &\bigm| & b_{3}'    
               \end{bmatrix}. $$
             Finally, we substract every element in $a_{3n}$ (row 3) in $M$ by
             <div class="tex-container">
@@ -341,13 +334,13 @@
             and we got the augmented upper triangle matrix $M'$ as 
               $$ M' = \begin{bmatrix} 
               a_{11} & a_{12}  & a_{13}   &\bigm| & b_{1} \\ 
-                     & a_{22}' & a_{23}'  &\bigm| & b_{2}' \\
-                     &         & a_{33}'' &\bigm| & b_{3}''    
+                      & a_{22}' & a_{23}'  &\bigm| & b_{2}' \\
+                      &         & a_{33}'' &\bigm| & b_{3}''    
               \end{bmatrix}. $$
           </div>
-  
+
           <h3 class="section-header">Backward Substitution</h3>
-  
+
           <div class="section-text">
             To perform the backward substitution step, we multiply $M'$ by $X$ and solve for $x_3$ first.
             Notice that for the last row of the matrix, we would get the equation
@@ -356,12 +349,12 @@
               x_3 &= \frac{b_{3}''}{a_{33}''}. \tag{1.4}\end{align}$$
             </div>
             Then, for $x_2$ we get
-  
+
             <div class="tex-container">
               $$a_{22}'x_2+a_{23}'x_3 = b_{2}'$$ 
               $$x_2 = \frac{b_{2}'- a_{23}x_2}{a_{22}'}. \tag{1.5}$$
             </div>
-  
+
             Finally, for $x_1$ we get
             
             <div class="tex-container">
@@ -477,7 +470,7 @@
               $$ M = \begin{bmatrix} 
               a_{11} & a_{12} & \ldots & a_{1n} &\bigm| & b_{1} \\ 
               a_{21} & a_{22} & \ldots & a_{2n} &\bigm| & b_{2} \\
-                     &        & \vdots &        &\bigm| &\vdots \\
+                      &        & \vdots &        &\bigm| &\vdots \\
               a_{n1} & a_{n2} & \ldots & a_{nn} &\bigm| & b_{n}    
               \end{bmatrix}. $$
             </div>
@@ -536,38 +529,38 @@
               We can now begin to write program to solve this system.
               <div class="code-container">
                 <pre><code class="language-python hljs">
-import numpy as np
+    import numpy as np
 
-# Array storing the variables
-array = np.array([[1, 2, 10], 
+    # Array storing the variables
+    array = np.array([[1, 2, 10], 
                   [1.1, 2, 10.4]])
 
-n = len(array)
+    n = len(array)
 
-# Array storing the solutions
-solution = np.zeros(n)
+    # Array storing the solutions
+    solution = np.zeros(n)
 
-# Forward Elimination Step
-for i in range(n):
+    # Forward Elimination Step
+    for i in range(n):
     for j in range(i+1, n):
         ratio = array[j][i]/array[i][i]
         
         for k in range(n+1):
             array[j][k] = array[j][k]-ratio*array[i][k]
 
-# Back Substitution Step
-solution[n-1] = array[n-1][n]/array[n-1][n-1]
+    # Back Substitution Step
+    solution[n-1] = array[n-1][n]/array[n-1][n-1]
 
-for i in range(n-2,-1,-1):
+    for i in range(n-2,-1,-1):
     solution[i] = array[i][n]
-    
+
     for j in range(i+1,n):
         solution[i] = solution[i]-array[i][j]*solution[j]
-    
+
     solution[i] = solution[i]/array[i][i]
 
-print("The augmented upper triangular matrix:\n", array)
-print("Numerical solutions:\n", solution)
+    print("The augmented upper triangular matrix:\n", array)
+    print("Numerical solutions:\n", solution)
                   </code></pre>
                 </div>
               </div>
@@ -587,38 +580,38 @@ print("Numerical solutions:\n", solution)
                 We can now begin to the write program to solve this system.
                 <div class="code-container">
                   <pre><code class="language-python hljs">
-import numpy as np
+    import numpy as np
 
-# Array storing the variables
-array = np.array([[2, 8, -2, -2], 
+    # Array storing the variables
+    array = np.array([[2, 8, -2, -2], 
                   [2, 10, 4, 4],
                   [2, 12, 2, 6]])
-n = len(array)
+    n = len(array)
 
-# Array storing the solutions
-solution = np.zeros(n)
+    # Array storing the solutions
+    solution = np.zeros(n)
 
-# Forward Elimination Step
-for i in range(n):
+    # Forward Elimination Step
+    for i in range(n):
     for j in range(i+1, n):
         ratio = array[j][i]/array[i][i]
         
         for k in range(n+1):
             array[j][k] = array[j][k]-ratio*array[i][k]
 
-# Back Substitution Step
-solution[n-1] = array[n-1][n]/array[n-1][n-1]
+    # Back Substitution Step
+    solution[n-1] = array[n-1][n]/array[n-1][n-1]
 
-for i in range(n-2,-1,-1):
+    for i in range(n-2,-1,-1):
     solution[i] = array[i][n]
-    
+
     for j in range(i+1,n):
         solution[i] = solution[i]-array[i][j]*solution[j]
-    
+
     solution[i] = solution[i]/array[i][i]
 
-print("The augmented upper triangular matrix:\n", array)
-print("Numerical solutions:\n", solution)
+    print("The augmented upper triangular matrix:\n", array)
+    print("Numerical solutions:\n", solution)
                   </code></pre>
                 </div>
               </div>
@@ -638,40 +631,40 @@ print("Numerical solutions:\n", solution)
                 We can now begin to write the program to solve this system.
                 <div class="code-container">
                   <pre><code class="language-python hljs">
-import numpy as np
+    import numpy as np
 
-# Array storing the variables
-array = np.array([[2, 1, -1, 2, 5],
+    # Array storing the variables
+    array = np.array([[2, 1, -1, 2, 5],
                   [4, 5, -3, 6, 9],
                   [-2, 5, -2, 6, 4],
                   [4, 11, -4, 8, 2]])
 
-n = len(array)
+    n = len(array)
 
-# Array storing the solutions
-solution = np.zeros(n)
+    # Array storing the solutions
+    solution = np.zeros(n)
 
-# Forward Elimination Step
-for i in range(n):
+    # Forward Elimination Step
+    for i in range(n):
     for j in range(i+1, n):
         ratio = array[j][i]/array[i][i]
         
         for k in range(n+1):
             array[j][k] = array[j][k]-ratio*array[i][k]
 
-# Back Substitution Step
-solution[n-1] = array[n-1][n]/array[n-1][n-1]
+    # Back Substitution Step
+    solution[n-1] = array[n-1][n]/array[n-1][n-1]
 
-for i in range(n-2,-1,-1):
+    for i in range(n-2,-1,-1):
     solution[i] = array[i][n]
-    
+
     for j in range(i+1,n):
         solution[i] = solution[i]-array[i][j]*solution[j]
-    
+
     solution[i] = solution[i]/array[i][i]
 
-print("The augmented upper triangular matrix:\n", array)
-print("Numerical solutions:\n", solution)
+    print("The augmented upper triangular matrix:\n", array)
+    print("Numerical solutions:\n", solution)
                   </code></pre>
                 </div>
               </div>
@@ -692,111 +685,113 @@ print("Numerical solutions:\n", solution)
                 We can now begin to write the program to solve this system.
                 <div class="code-container">
                   <pre><code class="language-python hljs">
-import numpy as np
+    import numpy as np
 
-# Array storing the variables
-array = np.array([[2, 1, -1, 2, 5],
+    # Array storing the variables
+    array = np.array([[2, 1, -1, 2, 5],
                   [4, 5, -3, 6, 9],
                   [-2, 5, -2, 6, 4],
                   [4, 11, -4, 8, 2]])
 
-n = len(array)
+    n = len(array)
 
-# Array storing the solutions
-solution = np.zeros(n)
+    # Array storing the solutions
+    solution = np.zeros(n)
 
-# Forward Elimination Step
-for i in range(n):
+    # Forward Elimination Step
+    for i in range(n):
     for j in range(i+1, n):
         ratio = array[j][i]/array[i][i]
         
         for k in range(n+1):
             array[j][k] = array[j][k]-ratio*array[i][k]
 
-# Back Substitution Step
-solution[n-1] = array[n-1][n]/array[n-1][n-1]
+    # Back Substitution Step
+    solution[n-1] = array[n-1][n]/array[n-1][n-1]
 
-for i in range(n-2,-1,-1):
+    for i in range(n-2,-1,-1):
     solution[i] = array[i][n]
-    
+
     for j in range(i+1,n):
         solution[i] = solution[i]-array[i][j]*solution[j]
-    
+
     solution[i] = solution[i]/array[i][i]
 
-print("The augmented upper triangular matrix:\n", array)
-print("Numerical solutions:\n", solution)
+    print("The augmented upper triangular matrix:\n", array)
+    print("Numerical solutions:\n", solution)
                   </code></pre>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <h2 class="section-header">References</h2>
+        <div class="section-text">
+          Chapra, S.C, & Canale, R.P. (2014). Numerical Methods for Engineers, 7th Edition. McGraw Hill.
+        </div>
+
+        <div class="spacer"></div>
         
         <div class="content-footer-wrapper">
           <div class="previous-content"><a href="2-1.html"><i class="fa fa-chevron-left"></i>Previous</a></div>
           <div class="next-content"><a href="2-3.html">Next<i class="fa fa-chevron-right"></i></a></div>
         </div>
       </div>
-    </div>
 
-    <!-- Start of copyable footer template -->
-    <div class="footer">
-      <div class="footer-row">
-        <span class="footer-logo-and-license">
-          <a href="../../../index.html">
-            <div class="logo-horizontal"></div>
-          </a>
-          <div>
-            For everyone who's learning geophysics.
-          </div>
+      <div class="footer">
+        <div class="footer-row">
+          <span class="footer-logo-and-license">
+            <a href="../../../index.html">
+              <div class="logo-horizontal"></div>
+            </a>
+            <div>
+              For everyone who's learning geophysics.
+            </div>
 
-          <div class="footer-license"> 
-            All materials in this website are licensed with the MIT License, except where noted. See <a style="color: #526D82; text-decoration: none;" href="https://github.com/reza-nugraha32/geophysics-wiki">readme</a> for detailed informations.
-          </div>        
-        </span>
-        
-        <span class="footer-column">
-          <div class="footer-row-list">
-            <h3>Help</h3>
-            <a href="../../../sources/help/en/contacts.html"><div class="footer-list">Contacts</div></a>
-            <a href="../../../sources/help/en/faqs.html"><div class="footer-list">FAQs</div></a>
-            <a href="../../../sources/help/en/contribute.html"><div class="footer-list">Contribute</div></a>
-          </div>
+            <div class="footer-license"> 
+              All materials in this website are licensed with the MIT License, except where noted. 
+              See <a href="https://github.com/reza-nugraha32/geophysics-wiki">readme</a> for detailed informations.
+            </div>        
+          </span>
+          
+          <span class="footer-link">
+            <div class="footer-row-list">
+              <h3>Help</h3>
+              <a href="../../../sources/help/en/contacts.html"><div class="footer-list">Contacts</div></a>
+              <a href="../../../sources/help/en/faqs.html"><div class="footer-list">FAQs</div></a>
+              <a href="../../../sources/help/en/contribute.html"><div class="footer-list">Contribute</div></a>
+            </div>
 
-          <div class="footer-row-list">
-            <h3>Policies</h3>
-            <a href="../../../sources/policy/en/tos.html"><div class="footer-list">Terms of Use</div></a>
-            <a href="../../../sources/policy/en/license.html"><div class="footer-list">Licensing</div></a>
-            <a href="../../../sources/policy/en/privacy.html"><div class="footer-list">Privacy Notice</div></a>
-          </div>
-        </span>
+            <div class="footer-row-list">
+              <h3>Policies</h3>
+              <a href="../../../sources/policy/en/tos.html"><div class="footer-list">Terms of Use</div></a>
+              <a href="../../../sources/policy/en/license.html"><div class="footer-list">Licensing</div></a>
+              <a href="../../../sources/policy/en/privacy.html"><div class="footer-list">Privacy Notice</div></a>
+            </div>
+          </span>
+        </div>
       </div>
-    </div>
 
-    <div class="watermark">
-      <div class="watermark-row">
-        <div class="watermark-paragraph">
-          &copy; 2023 Department of Geophysical Engineering, Faculty of Mining and Petroleum Engineering, Institut Teknologi Bandung. 
+      <div class="watermark">
+        <div class="copyright">
+          &copy; 2023 Geophysics Wiki
         </div>
         
-        <div class="web-button">
-          <a href="http://gf.itb.ac.id"><i class="fa fa-globe" style="font-size:2em;color:white"></i></a>
-        </div>
+        <div class="watermark-link">
+          <div class="web-button">
+            <a href="http://gf.itb.ac.id"><i class="fa fa-globe"></i></a>
+          </div>
 
-        <div class="github-button">
-          <a href="https://github.com/reza-nugraha32/geophysics-wiki"><i class="fa fa-github" style="font-size:2em;color:white"></i></a>
-        </div>
-
-        <div class="fttm-logo">
-          <a href="http://fttm.itb.ac.id"><img alt="FTTM ITB" src="../../../assets/images/home/FTTM-ITB.png" width="250"></a>
+          <div class="github-button">
+            <a href="https://github.com/reza-nugraha32/geophysics-wiki"><i class="fa fa-github"></i></a>
+          </div>
         </div>
       </div>
     </div>
-    <!-- End of copyable footer template -->
-    <script src="../../../resources/scripts/toggle-dropdown.js"></script>
-    <script src="../../../resources/scripts/trim-code-whitespace.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
-</body>
+  <script src="../../../resources/scripts/toggle-dropdown.js"></script>
+  <script src="../../../resources/scripts/trim-code-whitespace.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  </body>
 </html>

@@ -3,7 +3,7 @@ $(window).on('load', function () {
     });
 
 function removeLoader() {
-    $(".loading-box").fadeOut(1000, function () {
-        $(".loading-box").remove();
+    $(".loading").fadeOut(1000, function () {
+        $(".loading").remove();
     });
 };

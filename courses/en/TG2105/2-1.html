@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Start of copyable header template -->
 <html lang="en">
   <head>  
     <meta charset="UTF-8">
@@ -35,8 +34,8 @@
     </script>
   </head>
 
-  <body id="body-en">
-    <div class="loading-box">
+  <body>
+    <div class="loading">
       <div class="loading-wrapper">
           <div class="loading-container">
               <div class="loading-image">
@@ -49,12 +48,12 @@
       </div>
     </div>
     <div class="topnav">
-      <span class="logo">
+      <span class="topnav-logo">
         <a href="../../../index.html">
           <div class="logo-horizontal"></div>
         </a>
       </span>
-      <span class="menu">    
+      <span class="topnav-menu">    
         <div class="mode-switch">
           <i id="switch-button"></i>
         </div>
@@ -62,11 +61,9 @@
     </div>
     
     <!--Web content starts here-->
-    <!--Use this for the title of the page-->
-    <div id="main" class="lang en"> 
+    <div class="main"> 
       <div class="header">
         <div class="header-text">
-          <!-- Language switch-->
           <div class="language-switch">
             <a href="../../../sources/courses/id/odd-semester/TG2105/2-1.html">
               <i class="fa fa-language"></i>
@@ -81,10 +78,8 @@
           <h1 class="page-title">2.1 The Matrices System</h1>
         </div>
       </div>
-      <!-- End of copyable header template -->
       
-    <div class="content-column">
-      <div class="left-column">
+      <div class="contents">
         <div class="contents-header">
           <h3>Contents</h3>
           <i class="fa fa-times"></i>
@@ -172,9 +167,7 @@
             </div>
           </ul>
         </div>
-      </div>
-      
-      <div class="right-column">
+        
         <div class="toggle-dropdown">
           <h2 class="section-header">The Matrices System</h2>
           <i class="fa fa-chevron-up"></i>
@@ -201,7 +194,7 @@
             where $a_{nn}$ are the constant coefficients, $x_n$ are the unknown variables, 
             $c_n$ are the contants terms, and $n$ are the number of equations.
           </div>
-  
+
           <div class="section-text">
             This system can also be written as a matrices system in the form of
             $$[A][X]=[C].$$ 
@@ -226,10 +219,10 @@
             <div class="tex-container">
               $$ C = 
               \begin{bmatrix}
-               c_{1} \\
-               c_{2} \\
-               \vdots \\
-               c_{n} \\
+                c_{1} \\
+                c_{2} \\
+                \vdots \\
+                c_{n} \\
               \end{bmatrix}.$$
             </div>
           </div>
@@ -246,7 +239,7 @@
             <div class="tex-container">
               $$ A_{upper} = 
               \begin{bmatrix}
-               a_{11} & a_{12} & a_{13} & a_{14} \\
+                a_{11} & a_{12} & a_{13} & a_{14} \\
                       & a_{22} & a_{23} & a_{24} \\
                       &        & a_{33} & a_{34} \\
                       &        &        & a_{44} \\
@@ -256,13 +249,13 @@
             <div class="tex-container">
               $$ A_{lower} = 
               \begin{bmatrix}
-               a_{11} &        &        &        \\
-               a_{21} & a_{22} &        &        \\
-               a_{31} & a_{32} & a_{33} &        \\
-               a_{41} & a_{42} & a_{43} & a_{44} \\
+                a_{11} &        &        &        \\
+                a_{21} & a_{22} &        &        \\
+                a_{31} & a_{32} & a_{33} &        \\
+                a_{41} & a_{42} & a_{43} & a_{44} \\
               \end{bmatrix}.$$
             </div>
-  
+
             Furthermore, for a $2\times2$ matrix, we define the inverse identity of matrix as follow
             
             <div class="tex-container">
@@ -289,18 +282,18 @@
             <div class="tex-container">
               $$\begin{align}
               [A]^{-1} &= \frac{1}{\det{A}} adj{A} \\
-                       &= \frac{1}{a_{11}a_{22}-a_{12}a_{21}} 
+                        &= \frac{1}{a_{11}a_{22}-a_{12}a_{21}} 
               \begin{bmatrix}
                 a_{22} & -a_{12} \\
                 -a_{21} & a_{11} \\
               \end{bmatrix}.
               \end{align}$$
             </div>
-  
+
             Notice that when $\det{A}=0$, $A$ doesn't have any inverse. 
             This type of matrix is called a <b>singular matrix</b>.
           </div>
-  
+
           <div class="section-text">
             Therefore, we define $\det{A}$ of a $2\times2$ matrix as
             <div class="tex-container">
@@ -344,20 +337,20 @@
           <h2 class="section-header">Solving A System of Linear Equations</h2>
           <i class="fa fa-chevron-up"></i>
         </div>
-       
+        
         <div class="dropdown-content">
           <div class="section-text">
             There are several methods to solve a system of linear equation, both analytically and numerically. Some analytical methods to solve
             a system of linear equations are including substitution, Cramer's law, and using the graph of the equation. On the other hand, 
             some numerical methods to solve a system of linear equations are including Gauss elimination method and LU decomposition method. 
           </div>
-  
+
           <div class="section-text">
             We would take a look at using matrices and Cramer's law to solve this system.
           </div>
-  
+
           <h3 class="section-header">Cramer's Rule</h3>
-  
+
           <div class="section-text">
             Cramer's method can be used to solve a $2\times2$ or $3\times3$ matrices system.
             Consider a system of linear equations as follows
@@ -428,67 +421,69 @@
           </div>
         </div>
 
+        <h2 class="section-header">References</h2>
+        <div class="section-text">
+          Chapra, S.C, & Canale, R.P. (2014). Numerical Methods for Engineers, 7th Edition. McGraw Hill.
+        </div>
+
+        <div class="spacer"></div>
+
         <div class="content-footer-wrapper">
           <div class="previous-content"><a href="1-2.html"><i class="fa fa-chevron-left"></i>Previous</a></div>
           <div class="next-content"><a href="2-2.html">Next<i class="fa fa-chevron-right"></i></a></div>
         </div>
       </div>
-    </div>
 
-    <!-- Start of copyable footer template -->
-    <div class="footer">
-      <div class="footer-row">
-        <span class="footer-logo-and-license">
-          <a href="../../../index.html">
-            <div class="logo-horizontal"></div>
-          </a>
-          <div>
-            For everyone who's learning geophysics.
-          </div>
+      <div class="footer">
+        <div class="footer-row">
+          <span class="footer-logo-and-license">
+            <a href="../../../index.html">
+              <div class="logo-horizontal"></div>
+            </a>
+            <div>
+              For everyone who's learning geophysics.
+            </div>
 
-          <div class="footer-license"> 
-            All materials in this website are licensed with the MIT License, except where noted. See <a style="color: #526D82; text-decoration: none;" href="https://github.com/reza-nugraha32/geophysics-wiki">readme</a> for detailed informations.
-          </div>        
-        </span>
-        
-        <span class="footer-column">
-          <div class="footer-row-list">
-            <h3>Help</h3>
-            <a href="../../../sources/help/en/contacts.html"><div class="footer-list">Contacts</div></a>
-            <a href="../../../sources/help/en/faqs.html"><div class="footer-list">FAQs</div></a>
-            <a href="../../../sources/help/en/contribute.html"><div class="footer-list">Contribute</div></a>
-          </div>
+            <div class="footer-license"> 
+              All materials in this website are licensed with the MIT License, except where noted. 
+              See <a href="https://github.com/reza-nugraha32/geophysics-wiki">readme</a> for detailed informations.
+            </div>        
+          </span>
+          
+          <span class="footer-column">
+            <div class="footer-row-list">
+              <h3>Help</h3>
+              <a href="../../../sources/help/en/contacts.html"><div class="footer-list">Contacts</div></a>
+              <a href="../../../sources/help/en/faqs.html"><div class="footer-list">FAQs</div></a>
+              <a href="../../../sources/help/en/contribute.html"><div class="footer-list">Contribute</div></a>
+            </div>
 
-          <div class="footer-row-list">
-            <h3>Policies</h3>
-            <a href="../../../sources/policy/en/tos.html"><div class="footer-list">Terms of Use</div></a>
-            <a href="../../../sources/policy/en/license.html"><div class="footer-list">Licensing</div></a>
-            <a href="../../../sources/policy/en/privacy.html"><div class="footer-list">Privacy Notice</div></a>
-          </div>
-        </span>
+            <div class="footer-row-list">
+              <h3>Policies</h3>
+              <a href="../../../sources/policy/en/tos.html"><div class="footer-list">Terms of Use</div></a>
+              <a href="../../../sources/policy/en/license.html"><div class="footer-list">Licensing</div></a>
+              <a href="../../../sources/policy/en/privacy.html"><div class="footer-list">Privacy Notice</div></a>
+            </div>
+          </span>
+        </div>
       </div>
-    </div>
 
-    <div class="watermark">
-      <div class="watermark-row">
-        <div class="watermark-paragraph">
-          &copy; 2023 Department of Geophysical Engineering, Faculty of Mining and Petroleum Engineering, Institut Teknologi Bandung. 
+      <div class="watermark">
+        <div class="copyright">
+          &copy; 2023 Geophysics Wiki
         </div>
         
-        <div class="web-button">
-          <a href="http://gf.itb.ac.id"><i class="fa fa-globe" style="font-size:2em;color:white"></i></a>
-        </div>
-
-        <div class="github-button">
-          <a href="https://github.com/reza-nugraha32/geophysics-wiki"><i class="fa fa-github" style="font-size:2em;color:white"></i></a>
-        </div>
-
-        <div class="fttm-logo">
-          <a href="http://fttm.itb.ac.id"><img alt="FTTM ITB" src="../../../assets/images/home/FTTM-ITB.png" width="250"></a>
+        <div class="watermark-link">
+          <div class="web-button">
+            <a href="http://gf.itb.ac.id"><i class="fa fa-globe"></i></a>
+          </div>
+    
+          <div class="github-button">
+            <a href="https://github.com/reza-nugraha32/geophysics-wiki"><i class="fa fa-github"></i></a>
+          </div>
         </div>
       </div>
     </div>
-    <!-- End of copyable footer template -->
-    <script src="../../../resources/scripts/toggle-dropdown.js"></script>
-</body>
+  <script src="../../../resources/scripts/toggle-dropdown.js"></script>
+  </body>
 </html>
