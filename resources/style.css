@@ -99,46 +99,65 @@
   overflow-y: hidden;
 }
 .code-container{
-  border-radius: 10px;
   width: auto;
   margin-left: auto;
   margin-right: auto; 
   margin-top: 10px;
   overflow-x: auto;
   overflow-y: hidden;
+  border-radius: 10px;
+}
+.terminal{
+  display: none;
+  padding: 5px 0 5px 0;
+  font-size: 0.8em;
+  color: #4d77b3;
 }
 .python-output{
   width: auto;
-  overflow-x: scroll;
-  padding: 0 10px 0 10px;
+  padding: 5px 5px 5px 5px;
   font-size: 0.9em;
-  background-color: #151b1f;
+  font-family: monospace;
+}
+.pyscript-config{
+  display: none;
 }
 .pyscript-container{
+  display: flex;
   width: auto;
-  min-height: 50px;
-  margin-top: -7px;
   margin-left: auto;
   margin-right: auto; 
   overflow-x: auto;
-  overflow-y: hidden;
-  border-top: solid;
-  border-bottom: solid;
-  border-width: 1px;
-  border-color: #8a8a8a50;
   background-color: #151b1f;
+  color: #dadada;
 }  
 pre{
   margin: 0 0 0 0;
 }
+.code-button-container{
+  padding: 5px 5px 5px 3px;
+}
 .run-code-button{
   padding: 8px 8px 8px 8px;
-  margin: 5px 5px 5px 5px;
+  margin: 0 0 0 0;
   background-color: transparent;
   font-size: 0.9em;
   border: solid;
   border-radius: 10px;
   border-width: 2px;
+  border-color: #4d77b3;
+  color: #4d77b3;
+}
+.copy-code-button{
+  padding: 8px 8px 8px 8px;
+  margin: 0 0 0 0;
+  background-color: transparent;
+  font-size: 0.9em;
+  border: solid;
+  border-radius: 10px;
+  border-width: 2px;
+}
+.copy-code-button:active{
   border-color: #4d77b3;
   color: #4d77b3;
 }
@@ -178,7 +197,7 @@ body{
   padding: 10px 10px 10px 10px;
   text-align: center;
   border: solid;
-  border-width: 1.8px;
+  border-width: 2px;
   border-radius: 20px;
 }
 .contents-header h3{
@@ -249,6 +268,14 @@ body{
   }
   .solution{
     background-color: #dfdfdf;
+  }
+  .run-code-button:active{
+    border-color: #808080;
+    color: #808080;
+  }
+  .copy-code-button{
+    border-color: #808080;
+    color: #808080;
   }
   .course-subcontent a{
     color: #474747;
@@ -379,6 +406,14 @@ body{
   }
   .solution{
     background-color: #1d2529;
+  }
+  .run-code-button:active{
+    border-color: #dadada;
+    color: #dadada;
+  }
+  .copy-code-button{
+    border-color: #dadada;
+    color: #dadada;
   }
   .course-subcontent a{
     color: #dadada;
