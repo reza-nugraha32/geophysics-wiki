@@ -558,7 +558,6 @@ for i in range(n-2,-1,-1):
 
   solution[i] = solution[i]/array[i][i]
 
-print("The augmented upper triangular matrix:\n", array)
 print("Numerical solutions:\n", solution)  
                 </code></pre>
                   <div class="pyscript-container" id="exercise_1_1_container">
@@ -582,16 +581,15 @@ print("Numerical solutions:\n", solution)
                 We can now begin to the write program to solve this system.
                 <div class="code-container">
                   <pre><code class="language-python hljs">
-import numpy as np
-
 # Array storing the variables
-array = np.array([[2, 8, -2, -2], 
-              [2, 10, 4, 4],
-              [2, 12, 2, 6]])
+array = [[2, 8, -2, -2], 
+         [2, 10, 4, 4],
+         [2, 12, 2, 6]]
+
 n = len(array)
 
 # Array storing the solutions
-solution = np.zeros(n)
+solution = [0 for i in range(n)]
 
 # Forward Elimination Step
 for i in range(n):
@@ -612,7 +610,6 @@ for i in range(n-2,-1,-1):
 
   solution[i] = solution[i]/array[i][i]
 
-print("The augmented upper triangular matrix:\n", array)
 print("Numerical solutions:\n", solution)
                   </code></pre>
                   <div class="pyscript-container" id="exercise_1_2_container">
@@ -636,18 +633,16 @@ print("Numerical solutions:\n", solution)
                 We can now begin to write the program to solve this system.
                 <div class="code-container">
                   <pre><code class="language-python hljs">
-import numpy as np
-
 # Array storing the variables
-array = np.array([[2, 1, -1, 2, 5],
-              [4, 5, -3, 6, 9],
-              [-2, 5, -2, 6, 4],
-              [4, 11, -4, 8, 2]])
+array = [[2, 1, -1, 2, 5],
+         [4, 5, -3, 6, 9],
+         [-2, 5, -2, 6, 4],
+         [4, 11, -4, 8, 2]]
 
 n = len(array)
 
 # Array storing the solutions
-solution = np.zeros(n)
+solution = [0 for i in range(n)]
 
 # Forward Elimination Step
 for i in range(n):
@@ -668,7 +663,6 @@ for i in range(n-2,-1,-1):
 
   solution[i] = solution[i]/array[i][i]
 
-print("The augmented upper triangular matrix:\n", array)
 print("Numerical solutions:\n", solution)
                   </code></pre>
                   <div class="pyscript-container" id="exercise_1_3_container">
@@ -693,8 +687,6 @@ print("Numerical solutions:\n", solution)
                 We can now begin to write the program to solve this system.
                 <div class="code-container">
                   <pre><code class="language-python hljs">
-import numpy as np
-
 # Array storing the variables
 array = np.array([[2, 1, 4, 1, -1, 7],
                   [-1, 3, -2, -1, 2, 1],
@@ -705,7 +697,7 @@ array = np.array([[2, 1, 4, 1, -1, 7],
 n = len(array)
 
 # Array storing the solutions
-solution = np.zeros(n)
+solution = [0 for i in range(n)]
 
 # Forward Elimination Step
 for i in range(n):
@@ -726,7 +718,6 @@ for i in range(n-2,-1,-1):
 
   solution[i] = solution[i]/array[i][i]
 
-print("The augmented upper triangular matrix:\n", array)
 print("Numerical solutions:\n", solution)
                   </code></pre>
                   <div class="pyscript-container" id="exercise_1_4_container">
