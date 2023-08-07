@@ -1,4 +1,4 @@
-# This is not a standar python code, used only for fetching result to JavaScript and ran through PyScript
+# This is not a standar python code used only for fetching result to JavaScript and ran through PyScript
 # Array storing the variables
 array = [[[2, 8, -2, -2], 
         [2, 10, 4, 4],
