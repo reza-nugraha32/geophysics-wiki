@@ -33,6 +33,7 @@ for i in range(n-2,-1,-1):
 display('The augmented upper triangular matrix:', target="exercise_1_4_solution")
 for i in range(n):
     display(array[i], target="exercise_1_4_solution")
+display('', target="exercise_1_4_solution")
 display('Numerical solutions:', target="exercise_1_4_solution")
 for i in range(n):
     display(solution[i], target="exercise_1_4_solution")
