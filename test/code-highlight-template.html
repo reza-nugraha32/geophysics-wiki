@@ -1,11 +1,15 @@
 <link rel="stylesheet" href="style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="../../../../../../resources/scripts/trim-code-whitespace.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
+<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css"/>
+<script defer src="https://pyscript.net/latest/pyscript.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/tokyo-night-dark.min.css">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/mhchem.min.js"></script>
-<pre><code class="language-python hljs">
+<py-config>
+    packages = ["numpy"]
+</py-config>
+<pre>
+    <code class="language-python hljs">
 import numpy as np
 
 # Array storing the variables
@@ -14,7 +18,7 @@ array = np.array([[1, 2, 10],
 
 n = len(array)
 
-#Array storing the solutions
+# Array storing the solutions
 solution = np.zeros(n)
 
 # Forward Elimination Step
@@ -38,4 +42,46 @@ for i in range(n-2,-1,-1):
 
 print("The augmented upper triangular matrix:\n", array)
 print("Numerical solutions:\n", solution)
-</code></pre>
+    </code>
+</pre>
+<button py-click="display_to_div()" id="display">Say Hello</button>
+
+<py-script src="test.py">
+def display_to_div():
+    display("import numpy as np
+
+    # Array storing the variables
+    array = np.array([[1, 2, 10], 
+                    [1.1, 2, 10.4]])
+    
+    n = len(array)
+    
+    # Array storing the solutions
+    solution = np.zeros(n)
+    
+    # Forward Elimination Step
+    for i in range(n):
+        for j in range(i+1, n):
+            ratio = array[j][i]/array[i][i]
+            
+            for k in range(n+1):
+                array[j][k] = array[j][k]-ratio*array[i][k]
+    
+    # Back Substitution Step
+    solution[n-1] = array[n-1][n]/array[n-1][n-1]
+    
+    for i in range(n-2,-1,-1):
+        solution[i] = array[i][n]
+        
+        for j in range(i+1,n):
+            solution[i] = solution[i]-array[i][j]*solution[j]
+        
+        solution[i] = solution[i]/array[i][i]
+    
+    print("The augmented upper triangular matrix:\n", array)
+    print("Numerical solutions:\n", solution)", target="python-output")
+</py-script>
+
+<div class="python-output">
+    <py-terminal>
+</div>

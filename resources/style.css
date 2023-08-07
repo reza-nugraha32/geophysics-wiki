@@ -88,7 +88,10 @@
 .katex-display > .katex > .katex-html > .tag {
   position: relative !important;
   right: -0.5em !important;
-  font-size: 0.8em !important;
+  font-size: 1em !important;
+}
+.katex-display{
+  font-size: 0.8em;
 }
 .tex-container{
   width: 310px;
@@ -353,7 +356,7 @@ body{
     border-width: 0.5px;
     border-color: #8a8a8a50;
   }
-  .topnav-syllabus{
+  .topnav-table-of-contents{
     background-color: #131a1d;
     border-right: solid;
     border-width: 0.5px;
@@ -443,7 +446,6 @@ body{
     }
   }
 }  
-/* Top navigation */
 .topnav {
   display: flex;
   width: auto;
@@ -498,7 +500,6 @@ h2{
 h3{
   margin: 0 0 0 0;
 } 
-/* Add space between main section and footer section */
 .spacer{
   padding-bottom: 100px;
 }
@@ -560,7 +561,7 @@ li{
 }
 /* Dropdown toggle */
 .example{
-  width: 320px;
+  width: auto;
   margin-bottom: 30px;
 }
 .toggle-solution{

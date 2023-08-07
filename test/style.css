@@ -53,3 +53,8 @@ body{
         transform: translatex(0%);  
     }
 }
+.python-output{
+    height: 100px;
+    width: 100px;
+    background-color: #4d77b3;
+}
