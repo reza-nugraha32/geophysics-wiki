@@ -1,7 +1,6 @@
 def exercise_1_1():
   from js import document
-  terminal = document.getElementByClass("python-output")
-  print(terminal)
+  terminal = document.getElementById("terminal_1_1")
   terminal.innerHTML = ''
 
   import numpy as np
