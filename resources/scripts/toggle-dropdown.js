@@ -69,3 +69,10 @@ $(function toggleSolution(){
     $("i", this).toggleClass("fa-chevron-down fa-chevron-up");
   });  
 })
+
+// JQuery script to toggle solution dropdown
+$(function toggleCodeOutput(){
+  $(".run-code-button").click(function () {
+    $(".pyscript-container").next(".python-output").css({"display":"flex"});
+  });  
+})
