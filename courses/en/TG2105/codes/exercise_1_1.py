@@ -1,4 +1,4 @@
-def example_1_1():
+def exercise_1_1():
   from js import document
   terminal = document.getElementByClass("python-output")
   print(terminal)
