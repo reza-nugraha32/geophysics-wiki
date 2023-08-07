@@ -17,7 +17,7 @@ def exercise_1_1():
   
   # Forward Elimination Step
   for i in range(n):
-  for j in range(i+1, n):
+    for j in range(i+1, n):
       ratio = array[j][i]/array[i][i]
       
       for k in range(n+1):
@@ -27,7 +27,7 @@ def exercise_1_1():
   solution[n-1] = array[n-1][n]/array[n-1][n-1]
   
   for i in range(n-2,-1,-1):
-  solution[i] = array[i][n]
+    solution[i] = array[i][n]
   
   for j in range(i+1,n):
       solution[i] = solution[i]-array[i][j]*solution[j]
