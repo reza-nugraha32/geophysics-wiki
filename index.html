@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"> 
     <link rel="icon" href="assets/images/logo/default-logo.png" type="image/x-icon">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <py-config>
+      packages = ["numpy"]
+      [splashscreen]
+          enabled = false
+    </py-config>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js",
       onload="renderMathInElement(document.body, {delimiters: 
           [
@@ -76,7 +81,7 @@
           <h1 class="page-title">Geophysics learning resources.</h1>
           <div class="python-output"><py-terminal></div>
             <button py-click="test()" id="display">Say Hello</button>
-            <py-script src="./test/test.py"></py-script>
+            <py-script src="https://raw.githubusercontent.com/reza-nugraha32/geophysics-wiki/main/test/test.py"></py-script>
         </div>
       </div>
       
