@@ -108,6 +108,9 @@
   overflow-y: hidden;
 }
 .python-output{
+  display: none;
+  width: inherit;
+  height: auto;
   background-color: #151b1f;
 }
 .py-terminal{
@@ -778,7 +781,7 @@ li{
     display: grid;
     margin: 10px 5px 10px 5px;
     width: 150px;
-    height: 175px;
+    height: 180px;
     border-radius: 15px;
     align-content: start;
     overflow: hidden;
@@ -791,12 +794,12 @@ li{
   }
   .course-cover{
     width: 150px;
-    height: 85px;
+    height: 80px;
     display: grid;
   }
   .course-name{
     display: grid;
-    padding: 2px 5px 5px 10px;
+    padding: 0px 5px 5px 10px;
     text-decoration: none;
     text-align: left;
     font-size: 0.8em;
@@ -804,7 +807,7 @@ li{
   }
   .course-code{
     display: flex;
-    padding: 8px 5px 0 10px;
+    padding: 5px 5px 0 10px;
     text-decoration: none;
     text-align: left;
     font-size: 0.7em;

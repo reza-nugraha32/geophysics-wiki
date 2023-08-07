@@ -1,4 +1,5 @@
 def exercise_1_1():
+  micropip.install("numpy")
   import numpy as np
 
   # Array storing the variables
@@ -24,10 +25,13 @@ def exercise_1_1():
   for i in range(n-2,-1,-1):
     solution[i] = array[i][n]
   
-  for j in range(i+1,n):
-      solution[i] = solution[i]-array[i][j]*solution[j]
-  
-  solution[i] = solution[i]/array[i][i]
+    for j in range(i+1,n):
+        solution[i] = solution[i]-array[i][j]*solution[j]
+    
+    solution[i] = solution[i]/array[i][i]
   
   print("The augmented upper triangular matrix:\n", array)
   print("Numerical solutions:\n", solution)
+
+def display_solution():
+  display(exercise_1_1, target="")
