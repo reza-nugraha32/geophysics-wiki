@@ -1,9 +1,10 @@
 # This is not a standar python code  used only for fetching result to JavaScript and ran through PyScript
 # Array storing the variables
-array = [[2, 1, -1, 2, 5],
-        [4, 5, -3, 6, 9],
-        [-2, 5, -2, 6, 4],
-        [4, 11, -4, 8, 2]]
+array = [[2, 1, 4, 1, -1, 7],
+        [-1, 3, -2, -1, 2, 1],
+        [5, 1, 3, -4, 1, 33],
+        [3, -2, -2, -2, 3, 24],
+        [-4, -1, -5, 3, -4, -49]]
 
 n = len(array)
 
@@ -30,6 +31,8 @@ for i in range(n-2,-1,-1):
     solution[i] = solution[i]/array[i][i]
 
 display('The augmented upper triangular matrix:', target="exercise_1_4_solution")
-display(array, target="exercise_1_4_solution")
+for i in range(n):
+    display(array[i], target="exercise_1_4_solution")
 display('Numerical solutions:', target="exercise_1_4_solution")
-display(solution, target="exercise_1_4_solution")
+for i in range(n):
+    display(solution[i], target="exercise_1_4_solution")
