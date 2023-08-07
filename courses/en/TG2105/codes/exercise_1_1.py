@@ -1,8 +1,4 @@
 def exercise_1_1():
-  from js import document
-  terminal = document.getElementById("terminal_1_1")
-  terminal.innerHTML = ''
-
   import numpy as np
 
   # Array storing the variables

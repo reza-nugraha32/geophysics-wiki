@@ -108,9 +108,6 @@
   overflow-y: hidden;
 }
 .python-output{
-  display: none;
-  width: inherit;
-  height: auto;
   background-color: #151b1f;
 }
 .py-terminal{
