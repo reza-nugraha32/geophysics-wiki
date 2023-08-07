@@ -1,4 +1,5 @@
 def exercise_1_1():
+  import micropip
   micropip.install("numpy")
   import numpy as np
 
