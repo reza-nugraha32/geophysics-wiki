@@ -28,7 +28,7 @@ for i in range(n-2,-1,-1):
 
     solution[i] = solution[i]/array[i][i]
 
-display('The augmented upper triangular matrix:', target="${exercise_num+'_solution'}") 
-display(array, target="${exercise_num+'_solution'}")
-display('Numerical solutions:', target="${exercise_num+'_solution'}")
-display(solution, target="${exercise_num+'_solution'}")
+display('The augmented upper triangular matrix:', target="${exercise_num}+_solution")
+display(array, target="${exercise_num}+_solution")
+display('Numerical solutions:', target="${exercise_num}+_solution")
+display(solution, target="${exercise_num}+_solution")

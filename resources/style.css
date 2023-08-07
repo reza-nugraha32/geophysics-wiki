@@ -176,8 +176,9 @@ body{
   width: 125px;
   margin: 0 0 15px 0;
   padding: 10px 10px 10px 10px;
+  text-align: center;
   border: solid;
-  border-width: 2px;
+  border-width: 1.8px;
   border-radius: 20px;
 }
 .contents-header h3{
