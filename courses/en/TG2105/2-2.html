@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../../resources/style.css">
     <link rel="icon" href="../../../assets/images/logo/default-logo.png" type="image/x-icon">
-    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.2/full/pyodide.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js",
       onload="renderMathInElement(document.body, {delimiters: 
@@ -532,16 +531,14 @@
               We can now begin to write program to solve this system.
               <div class="code-container">
                 <pre><code class="language-python hljs">
-import numpy as np
-
 # Array storing the variables
-array = np.array([[1, 2, 10], 
-              [1.1, 2, 10.4]])
+array = [[1, 2, 10], 
+        [1.1, 2, 10.4]]
 
 n = len(array)
 
 # Array storing the solutions
-solution = np.zeros(n)
+solution = [0 for i in range(n)]
 
 # Forward Elimination Step
 for i in range(n):
@@ -565,11 +562,11 @@ for i in range(n-2,-1,-1):
 print("The augmented upper triangular matrix:\n", array)
 print("Numerical solutions:\n", solution)  
                 </code></pre>
-                  <div class="pyscript-container">
-                    <button onclick="loadPyScript()" py-click="exercise_1_1()" class="run-code-button" id="run-code">Run <i class="fa fa-play-circle"></i></button>
-                    <py-script src="https://raw.githubusercontent.com/reza-nugraha32/geophysics-wiki/main/courses/en/TG2105/codes/exercise_1_1.py"></py-script>
+                  <div class="pyscript-container" id="exercise_1_1_container">
+                    <button class="run-code-button" id="exercise_1_1">Run <i class="fa fa-play-circle"></i></button>
+                    <!--<py-script src="https://raw.githubusercontent.com/reza-nugraha32/geophysics-wiki/main/courses/en/TG2105/codes/exercise_1_1.py"></py-script>-->
                   </div>
-                  <div class="python-output"><py-terminal></div>
+                  
                 </div>
               </div>
             </div>

@@ -73,6 +73,6 @@ $(function toggleSolution(){
 // JQuery script to toggle solution dropdown
 $(function toggleCodeOutput(){
   $(".run-code-button").click(function () {
-    $(".pyscript-container").next(".python-output").css({"display":"flex"});
+    $(".pyscript-container").next(".python-output").css({"display":"block"});
   });  
 })

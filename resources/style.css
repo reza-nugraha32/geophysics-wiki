@@ -108,16 +108,11 @@
   overflow-y: hidden;
 }
 .python-output{
-  display: none;
-  width: inherit;
-  height: auto;
+  width: auto;
+  overflow-x: scroll;
+  padding: 10px 10px 10px 10px;
+  font-size: 0.8em;
   background-color: #151b1f;
-}
-.py-terminal{
-  width: inherit;
-  height: auto;
-  font-size: 0.9em;
-  background-color: #151b1f !important;
 }
 .pyscript-container{
   width: auto;
