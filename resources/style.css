@@ -111,7 +111,7 @@
   width: auto;
   overflow-x: scroll;
   padding: 10px 10px 10px 10px;
-  font-size: 0.8em;
+  font-size: 0.9em;
   background-color: #151b1f;
 }
 .pyscript-container{
@@ -132,10 +132,10 @@ pre{
   margin: 0 0 0 0;
 }
 .run-code-button{
-  padding: 7px 7px 7px 7px;
-  margin: 7px 5px 5px 5px;
+  padding: 8px 8px 8px 8px;
+  margin: 5px 5px 5px 5px;
   background-color: transparent;
-  font-size: 0.8em;
+  font-size: 0.9em;
   border: solid;
   border-radius: 10px;
   border-width: 2px;
