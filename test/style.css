@@ -9,15 +9,9 @@ body{
 .loading{
     background-color: #0807073b;
     backdrop-filter: blur(10px);
-    display: flex;
     justify-content: center;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 200px;
-    overflow-x: hidden;
-    height: 500px;
+    width: auto;
+    height: auto;
 }
 .wave{
     height: 50px;
@@ -54,7 +48,9 @@ body{
     }
 }
 .python-output{
-    height: 100px;
-    width: 100px;
     background-color: #4d77b3;
+}
+.py-terminal{
+    background-color: #041e42 !important;
+    width: 100%;
 }

@@ -8,12 +8,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
     <script src="resources/scripts/toggle-active-theme.js"></script>
     <script src="resources/scripts/loading.js"></script>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css"/>
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
     <link rel="stylesheet" href="resources/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"> 
     <link rel="icon" href="assets/images/logo/default-logo.png" type="image/x-icon">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js",
       onload="renderMathInElement(document.body, {delimiters: 
           [
             {left: '$$', right: '$$', display: true},
@@ -72,6 +74,9 @@
           </div>
           <h3 class="page-title">Geophysics Wiki</h3>
           <h1 class="page-title">Geophysics learning resources.</h1>
+          <div class="python-output"><py-terminal></div>
+            <button py-click="test()" id="display">Say Hello</button>
+            <py-script src="/test/test.py"></py-script>
         </div>
       </div>
       
