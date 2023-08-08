@@ -5,14 +5,15 @@ $(document).ready(function(){
         console.log($(this).attr("disabled"))
 
         var exercise_num = this.id
-        
+
+        // Display the terminal icon
+        $(".terminal").css({"display":"none"})
+        $(".loading-python").css({"display":"block"})
+
         // Clear output on click
         if (document.getElementById(exercise_num+"_solution")){
             document.getElementById(exercise_num+"_solution").innerHTML = ""
         }
-
-        // Display the terminal icon
-        $(".terminal").css({"display":"block"})
 
         // Python code url
         var url = "https://raw.githubusercontent.com/reza-nugraha32/geophysics-wiki/main/courses/en/TG2105/codes/"+exercise_num+".py"
@@ -22,7 +23,6 @@ $(document).ready(function(){
         solution = document.createElement("div")
         solution.className = "python-output"
         solution.id = exercise_num+"_solution"
-        solution.innerHTML = "Python is starting..."
 
         // Append to parent container
         container = document.getElementById(exercise_num+"_container")
@@ -71,10 +71,22 @@ ${code}
             document.body.append(pyscript_config)
             document.body.append(pyscript_script)
         }
-
         // Restore button functionality
         $(this).removeAttr("disabled")
         console.log($(this).attr("disabled"))
+
+        // Display the terminal icon
+        var finish_exec = false
+
+        var pyscript_exec = setTimeout(function(){
+            $(".loading-python").css({"display":"none"})
+            $(".terminal").css({"display":"block"})
+        })
+
+        if (finish_exec){
+            console.log("PyScript done executing")
+            clearTimeout(pyscript_exec)
+        }
     });
 });
 

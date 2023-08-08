@@ -109,14 +109,51 @@
 }
 .terminal{
   display: none;
-  padding: 5px 0 5px 0;
+  margin: 8px 0 8px 0px;
   font-size: 0.8em;
   color: #4d77b3;
 }
+.loading-python{
+  display: none;
+  margin: 8px 0 8px 8px;
+  font-family: monospace;
+  font-size: 1em;
+}
+.fa.fa-spinner{
+  font-size: 0.9em !important;
+  color: #4d77b3;
+  animation: spinning 0.5s infinite ease;
+  -webkit-animation: spinning 0.5s infinite ease;
+  -moz-animation: spinning 0.5s infinite ease;
+}
+@keyframes spinning{
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spinning{
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spinning{
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
 .python-output{
   width: auto;
-  padding: 5px 5px 5px 5px;
-  font-size: 0.9em;
+  margin: 8px 0 8px 0;
+  font-size: 1.1em;
   font-family: monospace;
 }
 .pyscript-config{
@@ -125,6 +162,8 @@
 .pyscript-container{
   display: flex;
   width: auto;
+  align-items: start;
+  gap: 10px;
   margin-left: auto;
   margin-right: auto; 
   overflow-x: auto;
@@ -135,7 +174,7 @@ pre{
   margin: 0 0 0 0;
 }
 .code-button-container{
-  padding: 5px 5px 5px 3px;
+  padding: 8px 8px 8px 8px;
 }
 .run-code-button{
   padding: 8px 8px 8px 8px;
