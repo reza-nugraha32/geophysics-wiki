@@ -33,7 +33,3 @@ for i in range(n-2,-1,-1):
 display('Numerical solutions:', target="exercise_1_4_solution")
 for i in range(n):
     display("x_%d: %5.5f" %(i+1, solution[i]), target="exercise_1_4_solution")
-
-import js
-
-js.document.dispatchEvent(js.pyInitedEvent)

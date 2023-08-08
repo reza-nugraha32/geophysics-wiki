@@ -77,41 +77,30 @@ ${code}
         console.log($(this).attr("disabled"))
 
         // Display the terminal icon
-        window.addEventListener("DOMContentLoaded", () => {
-            const pyCollectedOutput = document.createElement("div");
-            pyCollectedOutput.setAttribute("id", "py-collected");
-            document.body.appendChild(pyCollectedOutput);
-          
-            const pyInitedPyScript = document.createElement("py-script");
-            pyInitedPyScript.setAttribute("id", "py-inited");
-            pyInitedPyScript.setAttribute("src", "./py-inited.py");
-            pyInitedPyScript.setAttribute("output", "py-collected");
-            document.body.appendChild(pyInitedPyScript);
-          
-            window.pyInitedEvent = new Event("py-inited");
-            document.addEventListener("py-inited", () => {
-              document.body.removeChild(pyInitedPyScript);
-              console.log("pyscript tags were initialized!");
-            });
-          
-            const observer = new MutationObserver(() => {
-              document.body.removeChild(pyCollectedOutput);
-              console.log("pyscript tags were collected!");
-            });
-            observer.observe(pyCollectedOutput, {
-              childList: true,
-            });
-        });
+        pyscriptLoaded = false
 
-        $(window).on('pyInitedEvent', function () {
-            setTimeout(py_inited);
-            });
+        // Store the original console.log function
+        const originalConsoleLog = console.info;
+        
+        // Override the console.log function with a custom one
+        console.info = function (message) {
+          originalConsoleLog.apply(console, arguments); // Call the original console.log function
+        
+          if (message.includes('PyScript page fully initialized')) {
+            pyscriptLoaded = true;
+            console.log = originalConsoleLog;
+          }
+        };
+
+        setTimeout(py_inited);
 
         function py_inited() {
-            $(".loading-python").css({"display":"none"})
+            if (pyscriptLoaded){
+                $(".loading-python").css({"display":"none"})
             $(".terminal").css({"display":"block"})
             console.log("PyScript done executing")
             clearTimeout()
+            }
         };
     });
 });
