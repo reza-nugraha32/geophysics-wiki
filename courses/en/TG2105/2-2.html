@@ -8,7 +8,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="../../../resources/scripts/toggle-active-theme.js"></script>
     <script src="../../../resources/scripts/loading.js"></script>
-    <script src="../../../resources/scripts/load-pyscript.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/tokyo-night-dark.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -49,6 +48,12 @@
           </div>
       </div>
     </div>
+    <div class="code-copied-alert">
+      <div>
+        <i class="fa fa-info-circle"></i>
+        Code copied to clipboard!
+      </div>
+      <a class="close-alert"><i class="fa fa-times"></i></div></a>
     <div class="topnav">
       <div class="topnav-contents hidden">
         <i class="fa fa-times"></i>
@@ -176,89 +181,27 @@
         </div>
         <div class="table-of-contents">
           <ul class="course-syllabus">
-            <li class="course-content">Chapter 1: Preliminaries<i class="fa fa-chevron-down"></i></li>
+            <li class="course-content"><a href="#2-2-1">The Naive Gauss Elimination Method</a><i class="fa fa-chevron-down"></i></li>
               <div class="course-subcontent">
                 <ul>
-                  <li><a href="1-1.html">1.1 Numerical Methods and Computing in Geophysics</a></li>
-                  <li><a href="1-2.html">1.2 Mathematical Model, Algorithm, and Error Analysis</a></li>
+                  <li><a href="#2-2-1-1">Forward Elimination</a></li>
+                  <li><a href="#2-2-1-2">Backward Substitution</a></li>
                 </ul>
               </div>
-            <li class="course-content">Chapter 2: System of Linear Equations<i class="fa fa-chevron-down"></i></li>
-              <div class="course-subcontent">
-                <ul>
-                  <li><a href="2-1.html">2.1 The Matrices System</a></li>
-                  <li><a href="2-2.html">2.2 Naive Gauss Elimination Method</a></li>
-                  <li><a href="2-3.html">2.3 Gauss-Jordan Elimination Method</a></li>
-                  <li><a href="2-4.html">2.4 Gauss-Seidel Elimination Method</a></li>
-                  <li><a href="2-5.html">2.5 LU Decomposition Method</a></li>
-                </ul>
-              </div>
-            <li class="course-content">Chapter 3: Curve Fitting<i class="fa fa-chevron-down"></i></li>
+            <li class="course-content"><a href="#2-2-2">Generalization of The Naive Gauss Elimination Method</a><i class="fa fa-chevron-down"></i></li>
+            <li class="course-content"><a href="#2-2-3">Programming Exercises</a><i class="fa fa-chevron-down"></i></li>
             <div class="course-subcontent">
               <ul>
-                <li><a href="3-1.html">3.1 Linear Least-Square Regression</a></li>
-                <li><a href="3-2.html">3.2 Non-linear Least-Square Regression</a></li>
-                <li><a href="3-3.html">3.3 Interpolation and Linear Approximation</a></li>
-                <li><a href="3-4.html">3.4 Newton's Polynomial Interpolation</a></li>
-                <li><a href="3-5.html">3.5 Lagrange's Polynomial Interpolation</a></li>
-                <li><a href="3-6.html">3.6 Spline Interpolation</a></li>
-              </ul>
-            </div>
-            <li class="course-content">Chapter 4: Numerical Integration and Differentiation<i class="fa fa-chevron-down"></i></li>
-            <div class="course-subcontent">
-              <ul>
-                <li><a href="4-1.html">4.1 The Trapezoid Rule</a></li>
-                <li><a href="4-2.html">4.2 The Simpson's Rule</a></li>
-                <li><a href="4-3.html">4.3 Romberg's Extrapolation</a></li>
-                <li><a href="4-4.html">4.4 Gauss-Legendre Integration Method</a></li>
-                <li><a href="4-5.html">4.5 Euler's Method for Differential Equation</a></li>
-                <li><a href="4-6.html">4.6 Heun's Method for Differential Equation</a></li>
-                <li><a href="4-7.html">4.7 Runge-Kutta Method for Differential Equation</a></li>
-              </ul>
-            </div>
-            <li class="course-content">Chapter 5: Partial Differential Equation<i class="fa fa-chevron-down"></i></li>
-            <div class="course-subcontent">
-              <ul>
-                <li><a href="5-1.html">5.1 Elliptic Partial Differential Equation</a></li>
-                <li><a href="5-2.html">5.2 Finite Difference Method for Elliptic PDE</a></li>
-                <li><a href="5-3.html">5.3 Parabolic Partial Differential Equations</a></li>
-                <li><a href="5-4.html">5.4 Von Neumann Stability Analysis</a></li>
-                <li><a href="5-5.html">5.5 Conservation of Energy Law</a></li>
-                <li><a href="5-6.html">5.6 Hyperbolic Partial Differential Equations</a></li>
-              </ul>
-            </div>
-            <li class="course-content">Chapter 6: Finite Element Method<i class="fa fa-chevron-down"></i></li>
-            <div class="course-subcontent">
-              <ul>
-                <li><a href="6-1.html">6.1 Introduction to Finite Element Method</a></li>
-                <li><a href="6-2.html">6.2 Using Finite Element Method to Solve PDEs</a></li>
-              </ul>
-            </div>
-            <li class="course-content">Chapter 7: Optimizations<i class="fa fa-chevron-down"></i></li>
-            <div class="course-subcontent">
-              <ul>
-                <li><a href="7-1.html">7.1 Introduction to Optimizations</a></li>
-                <li><a href="7-2.html">7.2 Random Search Method</a></li>
-                <li><a href="7-3.html">7.3 Gradient Descent Method</a></li>
-                <li><a href="7-4.html">7.4 Newton's Optimization Method</a></li>
-              </ul>
-            </div>
-            <li class="course-content">Middle Term Exams<i class="fa fa-chevron-down"></i></li>
-            <div class="course-subcontent">
-              <ul>
-                <li><a href="midterm.html">Middle Term Exams</a></li>
-              </ul>
-            </div>
-            <li class="course-content">Final Term Exams<i class="fa fa-chevron-down"></i></li>
-            <div class="course-subcontent">
-              <ul>
-                <li><a href="finalterm.html">Final Term Exams</a></li>
+                <li><a href="#2-2-3-1">Exercise 1.1</a></li>
+                <li><a href="#2-2-3-2">Exercise 1.2</a></li>
+                <li><a href="#2-2-3-3">Exercise 1.3</a></li>
+                <li><a href="#2-2-3-4">Exercise 1.4</a></li>
               </ul>
             </div>
           </ul>
         </div>
       
-        <div class="toggle-dropdown">
+        <div class="toggle-dropdown" id="2-2-1">
           <h2 class="section-header">The Naive Gauss Elimination Method</h2>
           <i class="fa fa-chevron-up"></i>
         </div>
@@ -298,7 +241,7 @@
               \end{bmatrix}. $$
           </div>
 
-          <h3 class="section-header">Forward Elimination</h3>
+          <h3 class="section-header" id="2-2-1-1">Forward Elimination</h3>
 
           <div class="section-text">
             To perform the forward elimination step, 
@@ -340,7 +283,7 @@
               \end{bmatrix}. $$
           </div>
 
-          <h3 class="section-header">Backward Substitution</h3>
+          <h3 class="section-header" id="2-2-1-2">Backward Substitution</h3>
 
           <div class="section-text">
             To perform the backward substitution step, we multiply $M'$ by $X$ and solve for $x_3$ first.
@@ -449,7 +392,7 @@
           </div>  
         </div>
         
-        <div class="toggle-dropdown">
+        <div class="toggle-dropdown" id="2-2-2">
           <h2 class="section-header">Generalization of The Naive Gauss Elimination Method</h2>
           <i class="fa fa-chevron-up"></i>
         </div>
@@ -512,13 +455,13 @@
           </div>
         </div>
 
-        <div class="toggle-dropdown">
+        <div class="toggle-dropdown" id="2-2-3">
           <h2 class="section-header">Programming Exercises</h2>
           <i class="fa fa-chevron-up"></i>
         </div>
         
         <div class="dropdown-content">
-          <div class="example">
+          <div class="example" id="2-2-3-1">
             <h3 class="section-header">Exercise 1.1</h3>
             Solve the following system of linear equations using the naive Gauss elimination.
             $$ \begin{cases} x_1+2x_2=10 \\ 1.1x_1+2x_2=4 \end{cases}$$
@@ -529,7 +472,7 @@
               $$ \begin{bmatrix} 1 & 2 & \bigm| & 10 \\ 1.1 & 2 & \bigm| & 4 \end{bmatrix}.$$
               We can now begin to write program to solve this system.
               <div class="code-container">
-                <pre><code class="language-python hljs">
+                <pre><code class="language-python hljs" id="exercise_1_1_code">
 # Array storing the variables
 array = [[1, 2, 10], 
         [1.1, 2, 10.4]]
@@ -562,7 +505,7 @@ print("Numerical solutions:\n", solution)
                 </code></pre>
                   <div class="code-button-container">
                     <button class="run-code-button" id="exercise_1_1"><i class="fa fa-play-circle"></i> Run code</button>
-                    <button class="copy-code-button" id="copy_exercise_1_1"><i class="fa fa-copy"></i> Copy</button>
+                    <button class="copy-code-button" id="copy-exercise_1_1"><i class="fa fa-copy"></i> Copy</button>
                   </div>
                   <div class="pyscript-container" id="exercise_1_1_container">
                     <div class="terminal"><i class="fa fa-chevron-right"></i></div>
@@ -573,7 +516,7 @@ print("Numerical solutions:\n", solution)
             </div>
           </div>
 
-          <div class="example">
+          <div class="example" id="2-2-3-2">
             <h3 class="section-header">Exercise 1.2</h3>
             Solve the following system of linear equations using the naive Gauss elimination.
             $$ \begin{cases} 8x_1+2x_2-x_3=-2 \\ 10x_1+2x_2+4x_3=4 \\ 12x_1+2x_2+2x_3=6\end{cases}$$
@@ -585,7 +528,7 @@ print("Numerical solutions:\n", solution)
                 \\ 2 & 12 & 2 & \bigm| & 6 \end{bmatrix}.$$
                 We can now begin to the write program to solve this system.
                 <div class="code-container">
-                  <pre><code class="language-python hljs">
+                  <pre><code class="language-python hljs" id="exercise_1_2_code">
 # Array storing the variables
 array = [[2, 8, -2, -2], 
          [2, 10, 4, 4],
@@ -619,7 +562,7 @@ print("Numerical solutions:\n", solution)
                   </code></pre>
                   <div class="code-button-container">
                     <button class="run-code-button" id="exercise_1_2"><i class="fa fa-play-circle"></i> Run code</button>
-                    <button class="copy-code-button" id="copy_exercise_1_2"><i class="fa fa-copy"></i> Copy</button>
+                    <button class="copy-code-button" id="copy-exercise_1_2"><i class="fa fa-copy"></i> Copy</button>
                   </div>
                   <div class="pyscript-container" id="exercise_1_2_container">
                     <div class="terminal"><i class="fa fa-chevron-right"></i></div>
@@ -630,7 +573,7 @@ print("Numerical solutions:\n", solution)
             </div>
           </div>
 
-          <div class="example">
+          <div class="example" id="2-2-3-3">
             <h3 class="section-header">Exercise 1.3</h3>
             Solve the following system of linear equations using the naive Gauss elimination.
             $$ \begin{cases} 2x_1+x_2-x_3+2x_4=5 \\ 4x_1+5x_2-3x_3+6x_4=9 \\ -2x_1+5x_2-2x_3+6x_4=4 \\ 4x_1+11x_2-4x_3+8x_4=2\end{cases}$$
@@ -642,7 +585,7 @@ print("Numerical solutions:\n", solution)
                 \\ -2 & 5 & -2 & 6 & \bigm| & 4 \\ 4 & 11 & -4 & 8 & \bigm| & 2 \end{bmatrix}.$$
                 We can now begin to write the program to solve this system.
                 <div class="code-container">
-                  <pre><code class="language-python hljs">
+                  <pre><code class="language-python hljs" id="exercise_1_3_code">
 # Array storing the variables
 array = [[2, 1, -1, 2, 5],
          [4, 5, -3, 6, 9],
@@ -677,7 +620,7 @@ print("Numerical solutions:\n", solution)
                   </code></pre>
                   <div class="code-button-container">
                     <button class="run-code-button" id="exercise_1_3"><i class="fa fa-play-circle"></i> Run code</button>
-                    <button class="copy-code-button" id="copy_exercise_1_3"><i class="fa fa-copy"></i> Copy</button>
+                    <button class="copy-code-button" id="copy-exercise_1_3"><i class="fa fa-copy"></i> Copy</button>
                   </div>
                   <div class="pyscript-container" id="exercise_1_3_container">
                     <div class="terminal"><i class="fa fa-chevron-right"></i></div>
@@ -688,7 +631,7 @@ print("Numerical solutions:\n", solution)
             </div>
           </div>
 
-          <div class="example">
+          <div class="example" id="2-2-3-4">
             <h3 class="section-header">Exercise 1.4</h3>
             Solve the following system of linear equations using the naive Gauss elimination.
             $$ \begin{cases} 2x_1+x_2+4x_3+x_4-x_5=7 \\ -x_1+3x_2-2x_3-x_4+2x_5=1 \\ 5x_1+x_2+3x_3-4x_4+x_5=33 \\ 3x_1-2x_2-2x_3-2x_4+x_5=24 \\ -4x_1-x_2-5x_3+3x_4-4x_5=-49\end{cases}$$
@@ -701,7 +644,7 @@ print("Numerical solutions:\n", solution)
                 \\ 5 & 1 & 3 & -4 & 1 & \bigm| & 33 \\ 3 & -2 & -2 & -2 & 3 & \bigm| & 24 \\ -4 & -1 & -5 & 3 & -4 & \bigm| & -49\end{bmatrix}.$$
                 We can now begin to write the program to solve this system.
                 <div class="code-container">
-                  <pre><code class="language-python hljs">
+                  <pre><code class="language-python hljs" id="exercise_1_4_code">
 # Array storing the variables
 array = np.array([[2, 1, 4, 1, -1, 7],
                   [-1, 3, -2, -1, 2, 1],
@@ -737,7 +680,7 @@ print("Numerical solutions:\n", solution)
                   </code></pre>
                   <div class="code-button-container">
                     <button class="run-code-button" id="exercise_1_4"><i class="fa fa-play-circle"></i> Run code</button>
-                    <button class="copy-code-button" id="copy_exercise_1_4"><i class="fa fa-copy"></i> Copy</button>
+                    <button class="copy-code-button" id="copy-exercise_1_4"><i class="fa fa-copy"></i> Copy</button>
                   </div>
                   <div class="pyscript-container" id="exercise_1_4_container">
                     <div class="terminal"><i class="fa fa-chevron-right"></i></div>
@@ -749,7 +692,7 @@ print("Numerical solutions:\n", solution)
           </div>
         </div>
 
-        <h2 class="section-header">References</h2>
+        <h2 class="section-header" id="references">References</h2>
         <div class="section-text">
           Chapra, S.C, & Canale, R.P. (2014). Numerical Methods for Engineers, 7th Edition. McGraw Hill.
         </div>
@@ -812,6 +755,8 @@ print("Numerical solutions:\n", solution)
         </div>
       </div>
     </div>
+  <script src="../../../resources/scripts/copy-code.js"></script>
+  <script src="../../../resources/scripts/load-pyscript.js"></script>
   <script src="../../../resources/scripts/toggle-dropdown.js"></script>
   <script src="../../../resources/scripts/trim-code-whitespace.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>

@@ -1,4 +1,21 @@
 $(document).ready(function(){
+    // Append 
+    pyscript_config = document.createElement("div")
+    pyscript_config.className = "pyscript_config"
+    pyscript_config.innerHTML = `
+    <py-config>
+    [splashscreen]
+        enabled = false
+    </py-config>
+    `
+    document.body.append(pyscript_config)
+
+    css_link = document.createElement("link")
+    css_link.rel = "stylesheet"
+    css_link.type = "text/css"
+    css_link.href = "https://pyscript.net/latest/pyscript.css"
+    document.getElementsByTagName("head")[0].appendChild(css_link)
+
     $(".run-code-button").click(function() {
         // Disable button to prevent calling handler multiple times
         $(this).attr("disabled", true)
@@ -30,6 +47,33 @@ $(document).ready(function(){
 
         var code = null
 
+
+
+        // Store the original console.log function
+        const originalConsoleLog = console.info;
+        var pyscriptLoaded = false
+
+        // Override the console.log function with a custom one
+        console.info = function (message) {
+            originalConsoleLog.apply(console, arguments); // Call the original console.log function
+        
+            if (message.includes('PyScript page fully initialized')) {
+                pyscriptLoaded = true;
+                console.log("PyScript done executing")
+                console.log = originalConsoleLog;
+            }
+        };
+
+        // Display the terminal icon
+        if (pyscriptLoaded){
+            clearTimeout(loading)
+        }
+
+        var loading = setTimeout(function(){
+            $(".loading-python").css({"display":"none"})
+            $(".terminal").css({"display":"block"})
+        });
+
         // Fetch python code
         fetch(url)
             .then(response => response.text())
@@ -46,62 +90,26 @@ ${code}
                 solution.innerHTML = pycode
 
                 // Append to parent container
-                container.appendChild(solution);
+                container.appendChild(solution)
         });
-        
-        // Append PyScript to document
-        css_link = document.createElement("link")
-        css_link.rel = "stylesheet"
-        css_link.type = "text/css"
-        css_link.href = "https://pyscript.net/latest/pyscript.css"
-        document.getElementsByTagName("head")[0].appendChild(css_link)
-        
-        pyscript_config = document.createElement("div")
-        pyscript_config.className = "pyscript_config"
-        pyscript_config.innerHTML = `
-        <py-config>
-        [splashscreen]
-            enabled = false
-        </py-config>
-        `
-
-        pyscript_script = document.createElement("script")
-        pyscript_script.src = "https://pyscript.net/latest/pyscript.js"
-        if (!$(document).find(pyscript_script).length){
-            document.body.append(pyscript_config)
-            document.body.append(pyscript_script)
-        }
 
         // Restore button functionality
         $(this).attr("disabled", false)
         console.log($(this).attr("disabled"))
+    });
 
-        // Display the terminal icon
-        pyscriptLoaded = false
+    var counter = 1
+    $(".run-code-button").one("click", function() {
+        // Append PyScript to document
+        pyscript_script = document.createElement("script")
+        pyscript_script.src = "https://pyscript.net/latest/pyscript.js"
+        document.body.append(pyscript_script)
 
-        // Store the original console.log function
-        const originalConsoleLog = console.info;
+        counter = counter+1
         
-        // Override the console.log function with a custom one
-        console.info = function (message) {
-          originalConsoleLog.apply(console, arguments); // Call the original console.log function
-        
-          if (message.includes('PyScript page fully initialized')) {
-            pyscriptLoaded = true;
-            console.log = originalConsoleLog;
-          }
-        };
-
-        setTimeout(py_inited);
-
-        function py_inited() {
-            if (pyscriptLoaded){
-                $(".loading-python").css({"display":"none"})
-            $(".terminal").css({"display":"block"})
-            console.log("PyScript done executing")
-            clearTimeout()
-            }
-        };
+        if (counter > 1){
+            document.body.removeChild(pyscript_script)
+        }
     });
 });
 
