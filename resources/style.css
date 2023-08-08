@@ -262,6 +262,7 @@ body{
   margin: 0 0 15px 0;
   padding: 10px 10px 10px 10px;
   text-align: center;
+  align-items: center;
   border: solid;
   border-width: 2px;
   border-radius: 20px;
@@ -700,13 +701,6 @@ li{
 .fa.fa-plus, .fa.fa-minus{
   font-size: 0.7em;
 }
-.fa.fa-times{
-  padding: 3px 0 0 1px;
-  scale: 1.05;
-}
-.fa.fa-bars{
-  padding: 5px 0 0 0;
-}
 /* Dropdown toggle */
 .example{
   width: auto;
@@ -1126,6 +1120,7 @@ li{
     width: 125px;
     margin: 0 0 0 0;
     padding: 10px 10px 10px 10px;
+    align-items: center;
     border: solid;
     border-width: 2px;
     border-radius: 20px;
