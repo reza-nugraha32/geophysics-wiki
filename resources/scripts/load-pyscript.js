@@ -71,19 +71,20 @@ ${code}
             document.body.append(pyscript_config)
             document.body.append(pyscript_script)
         }
+
         // Restore button functionality
-        $(this).removeAttr("disabled")
+        $(this).attr("disabled", false)
         console.log($(this).attr("disabled"))
 
         // Display the terminal icon
-        var finish_exec = false
+        let py_inited = false;
 
         var pyscript_exec = setTimeout(function(){
             $(".loading-python").css({"display":"none"})
             $(".terminal").css({"display":"block"})
         })
 
-        if (finish_exec){
+        if (py_inited){
             console.log("PyScript done executing")
             clearTimeout(pyscript_exec)
         }
