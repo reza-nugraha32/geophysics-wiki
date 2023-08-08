@@ -35,4 +35,5 @@ for i in range(n):
     display("x_%d: %5.5f" %(i+1, solution[i]), target="exercise_1_4_solution")
 
 import js
-js.py_inited = True
+
+js.document.dispatchEvent(js.pyInitedEvent)

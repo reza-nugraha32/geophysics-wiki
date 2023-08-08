@@ -32,4 +32,5 @@ for i in range(n):
     display("x_%d: %.5f" %(i+1, solution[i]), target="exercise_1_1_solution")
 
 import js
-js.py_inited = True
+
+js.document.dispatchEvent(js.pyInitedEvent)

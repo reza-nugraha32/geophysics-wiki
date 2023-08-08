@@ -77,17 +77,42 @@ ${code}
         console.log($(this).attr("disabled"))
 
         // Display the terminal icon
-        let py_inited = false;
+        window.addEventListener("DOMContentLoaded", () => {
+            const pyCollectedOutput = document.createElement("div");
+            pyCollectedOutput.setAttribute("id", "py-collected");
+            document.body.appendChild(pyCollectedOutput);
+          
+            const pyInitedPyScript = document.createElement("py-script");
+            pyInitedPyScript.setAttribute("id", "py-inited");
+            pyInitedPyScript.setAttribute("src", "./py-inited.py");
+            pyInitedPyScript.setAttribute("output", "py-collected");
+            document.body.appendChild(pyInitedPyScript);
+          
+            window.pyInitedEvent = new Event("py-inited");
+            document.addEventListener("py-inited", () => {
+              document.body.removeChild(pyInitedPyScript);
+              console.log("pyscript tags were initialized!");
+            });
+          
+            const observer = new MutationObserver(() => {
+              document.body.removeChild(pyCollectedOutput);
+              console.log("pyscript tags were collected!");
+            });
+            observer.observe(pyCollectedOutput, {
+              childList: true,
+            });
+        });
 
-        var pyscript_exec = setTimeout(function(){
+        $(window).on('pyInitedEvent', function () {
+            setTimeout(py_inited);
+            });
+
+        function py_inited() {
             $(".loading-python").css({"display":"none"})
             $(".terminal").css({"display":"block"})
-        })
-
-        if (py_inited){
             console.log("PyScript done executing")
-            clearTimeout(pyscript_exec)
-        }
+            clearTimeout()
+        };
     });
 });
 
