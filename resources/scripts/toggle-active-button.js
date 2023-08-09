@@ -1,4 +1,4 @@
-// JQuery script for toggling course by year button
+// Display course per year as from the button clicked
 $(function toggleActive(){
     $(".year-button").click(function(){
       $(".year-button").removeClass("active")
@@ -65,28 +65,4 @@ $(function toggleActive(){
         h.style.width = "100%";
       }
     }); 
-});
-
-$(".first-left-scroll").click(function () { 
-  var leftPos = $(".first-semester").scrollLeft();
-  $(".first-semester").animate({scrollLeft: leftPos - 300}, 300);
-  console.log(leftPos);
-});
-
-$(".first-right-scroll").click(function () { 
-  var leftPos = $(".first-semester").scrollLeft();
-  $(".first-semester").animate({scrollLeft: leftPos + 300}, 300);
-  console.log(leftPos);
-});
-
-$(".second-left-scroll").click(function () { 
-  var leftPos = $(".second-semester").scrollLeft();
-  $(".second-semester").animate({scrollLeft: leftPos - 300}, 300);
-  console.log(leftPos);
-});
-
-$(".second-right-scroll").click(function () { 
-  var leftPos = $(".second-semester").scrollLeft();
-  $(".second-semester").animate({scrollLeft: leftPos + 300}, 300);
-  console.log(leftPos);
 });

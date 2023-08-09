@@ -172,91 +172,21 @@
           <h3>Contents</h3>
           <i class="fa fa-times"></i>
         </div>
+        
         <div class="table-of-contents">
           <ul class="course-syllabus">
-            <li class="course-content">Chapter 1: Preliminaries<i class="fa fa-chevron-down"></i></li>
-              <div class="course-subcontent">
-                <ul>
-                  <li><a href="1-1.html">1.1 Numerical Methods and Computing in Geophysics</a></li>
-                  <li><a href="1-2.html">1.2 Mathematical Model, Algorithm, and Error Analysis</a></li>
-                </ul>
-              </div>
-            <li class="course-content">Chapter 2: System of Linear Equations<i class="fa fa-chevron-down"></i></li>
-              <div class="course-subcontent">
-                <ul>
-                  <li><a href="2-1.html">2.1 The Matrices System</a></li>
-                  <li><a href="2-2.html">2.2 Naive Gauss Elimination Method</a></li>
-                  <li><a href="2-3.html">2.3 Gauss-Jordan Elimination Method</a></li>
-                  <li><a href="2-4.html">2.4 Gauss-Seidel Elimination Method</a></li>
-                  <li><a href="2-5.html">2.5 LU Decomposition Method</a></li>
-                </ul>
-              </div>
-            <li class="course-content">Chapter 3: Curve Fitting<i class="fa fa-chevron-down"></i></li>
+            <li class="course-content"><a href="#2-1-1">The Matrices System</a><i class="fa fa-chevron-down"></i></li>
+            <li class="course-content"><a href="#2-1-2">Some Matrices Notation</a><i class="fa fa-chevron-down"></i></li>
+            <li class="course-content"><a href="#2-1-3">Solving A System of Linear Equations</a><i class="fa fa-chevron-down"></i></li>
             <div class="course-subcontent">
               <ul>
-                <li><a href="3-1.html">3.1 Linear Least-Square Regression</a></li>
-                <li><a href="3-2.html">3.2 Non-linear Least-Square Regression</a></li>
-                <li><a href="3-3.html">3.3 Interpolation and Linear Approximation</a></li>
-                <li><a href="3-4.html">3.4 Newton's Polynomial Interpolation</a></li>
-                <li><a href="3-5.html">3.5 Lagrange's Polynomial Interpolation</a></li>
-                <li><a href="3-6.html">3.6 Spline Interpolation</a></li>
-              </ul>
-            </div>
-            <li class="course-content">Chapter 4: Numerical Integration and Differentiation<i class="fa fa-chevron-down"></i></li>
-            <div class="course-subcontent">
-              <ul>
-                <li><a href="4-1.html">4.1 The Trapezoid Rule</a></li>
-                <li><a href="4-2.html">4.2 The Simpson's Rule</a></li>
-                <li><a href="4-3.html">4.3 Romberg's Extrapolation</a></li>
-                <li><a href="4-4.html">4.4 Gauss-Legendre Integration Method</a></li>
-                <li><a href="4-5.html">4.5 Euler's Method for Differential Equation</a></li>
-                <li><a href="4-6.html">4.6 Heun's Method for Differential Equation</a></li>
-                <li><a href="4-7.html">4.7 Runge-Kutta Method for Differential Equation</a></li>
-              </ul>
-            </div>
-            <li class="course-content">Chapter 5: Partial Differential Equation<i class="fa fa-chevron-down"></i></li>
-            <div class="course-subcontent">
-              <ul>
-                <li><a href="5-1.html">5.1 Elliptic Partial Differential Equation</a></li>
-                <li><a href="5-2.html">5.2 Finite Difference Method for Elliptic PDE</a></li>
-                <li><a href="5-3.html">5.3 Parabolic Partial Differential Equations</a></li>
-                <li><a href="5-4.html">5.4 Von Neumann Stability Analysis</a></li>
-                <li><a href="5-5.html">5.5 Conservation of Energy Law</a></li>
-                <li><a href="5-6.html">5.6 Hyperbolic Partial Differential Equations</a></li>
-              </ul>
-            </div>
-            <li class="course-content">Chapter 6: Finite Element Method<i class="fa fa-chevron-down"></i></li>
-            <div class="course-subcontent">
-              <ul>
-                <li><a href="6-1.html">6.1 Introduction to Finite Element Method</a></li>
-                <li><a href="6-2.html">6.2 Using Finite Element Method to Solve PDEs</a></li>
-              </ul>
-            </div>
-            <li class="course-content">Chapter 7: Optimizations<i class="fa fa-chevron-down"></i></li>
-            <div class="course-subcontent">
-              <ul>
-                <li><a href="7-1.html">7.1 Introduction to Optimizations</a></li>
-                <li><a href="7-2.html">7.2 Random Search Method</a></li>
-                <li><a href="7-3.html">7.3 Gradient Descent Method</a></li>
-                <li><a href="7-4.html">7.4 Newton's Optimization Method</a></li>
-              </ul>
-            </div>
-            <li class="course-content">Middle Term Exams<i class="fa fa-chevron-down"></i></li>
-            <div class="course-subcontent">
-              <ul>
-                <li><a href="midterm.html">Middle Term Exams</a></li>
-              </ul>
-            </div>
-            <li class="course-content">Final Term Exams<i class="fa fa-chevron-down"></i></li>
-            <div class="course-subcontent">
-              <ul>
-                <li><a href="finalterm.html">Final Term Exams</a></li>
+                <li><a href="#2-1-3-1">Cramer's Rule</a></li>
               </ul>
             </div>
           </ul>
         </div>
         
-        <div class="toggle-dropdown">
+        <div class="toggle-dropdown" id="2-1-1">
           <h2 class="section-header">The Matrices System</h2>
           <i class="fa fa-chevron-up"></i>
         </div>
@@ -316,7 +246,7 @@
           </div>
         </div>
 
-        <div class="toggle-dropdown">
+        <div class="toggle-dropdown" id="2-1-2">
           <h2 class="section-header">Some Matrices Notation</h2>
           <i class="fa fa-chevron-up"></i>
         </div>
@@ -421,7 +351,7 @@
           </div>
         </div>
 
-        <div class="toggle-dropdown">
+        <div class="toggle-dropdown" id="2-1-3">
           <h2 class="section-header">Solving A System of Linear Equations</h2>
           <i class="fa fa-chevron-up"></i>
         </div>
@@ -437,7 +367,7 @@
             We would take a look at using matrices and Cramer's law to solve this system.
           </div>
 
-          <h3 class="section-header">Cramer's Rule</h3>
+          <h3 class="section-header" id="2-1-3-1">Cramer's Rule</h3>
 
           <div class="section-text">
             Cramer's method can be used to solve a $2\times2$ or $3\times3$ matrices system.
@@ -572,6 +502,7 @@
         </div>
       </div>
     </div>
+  <script src="../../../resources/scripts/toggle-topnav-table-of-contents.js"></script>
   <script src="../../../resources/scripts/toggle-dropdown.js"></script>
   </body>
 </html>

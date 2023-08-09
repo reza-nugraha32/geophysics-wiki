@@ -1,6 +1,6 @@
-// JQuery script for toggling between dark mode and light mode
+// Toggle between dark mode and light mode
 $(document).ready(function(){
-  // Last theme used when visiting the web stored in localStorage
+  // Get last used theme when visiting the web stored in localStorage
   var lastTheme = localStorage.getItem("theme")
 
   // Detect device theme

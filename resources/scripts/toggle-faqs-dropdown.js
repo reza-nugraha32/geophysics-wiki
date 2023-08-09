@@ -1,4 +1,4 @@
-// JQuery script to toggle dropdown
+// Toggle dropdown in FAQs page
 $(function toggleDropdown(){
     $(".faqs-dropdown").click(function () {
       $(this).next(".dropdown-content").slideToggle(500);

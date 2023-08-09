@@ -1,12 +1,4 @@
-// JQuery script to toggle dropdown
-$(function toggleDropdown(){
-    $(".toggle-dropdown").click(function () {
-      $(this).next(".dropdown-content").slideToggle(0);
-      $("i", this).toggleClass("fa-chevron-down fa-chevron-up");
-    });  
-})
-
-// JQuery script to toggle table of contents
+// Toggle table of contents container
 $(function toggleTableofContents(){
    
   $(".contents-header").click(function () {
@@ -23,42 +15,15 @@ $(function toggleTableofContents(){
   }
 })
 
-$(function toggleTopnavTableofContents(){
-  $(".topnav-contents").click(function () {
-      $(".topnav-table-of-contents").slideToggle(0);
-      $("i", this).toggleClass("fa-times fa-bars");
+// Toggle dropdown on table of contents
+$(function toggleDropdown(){
+  $(".toggle-dropdown").click(function () {
+    $(this).next(".dropdown-content").slideToggle(0);
+    $("i", this).toggleClass("fa-chevron-down fa-chevron-up");
   });  
-  
-  $(".main").click(function () {
-    $(".topnav-table-of-contents").css({"display":"none"});
-    $("i", ".topnav-contents").removeClass("fa-times");
-    $("i", ".topnav-contents").addClass("fa-bars");
-  }); 
-
-  if ($(".topnav-table-of-contents").css("display") != "none"){
-      $("i", ".topnav-contents").removeClass("fa-bars");
-      $("i", ".topnav-contents").addClass("fa-times");
-  } else{
-      $("i", ".topnav-contents").removeClass("fa-times");
-      $("i", ".topnav-contents").addClass("fa-bars");
-  }
 })
 
-$(window).scroll(function () {
-  if ($(this).scrollTop() < 100) {
-    if ($(".topnav-table-of-contents").css("display") == "none"){
-      $(".topnav").removeAttr("style");
-      $(".topnav-contents").addClass("hidden");
-    }
-  } else {
-    if ($("body").attr("class") != "dark-mode"){
-      $(".topnav").css({"box-shadow":"none", "border-bottom":"solid", "border-width":"0.5px", "border-bottom-color":"#80808050"});
-    }
-    $(".topnav-contents").removeClass("hidden");
-  }
-});
-
-// JQuery script to toggle course subcontents dropdown
+// Toggle course subcontents dropdown
 $(function toggleCourseSubcontent(){
   $(".course-content").click(function () {
     $(this).next(".course-subcontent").slideToggle(300);
@@ -66,7 +31,7 @@ $(function toggleCourseSubcontent(){
   });  
 })
 
-// JQuery script to toggle solution dropdown
+// Toggle solution dropdown
 $(function toggleSolution(){
   $(".toggle-solution").click(function () {
     $(this).next(".solution-content").slideToggle(0);
@@ -74,7 +39,7 @@ $(function toggleSolution(){
   });  
 })
 
-// JQuery script to toggle solution dropdown
+// Toggle output terminal
 $(function toggleCodeOutput(){
   $(".run-code-button").click(function () {
     $(".pyscript-container").next(".python-output").css({"display":"block"});

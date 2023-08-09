@@ -1,4 +1,4 @@
-// JQuery script for assigning gradient to course cover
+// Assign gradient in alternate succesion as course cover
 $(document).ready(function(){
     var gradient_1 = "linear-gradient(45deg, #FDBB2D 0%, #22C1C3 100%)";
     var gradient_2 = "linear-gradient(45deg, #0700b8 0%, #00ff88 100%)";

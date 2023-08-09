@@ -315,6 +315,7 @@ body{
   background-color: #f7f9ff;
   .page-title{
     background: linear-gradient(90deg, #474747 0%, #4d77b3 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -339,7 +340,7 @@ body{
     color: #808080;
   }
   .code-copied-alert{
-    background-color: #f7f9ff60;
+    background-color: #f7f9ff;
   }
   .copy-code-button{
     border-color: #808080;
@@ -356,12 +357,10 @@ body{
     color: #474747;
   }
   .topnav {
-    background-color: #ffffff60;
+    background-color: #ffffff90;
     backdrop-filter: blur(10px);
     box-shadow: 0 0 10px 0 #b4b4b4;
     border-bottom: none;
-    border-width: 0.5px;
-    border-color: #8a8a8a50;
   }
   .topnav-table-of-contents{
     background-color: #f7f9ff;
@@ -454,6 +453,7 @@ body{
   background-color: #151b1f;
   .page-title{
     background: linear-gradient(90deg, #4d77b3 0%, #ffffff 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -483,7 +483,7 @@ body{
     color: #dadada;
   }
   .code-copied-alert{
-    background-color: #1d252940;
+    background-color: #1d2529;
   }
   .copy-code-button{
     border-color: #dadada;
@@ -616,7 +616,6 @@ body{
 .topnav-menu:hover{
   color: #4d77b3;
 }
-/* Wrapper for any section */
 .section{
   margin: 20px 20px 20px 20px;
 }
@@ -626,7 +625,7 @@ body{
   margin-top: 0;
   padding-bottom: 10px;
 }
-/* Section text is use for plain text for any text section */
+/* Use to contain text for any text section */
 .section-text{
   margin-bottom: 30px;
 }
@@ -656,7 +655,6 @@ a:hover{
   text-decoration-color: #4d77b3;
   transition: color 300ms ease-in-out;
 }
-/* Course syllabus */
 li{
   padding: 0.5em 0 1em 0;
   display: list-item;
@@ -696,7 +694,6 @@ li{
 .fa.fa-plus, .fa.fa-minus{
   font-size: 0.7em;
 }
-/* Dropdown toggle */
 .example{
   width: auto;
   margin-bottom: 30px;
@@ -727,7 +724,6 @@ li{
 .faqs-dropdown{
   padding-bottom: 1em;
 }
-/* Switch between light and dark mode */
 .mode-switch{
   display: grid;
   justify-items: center;
@@ -737,12 +733,10 @@ li{
 .mode-switch:hover{
   color: #4d77b3;
 }
-/* The whole main content */
 .main {
   margin: 0;
   align-items: center;
 }
-/* Header text of the page*/
 .header{
   .header-text{
     margin: 10px 20px 0 20px;
@@ -751,7 +745,6 @@ li{
     padding-top: 10px;
   }
 }
-/* Language switch */
 .language-switch a{
   display: flex;
   margin: 0 0 0 0;
@@ -1115,12 +1108,13 @@ li{
   .contents-header{
     display: flex;
     width: 125px;
+    height: 30px;
     margin: 0 0 0 0;
     padding: 10px 10px 10px 10px;
     align-items: center;
     border: solid;
     border-width: 2px;
-    border-radius: 20px;
+    border-radius: 15px;
   }
   .table-of-contents{
     display: none;

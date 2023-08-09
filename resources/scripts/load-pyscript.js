@@ -1,5 +1,6 @@
+// Add and initialize PyScript to document
 $(document).ready(function(){
-    // Append 
+    // Disable PyScript default splash screen
     pyscript_config = document.createElement("div")
     pyscript_config.className = "pyscript_config"
     pyscript_config.innerHTML = `
@@ -10,6 +11,7 @@ $(document).ready(function(){
     `
     document.body.append(pyscript_config)
 
+    // Append PyScript CSS link
     css_link = document.createElement("link")
     css_link.rel = "stylesheet"
     css_link.type = "text/css"
@@ -21,6 +23,7 @@ $(document).ready(function(){
         $(this).attr("disabled", true)
         console.log($(this).attr("disabled"))
 
+        // Get id of a specific code to run 
         var exercise_num = this.id
 
         // Display the terminal icon
@@ -32,30 +35,23 @@ $(document).ready(function(){
             document.getElementById(exercise_num+"_solution").innerHTML = ""
         }
 
-        // Python code url
-        var url = "https://raw.githubusercontent.com/reza-nugraha32/geophysics-wiki/main/courses/en/TG2105/codes/"+exercise_num+".py"
-        console.log(url)
-
-        // Create solution container
+        // Create solution container as the output terminal
         solution = document.createElement("div")
         solution.className = "python-output"
         solution.id = exercise_num+"_solution"
 
-        // Append to parent container
         container = document.getElementById(exercise_num+"_container")
         container.appendChild(solution)
 
-        var code = null
-
-
-
+        // Set timeout for "Loading PyScript" message
         // Store the original console.log function
         const originalConsoleLog = console.info;
         var pyscriptLoaded = false
 
         // Override the console.log function with a custom one
         console.info = function (message) {
-            originalConsoleLog.apply(console, arguments); // Call the original console.log function
+            // Call the original console.log function
+            originalConsoleLog.apply(console, arguments); 
         
             if (message.includes('PyScript page fully initialized')) {
                 pyscriptLoaded = true;
@@ -64,7 +60,7 @@ $(document).ready(function(){
             }
         };
 
-        // Display the terminal icon
+        // Hide the "Loading PyScript" message and display the terminal icon
         if (pyscriptLoaded){
             clearTimeout(loading)
         }
@@ -74,7 +70,14 @@ $(document).ready(function(){
             $(".terminal").css({"display":"block"})
         });
 
-        // Fetch python code
+        // Fetch Python code from Github Raw and append to output terminal to be parsed by PyScript
+        // Note that the Python code below are not necessarily standard, written for PyScript in mind
+        // Doing this to avoid cluttering the document 
+        var url = "https://raw.githubusercontent.com/reza-nugraha32/geophysics-wiki/main/courses/en/TG2105/codes/"+exercise_num+".py"
+        console.log(url)
+        
+        var code = null
+
         fetch(url)
             .then(response => response.text())
             .then(result => {
@@ -86,10 +89,7 @@ ${code}
 
                 console.log(pycode)
 
-                //Change inner HTML
                 solution.innerHTML = pycode
-
-                // Append to parent container
                 container.appendChild(solution)
         });
 
@@ -98,6 +98,7 @@ ${code}
         console.log($(this).attr("disabled"))
     });
 
+    // Prevent PyScript tag to be appended more than once
     var counter = 1
     $(".run-code-button").one("click", function() {
         // Append PyScript to document
