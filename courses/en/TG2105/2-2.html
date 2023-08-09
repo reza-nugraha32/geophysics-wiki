@@ -53,7 +53,8 @@
         <i class="fa fa-info-circle"></i>
         Code copied to clipboard!
       </div>
-      <a class="close-alert"><i class="fa fa-times"></i></div></a>
+      <a class="close-alert"><i class="fa fa-times"></i></a>
+    </div>
     <div class="topnav">
       <div class="topnav-contents hidden">
         <i class="fa fa-times"></i>
@@ -167,7 +168,7 @@
           </div>
           <div class="page-title">
             <a href="index.html">
-                <i class="fa fa-chevron-left"></i>TG2105 Computing in Geophysics
+              <i class="fa fa-chevron-left"></i>TG2105 Computing in Geophysics
             </a>  
           </div>
           <h1 class="page-title">2.2 Naive Gauss Elimination Method</h1>
@@ -208,8 +209,8 @@
 
         <div class="dropdown-content">
           <div class="section-text">
-            Naive Gauss elimination method is one of the numerical to solve a system of linear equations.
-            This method is similiar to Cramer's, with Gauss elimination generalized it to solve $n$ number of equations. 
+            Naive Gauss elimination method is one of the numerical method to solve a system of linear equations.
+            This method is similiar to Cramer's, with generalization to solve $n$ number of equations. 
             It's called "naive" because it does not avoid division by zero. Should we encounter one, 
             pivoting of the matrices are required. 
           </div>
@@ -233,7 +234,7 @@
               \end{bmatrix} = \begin{bmatrix} 
               b_{1} \\ b_{2} \\ b_{3}
               \end{bmatrix}.$$ 
-            We now introduce $M$ as augmented form of $A$ with elements of $B$ as
+            We now introduce $M$ as the augmented form of $A$ with elements of $B$ as
               $$ M = \begin{bmatrix} 
               a_{11} & a_{12} & a_{13} &\bigm| & b_{1} \\ 
               a_{21} & a_{22} & a_{23} &\bigm| & b_{2} \\
@@ -293,14 +294,11 @@
               x_3 &= \frac{b_{3}''}{a_{33}''}. \tag{1.4}\end{align}$$
             </div>
             Then, for $x_2$ we get
-
             <div class="tex-container">
               $$a_{22}'x_2+a_{23}'x_3 = b_{2}'$$ 
               $$x_2 = \frac{b_{2}'- a_{23}x_2}{a_{22}'}. \tag{1.5}$$
             </div>
-
             Finally, for $x_1$ we get
-            
             <div class="tex-container">
               $$a_{11}x_1+a_{12}x_2+a_{13}x_3 = b_{1}$$
               $$x_1 = \frac{b_{1} - a_{12}x_2 - a_{13}x_3}{a_{11}}. \tag{1.6}$$
@@ -319,7 +317,7 @@
             <div class="solution">
               <div class="toggle-solution"><b>Solution</b><i class="fa fa-chevron-down"></i></div>
               <div class="solution-content">
-                We begin by constructing an augmented matrix $M$ from the system, 
+                We begin by constructing the augmented matrix $M$ from the system, 
                 <div class="tex-container">
                   $$ M = \begin{bmatrix} 
                   3   & -0.1  & -0.2 &\bigm| & 7.85 \\ 

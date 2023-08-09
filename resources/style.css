@@ -252,23 +252,21 @@ body{
   z-index: -1;
 }
 .contents{
-  display: grid;
   gap: 10px;
   padding: 20px 20px 20px 20px;
 }
 .contents-header{
   display: flex;
   width: 125px;
+  height: 40px;
+  gap: 10px;
   margin: 0 0 15px 0;
-  padding: 10px 10px 10px 10px;
+  padding: 5px 10px 5px 10px;
   text-align: center;
   align-items: center;
   border: solid;
   border-width: 2px;
-  border-radius: 20px;
-}
-.contents-header h3{
-  padding: 0 10px 0 0;
+  border-radius: 15px;
 }
 .topnav-contents{
   font-size: 1.4em;
@@ -278,9 +276,6 @@ body{
 }
 .topnav-contents.hidden{
   display: none;
-}
-.topnav-contents i{
-  padding: 0 !important;
 }
 .topnav-table-of-contents{
   display: none;
@@ -638,7 +633,7 @@ body{
 /* Use for title heading */
 h1{
   margin: 0;
-  font-size: 2.3em;
+  font-size: 2em;
 }
 /* Use for headings in text */
 h2{
@@ -724,6 +719,7 @@ li{
 .toggle-dropdown{
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .dropdown-content{
   overflow: hidden;
@@ -757,9 +753,10 @@ li{
 }
 /* Language switch */
 .language-switch a{
-  display: inline-flex;
+  display: flex;
   margin: 0 0 0 0;
   padding: 10px 0 10px 0;
+  align-items: center;
   .language{
     padding-left: 10px;
     font-size: 0.8em;
