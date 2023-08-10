@@ -868,7 +868,7 @@ li{
   }
   .course-box{
     display: grid;
-    margin: 10px 5px 10px 5px;
+    margin: 15px 5px 15px 5px;
     width: 145px;
     height: 180px;
     border-radius: 15px;
