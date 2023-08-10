@@ -89,10 +89,10 @@
   font-size: 1.1em !important;
 }
 .katex-display{
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 .tex-container{
-  width: 310px;
+  width: auto;
   margin-bottom: 8px;
   margin-left: auto;
   margin-right: auto; 
@@ -198,7 +198,7 @@ pre{
   width: 300px;
   height: auto;
   top: 60px;
-  left: 20px;
+  left: 10px;
   font-size: 1em;
   border: solid;
   border-radius: 10px;
@@ -243,7 +243,7 @@ pre{
 }
 body{
   font-family: "Helvetica", sans-serif;
-  font-size: 1.2em;
+  font-size: 1.1em;
   margin: 0;
 }
 .background-gradient{
@@ -254,8 +254,7 @@ body{
   z-index: -1;
 }
 .contents{
-  gap: 10px;
-  padding: 20px 20px 20px 20px;
+  padding: 20px 30px 10px 30px;
 }
 .contents-header{
   display: flex;
@@ -263,7 +262,7 @@ body{
   height: 40px;
   gap: 10px;
   margin: 0 0 15px 0;
-  padding: 5px 10px 5px 10px;
+  padding: 3px 0px 3px 10px;
   text-align: center;
   align-items: center;
   border: solid;
@@ -288,14 +287,14 @@ body{
   z-index: 99;
 }
 .topnav-syllabus{
-  padding: 20px 20px 20px 0;
+  padding: 20px 30px 20px 0;
 }
 .topnav-syllabus ul{
   margin-top: 0;
 }
 .table-of-contents{
   display: none;
-  padding: 0 20px 0 0;
+  padding: 0 30px 0 0;
   margin: 0 0 0 0;
   overflow-y: scroll;
   max-height: 350px;
@@ -423,7 +422,7 @@ body{
   }
   .course-box{
     background-color: #ffffff;
-    box-shadow: 0 0 10px 0 #b4b4b4;
+    box-shadow: 0 0 5px 0 #b4b4b4;
     border-color: #ffffff;
     border-width: 1px;
     text-decoration: none;
@@ -597,7 +596,7 @@ body{
 .topnav {
   display: flex;
   width: auto;
-  padding: 0 20px 0 20px;
+  padding: 0 30px 0 30px;
   position: sticky;
   top: 0px;
   z-index: 99;
@@ -621,7 +620,7 @@ body{
   color: #4d77b3;
 }
 .section{
-  margin: 20px 20px 20px 20px;
+  margin: 20px 30px 20px 30px;
 }
 /* Section header for any text section */
 .section-header{
@@ -710,7 +709,7 @@ li{
 .solution-content{
   display: none;
   overflow: hidden;
-  padding: 0 10px 10px 10px;
+  padding: 0 20px 10px 20px;
 }
 .solution{
   margin-bottom: 30px;
@@ -743,10 +742,11 @@ li{
 }
 .header{
   .header-text{
-    margin: 10px 20px 0 20px;
+    margin: 10px 30px 0 30px;
   }
   .page-title{
     padding-top: 10px;
+    line-height: 1.1;
   }
 }
 .language-switch a{
@@ -790,20 +790,15 @@ li{
   align-items: center;
   justify-content: center;
   padding: 10px 10px 10px 10px;
-  margin: 10px 0 10px 0;
-  width: 15px;
-  height: 15px;
-  font-size: 0.9em;
+  margin: 0 0 0 0;
+  width: 10px;
+  height: 10px;
+  font-size: 0.8em;
   border-radius: 30px;
   background-color: transparent;
   box-shadow: inset 0 0 0 3px #4d77b3;
   color: #4d77b3;
   transition: color 300ms, box-shadow 300ms ease-in-out;
-}
-.first-semester-container, .second-semester-container{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 .second-semester-container{
   padding: 10px 0 0 0;
@@ -820,7 +815,7 @@ li{
 }
 .courses{
   padding: 15px 10px 15px 10px;
-  margin: 0 10px 0 10px;
+  margin: 0 20px 0 20px;
   border-style: solid;
   border-color: transparent;
   border-radius: 20px;
@@ -834,9 +829,10 @@ li{
   }
   .year-wrapper{
     display: flex;
+    width: fit-content;
     margin: 10px 10px 10px 10px;
     align-items: center;
-    justify-content: space-around;
+    justify-content: start;
     border-radius: 15px;
   }
   .course-wrapper{
@@ -844,9 +840,11 @@ li{
   }
   .first-semester-text{
     padding: 10px 0 10px 0;
+    font-size: 0.9em;
   }
   .second-semester-text{
     padding: 10px 0 10px 0;
+    font-size: 0.9em;
   }
   #second-year-course-odd, #third-year-course-odd, #fourth-year-course-odd,
   #second-year-course-even, #third-year-course-even, #fourth-year-course-even{
@@ -871,7 +869,7 @@ li{
   .course-box{
     display: grid;
     margin: 10px 5px 10px 5px;
-    width: 150px;
+    width: 145px;
     height: 180px;
     border-radius: 15px;
     align-content: start;
@@ -884,7 +882,7 @@ li{
     animation: course-box-hover 0.5s ease;
   }
   .course-cover{
-    width: 150px;
+    width: 145px;
     height: 80px;
     display: grid;
   }
@@ -940,7 +938,7 @@ li{
 }
 /* Contribute with us section */
 .contribute{
-  margin: 50px 20px 30px 20px;
+  margin: 40px 30px 30px 30px;
   text-align: center;
   .contribute-header{
     font-size: 1em;
@@ -965,7 +963,7 @@ li{
     margin: 20px 0 10px 0;
   }
   .footer-row{
-    margin: 20px 20px 20px 20px;
+    margin: 20px 30px 20px 30px;
     border-top: solid;
     border-width: 0.5px;
     border-color: #8a8a8a50;
@@ -1001,7 +999,7 @@ li{
 .watermark{
   display: flex;
   width: auto;
-  margin: 0 20px 0 20px;
+  margin: 0 30px 0 30px;
   font-size: 0.7em;
   opacity: 0.7;
   justify-content: space-between;
@@ -1031,7 +1029,7 @@ li{
   justify-content: center;
   text-align: center;
   .figure{
-    width: 300px;
+    width: 350px;
     margin-left: auto;
     margin-right: auto;
   }
