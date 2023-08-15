@@ -229,6 +229,38 @@ pre{
   border-color: #4d77b3;
   color: #4d77b3;
 }
+.ellipse-container-top{
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  top: 10px;
+  right: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.ellipse-top{
+  position: absolute;
+  height: 400px;
+  right: -80px;
+  z-index: -1;
+}
+.ellipse-container-bottom{
+  position: absolute;
+  height: 500px;
+  width: 100%;
+  right: 0;
+  bottom: -200vh;
+  z-index: -1;
+  overflow: hidden;
+}
+.ellipse-bottom{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
 .logo-horizontal{
   width: 200px;
   height: 37px;
@@ -314,6 +346,9 @@ body{
 .light-mode{
   color: #474747;
   background-color: #f7f9ff;
+  .ellipse-container-top, .ellipse-container-bottom{
+    opacity: 0.3;
+  }
   .page-title{
     background: linear-gradient(90deg, #474747 0%, #4d77b3 100%);
     background-clip: text;
@@ -738,7 +773,6 @@ li{
 }
 .main {
   margin: 0;
-  align-items: center;
 }
 .header{
   .header-text{
@@ -1100,6 +1134,22 @@ li{
     .figure-caption{
       padding: 20px 0 0 0 ;
     }
+  }
+  .ellipse-container-bottom{
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    right: 0;
+    bottom: -1000px;
+    z-index: -1;
+    overflow: hidden;
+  }
+  .ellipse-bottom{
+    position: absolute;
+    width: 100%;
+    bottom: -120px;
+    right: 0;
+    z-index: -1;
   }
   .contents{
     display: grid;
