@@ -304,7 +304,7 @@ body{
 }
 ::-webkit-scrollbar{
   height: 3px;
-  width: 10px;
+  width: 8px;
   border-radius: 0;
   background: linear-gradient(#808080 0%, #474747 100%);
 }
@@ -635,7 +635,7 @@ body{
 /* Use for title heading */
 h1{
   margin: 0;
-  font-size: 2.2em;
+  font-size: 2.4em;
 }
 /* Use for headings in text */
 h2{
@@ -869,7 +869,7 @@ li{
   .course-box{
     display: grid;
     margin: 15px 5px 15px 5px;
-    width: 145px;
+    width: 135px;
     height: 180px;
     border-radius: 15px;
     align-content: start;
@@ -882,7 +882,7 @@ li{
     animation: course-box-hover 0.5s ease;
   }
   .course-cover{
-    width: 145px;
+    width: 135px;
     height: 80px;
     display: grid;
   }
@@ -1064,7 +1064,7 @@ li{
     right: 5px;
   }
   ::-webkit-scrollbar{
-    height: 10px;
+    height: 8px;
   }
   ::-webkit-scrollbar-thumb{
     border-radius: 15px;
