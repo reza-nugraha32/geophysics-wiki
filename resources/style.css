@@ -989,10 +989,7 @@ li{
   }
 }
 .footer{
-  display: flex;
   width: auto;
-  align-items: start;
-  justify-content: space-between;
   .logo-horizontal{
     margin: 20px 0 10px 0;
   }
