@@ -970,7 +970,6 @@ li{
     transform: scale(1);
   }
 }
-/* Contribute with us section */
 .contribute{
   margin: 40px 30px 30px 30px;
   text-align: center;
@@ -1159,10 +1158,9 @@ li{
     width: 125px;
     height: 30px;
     margin: 0 0 0 0;
-    padding: 10px 10px 10px 10px;
     align-items: center;
     border: solid;
-    border-width: 2px;
+    border-width: 1.7px;
     border-radius: 15px;
   }
   .table-of-contents{
