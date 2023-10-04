@@ -345,18 +345,11 @@ body{
 }
 .light-mode{
   color: #474747;
-  background-color: #f7f9ff;
+  background-color: #fdfdfd;
   .ellipse-container-top, .ellipse-container-bottom{
     opacity: 0.3;
   }
-  .page-title{
-    background: linear-gradient(90deg, #474747 0%, #4d77b3 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-  }
+
   ::-webkit-scrollbar{
     border-radius: 15px;
     background: linear-gradient(90deg, #bbbbbb 0%, #b4b4b4 100%);
@@ -488,14 +481,7 @@ body{
 .dark-mode{
   color: #dadada;
   background-color: #151b1f;
-  .page-title{
-    background: linear-gradient(90deg, #4d77b3 0%, #ffffff 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-  }
+
   ::-webkit-scrollbar{
     border-radius: 15px;
     background: linear-gradient(90deg, #1d2529 0%, #1a2025 100%);
@@ -530,7 +516,7 @@ body{
     color: #dadada;
   }
   .topnav {
-    background-color: #131a1d60;
+    background-color: #131a1d80;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: none;
@@ -1107,7 +1093,7 @@ li{
     width: 300px;
     height: auto;
     top: 70px;
-    left: 100px;
+    left: 150px;
   }
   .topnav-table-of-contents{
     width: 500px;
@@ -1150,7 +1136,7 @@ li{
   .contents{
     display: grid;
     width: auto;
-    padding: 0 100px 0 100px;
+    padding: 0 150px 0 150px;
     gap: 20px;
   }
   .contents-header{
@@ -1171,10 +1157,10 @@ li{
     overflow-y: scroll;
   }
   .topnav-syllabus{
-    padding: 20px 20px 100px 60px;
+    padding: 20px 20px 150px 60px;
   }
   .section{
-    margin: 20px 100px 20px 100px;
+    margin: 20px 150px 20px 150px;
   }
     .section-header{
       padding-bottom: 10px;
@@ -1183,10 +1169,10 @@ li{
     margin-bottom: 20px;
   }
   .spacer{
-    padding-bottom: 100px;
+    padding-bottom: 150px;
   }
   .header{
-    margin: 20px 100px 20px 100px;
+    margin: 20px 150px 20px 150px;
     .header-text{
      margin: 0; 
     }
@@ -1210,7 +1196,7 @@ li{
   }
   .courses{
     padding: 30px 30px 30px 30px;
-    margin: 40px 100px 40px 100px;
+    margin: 40px 150px 40px 150px;
     border-radius: 30px;
     .courses-header{
       display: flex;
@@ -1247,7 +1233,7 @@ li{
     }  
   } 
   .contribute{
-    margin: 50px 100px 60px 100px;
+    margin: 50px 150px 60px 150px;
   }
   .repo-button{
     margin: 30px 0 30px 0;
@@ -1256,7 +1242,7 @@ li{
     }
   }
   .footer{
-    margin: 30px 100px 30px 100px;
+    margin: 30px 150px 30px 150px;
     .logo-horizontal{
       margin: 0 0 20px 0;
     }  
@@ -1285,7 +1271,7 @@ li{
   }
   .watermark{
     display: flex;
-    margin: 40px 100px 10px 100px;
+    margin: 40px 150px 10px 150px;
     justify-content: space-between;
     align-items: center;
     .copyright{
@@ -1309,7 +1295,7 @@ li{
   }
   .topnav {
     display: flex;
-    padding: 0 100px 0 100px;
+    padding: 0 150px 0 150px;
   }
   .topnav a {
     margin: 10px 0 10px 0;
